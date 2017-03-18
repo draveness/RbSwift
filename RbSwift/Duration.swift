@@ -25,10 +25,10 @@ public struct Duration {
         .weeks: 0,
         .days: 0,
         .hours: 0,
-        .months: 0,
+        .minutes: 0,
         .seconds: 0]
     
-    init(years: Int = 0, months: Int = 0, weeks: Int = 0,
+    public init(years: Int = 0, months: Int = 0, weeks: Int = 0,
          days: Int = 0, hours: Int = 0, minutes: Int = 0, seconds: Int = 0) {
         self.values[.years] = years
         self.values[.weeks] = weeks
@@ -50,11 +50,11 @@ let secondsPerComponent: [Duration.DurationComponent: Int] = [
     .weeks: 604800,
     .days: 86400,
     .hours: 3600,
-    .months: 60,
+    .minutes: 60,
     .seconds: 1]
 
 
-extension Duration {
+public extension Duration {
     var years: Int {
         return self.values[.years]!
     }
@@ -91,7 +91,7 @@ extension Duration {
         return "\(toSeconds)"
     }
     
-    var to_i: String {
+    var to_i: Int {
         return toSeconds
     }
 }
