@@ -28,6 +28,8 @@
 		724875331E7CF88A007984FD /* Indent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248752D1E7CF88A007984FD /* Indent.swift */; };
 		724875341E7CF88A007984FD /* Inflections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248752E1E7CF88A007984FD /* Inflections.swift */; };
 		724875381E7CF8AB007984FD /* StringExtSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875371E7CF8AB007984FD /* StringExtSpec.swift */; };
+		7248753E1E7CFC95007984FD /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248753D1E7CFC95007984FD /* Duration.swift */; };
+		72541B011E7D58E2008B49B1 /* DurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B001E7D58E2008B49B1 /* DurationSpec.swift */; };
 		8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,11 +68,13 @@
 		7248752D1E7CF88A007984FD /* Indent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indent.swift; sourceTree = "<group>"; };
 		7248752E1E7CF88A007984FD /* Inflections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inflections.swift; sourceTree = "<group>"; };
 		724875371E7CF8AB007984FD /* StringExtSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtSpec.swift; sourceTree = "<group>"; };
+		7248753D1E7CFC95007984FD /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		72541B001E7D58E2008B49B1 /* DurationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationSpec.swift; sourceTree = "<group>"; };
 		8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift.release.xcconfig"; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
-		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests.release.xcconfig"; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		BD9E59D9F4BB3658534902C7 /* Pods-RbSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests.debug.xcconfig"; path = "Pods-RbSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E37E0F0348628316CA597CBB /* Pods-RbSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift.debug.xcconfig"; path = "Pods-RbSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
+		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD9E59D9F4BB3658534902C7 /* Pods-RbSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E37E0F0348628316CA597CBB /* Pods-RbSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +106,6 @@
 				BD9E59D9F4BB3658534902C7 /* Pods-RbSwiftTests.debug.xcconfig */,
 				AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -121,13 +124,13 @@
 				724874F71E7CF813007984FD /* RbSwift.framework */,
 				724875101E7CF843007984FD /* RbSwiftTests.xctest */,
 			);
-			name = Products;
 			path = Products;
 			sourceTree = "<group>";
 		};
 		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7248753C1E7CFC8C007984FD /* Duration */,
 				724875351E7CF891007984FD /* CoreExtension */,
 				724875021E7CF829007984FD /* ArrayPatch.swift */,
 				724874FB1E7CF813007984FD /* Info.plist */,
@@ -142,6 +145,7 @@
 		724875111E7CF843007984FD /* RbSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				7248753F1E7CFF96007984FD /* Duration */,
 				724875391E7CF8B5007984FD /* CoreExtension */,
 				7248751B1E7CF850007984FD /* ArrayPatchSpec.swift */,
 				724875141E7CF843007984FD /* Info.plist */,
@@ -191,8 +195,23 @@
 				6B42246106CB516A53DF4EE0 /* Pods */,
 				724874F81E7CF813007984FD /* Products */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7248753C1E7CFC8C007984FD /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				7248753D1E7CFC95007984FD /* Duration.swift */,
+			);
+			name = Duration;
+			sourceTree = "<group>";
+		};
+		7248753F1E7CFF96007984FD /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				72541B001E7D58E2008B49B1 /* DurationSpec.swift */,
+			);
+			name = Duration;
 			sourceTree = "<group>";
 		};
 		D890256EF0393E9E9DAF6866 /* Frameworks */ = {
@@ -201,7 +220,6 @@
 				3E6FB7BF2D3E3A56DE0F483D /* Pods_RbSwift.framework */,
 				8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */,
 			);
-			name = Frameworks;
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
@@ -403,6 +421,7 @@
 				724875321E7CF88A007984FD /* Filter.swift in Sources */,
 				724875301E7CF88A007984FD /* Bool.swift in Sources */,
 				724875061E7CF829007984FD /* ArrayPatch.swift in Sources */,
+				7248753E1E7CFC95007984FD /* Duration.swift in Sources */,
 				724875071E7CF829007984FD /* NumberPatch.swift in Sources */,
 				724875081E7CF829007984FD /* SequencePatch.swift in Sources */,
 				724875341E7CF88A007984FD /* Inflections.swift in Sources */,
@@ -420,6 +439,7 @@
 			files = (
 				724875221E7CF850007984FD /* NumberPatchSpec.swift in Sources */,
 				724875131E7CF843007984FD /* RbSwiftTests.swift in Sources */,
+				72541B011E7D58E2008B49B1 /* DurationSpec.swift in Sources */,
 				724875241E7CF850007984FD /* StringPatchSpec.swift in Sources */,
 				724875381E7CF8AB007984FD /* StringExtSpec.swift in Sources */,
 				724875231E7CF850007984FD /* SequencePatchSpec.swift in Sources */,
