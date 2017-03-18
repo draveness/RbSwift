@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class TimeZonePatchSpec: QuickSpec {
+class TimeZoneSpec: QuickSpec {
     override func spec() {
         
         describe(".timezone") {

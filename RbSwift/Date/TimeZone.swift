@@ -1,5 +1,5 @@
 //
-//  TimeZonePatch.swift
+//  TimeZone.swift
 //  RbSwift
 //
 //  Created by draveness on 18/03/2017.
