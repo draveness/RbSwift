@@ -10,12 +10,16 @@ import Quick
 import Nimble
 import RbSwift
 
-class DatePatchSpec: QuickSpec {
+class ComponentsSpec: QuickSpec {
     override func spec() {
         
         describe(".dateComponents") {
             beforeEach {
-                RbSwift.GlobalTimeZone = TimeZone(abbreviation: "UTC")!
+                RbSwift.GlobalTimeZone = TimeZone.utc
+            }
+            
+            afterEach {
+                RbSwift.GlobalTimeZone = TimeZone.current
             }
 
             it("returns date's components correctly") {
