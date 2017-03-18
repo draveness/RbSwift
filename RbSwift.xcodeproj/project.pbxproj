@@ -30,6 +30,11 @@
 		724875381E7CF8AB007984FD /* StringExtSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875371E7CF8AB007984FD /* StringExtSpec.swift */; };
 		7248753E1E7CFC95007984FD /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7248753D1E7CFC95007984FD /* Duration.swift */; };
 		72541B011E7D58E2008B49B1 /* DurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B001E7D58E2008B49B1 /* DurationSpec.swift */; };
+		72541B041E7D5D90008B49B1 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B031E7D5D90008B49B1 /* DateFormatter.swift */; };
+		72541B061E7D5DD6008B49B1 /* DatePatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B051E7D5DD6008B49B1 /* DatePatch.swift */; };
+		72541B091E7D62B1008B49B1 /* DatePatchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B081E7D62B1008B49B1 /* DatePatchSpec.swift */; };
+		72541B0B1E7D6771008B49B1 /* TimeZonePatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B0A1E7D6771008B49B1 /* TimeZonePatch.swift */; };
+		72541B0D1E7D6803008B49B1 /* TimeZonePatchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B0C1E7D6803008B49B1 /* TimeZonePatchSpec.swift */; };
 		8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +75,11 @@
 		724875371E7CF8AB007984FD /* StringExtSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtSpec.swift; sourceTree = "<group>"; };
 		7248753D1E7CFC95007984FD /* Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
 		72541B001E7D58E2008B49B1 /* DurationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationSpec.swift; sourceTree = "<group>"; };
+		72541B031E7D5D90008B49B1 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		72541B051E7D5DD6008B49B1 /* DatePatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePatch.swift; sourceTree = "<group>"; };
+		72541B081E7D62B1008B49B1 /* DatePatchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePatchSpec.swift; sourceTree = "<group>"; };
+		72541B0A1E7D6771008B49B1 /* TimeZonePatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZonePatch.swift; sourceTree = "<group>"; };
+		72541B0C1E7D6803008B49B1 /* TimeZonePatchSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZonePatchSpec.swift; sourceTree = "<group>"; };
 		8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +140,7 @@
 		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
+				72541B021E7D5D71008B49B1 /* Date */,
 				7248753C1E7CFC8C007984FD /* Duration */,
 				724875351E7CF891007984FD /* CoreExtension */,
 				724875021E7CF829007984FD /* ArrayPatch.swift */,
@@ -145,6 +156,7 @@
 		724875111E7CF843007984FD /* RbSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				72541B071E7D629E008B49B1 /* Date */,
 				7248753F1E7CFF96007984FD /* Duration */,
 				724875391E7CF8B5007984FD /* CoreExtension */,
 				7248751B1E7CF850007984FD /* ArrayPatchSpec.swift */,
@@ -212,6 +224,25 @@
 				72541B001E7D58E2008B49B1 /* DurationSpec.swift */,
 			);
 			name = Duration;
+			sourceTree = "<group>";
+		};
+		72541B021E7D5D71008B49B1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				72541B031E7D5D90008B49B1 /* DateFormatter.swift */,
+				72541B051E7D5DD6008B49B1 /* DatePatch.swift */,
+				72541B0A1E7D6771008B49B1 /* TimeZonePatch.swift */,
+			);
+			name = Date;
+			sourceTree = "<group>";
+		};
+		72541B071E7D629E008B49B1 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				72541B081E7D62B1008B49B1 /* DatePatchSpec.swift */,
+				72541B0C1E7D6803008B49B1 /* TimeZonePatchSpec.swift */,
+			);
+			name = Date;
 			sourceTree = "<group>";
 		};
 		D890256EF0393E9E9DAF6866 /* Frameworks */ = {
@@ -426,9 +457,12 @@
 				724875081E7CF829007984FD /* SequencePatch.swift in Sources */,
 				724875341E7CF88A007984FD /* Inflections.swift in Sources */,
 				724875281E7CF883007984FD /* RegexSupport.swift in Sources */,
+				72541B0B1E7D6771008B49B1 /* TimeZonePatch.swift in Sources */,
+				72541B041E7D5D90008B49B1 /* DateFormatter.swift in Sources */,
 				724875311E7CF88A007984FD /* Conversions.swift in Sources */,
 				724875091E7CF829007984FD /* StringPatch.swift in Sources */,
 				724875331E7CF88A007984FD /* Indent.swift in Sources */,
+				72541B061E7D5DD6008B49B1 /* DatePatch.swift in Sources */,
 				724875271E7CF883007984FD /* Inflector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,8 +476,10 @@
 				72541B011E7D58E2008B49B1 /* DurationSpec.swift in Sources */,
 				724875241E7CF850007984FD /* StringPatchSpec.swift in Sources */,
 				724875381E7CF8AB007984FD /* StringExtSpec.swift in Sources */,
+				72541B0D1E7D6803008B49B1 /* TimeZonePatchSpec.swift in Sources */,
 				724875231E7CF850007984FD /* SequencePatchSpec.swift in Sources */,
 				724875201E7CF850007984FD /* ArrayPatchSpec.swift in Sources */,
+				72541B091E7D62B1008B49B1 /* DatePatchSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
