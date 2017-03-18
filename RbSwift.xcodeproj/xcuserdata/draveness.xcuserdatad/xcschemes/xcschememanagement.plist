@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RbSwiftTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>724874F61E7CF813007984FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7248750F1E7CF843007984FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
