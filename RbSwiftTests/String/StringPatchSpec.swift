@@ -156,14 +156,14 @@ class StringPatchSpec: QuickSpec {
         }
 
         describe(".isUpcase") {
-            it("") {
+            it("returns true it string's chars are all upcase") {
                 expect("HELLO".isUpcase).to(beTrue())
                 expect("HELLOo".isUpcase).to(beFalse())
             }
         }
         
         describe(".isDowncase") {
-            it("") {
+            it("returns true it string's chars are all downcase") {
                 expect("HELLO".isDowncase).to(beFalse())
                 expect("HELLOo".isDowncase).to(beFalse())
                 expect("hello".isDowncase).to(beTrue())
