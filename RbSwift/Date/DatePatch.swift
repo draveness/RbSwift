@@ -84,7 +84,7 @@ public extension Date {
     }
     
     var utc: Date {
-        let dateFormatter = DateFormatterFactory.ISO8601()
+        let dateFormatter = DateFormatterFactory.Custom()
         dateFormatter.timeZone = TimeZone.utc
         return dateFormatter.date(from: "\(self)")!
     }

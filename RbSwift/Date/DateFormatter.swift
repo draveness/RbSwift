@@ -22,4 +22,11 @@ struct DateFormatterFactory {
         dateFormatter.timeZone = TimeZone.utc
         return dateFormatter
     }
+    
+    static func Rss() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
+        dateFormatter.dateFormat = "EEE, d MMM yyyy HH:mm:ss ZZZ"
+        return dateFormatter
+    }
 }

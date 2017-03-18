@@ -60,4 +60,31 @@ public extension String {
         let num = (0..<self.length).contains(num) ? num + 1 : self.length + num + 1
         return substring(to: num)
     }
+    
+    func substring(from: Int) -> String {
+        let string = self as NSString
+        let substring = string.substring(from: from)
+        return substring
+    }
+    
+    func substring(to: Int) -> String {
+        let string = self as NSString
+        let substring = string.substring(to: to)
+        return substring
+    }
+    
+    var chr: String {
+        guard let firstChar = self.characters.first else { return "" }
+        return "\(firstChar)"
+    }
+    
+    func index(_ str: String) -> Int? {
+        guard let data = matchAll(str).first else { return nil }
+        return data.range.location
+    }
+    
+    func rindex(_ str: String) -> Int? {
+        guard let data = matchAll(str).last else { return nil }
+        return data.range.location
+    }
 }
