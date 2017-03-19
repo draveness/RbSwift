@@ -18,5 +18,11 @@ class StringCharsSpec: QuickSpec {
                 expect("abcde".chars).to(equal(["a", "b", "c", "d", "e"]))
             }
         }
+        
+        describe(".lines") {
+            it("all lines in string form separated by newline `\n`") {
+                expect("a\nb\nc\nd\ne".lines).to(equal(["a", "b", "c", "d", "e"]))
+            }
+        }
     }
 }

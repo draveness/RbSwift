@@ -22,6 +22,21 @@ public extension String {
         return to_i(10)
     }
     
+    
+    /// Treats leading characters from str as a string of hexadecimal digits (with an optional sign and an optional 0x)
+    /// and returns the corresponding number. Zero is returned on error.
+    var to_hex: Int {
+        let sign = isStartWith("-") ? -1 : 1
+        let str = isStartWith("-") ? self.substring(from: 1) : self
+        guard str.isStartWith("0x") else { return str.to_i(16) * sign }
+        return str.substring(from: 2).to_i(16) * sign
+    }
+    
+    /// An alias to `to_hex` method.
+    var hex: Int {
+        return to_hex
+    }
+    
     /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36).
     /// Extraneous characters past the end of a valid number are ignored.
     /// If there is not a valid number at the start of str, 0 is returned.
