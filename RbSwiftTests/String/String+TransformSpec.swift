@@ -78,7 +78,7 @@ class StringTransformSpec: QuickSpec {
         describe(".split") {
             it("splits string into array") {
                 expect(" now's  the time".split).to(equal(["now's", "the", "time"]))
-                expect("hello".split("")).to(equal(["h", "e", "l", "l", "o"]))
+                expect("hello".chars).to(equal(["h", "e", "l", "l", "o"]))
                 expect(" now's  the time".split(" ")).to(equal(["now's", "the", "time"]))
                 expect("mellow yellow".split("ello")).to(equal(["m", "w y", "w"]))
                 expect("1,2,,3,4,,".split(",")).to(equal(["1", "2", "", "3", "4"]))

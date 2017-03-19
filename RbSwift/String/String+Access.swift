@@ -20,7 +20,7 @@ public extension String {
     /// - Returns: A substring of one character at that position or nil
     func at(_ pos: Int) -> String? {
         if pos >= length { return nil }
-        return self.split("")[pos]
+        return self.chars[pos]
     }
     
     
@@ -36,7 +36,7 @@ public extension String {
         if range.lowerBound > length { return nil }
         if range.lowerBound == length { return "" }
         let upperBound = range.upperBound > length - 1 ? length - 1 : range.upperBound
-        return self.split("")[range.lowerBound...upperBound].joined()
+        return self.chars[range.lowerBound...upperBound].joined()
     }
     
     /// If you pass a single `Int`, returns a substring of one character at that position.
@@ -51,7 +51,7 @@ public extension String {
         if range.lowerBound > length { return nil }
         if range.lowerBound == length { return "" }
         let upperBound = range.upperBound >= length ? length : range.upperBound
-        return self.split("")[range.lowerBound..<upperBound].joined()
+        return self.chars[range.lowerBound..<upperBound].joined()
     }
     
     /// Returns the first character as `String`.
@@ -75,7 +75,7 @@ public extension String {
     func first(_ limit: Int = 1) -> String {
         if limit <= 0 { return "" }
         if limit >= self.length { return self }
-        return split("")[0..<limit].joined()
+        return chars[0..<limit].joined()
     }
     
     /// Returns the last character of the reveiver of `String`.
@@ -93,7 +93,7 @@ public extension String {
     func last(_ limit: Int = 1) -> String {
         if limit <= 0 { return "" }
         if limit >= self.length { return self }
-        return split("")[self.length-limit..<self.length].joined()
+        return chars[self.length-limit..<self.length].joined()
     }
     
     /// Returns a substring from the given position to the end of the string. 

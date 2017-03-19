@@ -122,7 +122,7 @@ public extension String {
 
     /// Returns true is the recevier string's characters are all whitespaces, like `\r`, `\n`, `\t` and ` `.
     var isBlank: Bool {
-        return self.split("").reduce(true) { $0 && ($1 =~ "[\r\n\t ]") }
+        return self.chars.reduce(true) { $0 && ($1 =~ "[\r\n\t ]") }
     }
     
     /// Returns true is the recevier string's characters are all downcase.

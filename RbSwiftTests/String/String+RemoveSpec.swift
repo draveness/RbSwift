@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringFilterSpec: QuickSpec {
+class StringRemoveSpec: QuickSpec {
     override func spec() {
         describe(".truncate(at:omission:)") {
             it("truncates a given text after a given length if text is longer than length") {
