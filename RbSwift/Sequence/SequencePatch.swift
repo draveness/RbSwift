@@ -9,12 +9,6 @@
 import Foundation
 
 
-public protocol OptionalType {
-    associatedtype Wrapped
-    func map<U>(_ f: (Wrapped) throws -> U) rethrows -> U?
-}
-
-extension Optional: OptionalType {}
 
 public extension Sequence {
     func select(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
@@ -39,24 +33,17 @@ public extension Sequence {
         return self + other
     }
     
-    var length: Int {
-        return count
-    }
-    
-    var size: Int {
-        return count
-    }
-    
-    var count: Int {
-        var i = 0
-        self.forEach { _ in i += 1 }
-        return i
-    }
-    
     func count(closure: (Iterator.Element) -> Bool) -> Int {
         return self.filter(closure).count
     }
 }
+
+public protocol OptionalType {
+    associatedtype Wrapped
+    func map<U>(_ f: (Wrapped) throws -> U) rethrows -> U?
+}
+
+extension Optional: OptionalType {}
 
 public extension Sequence where Iterator.Element: OptionalType {
     var compact: [Iterator.Element.Wrapped] {
@@ -78,7 +65,7 @@ public extension Sequence where Iterator.Element: Equatable {
     }
 }
 
-extension Sequence where Iterator.Element : Sequence {
+public extension Sequence where Iterator.Element : Sequence {
     var flatten: FlattenSequence<Self> {
         return self.joined()
     }
