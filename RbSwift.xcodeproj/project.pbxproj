@@ -257,10 +257,10 @@
 		72541B021E7D5D71008B49B1 /* Date */ = {
 			isa = PBXGroup;
 			children = (
+				72541B1F1E7D96F3008B49B1 /* Components.swift */,
 				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
 				72541B051E7D5DD6008B49B1 /* Initialize.swift */,
 				72541B0A1E7D6771008B49B1 /* TimeZone.swift */,
-				72541B1F1E7D96F3008B49B1 /* Components.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -269,9 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				72541B081E7D62B1008B49B1 /* ComponentsSpec.swift */,
-				72541B0C1E7D6803008B49B1 /* TimeZoneSpec.swift */,
 				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
 				72541B231E7E27AC008B49B1 /* InitializeSpec.swift */,
+				72541B0C1E7D6803008B49B1 /* TimeZoneSpec.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -302,13 +302,13 @@
 				72541B3E1E7E2BF1008B49B1 /* ConversionsSpec.swift */,
 				72541B3F1E7E2BF1008B49B1 /* EnumerationSpec.swift */,
 				72541B401E7E2BF1008B49B1 /* FilterSpec.swift */,
+				72541B571E7E2CE2008B49B1 /* IndentSpec.swift */,
 				72541B421E7E2BF1008B49B1 /* InflectionSpec.swift */,
 				72541B431E7E2BF1008B49B1 /* LengthSpec.swift */,
 				72541B441E7E2BF1008B49B1 /* OperatorSpec.swift */,
 				72541B451E7E2BF1008B49B1 /* RegexSpec.swift */,
 				72541B471E7E2BF1008B49B1 /* StringPatchSpecSpec.swift */,
 				72541B481E7E2BF1008B49B1 /* TransformSpec.swift */,
-				72541B571E7E2CE2008B49B1 /* IndentSpec.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
