@@ -42,24 +42,17 @@ class StringCaseSpec: QuickSpec {
             }
         }
         
-        describe(".isUpcase") {
-            it("returns true it string's chars are all upcase") {
-                expect("HELLO".isUpcase).to(beTrue())
-                expect("HELLOo".isUpcase).to(beFalse())
-            }
-        }
-        
-        describe(".isDowncase") {
-            it("returns true it string's chars are all downcase") {
-                expect("HELLO".isDowncase).to(beFalse())
-                expect("HELLOo".isDowncase).to(beFalse())
-                expect("hello".isDowncase).to(beTrue())
-            }
-        }
-        
         describe(".swapcase") {
             it("returns a copy of str with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase") {
                 expect("HellHEo".swapcase).to(equal("hELLheO"))
+            }
+        }
+        
+        describe(".swapcased") {
+            it("mutates current string with swapcase") {
+                var hello = "HellHEo"
+                hello.swapcased()
+                expect(hello).to(equal("hELLheO"))
             }
         }
     }
