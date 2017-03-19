@@ -8,7 +8,15 @@
 
 import UIKit
 
+public var GlobalTimeZone: TimeZone = TimeZone.current
+
 public extension TimeZone {
     static let utc: TimeZone = TimeZone(abbreviation: "UTC")!
     static let gmt: TimeZone = TimeZone(abbreviation: "GMT")!
+}
+
+public extension Date {
+    var currentTimeZone: TimeZone {
+        return GlobalTimeZone
+    }
 }

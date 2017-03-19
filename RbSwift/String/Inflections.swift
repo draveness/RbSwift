@@ -51,8 +51,8 @@ public extension String {
     }
     
     var underscore: String {
-        var word = self.gsub("([A-Z\\d]+)([A-Z][a-z])", "$1_$2".freeze)
-        word.gsubed("([a-z\\d])([A-Z])", "$1_$2".freeze)
+        var word = self.gsub("([A-Z\\d]+)([A-Z][a-z])", "$1_$2")
+        word.gsubed("([a-z\\d])([A-Z])", "$1_$2")
         //        word.tr("-".freeze, "_".freeze)
         word.downcased()
         return word
