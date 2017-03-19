@@ -8,11 +8,19 @@
 
 import Foundation
 
+// MARK: - Regex
 public extension String {
-    func match(_ pattern: String) -> MatchData? {
+    /// Converts pattern to a `NSRegularExpression`, then invokes its firstMatch(in:options:range:) method.
+    /// If the second parameter is present, it specifies the position in the string to begin the search.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - pos: A int specifies the position in the string to begin the search
+    /// - Returns: A `MatchData` instance contains all match results in it
+    func match(_ pattern: String, _ pos: Int = 0) -> MatchData? {
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        guard let result = regex.firstMatch(in: self, options: [], range: NSMakeRange(0, self.length)) else { return nil }
-        let str = self as NSString
+        let str = self.substring(from: pos) as NSString
+        guard let result = regex.firstMatch(in: str as String, options: [], range: NSMakeRange(0, self.length)) else { return nil }
         let match = str.substring(with: result.range)
         var datas: [String] = []
         var ranges: [NSRange] = []
@@ -24,11 +32,18 @@ public extension String {
         return MatchData(match: match, range: result.range, datas: datas, ranges: ranges)
     }
     
-    func matchAll(_ pattern: String) -> [MatchData] {
+    /// Converts pattern to a `NSRegularExpression`, then invokes its matches(in:options:range:) method.
+    /// If the second parameter is present, it specifies the position in the string to begin the search.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - pos: A int specifies the position in the string to begin the search
+    /// - Returns: An array of `MatchData` instances contains all match results in it
+    func matchAll(_ pattern: String, _ pos: Int = 0) -> [MatchData] {
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        let matches = regex.matches(in: self, options: [], range: NSMakeRange(0, self.length))
+        let str = self.substring(from: pos) as NSString
+        let matches = regex.matches(in: str as String, options: [], range: NSMakeRange(0, self.length))
         
-        let str = self as NSString
         var matchDatas: [MatchData] = []
         for match in matches {
             let substr = str.substring(with: match.range)
@@ -45,24 +60,58 @@ public extension String {
         return matchDatas
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its match(pattern:) method to get
+    /// the `MatchData` and replace the first matchig result with passing str.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - str: A string to replace the matching substring
+    /// - Returns: A new string with str replacing the matched result
     func sub(_ pattern: String, _ str: String) -> String {
         guard let matchData = match(pattern) else { return self }
         return (self as NSString).replacingCharacters(in: matchData.range, with: str)
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its match(pattern:) method to get
+    /// the `MatchData` and replace the first matchig result with passing str, and eventually mutating itself.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - str: A string to replace the matching substring
     mutating func subed(_ pattern: String, _ str: String) {
         self = sub(pattern, str)
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its matchAll(pattern:) method to get
+    /// the `MatchData` array and replace the all matchig result with passing str.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - str: A string to replace the matching substring
+    /// - Returns: A new string with str replacing the matched result
     func gsub(_ pattern: String, _ str: String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
         return regex.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, self.length), withTemplate: str)
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its matchAll(pattern:) method to get
+    /// the `MatchData` array and replace the all matchig result with passing str, and eventually mutating itself.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - str: A string to replace the matching substring
     mutating func gsubed(_ pattern: String, _ str: String) {
         self = gsub(pattern, str)
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its matchAll(pattern:) method to get
+    /// the `MatchData` array and invoke the closure with all matchig result and replace current string with the invokation
+    /// of the closure.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - closure: A closure accepts the matching result as input and return output to change the origianl string
+    /// - Returns: A new string with str replacing the matched result
     func gsub(_ pattern: String, closure: (String) -> String) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
         let matchDatas = matchAll(pattern)
@@ -73,6 +122,13 @@ public extension String {
         return result as String
     }
     
+    /// Converts pattern to a `NSRegularExpression`, then invokes its matchAll(pattern:) method to get
+    /// the `MatchData` array and invoke the closure with all matchig result and replace current string with the invokation
+    /// of the closure , and eventually mutating itself.
+    ///
+    /// - Parameters:
+    ///   - pattern: A string pattern
+    ///   - closure: A closure accepts the matching result as input and return output to change the origianl string
     mutating func gsubed(_ pattern: String, closure: (String) -> String) {
         self = gsub(pattern, closure: closure)
     }
