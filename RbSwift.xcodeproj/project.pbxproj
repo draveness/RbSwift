@@ -219,6 +219,7 @@
 		724875361E7CF89F007984FD /* String */ = {
 			isa = PBXGroup;
 			children = (
+				72541B181E7D95AB008B49B1 /* Regex */,
 				72541B6E1E7E32E1008B49B1 /* String+Access.swift */,
 				72541B6F1E7E32E1008B49B1 /* String+Bool.swift */,
 				72541B701E7E32E1008B49B1 /* String+Case.swift */,
@@ -231,7 +232,6 @@
 				72541B771E7E32E1008B49B1 /* String+Operator.swift */,
 				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
-				72541B181E7D95AB008B49B1 /* Regex */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
-				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
 				72541B051E7D5DD6008B49B1 /* Date+Initialize.swift */,
 				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
+				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -278,8 +278,8 @@
 			children = (
 				72541B871E7E32F2008B49B1 /* Date+ComponentsSpec.swift */,
 				72541B881E7E32F2008B49B1 /* Date+InitializeSpec.swift */,
-				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
 				72541B0C1E7D6803008B49B1 /* Date+TimeZoneSpec.swift */,
+				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
