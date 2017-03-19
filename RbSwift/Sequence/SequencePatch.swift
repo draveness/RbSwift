@@ -60,7 +60,12 @@ public extension Sequence where Iterator.Element: OptionalType {
 
 public extension Sequence where Iterator.Element: Equatable {
     func isAny(obj: Iterator.Element) -> Bool {
-        guard let _ = self.first(where:{$0 == obj}) else { return false}
+        guard let _ = self.first(where:{$0 == obj}) else { return false }
+        return true
+    }
+    
+    func isAll(obj: Iterator.Element) -> Bool {
+        if let _ = self.first(where:{$0 != obj}) { return false }
         return true
     }
 }
