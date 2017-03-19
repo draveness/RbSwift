@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension Date {
     static func parse(str: String) -> Date? {
         guard let date = DateFormat.parse(str: str) else { return nil }
@@ -18,10 +17,5 @@ public extension Date {
     init?(str: String) {
         guard let date = DateFormat.parse(str: str) else { return nil }
         self.init(timeIntervalSince1970: date.timeIntervalSince1970)
-    }
-    
-    var utc: Date {
-        let dateFormatter = DateFormat.Custom()
-        return dateFormatter.date(from: "\(self)")!
     }
 }

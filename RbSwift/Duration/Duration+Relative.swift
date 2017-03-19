@@ -9,5 +9,11 @@
 import Foundation
 
 public extension Duration {
+    var since: Date {
+        return Calendar.current.date(byAdding: self.to_dateComponents, to: Date.now)!
+    }
     
+    var ago: Date {
+        return Calendar.current.date(byAdding: self.to_dateComponents(before: true), to: Date.now)!
+    }
 }
