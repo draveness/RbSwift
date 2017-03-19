@@ -32,7 +32,7 @@ public extension String {
     func to_i(_ base: Int = 10) -> Int {
         guard Array(2...36).contains(base) else { return 0 }
         let nums = radix[0..<base]
-        var chars = split("")
+        var chars = self.chars
         
         // deal with the sign
         let sign = chars.first == "-" ? -1 : 1
@@ -45,7 +45,7 @@ public extension String {
         }
         
         var value = 0
-        for (index, bit) in result.reverse.split("").enumerated() {
+        for (index, bit) in result.reverse.chars.enumerated() {
             value += Int(pow(Double(base), Double(index))) * nums.index(of: bit)!
         }
         return value * sign
@@ -60,7 +60,7 @@ public extension String {
     /// Extraneous characters past the end of a valid number are ignored.
     /// If there is not a valid number at the start of str, 0.0 is returned.
     var to_double: Double {
-        var chars = split("")
+        var chars = self.chars
         
         // deal with the sign
         let sign: Double = chars.first == "-" ? -1.0 : 1.0

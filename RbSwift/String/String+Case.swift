@@ -32,7 +32,7 @@ public extension String {
     
     /// Returns a copy of str with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase.
     var swapcase: String {
-        return self.split("").map { $0.isUpcase ? $0.downcase : $0.upcase }.joined()
+        return self.chars.map { $0.isUpcase ? $0.downcase : $0.upcase }.joined()
     }
     
     /// Equivalent to `swapcase`, but modifies the receiver in place.

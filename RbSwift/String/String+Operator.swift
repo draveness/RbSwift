@@ -20,6 +20,10 @@ public func =~(left: Character, right: String) -> Bool {
     return String(left) =~ right
 }
 
+public func =~(left: String, right: Character) -> Bool {
+    return left =~ String(right)
+}
+
 public func *(left: String, right: Int) -> String {
     guard right > 0 else { return "" }
     var result = ""

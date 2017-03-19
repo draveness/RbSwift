@@ -44,6 +44,7 @@ class StringConversionsSpec: QuickSpec {
                 expect("1100101.11".to_double).to(equal(1100101.11))
                 expect("123.456".to_double).to(equal(123.456))
                 expect("123.456ddddd".to_double).to(equal(123.456))
+                expect(".456ddddd".to_double).to(equal(0.456))
             }
             
             it("returns zero if format is invalid") {
