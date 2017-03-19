@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Case
 public extension String {
     /// Returns a copy of str with all uppercase letters replaced with their lowercase counterparts. 
     var downcase: String {
