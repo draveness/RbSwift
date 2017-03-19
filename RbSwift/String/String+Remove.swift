@@ -24,6 +24,12 @@ public extension String {
             .gsub("[[:space:]]+\\z", "")
             .gsub("[[:space:]]+", " ")
     }
+    
+    mutating func squished() {
+        self = gsub("\\A[[:space:]]+", "")
+            .gsub("[[:space:]]+\\z", "")
+            .gsub("[[:space:]]+", " ")
+    }
  
     func truncate(_ at: Int, omission: String = "...") -> String {
         if self.length <= omission.length { return self }

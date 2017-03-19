@@ -9,10 +9,6 @@
 import Foundation
 
 public extension Integer {
-    var zero: Bool {
-        return isZero
-    }
-    
     var isZero: Bool {
         return self == 0
     }
