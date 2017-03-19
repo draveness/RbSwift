@@ -34,5 +34,4 @@ public extension String {
     var to_datetime: Date? {
         return Date(str: self)
     }
-    
 }
