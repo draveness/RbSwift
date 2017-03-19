@@ -9,10 +9,6 @@
 import Foundation
 
 public extension String {
-    func concat(_ other: String) -> String {
-        return self + other
-    }
-    
     var chomp: String {
         guard self.length > 0 else { return "" }
         var result = self
@@ -129,6 +125,10 @@ public extension String {
     
     var rstrip: String {
         return chomp
+    }
+    
+    func concat(_ other: String) -> String {
+        return self + other
     }
     
     mutating func prepend(_ other: String) -> String {

@@ -45,6 +45,10 @@ class StringInflectionSpec: QuickSpec {
                 expect("user".pluralize).to(equal("users"))
                 expect("man".pluralize).to(equal("men"))
             }
+            
+            it("is identical to singularize it count == 1") {
+                expect("men".pluralize(1)).to(equal("man"))
+            }
         }
         
         describe(".tableize") {

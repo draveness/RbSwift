@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Indent
 public extension String {
     /// Indents the lines in the receiver
     ///
