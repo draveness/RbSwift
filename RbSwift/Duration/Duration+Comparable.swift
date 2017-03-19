@@ -35,3 +35,4 @@ extension Duration: Comparable, Equatable {
         return lhs.toSeconds == rhs.toSeconds
     }
 }
+

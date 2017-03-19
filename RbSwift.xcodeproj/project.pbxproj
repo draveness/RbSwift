@@ -68,6 +68,10 @@
 		729D3D4F1E7E357800258333 /* Date+Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D4E1E7E357800258333 /* Date+Initializer.swift */; };
 		729D3D511E7E385E00258333 /* Duration+RelativeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */; };
 		729D3D531E7E387E00258333 /* Number+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D521E7E387E00258333 /* Number+Duration.swift */; };
+		729D3D551E7E5F7100258333 /* Date+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D541E7E5F7100258333 /* Date+Duration.swift */; };
+		729D3D571E7E63F200258333 /* Duration+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D561E7E63F200258333 /* Duration+Math.swift */; };
+		729D3D591E7E651600258333 /* Duration+MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D581E7E651600258333 /* Duration+MathSpec.swift */; };
+		729D3D5B1E7E68A900258333 /* Date+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5A1E7E68A900258333 /* Date+Math.swift */; };
 		8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +150,10 @@
 		729D3D4E1E7E357800258333 /* Date+Initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Initializer.swift"; sourceTree = "<group>"; };
 		729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+RelativeSpec.swift"; sourceTree = "<group>"; };
 		729D3D521E7E387E00258333 /* Number+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Duration.swift"; sourceTree = "<group>"; };
+		729D3D541E7E5F7100258333 /* Date+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Duration.swift"; sourceTree = "<group>"; };
+		729D3D561E7E63F200258333 /* Duration+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+Math.swift"; sourceTree = "<group>"; };
+		729D3D581E7E651600258333 /* Duration+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+MathSpec.swift"; sourceTree = "<group>"; };
+		729D3D5A1E7E68A900258333 /* Date+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Math.swift"; sourceTree = "<group>"; };
 		8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +278,7 @@
 				72541BB11E7E33F9008B49B1 /* Duration+Comparable.swift */,
 				72541BAD1E7E33A3008B49B1 /* Duration+Components.swift */,
 				72541BAF1E7E33C1008B49B1 /* Duration+Conversions.swift */,
+				729D3D561E7E63F200258333 /* Duration+Math.swift */,
 				72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */,
 				7248753D1E7CFC95007984FD /* Duration.swift */,
 			);
@@ -279,8 +288,9 @@
 		7248753F1E7CFF96007984FD /* Duration */ = {
 			isa = PBXGroup;
 			children = (
-				72541B001E7D58E2008B49B1 /* DurationSpec.swift */,
+				729D3D581E7E651600258333 /* Duration+MathSpec.swift */,
 				729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */,
+				72541B001E7D58E2008B49B1 /* DurationSpec.swift */,
 			);
 			path = Duration;
 			sourceTree = "<group>";
@@ -290,10 +300,12 @@
 			children = (
 				729D3D4B1E7E353000258333 /* DateFormat */,
 				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
-				72541B051E7D5DD6008B49B1 /* Date+Format.swift */,
-				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
 				72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */,
+				729D3D541E7E5F7100258333 /* Date+Duration.swift */,
+				72541B051E7D5DD6008B49B1 /* Date+Format.swift */,
 				729D3D4E1E7E357800258333 /* Date+Initializer.swift */,
+				729D3D5A1E7E68A900258333 /* Date+Math.swift */,
+				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -406,6 +418,7 @@
 				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
 			);
 			name = DateFormat;
+			path = DateFormat;
 			sourceTree = "<group>";
 		};
 		D890256EF0393E9E9DAF6866 /* Frameworks */ = {
@@ -612,9 +625,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				72541B7F1E7E32E1008B49B1 /* String+Enumeration.swift in Sources */,
+				729D3D551E7E5F7100258333 /* Date+Duration.swift in Sources */,
 				72541B201E7D96F3008B49B1 /* Date+Components.swift in Sources */,
 				72541B851E7E32E1008B49B1 /* String+Regex.swift in Sources */,
 				72541B831E7E32E1008B49B1 /* String+Length.swift in Sources */,
+				729D3D5B1E7E68A900258333 /* Date+Math.swift in Sources */,
 				72541B7E1E7E32E1008B49B1 /* String+Conversions.swift in Sources */,
 				72541B1A1E7D95B5008B49B1 /* MatchData.swift in Sources */,
 				729D3D4D1E7E355300258333 /* InflectorRule.swift in Sources */,
@@ -628,6 +643,7 @@
 				724875281E7CF883007984FD /* R.swift in Sources */,
 				72541BAC1E7E3384008B49B1 /* Duration+Relative.swift in Sources */,
 				72541BB41E7E34C4008B49B1 /* Date+Conversions.swift in Sources */,
+				729D3D571E7E63F200258333 /* Duration+Math.swift in Sources */,
 				72541B801E7E32E1008B49B1 /* String+Filter.swift in Sources */,
 				72541B821E7E32E1008B49B1 /* String+Inflections.swift in Sources */,
 				72541B861E7E32E1008B49B1 /* String+Transform.swift in Sources */,
@@ -657,6 +673,7 @@
 				72541B8D1E7E32FA008B49B1 /* Number+BoolSpec.swift in Sources */,
 				72541B8A1E7E32F2008B49B1 /* Date+InitializeSpec.swift in Sources */,
 				72541B9E1E7E330A008B49B1 /* String+AccessSpec.swift in Sources */,
+				729D3D591E7E651600258333 /* Duration+MathSpec.swift in Sources */,
 				72541BA11E7E330A008B49B1 /* String+ConversionsSpec.swift in Sources */,
 				72541BA51E7E330A008B49B1 /* String+InflectionSpec.swift in Sources */,
 				72541BA91E7E330A008B49B1 /* String+StringPatchSpecSpec.swift in Sources */,

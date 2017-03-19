@@ -16,63 +16,87 @@ public extension Date {
         return calendar.dateComponents(in: currentTimeZone, from: self)
     }
     
-    var era: Int! {
-        return _components.era
+    /// The number of era units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var era: Int {
+        return _components.era ?? 0
     }
     
-    var year: Int! {
-        return _components.year
+    /// The number of year units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var year: Int {
+        return _components.year ?? 0
     }
     
-    var month: Int! {
-        return _components.month
+    /// The number of month units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var month: Int {
+        return _components.month ?? 0
     }
     
-    var day: Int! {
-        return _components.day
+    /// The number of day units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var day: Int {
+        return _components.day ?? 0
     }
     
-    var hour: Int! {
-        return _components.hour
+    /// The number of hour units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var hour: Int {
+        return _components.hour ?? 0
     }
     
-    var minute: Int! {
-        return _components.minute
+    /// The number of minute units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var minute: Int {
+        return _components.minute ?? 0
     }
     
-    var second: Int! {
-        return _components.second
+    /// The number of second units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var second: Int {
+        return _components.second ?? 0
     }
     
-    var nanosecond: Int! {
-        return _components.nanosecond
+    /// The number of nanosecond units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var nanosecond: Int {
+        return _components.nanosecond ?? 0
     }
     
-    var weekday: Int! {
-        return _components.weekday
+    /// The number of weekday units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var weekday: Int {
+        return _components.weekday ?? 0
     }
     
-    var weekdayOrdinal: Int! {
-        return _components.weekdayOrdinal
+    /// The number of weekdayOrdinal units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var weekdayOrdinal: Int {
+        return _components.weekdayOrdinal ?? 0
     }
     
-    var quarter: Int! {
-        return _components.quarter
+    /// The number of quarter units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var quarter: Int {
+        return _components.quarter ?? 0
     }
     
-    var timeZone: TimeZone! {
-        return _components.timeZone
+    /// The number of weekOfMonth units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var weekOfMonth: Int {
+        return _components.weekOfMonth ?? 0
     }
     
-    var weekOfMonth: Int! {
-        return _components.weekOfMonth
+    /// The number of weekOfYear units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var weekOfYear: Int {
+        return _components.weekOfYear ?? 0
     }
     
-    var weekOfYear: Int! {
-        return _components.weekOfYear
-    }
-    
-    var yearForWeekOfYear: Int! {
-        return _components.yearForWeekOfYear
+    /// The number of yearForWeekOfYear units for the receiver.
+    /// - note: This value is interpreted in the context of the calendar and timezone with which it is used
+    var yearForWeekOfYear: Int {
+        return _components.yearForWeekOfYear ?? 0
     }
 }

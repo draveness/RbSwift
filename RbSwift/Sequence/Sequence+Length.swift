@@ -22,5 +22,4 @@ public extension Sequence {
         self.forEach { _ in i += 1 }
         return i
     }
-    
 }

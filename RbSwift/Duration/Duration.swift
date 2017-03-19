@@ -43,7 +43,7 @@ public struct Duration {
         return values.reduce(0) { $0 + secondsPerComponent[$1.0]! * $1.1 }
     }
     
-    private init(values: [DurationComponent: Int]) {
+    init(values: [DurationComponent: Int]) {
         self.values = values
     }
     
@@ -57,3 +57,8 @@ public struct Duration {
         .seconds: 1]
 }
 
+extension Duration: CustomStringConvertible {
+    public var description: String {
+        return values.filter { $1 != 0 }.map { "\($1) \($0.rawValue)" }.joined(separator: ", ")
+    }
+}

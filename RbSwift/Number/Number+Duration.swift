@@ -10,6 +10,10 @@ import Foundation
 
 public extension Int {
     var years: Duration {
-        return Duration(years: 1)
+        return Duration(years: self)
+    }
+    
+    var year: Duration {
+        return Duration(years: self)
     }
 }

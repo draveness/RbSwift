@@ -10,10 +10,34 @@ import Foundation
 
 public extension Duration {
     var since: Date {
-        return Calendar.current.date(byAdding: self.to_dateComponents, to: Date.now)!
+        return since()
+    }
+    
+    var later: Date {
+        return since
     }
     
     var ago: Date {
-        return Calendar.current.date(byAdding: self.to_dateComponents(before: true), to: Date.now)!
+        return ago()
+    }
+    
+    var before: Date {
+        return ago
+    }
+    
+    func before(_ date: Date = Date.now) -> Date {
+        return ago(date)
+    }
+    
+    func later(_ date: Date = Date.now) -> Date {
+        return since(date)
+    }
+    
+    func since(_ date: Date = Date.now) -> Date {
+        return Calendar.current.date(byAdding: self.to_dateComponents, to: date)!
+    }
+    
+    func ago(_ date: Date = Date.now) -> Date {
+        return Calendar.current.date(byAdding: self.to_dateComponents(before: true), to: date)!
     }
 }
