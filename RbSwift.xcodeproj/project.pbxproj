@@ -248,6 +248,7 @@
 				72541B6E1E7E32E1008B49B1 /* String+Access.swift */,
 				72541B6F1E7E32E1008B49B1 /* String+Bool.swift */,
 				72541B701E7E32E1008B49B1 /* String+Case.swift */,
+				729D3D5C1E7EB46900258333 /* String+Chars.swift */,
 				72541B711E7E32E1008B49B1 /* String+Conversions.swift */,
 				72541B721E7E32E1008B49B1 /* String+Enumeration.swift */,
 				72541B741E7E32E1008B49B1 /* String+Indent.swift */,
@@ -257,7 +258,6 @@
 				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
 				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
-				729D3D5C1E7EB46900258333 /* String+Chars.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -345,6 +345,7 @@
 				72541B911E7E330A008B49B1 /* String+AccessSpec.swift */,
 				72541B921E7E330A008B49B1 /* String+BoolSpec.swift */,
 				72541B931E7E330A008B49B1 /* String+CaseSpec.swift */,
+				729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */,
 				72541B941E7E330A008B49B1 /* String+ConversionsSpec.swift */,
 				72541B951E7E330A008B49B1 /* String+EnumerationSpec.swift */,
 				72541B971E7E330A008B49B1 /* String+IndentSpec.swift */,
@@ -354,7 +355,6 @@
 				72541B9B1E7E330A008B49B1 /* String+RegexSpec.swift */,
 				72541B961E7E330A008B49B1 /* String+RemoveSpec.swift */,
 				72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */,
-				729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
