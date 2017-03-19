@@ -12,7 +12,6 @@ import RbSwift
 
 class TimeZoneSpec: QuickSpec {
     override func spec() {
-        
         describe(".timezone") {
             it("returns timezone with static variable") {
                 expect(TimeZone.utc).to(equal(TimeZone(abbreviation: "UTC")!))
