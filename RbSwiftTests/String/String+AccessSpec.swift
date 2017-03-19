@@ -109,6 +109,7 @@ class StringAccessSpec: QuickSpec {
             it("returns the first char of a string") {
                 expect("xyz".chr).to(equal("x"))
                 expect("".chr).to(beEmpty())
+                expect("xyz".chr).to(equal("xyz".first))
             }
         }
         
