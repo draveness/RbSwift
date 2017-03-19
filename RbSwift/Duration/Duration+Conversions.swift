@@ -16,4 +16,20 @@ public extension Duration {
     var to_i: Int {
         return toSeconds
     }
+    
+    var to_dateComponents: DateComponents {
+        return to_dateComponents()
+    }
+    
+    func to_dateComponents(before: Bool = false) -> DateComponents {
+        var dateComponents = DateComponents()
+        let sign = before ? -1 : 1
+        dateComponents.year = self.years * sign
+        dateComponents.month = self.months * sign
+        dateComponents.day = (self.days + self.weeks * 7) * sign
+        dateComponents.hour = self.hours * sign
+        dateComponents.minute = self.minutes * sign
+        dateComponents.second = self.seconds * sign
+        return dateComponents
+    }
 }
