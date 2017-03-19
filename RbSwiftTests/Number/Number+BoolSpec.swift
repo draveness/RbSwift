@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberPatchSpec: QuickSpec {
+class NumberBoolSpec: QuickSpec {
     
     override func spec() {
         describe(".times") {

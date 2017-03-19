@@ -31,7 +31,6 @@ class InitializeSpec: QuickSpec {
                 expect(date.hour).to(equal(0))
                 expect(date.minute).to(equal(35))
                 expect(date.second).to(equal(36))
-//                expect(date.timeZone).to(equal(TimeZone(abbreviation: "CST")!))
             }
         }
     }
