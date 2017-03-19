@@ -9,11 +9,15 @@
 import Foundation
 
 
-public var GlobalTimeZone: TimeZone = TimeZone.current
-
 public extension Date {
-    var currentTimeZone: TimeZone {
-        return GlobalTimeZone
+    static func parse(str: String) -> Date? {
+        guard let date = DateFormat.parse(str: str) else { return nil }
+        return date
+    }
+    
+    init?(str: String) {
+        guard let date = DateFormat.parse(str: str) else { return nil }
+        self.init(timeIntervalSince1970: date.timeIntervalSince1970)
     }
     
     var utc: Date {

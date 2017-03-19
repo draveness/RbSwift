@@ -30,4 +30,9 @@ public extension String {
         }
         return value
     }
+    
+    var to_datetime: Date? {
+        return Date(str: self)
+    }
+    
 }
