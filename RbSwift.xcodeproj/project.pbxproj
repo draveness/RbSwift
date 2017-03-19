@@ -56,7 +56,6 @@
 		72541BA61E7E330A008B49B1 /* String+LengthSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B991E7E330A008B49B1 /* String+LengthSpec.swift */; };
 		72541BA71E7E330A008B49B1 /* String+OperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9A1E7E330A008B49B1 /* String+OperatorSpec.swift */; };
 		72541BA81E7E330A008B49B1 /* String+RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9B1E7E330A008B49B1 /* String+RegexSpec.swift */; };
-		72541BA91E7E330A008B49B1 /* String+StringPatchSpecSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9C1E7E330A008B49B1 /* String+StringPatchSpecSpec.swift */; };
 		72541BAA1E7E330A008B49B1 /* String+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */; };
 		72541BAC1E7E3384008B49B1 /* Duration+Relative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */; };
 		72541BAE1E7E33A3008B49B1 /* Duration+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541BAD1E7E33A3008B49B1 /* Duration+Components.swift */; };
@@ -72,6 +71,7 @@
 		729D3D591E7E651600258333 /* Duration+MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D581E7E651600258333 /* Duration+MathSpec.swift */; };
 		729D3D5B1E7E68A900258333 /* Date+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5A1E7E68A900258333 /* Date+Math.swift */; };
 		729D3D5D1E7EB46900258333 /* String+Chars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5C1E7EB46900258333 /* String+Chars.swift */; };
+		729D3D5F1E7EB51700258333 /* String+CharsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */; };
 		8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,7 +138,6 @@
 		72541B991E7E330A008B49B1 /* String+LengthSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+LengthSpec.swift"; sourceTree = "<group>"; };
 		72541B9A1E7E330A008B49B1 /* String+OperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OperatorSpec.swift"; sourceTree = "<group>"; };
 		72541B9B1E7E330A008B49B1 /* String+RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RegexSpec.swift"; sourceTree = "<group>"; };
-		72541B9C1E7E330A008B49B1 /* String+StringPatchSpecSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+StringPatchSpecSpec.swift"; sourceTree = "<group>"; };
 		72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TransformSpec.swift"; sourceTree = "<group>"; };
 		72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+Relative.swift"; sourceTree = "<group>"; };
 		72541BAD1E7E33A3008B49B1 /* Duration+Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+Components.swift"; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		729D3D581E7E651600258333 /* Duration+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+MathSpec.swift"; sourceTree = "<group>"; };
 		729D3D5A1E7E68A900258333 /* Date+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Math.swift"; sourceTree = "<group>"; };
 		729D3D5C1E7EB46900258333 /* String+Chars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Chars.swift"; sourceTree = "<group>"; };
+		729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CharsSpec.swift"; sourceTree = "<group>"; };
 		8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -353,8 +353,8 @@
 				72541B9A1E7E330A008B49B1 /* String+OperatorSpec.swift */,
 				72541B9B1E7E330A008B49B1 /* String+RegexSpec.swift */,
 				72541B961E7E330A008B49B1 /* String+RemoveSpec.swift */,
-				72541B9C1E7E330A008B49B1 /* String+StringPatchSpecSpec.swift */,
 				72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */,
+				729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -675,13 +675,13 @@
 				729D3D591E7E651600258333 /* Duration+MathSpec.swift in Sources */,
 				72541BA11E7E330A008B49B1 /* String+ConversionsSpec.swift in Sources */,
 				72541BA51E7E330A008B49B1 /* String+InflectionSpec.swift in Sources */,
-				72541BA91E7E330A008B49B1 /* String+StringPatchSpecSpec.swift in Sources */,
 				72541BA41E7E330A008B49B1 /* String+IndentSpec.swift in Sources */,
 				72541BA61E7E330A008B49B1 /* String+LengthSpec.swift in Sources */,
 				72541B9F1E7E330A008B49B1 /* String+BoolSpec.swift in Sources */,
 				724875231E7CF850007984FD /* SequencePatchSpec.swift in Sources */,
 				72541B221E7D986B008B49B1 /* DateFormatSpec.swift in Sources */,
 				72541BAA1E7E330A008B49B1 /* String+TransformSpec.swift in Sources */,
+				729D3D5F1E7EB51700258333 /* String+CharsSpec.swift in Sources */,
 				729D3D511E7E385E00258333 /* Duration+RelativeSpec.swift in Sources */,
 				72541BA81E7E330A008B49B1 /* String+RegexSpec.swift in Sources */,
 				72541B891E7E32F2008B49B1 /* Date+ComponentsSpec.swift in Sources */,
