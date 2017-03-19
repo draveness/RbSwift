@@ -13,4 +13,17 @@ public extension String {
     var chars: [String] {
         return split("")
     }
+    
+    /// Returns all lines in string form separated by newline `\n`.
+    var lines: [String] {
+        return lines()
+    }
+    
+    /// Returns all lines in string form separated by separator.
+    ///
+    /// - Parameter separator: A separator used to separate the receiver string
+    /// - Returns: An array of strings separated by separator
+    func lines(_ separator: String = "\n") -> [String] {
+        return components(separatedBy: separator)
+    }
 }

@@ -12,7 +12,7 @@ import RbSwift
 
 class StringEnumerationSpec: QuickSpec {
     override func spec() {
-        describe(".eachLine()") {
+        describe(".eachLine(separator:closure:)") {
             it("separates the string by \\n characters") {
                 var results: [String] = []
                 "Hello\nWorld".eachLine {
@@ -30,7 +30,7 @@ class StringEnumerationSpec: QuickSpec {
             }
         }
         
-        describe(".eachChar()") {
+        describe(".eachChar(closure:)") {
             it("separates the string by characters") {
                 var results: [String] = []
                 "Hello\n".eachChar {

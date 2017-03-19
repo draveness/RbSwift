@@ -15,6 +15,7 @@ class StringConversionsSpec: QuickSpec {
         describe(".to_i") {
             it("returns an integer under different circumstances") {
                 expect("0a".to_i(16)).to(equal(10))
+                expect("0xa".to_i(16)).to(equal(0))
                 expect("12".to_i).to(equal(12))
                 expect("-1100101".to_i(2)).to(equal(-101))
                 expect("1100101".to_i(2)).to(equal(101))
@@ -35,6 +36,15 @@ class StringConversionsSpec: QuickSpec {
                 expect("d-1".to_i).to(equal(0))
                 expect("0a".to_i).to(equal(0))
                 expect("hello".to_i).to(equal(0))
+            }
+        }
+        
+        describe(".hex") { 
+            it("returns a hex integer from str") {
+                expect("-".hex).to(equal(0))
+                expect("0xa".hex).to(equal(10))
+                expect("-0xa".hex).to(equal(-10))
+                expect("a".hex).to(equal(10))
             }
         }
         
