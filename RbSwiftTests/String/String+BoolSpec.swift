@@ -30,12 +30,71 @@ class StringBoolSpec: QuickSpec {
                 expect("\t\nblah".isBlank).to(beFalse())
             }
         }
+
+        describe(".isUpcase") {
+            it("returns true if the string are all uppercase.") {
+                expect("  ".isUpcase).to(beTrue())
+                expect("he".isUpcase).to(beFalse())
+                expect("HE".isUpcase).to(beTrue())
+                expect("oe".isUpcase).to(beFalse())
+            }
+        }
         
+        describe(".isDowncase") {
+            it("returns true if the string are all lowercase.") {
+                expect("  ".isDowncase).to(beTrue())
+                expect("he".isDowncase).to(beTrue())
+                expect("HE".isDowncase).to(beFalse())
+                expect("oe".isDowncase).to(beTrue())
+            }
+        }
+
         describe(".isExclude(substring:)") {
             it("returns true if the string does not include the other string.") {
                 expect("  ".isExlude("he")).to(beTrue())
                 expect("he".isExlude("he")).to(beFalse())
                 expect("ohe".isExlude("he")).to(beFalse())
+                expect("ohe".isExlude("he", "oooo")).to(beFalse())
+                expect("oe".isExlude("he", "dajkldjda")).to(beTrue())
+            }
+        }
+        
+        describe(".isInclude(substring:)") {
+            it("returns true if the string includes the other string.") {
+                expect("  ".isInclude("he")).to(beFalse())
+                expect("he".isInclude("he")).to(beTrue())
+                expect("ohe".isInclude("he")).to(beTrue())
+                expect("ohe".isInclude("he", "oooo")).to(beTrue())
+                expect("oe".isInclude("he", "dajkldjda")).to(beFalse())
+            }
+        }
+        
+        describe(".isStartWith(substring:)") {
+            it("returns true if the string starts with the other string.") {
+                expect("he".isStartWith("he")).to(beTrue())
+                expect("ohe".isStartWith("he", "oooo")).to(beFalse())
+                expect("oe".isStartWith("o", "dajkldjda")).to(beTrue())
+            }
+        }
+        
+        describe(".isEndWith(substring:)") {
+            it("returns true if the string ends with the other string.") {
+                expect("  ".isEndWith("he")).to(beFalse())
+                expect("he".isEndWith("he")).to(beTrue())
+                expect("ohe".isEndWith("he")).to(beTrue())
+                expect("ohe".isEndWith("he", "oooo")).to(beTrue())
+                expect("oe".isEndWith("he", "dajkldjda")).to(beFalse())
+            }
+        }
+        
+        describe(".isMatch(substring:)") {
+            it("returns true if the string matches the other string.") {
+                expect("  ".isMatch("he")).to(beFalse())
+                expect("he".isMatch("he")).to(beTrue())
+                expect("ohe".isMatch("he", 2)).to(beFalse())
+                expect("oe".isMatch("he")).to(beFalse())
+                expect("oe".isMatch(".e")).to(beTrue())
+                expect("abcdefghijklmnopqrstuvwxyz".isMatch(".*")).to(beTrue())
             }
         }
     }
