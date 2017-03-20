@@ -33,6 +33,7 @@ class StringRegexSpec: QuickSpec {
             it("returns a copy of str with the first occurrence of pattern replaced by the second argument") {
                 expect("hello".gsub("l", "abc")).to(equal("heabcabco"))
                 expect("hello".gsub("le", "lll")).to(equal("hello"))
+                expect("hello".gsub(".".literal, "lll")).to(equal("hello"))
                 expect("hello".gsub(".", "lll")).to(equal("lll" * 5))
                 expect("hello".gsub("^he", "lll")).to(equal("lllllo"))
                 expect("my name is draven".gsub("\\b(?<!['’`])[a-z]") { _ in

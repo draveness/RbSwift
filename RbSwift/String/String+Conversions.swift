@@ -22,7 +22,6 @@ public extension String {
         return to_i(10)
     }
     
-    
     /// Treats leading characters from str as a string of hexadecimal digits (with an optional sign and an optional 0x)
     /// and returns the corresponding number. Zero is returned on error.
     var to_hex: Int {
@@ -117,10 +116,39 @@ public extension String {
     var to_datetime: Date? {
         return Date(str: self)
     }
-    
-    /// Try to convert `self` to a `Regexp` which used to match string or pass as parameter
+}
+
+extension String {
+    /// Try to convert `self` to a `Regex` which used to match string or pass as parameter
     /// into some methods.
-    var to_regex: Regex {
-        return Regex(self)
+    public var to_regex: Regex {
+        return to_regex()
+    }
+    
+    /// Returns a `Regex` with matching string literally.
+    public var literal: Regex {
+        return to_regex(true)
+    }
+
+    /// Try to convert `self` to a `Regex` which used to match string or pass as parameter
+    /// into some methods.
+    ///
+    /// - Parameter literal: A bool indicate whether match the receiver literally
+    /// - Returns: A `Regex` struct contains the receiver as a pattern
+    public func to_regex(_ literal: Bool = false) -> Regex {
+        return Regex(self, literal: literal)
+    }
+}
+
+extension Character {
+    /// Try to convert `self` to a `Regex` which used to match string or pass as parameter
+    /// into some methods.
+    public var to_regex: Regex {
+        return String(self).to_regex
+    }
+    
+    /// Returns a `Regex` with matching character literally.
+    public var literal: Regex {
+        return String(self).literal
     }
 }
