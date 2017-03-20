@@ -16,8 +16,11 @@ public extension String {
     }
     
     /// Downcases the contents of the receiver
-    mutating func downcased() {
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func downcased() -> String {
         self = downcase
+        return self
     }
     
     /// Returns a copy of str with all lowercase letters replaced with their uppercase counterparts.
@@ -26,8 +29,11 @@ public extension String {
     }
     
     /// Upcases the contents of the receiver
-    mutating func upcased() {
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func upcased() -> String {
         self = upcase
+        return self
     }
     
     /// Returns a copy of str with uppercase alphabetic characters converted to lowercase and lowercase characters converted to uppercase.
@@ -36,7 +42,10 @@ public extension String {
     }
     
     /// Equivalent to `swapcase`, but modifies the receiver in place.
-    mutating func swapcased() {
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func swapcased() -> String {
         self = swapcase
+        return self
     }
 }

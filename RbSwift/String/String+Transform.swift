@@ -9,6 +9,7 @@
 import Foundation
 
 public extension String {
+    /// Returns a new String with the \n, \r, and \r\n removed from the end of str,
     var chomp: String {
         guard self.length > 0 else { return "" }
         var result = self
@@ -26,9 +27,14 @@ public extension String {
         return result
     }
     
-    func chomp(_ chars: String = "") -> String {
+    /// Returns a new String with the seaprator removed from the end of str (if present).
+    /// If separator is an empty string, it will remove all trailing newlines from the string.
+    ///
+    /// - Parameter separator: A string used to chomp from the end of the string
+    /// - Returns: A new string with the end of str being chomped from the receiver
+    func chomp(_ separator: String = "") -> String {
         guard self.length > 0 else { return "" }
-        guard chars.length > 0 else {
+        guard separator.length > 0 else {
             var result = self
             while result.length > 0 {
                 if let lastChar = result.characters.last {
@@ -41,11 +47,23 @@ public extension String {
             }
             return result
         }
-        guard hasSuffix(chars) else { return self }
-        let substring = self.substring(to: self.length - chars.length)
+        guard hasSuffix(separator) else { return self }
+        let substring = self.substring(to: self.length - separator.length)
         return substring
     }
     
+    /// Modifies str in place as described for .chomp(separator:), returning str.
+    ///
+    /// - Parameter separator: A string used to chomp from the end of the string
+    /// - Returns: Self
+    @discardableResult mutating func chomped(_ separator: String = "") -> String {
+        self = chomp(separator)
+        return self
+    }
+    
+    /// Return a new string with the last char removed from the receiver
+    /// This methods will return a empty string if the receiver length is less than or
+    /// equal to 0.
     var chop: String {
         guard self.length > 0 else { return "" }
         var result = self
@@ -53,24 +71,61 @@ public extension String {
         return result
     }
     
-    mutating func clear() -> String {
+    /// Modifies str in place as described for .chop, returning str.
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func choped() -> String {
+        self = chop
+        return self
+    }
+    
+    /// Makes string empty.
+    ///
+    /// - Returns: A empty string
+    @discardableResult mutating func cleared() -> String {
         self = ""
         return self
     }
     
+    /// Reverses all characters in the string.
     var reverse: String {
         return String(self.characters.reversed())
     }
     
+    /// Modifies str in place as described for .reverse, returning str.
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func reversed() -> String {
+        self = reverse
+        return self
+    }
+    
+    /// Divides str into substrings based on a delimiter, returning an array of these substrings.
     var split: [String] {
         return split(" ")
     }
     
-    func split(_ separator: String = " ") -> [String] {
-        guard separator.length > 0 else { return self.characters.map { String($0) } }
+    /// Divides str into substrings based on a delimiter, returning an array of these substrings. (default is " ")
+    ///
+    /// - Parameter separator: A string to seperate the receiver
+    /// - Returns: An array of string which separated by separator
+    func split(_ separator: RegexConvertible = " ", limit: Int = 0) -> [String] {
+        guard separator.pattern.length > 0 else { return self.characters.map { String($0) } }
         let result = trimmingCharacters(in: CharacterSet.whitespaces)
-        guard separator != " " else { return result.components(separatedBy: CharacterSet.whitespaces).filter { !$0.isEmpty } }
-        var results = result.components(separatedBy: separator)
+        guard separator.pattern != " " else { return result.components(separatedBy: CharacterSet.whitespaces).filter { !$0.isEmpty } }
+        let datas = separator.regex.scan(self)
+        var results: [String] = []
+        var traceIndex: Int = 0
+        for data in datas {
+            if let str = self.range(traceIndex, data.range.location - 1) {
+                results.append(str)
+                traceIndex = data.range.location + data.range.length
+            }
+        }
+        if traceIndex < self.length {
+            results.append(self.from(traceIndex)!)
+        }
+
         while let first = results.first {
             if first.isEmpty {
                 results.remove(at: 0)
@@ -131,12 +186,12 @@ public extension String {
         return self + other
     }
     
-    mutating func prepend(_ other: String) -> String {
+    @discardableResult mutating func prepend(_ other: String) -> String {
         self = other + self
         return self
     }
     
-    mutating func replace(_ other: String) -> String {
+    @discardableResult mutating func replace(_ other: String) -> String {
         self = other
         return self
     }

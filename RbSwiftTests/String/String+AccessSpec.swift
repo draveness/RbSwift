@@ -91,6 +91,16 @@ class StringAccessSpec: QuickSpec {
             }
         }
         
+        describe(".range(from:to:)") { 
+            it("returns a substring within the range of the given parameter") {
+                let str = "hello"
+                expect(str.range(0, 0)).to(equal("h"))
+                expect(str.range(0, 1)).to(equal("he"))
+                expect(str.range(0, 10)).to(equal("hello"))
+                expect(str.range(3, 10)).to(equal("lo"))
+            }
+        }
+        
         describe(".substring(to:)") {
             it("returns a new string substring to index") {
                 expect("Hello".substring(to: 1)).to(equal("H"))

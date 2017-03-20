@@ -18,7 +18,7 @@ class StringTransformSpec: QuickSpec {
             }
         }
         
-        describe(".chomp") {
+        describe(".chomp(chars:)") {
             it("returns a new string without whitespace in the end") {
                 expect("1Hello\r1\n".chomp).to(equal("1Hello\r1"))
                 expect("Hello\r\n\r\n".chomp).to(equal("Hello"))
@@ -28,9 +28,7 @@ class StringTransformSpec: QuickSpec {
                 expect("  Hello  \r".chomp).to(equal("  Hello"))
                 expect("".chomp).to(beEmpty())
             }
-        }
-        
-        describe(".chomp(chars:)") {
+
             it("returns a new string without the passing chars in the end") {
                 expect("Hello\r\n".chomp("o\r\n")).to(equal("Hell"))
                 expect("Hello".chomp("o\r\n")).to(equal("Hello"))
@@ -56,7 +54,7 @@ class StringTransformSpec: QuickSpec {
         describe(".clear") {
             it("makes the string empty") {
                 var s = "xyz"
-                expect(s.clear()).to(beEmpty())
+                expect(s.cleared()).to(beEmpty())
                 expect(s).to(beEmpty())
             }
         }
@@ -82,6 +80,7 @@ class StringTransformSpec: QuickSpec {
                 expect(" now's  the time".split(" ")).to(equal(["now's", "the", "time"]))
                 expect("mellow yellow".split("ello")).to(equal(["m", "w y", "w"]))
                 expect("1,2,,3,4,,".split(",")).to(equal(["1", "2", "", "3", "4"]))
+                expect("red yellow and blue".split("[ae ]")).to(equal(["r", "d", "y", "llow", "", "nd", "blu"]))
             }
         }
         
