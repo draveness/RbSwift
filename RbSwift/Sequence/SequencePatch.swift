@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 public extension Sequence {
     func select(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
         var result: [Iterator.Element] = []
