@@ -36,6 +36,19 @@ public extension String {
         return to_hex
     }
     
+    /// Treats leading characters of str as a string of octal digits (with an optional sign) 
+    /// and returns the corresponding number. Returns 0 if the conversion fails.
+    var oct: Int {
+        return to_i(8)
+    }
+    
+    /// Return the Integer ordinal of a one-character string.
+    /// Return 0 if the receiver is an empty string.
+    var ord: UInt32 {
+        guard let first = self.unicodeScalars.first else { return 0 }
+        return first.value
+    }
+    
     /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36).
     /// Extraneous characters past the end of a valid number are ignored.
     /// If there is not a valid number at the start of str, 0 is returned.
