@@ -8,8 +8,6 @@
 
 import Foundation
 
-infix operator =~
-
 /// Returns true if right pattern is match with left string, the pattern string would converts to a NSRegularExpression
 /// automaticlly in method.
 ///
@@ -18,9 +16,7 @@ infix operator =~
 ///   - pattern: A pattern used to match the string
 /// - Returns: A bool value indicates whether the str is matched with the pattern
 public func =~(str: String, pattern: String) -> Bool {
-    let regex = try! NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
-    guard let _ = regex.firstMatch(in: str, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, str.length)) else { return false }
-    return true
+    return str =~ pattern.to_regex
 }
 
 /// Returns true if right pattern is match with left character, the pattern string would converts to a NSRegularExpression
@@ -31,11 +27,11 @@ public func =~(str: String, pattern: String) -> Bool {
 ///   - right: A pattern used to match the string
 /// - Returns: A bool value indicates whether the char is matched with the pattern
 public func =~(left: Character, right: String) -> Bool {
-    return String(left) =~ right
+    return String(left) =~ right.to_regex
 }
 
-/// Returns true if right `Character` which converted to a `NSRegularExpression` is match with left character, 
-/// the pattern string would converts to a NSRegularExpression automaticlly in method. 
+/// Returns true if right `Character` which converted to a `NSRegularExpression` is match with left character,
+/// the pattern string would converts to a NSRegularExpression automaticlly in method.
 /// This method use =~(str:pattern) internal to match char with pattern.
 ///
 /// - Parameters:
@@ -43,7 +39,7 @@ public func =~(left: Character, right: String) -> Bool {
 ///   - right: A Character used to match the string, will convert to String, and eventually NSRegularExpression.
 /// - Returns: A bool value indicates whether the char is matched with the pattern
 public func =~(left: String, right: Character) -> Bool {
-    return left =~ String(right)
+    return left =~ String(right).to_regex
 }
 
 /// Returns a new String containing integer copies of the receiver. integer must be greater than or equal to 0.

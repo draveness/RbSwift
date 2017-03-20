@@ -53,8 +53,8 @@ class StringRegexSpec: QuickSpec {
             it("converts pattern to a NSRegularExpression, then invokes its match method on str") {
                 let matchData = "hello".match("(.)ll(o)")!
                 expect(matchData.match).to(equal("ello"))
-                expect(matchData.datas[0]).to(equal("e"))
-                expect(matchData.datas[1]).to(equal("o"))
+                expect(matchData.captures[0]).to(equal("e"))
+                expect(matchData.captures[1]).to(equal("o"))
             }
             
             it("retuns nil if matches nothing") {
