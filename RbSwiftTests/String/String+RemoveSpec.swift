@@ -38,6 +38,14 @@ class StringRemoveSpec: QuickSpec {
                 expect(" foo   bar    \n   \t   boo    ".squish).to(equal("foo bar boo"))
             }
         }
+        
+        describe(".squeeze") {
+            it("Returns a new string where runs of the same character that occur in this str replaced by single char") {
+                expect("yellow moon".squeeze).to(equal("yelow mon"))
+                expect("  now   is  the".squeeze(" ")).to(equal(" now is the"))
+                expect("putters shoot balls".squeeze("to")).to(equal("puters shot balls"))
+            }
+        }
     }
 }
 
