@@ -234,20 +234,38 @@ public extension String {
         return self
     }
     
+    /// Replace the receiver string by the passing parameter
+    ///
+    /// - Parameter other: A new string used to replace self
+    /// - Returns: Self
     @discardableResult mutating func replace(_ other: String) -> String {
         self = other
         return self
     }
     
-    func partition(_ sep: String) -> [String] {
-        let comps = self.components(separatedBy: sep)
-        guard comps.length >= 2 else { return [self, "", ""] }
-        return [comps[0], sep, comps.dropFirst().joined(separator: sep)]
+    /// Searches sep or pattern (Regex) in the string and returns the part 
+    /// before it, the match, and the part after it. If it is not found,
+    /// returns two empty strings and str.
+    ///
+    /// - Parameter pattern: A string used to separate the receiver
+    /// - Returns: An array of string which separated by seperator
+    func partition(_ pattern: RegexConvertible) -> [String] {
+        guard let data = match(pattern),
+            let head = self.to(data.range.location - 1),
+            let tail = self.from(data.range.location + data.range.length) else { return [self, "", ""] }
+        return [head, data.match, tail]
     }
     
-    func rpartition(_ sep: String) -> [String] {
-        let comps = self.components(separatedBy: sep)
-        guard comps.length >= 2 else { return ["", "", self] }
-        return [comps.dropLast().joined(separator: sep), sep, comps.last!]
+    /// Searches sep or pattern (regexp) in the string from the end of the 
+    /// string, and returns the part before it, the match, and the part after it. 
+    /// If it is not found, returns two empty strings and str.
+    ///
+    /// - Parameter pattern: A string used to separate the receiver
+    /// - Returns: An array of string which separated by seperator
+    func rpartition(_ pattern: RegexConvertible) -> [String] {
+        guard let data = scan(pattern).last,
+            let head = self.to(data.range.location - 1),
+            let tail = self.from(data.range.location + data.range.length) else { return ["", "", self] }
+        return [head, data.match, tail]
     }
 }
