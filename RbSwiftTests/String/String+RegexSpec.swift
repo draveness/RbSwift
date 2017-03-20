@@ -62,6 +62,16 @@ class StringRegexSpec: QuickSpec {
                 expect(matchData).to(beNil())
             }
         }
+        
+        describe(".scan(str:)") {
+            it("returns all the match results in an array") {
+                let str = "abcxxabcxxsbc"
+                let scanResults = str.scan("(.)bc")
+                expect(scanResults[0].to_a).to(equal(["abc", "a"]))
+                expect(scanResults[1].to_a).to(equal(["abc", "a"]))
+                expect(scanResults[2].to_a).to(equal(["sbc", "s"]))
+            }
+        }
     }
 }
 
