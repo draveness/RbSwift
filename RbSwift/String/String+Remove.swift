@@ -12,17 +12,17 @@ import Foundation
 public extension String {
     /// Returns a new string with all occurrences of the patterns removed.
     ///
-    /// - Parameter patterns: A string which will be converted to `NSRegularExpression`
+    /// - Parameter patterns: An array of string which will be converted to `Regexp`
     /// - Returns: A new string with all occurrences of the patterns removed
-    func remove(_ patterns: String...) -> String {
+    func remove(_ patterns: RegexConvertible...) -> String {
         return remove(patterns)
     }
     
     /// Returns a new string with all occurrences of the patterns removed.
     ///
-    /// - Parameter patterns: A string which will be converted to `NSRegularExpression`
+    /// - Parameter patterns: An array of string which will be converted to `Regexp`
     /// - Returns: A new string with all occurrences of the patterns removed
-    func remove(_ patterns: [String]) -> String {
+    func remove(_ patterns: [RegexConvertible]) -> String {
         var result = self
         patterns.forEach { result.gsubed($0, "") }
         return result
