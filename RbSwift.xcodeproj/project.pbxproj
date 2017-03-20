@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1734AE0417F567A72978FAC4 /* Pods_RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */; };
 		302B4D375F88F634BE066647 /* Pods_RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6FB7BF2D3E3A56DE0F483D /* Pods_RbSwift.framework */; };
 		724874FC1E7CF813007984FD /* RbSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 724874FA1E7CF813007984FD /* RbSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724875061E7CF829007984FD /* ArrayPatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875021E7CF829007984FD /* ArrayPatch.swift */; };
@@ -73,6 +74,7 @@
 		729D3D5D1E7EB46900258333 /* String+Chars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5C1E7EB46900258333 /* String+Chars.swift */; };
 		729D3D5F1E7EB51700258333 /* String+CharsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */; };
 		8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */; };
+		EB0B86ED90E27DC2018745E6 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,7 +159,9 @@
 		8350DAD0880B7AE2E6E28413 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A27D86828B9709B27D2CC096 /* Pods-RbSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.release.xcconfig"; sourceTree = "<group>"; };
 		AA9820DFA94ACA23D1F7F05E /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9E59D9F4BB3658534902C7 /* Pods-RbSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37E0F0348628316CA597CBB /* Pods-RbSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RbSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302B4D375F88F634BE066647 /* Pods_RbSwift.framework in Frameworks */,
+				1734AE0417F567A72978FAC4 /* Pods_RbSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,12 +181,20 @@
 			files = (
 				724875151E7CF843007984FD /* RbSwift.framework in Frameworks */,
 				8433FEA7868184CA1A3DBDB2 /* Pods_RbSwiftTests.framework in Frameworks */,
+				EB0B86ED90E27DC2018745E6 /* Pods_RbSwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D74309F6A6B8E1E2C4BCA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6B42246106CB516A53DF4EE0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,12 +206,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7062BA3357BD5C5CD6608FDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */,
+				D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		724874ED1E7CF813007984FD = {
 			isa = PBXGroup;
 			children = (
 				724874F91E7CF813007984FD /* RbSwift */,
 				724875111E7CF843007984FD /* RbSwiftTests */,
 				7248753B1E7CFC26007984FD /* Supporting Files */,
+				28D74309F6A6B8E1E2C4BCA2 /* Pods */,
+				7062BA3357BD5C5CD6608FDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
