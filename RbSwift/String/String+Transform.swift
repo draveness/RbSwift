@@ -80,6 +80,15 @@ public extension String {
         return self
     }
     
+    func count(_ strs: String...) -> Int {
+        let strs = strs.map { "[\($0)]" }
+        let sets = strs.map { Set<MatchData>($0.regex.scan(self)) }
+        guard let first = sets.first else { return 0 }
+        return sets.reduce(first, { (result, set) in
+            result.intersection(set)
+        }).count
+    }
+    
     /// Reverses all characters in the string.
     var reverse: String {
         return String(self.characters.reversed())
