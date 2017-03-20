@@ -80,6 +80,13 @@ public extension String {
         return self
     }
     
+    /// Each `strs` parameter defines a set of characters to count. The intersection of these sets
+    /// defines the characters to count in str. Any `strs` that starts with a caret ^ is negated.
+    /// The sequence c1-c2 means all characters between c1 and c2. The backslash character \ can be used 
+    /// to escape ^ or - and is otherwise ignored unless it appears at the end of a sequence or the end of a `strs`.
+    ///
+    /// - Parameter strs: An array of string used to match the receiver string
+    /// - Returns: The count of all the matched characters
     func count(_ strs: String...) -> Int {
         let strs = strs.map { "[\($0)]" }
         let sets = strs.map { Set<MatchData>($0.regex.scan(self)) }
@@ -89,8 +96,42 @@ public extension String {
         }).count
     }
     
+    /// Returns a copy of str with all characters in the intersection of its arguments deleted.
+    /// Uses the same rules for building the set of characters as String#count.
+    ///
+    /// - Parameter strs: An array of string used to match the receiver string
+    /// - Returns: A string with all chars in strs deleted
     func delete(_ strs: String...) -> String {
-        <#function body#>
+        return self.delete(strs)
+    }
+    
+    /// Returns a copy of str with all characters in the intersection of its arguments deleted.
+    /// Uses the same rules for building the set of characters as String#count.
+    ///
+    /// - Parameter strs: An array of string used to match the receiver string
+    /// - Returns: A string with all chars in strs deleted
+    func delete(_ strs: [String]) -> String {
+        let strs = strs.map { "[\($0)]" }
+        let sets = strs.map { Set<MatchData>($0.regex.scan(self)) }
+        guard let first = sets.first else { return self }
+        var result = self as NSString
+        sets.reduce(first, { (result, set) in
+            result.intersection(set)
+        }).sorted(by: { (lhs, rhs) -> Bool in
+            return lhs.range.location >= rhs.range.location
+        }).forEach { data in
+            result = result.replacingCharacters(in: data.range, with: "") as NSString
+        }
+        return result as String
+    }
+    
+    /// Use `delete(strs:)` to mutate `self` in place, see also `delete(strs:)`
+    ///
+    /// - Parameter strs: An array of string used to match the receiver string
+    /// - Returns: Self
+    @discardableResult mutating func deleted(_ strs: String...) -> String {
+        self = delete(strs)
+        return self
     }
     
     /// Reverses all characters in the string.

@@ -77,7 +77,21 @@ class StringTransformSpec: QuickSpec {
         }
         
         describe(".delete(str:)") {
-            
+            it("returns the string with specific chars deleted inside the receiver string") {
+                let a = "hello world"
+                expect(a.delete("lo")).to(equal("he wrd"))
+                expect(a.delete("lo", "o")).to(equal("hell wrld"))
+                expect(a.delete("hello", "^l")).to(equal("ll wrld"))
+                expect(a.delete("ej-m")).to(equal("ho word"))
+                
+                expect("hello^world".delete("\\^aeiou")).to(equal("hllwrld"))
+                expect("hello-world".delete("a-eo")).to(equal("hll-wrl"))
+                expect("hello-world".delete("a\\-eo")).to(equal("hllwrld"))
+                
+                let c = "hello world\\r\\n"
+                expect(c.delete("\\A")).to(equal("hello world\\r\\n"))
+                expect(c.delete("X\\-\\\\w")).to(equal("hello orldrn"))
+            }
         }
         
         describe(".reverse") {
