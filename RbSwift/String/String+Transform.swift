@@ -9,20 +9,13 @@
 import Foundation
 
 public extension String {
-    /// Returns a new String with the \n, \r, and \r\n removed from the end of str,
+    /// Returns a new String with the \n, \r, \v, " " and \r\n removed from the end of str,
     var chomp: String {
         guard self.length > 0 else { return "" }
         var result = self
-        while result.length > 0 {
-            if let lastChar = result.characters.last {
-                if lastChar == "\n" || lastChar == "\r" ||
-                    lastChar == " " || lastChar == "\t" || lastChar == "\r\n" {
-                    result = result.chop
-                    print(result)
-                } else {
-                    break
-                }
-            }
+        while let last = result.characters.last {
+            guard last =~ "[ \t\n\r\\v]" else { break }
+            result = result.chop
         }
         return result
     }
@@ -145,6 +138,13 @@ public extension String {
         return results
     }
     
+    /// If integer is greater than the length of str, returns a new String of length integer 
+    /// with str left justified and padded with padstr; otherwise, returns str.
+    ///
+    /// - Parameters:
+    ///   - length: A int to indicates the return length of the new string
+    ///   - padding: A string used to padding str
+    /// - Returns: A new string use padding to ljust
     func ljust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -155,6 +155,13 @@ public extension String {
         return result.substring(to: length)
     }
     
+    /// If integer is greater than the length of str, returns a new String of length integer
+    /// with str right justified and padded with padstr; otherwise, returns str.
+    ///
+    /// - Parameters:
+    ///   - length: A int to indicates the return length of the new string
+    ///   - padding: A string used to padding str
+    /// - Returns: A new string use padding to rjsut
     func rjust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -166,27 +173,62 @@ public extension String {
         return result.substring(to: paddingLength) + self
     }
     
+    /// Returns a copy of str with leading and trailing whitespace removed.
     var strip: String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
+    /// Removes leading and trailing whitespace from str.
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func stripped() -> String {
+        self = strip
+        return self
+    }
+    
+    /// Returns a copy of str with leading whitespace removed. See also `rstrip` and `strip`.
     var lstrip: String {
         var result = self
         while let first = result.characters.first {
-            guard first =~ "[ \t\n\r]" else { break }
+            guard first =~ "[ \t\n\r\\v]" else { break }
             result.remove(at: result.startIndex)
         }
         return result
     }
     
+    /// Removes leading whitespace from str.
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func lstripped() -> String {
+        self = lstrip
+        return self
+    }
+    
+    /// Returns a copy of str with trailing whitespace removed. See also `strip` and `lstrip`.
     var rstrip: String {
         return chomp
     }
     
+    /// Removes trailing whitespace from str.
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func rstripped() -> String {
+        self = rstrip
+        return self
+    }
+    
+    /// Concatenates the given str to the receiver
+    ///
+    /// - Parameter other: A string use to concat to the receiver
+    /// - Returns: A new string with self + other
     func concat(_ other: String) -> String {
         return self + other
     }
     
+    /// Similar to `append` method, prepend another string to the receiver.
+    ///
+    /// - Parameter other: Anothing string
+    /// - Returns: Self
     @discardableResult mutating func prepend(_ other: String) -> String {
         self = other + self
         return self
