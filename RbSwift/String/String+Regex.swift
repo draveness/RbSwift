@@ -66,7 +66,7 @@ public extension String {
     ///   - str: A string to replace the matching substring
     /// - Returns: A new string with str replacing the matched result
     func gsub(_ pattern: RegexConvertible, _ str: String) -> String {
-        return pattern.regex.regexp.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, self.length), withTemplate: str)
+        return pattern.regex.replace(self, template: str)
     }
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
@@ -80,8 +80,8 @@ public extension String {
     }
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
-    /// the `MatchData` array and invoke the closure with all matchig result and replace current string with the invokation
-    /// of the closure.
+    /// the `MatchData` array and invoke the closure with all matchig result and replace 
+    /// current string with the invocation of the closure.
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -89,10 +89,9 @@ public extension String {
     /// - Returns: A new string with str replacing the matched result
     func gsub(_ pattern: RegexConvertible, closure: (String) -> String) -> String {
         let regex = pattern.regex
-        let matchDatas = scan(regex)
         var result: String = self
-        for matchData in matchDatas.reversed() {
-            result = regex.regexp.stringByReplacingMatches(in: result, options: [], range: NSMakeRange(0, self.length), withTemplate: closure(matchData.match))
+        for matchData in scan(regex).reversed() {
+            result = regex.replace(result, template: closure(matchData.match))
         }
         return result as String
     }

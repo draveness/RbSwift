@@ -15,8 +15,8 @@ import Foundation
 ///   - str: A string waiting to match
 ///   - pattern: A pattern used to match the string
 /// - Returns: A bool value indicates whether the str is matched with the pattern
-public func =~(str: String, pattern: String) -> Bool {
-    return str =~ pattern.to_regex
+public func =~(str: String, pattern: RegexConvertible) -> Bool {
+    return str =~ pattern.regex
 }
 
 /// Returns true if right pattern is match with left character, the pattern string would converts to a NSRegularExpression
@@ -26,20 +26,8 @@ public func =~(str: String, pattern: String) -> Bool {
 ///   - left: A `Character` waiting to match
 ///   - right: A pattern used to match the string
 /// - Returns: A bool value indicates whether the char is matched with the pattern
-public func =~(left: Character, right: String) -> Bool {
-    return String(left) =~ right.to_regex
-}
-
-/// Returns true if right `Character` which converted to a `NSRegularExpression` is match with left character,
-/// the pattern string would converts to a NSRegularExpression automaticlly in method.
-/// This method use =~(str:pattern) internal to match char with pattern.
-///
-/// - Parameters:
-///   - str: A string waiting to match
-///   - right: A Character used to match the string, will convert to String, and eventually NSRegularExpression.
-/// - Returns: A bool value indicates whether the char is matched with the pattern
-public func =~(left: String, right: Character) -> Bool {
-    return left =~ String(right).to_regex
+public func =~(left: Character, right: RegexConvertible) -> Bool {
+    return String(left) =~ right.regex
 }
 
 /// Returns a new String containing integer copies of the receiver. integer must be greater than or equal to 0.

@@ -34,7 +34,7 @@ public struct Regex {
     ///
     /// - Parameters pattern: A string
     /// - Returns: A `MatchData` instance contains all match results in it
-    func match(_ str: String) -> MatchData? {
+    public func match(_ str: String) -> MatchData? {
         let str = str as NSString
         guard let result = regexp.firstMatch(in: str as String, options: [], range: NSMakeRange(0, str.length)) else { return nil }
 
@@ -55,7 +55,7 @@ public struct Regex {
     ///
     /// - Parameters pattern: A string
     /// - Returns: An array of `MatchData` instance contains all match results in it
-    func scan(_ str: String) -> [MatchData] {
+    public func scan(_ str: String) -> [MatchData] {
         let matches = regexp.matches(in: str, options: [], range: NSMakeRange(0, str.length))
         
         let str = str as NSString
@@ -73,6 +73,17 @@ public struct Regex {
             matchDatas.append(matchData)
         }
         return matchDatas
+    }
+    
+    /// Invokes `stringByReplacingMatches(in:options:range:withTemplate:)` method to replace original match
+    /// result with template, $1, $2... are used to capture the match group in the str.
+    ///
+    /// - Parameters:
+    ///   - str: A string waiting for replacing
+    ///   - template: A template string used to replace original str
+    /// - Returns: A new string with all matching result replaced by template
+    public func replace(_ str: String, template: String) -> String {
+        return regexp.stringByReplacingMatches(in: str, options: [], range: NSMakeRange(0, str.length), withTemplate: template)
     }
     
     /// Returns true if right string is match with left `Regexp`
