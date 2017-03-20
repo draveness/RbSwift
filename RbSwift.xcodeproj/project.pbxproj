@@ -75,6 +75,7 @@
 		72A218F61E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F41E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig */; };
 		72A218F91E7F8A7D00EF65C9 /* Pods-RbSwiftTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F71E7F8A7D00EF65C9 /* Pods-RbSwiftTests.debug.xcconfig */; };
 		72A218FA1E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F81E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig */; };
+		72A218FE1E7FB38E00EF65C9 /* RegexConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */; };
 		EB0B86ED90E27DC2018745E6 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,6 +161,7 @@
 		72A218F81E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests/Pods-RbSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		72A218FB1E7F8A9B00EF65C9 /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A218FC1E7F8A9B00EF65C9 /* RbSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RbSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexConvertible.swift; sourceTree = "<group>"; };
 		AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
+				72541B181E7D95AB008B49B1 /* Regex */,
 				72541B5F1E7E2EDE008B49B1 /* Array */,
 				72541B021E7D5D71008B49B1 /* Date */,
 				7248753C1E7CFC8C007984FD /* Duration */,
@@ -249,7 +252,6 @@
 		724875361E7CF89F007984FD /* String */ = {
 			isa = PBXGroup;
 			children = (
-				72541B181E7D95AB008B49B1 /* Regex */,
 				72541B6E1E7E32E1008B49B1 /* String+Access.swift */,
 				72541B6F1E7E32E1008B49B1 /* String+Bool.swift */,
 				72541B701E7E32E1008B49B1 /* String+Case.swift */,
@@ -321,8 +323,10 @@
 			children = (
 				72541B191E7D95B5008B49B1 /* MatchData.swift */,
 				724875261E7CF883007984FD /* Regex.swift */,
+				72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */,
 			);
-			path = Regex;
+			name = Regex;
+			path = String/Regex;
 			sourceTree = "<group>";
 		};
 		72541B1B1E7D95DC008B49B1 /* Inflector */ = {
@@ -613,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A218FE1E7FB38E00EF65C9 /* RegexConvertible.swift in Sources */,
 				72541B7F1E7E32E1008B49B1 /* String+Enumeration.swift in Sources */,
 				729D3D551E7E5F7100258333 /* Date+Duration.swift in Sources */,
 				72541B201E7D96F3008B49B1 /* Date+Components.swift in Sources */,

@@ -18,18 +18,8 @@ public extension String {
     ///   - pos: A int specifies the position in the string to begin the search
     /// - Returns: A `MatchData` instance contains all match results in it
     func match(_ pattern: String, _ pos: Int = 0) -> MatchData? {
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        let str = self.substring(from: pos) as NSString
-        guard let result = regex.firstMatch(in: str as String, options: [], range: NSMakeRange(0, self.length)) else { return nil }
-        let match = str.substring(with: result.range)
-        var datas: [String] = []
-        var ranges: [NSRange] = []
-        for index in 1..<result.numberOfRanges {
-            let range = result.rangeAt(index)
-            ranges.append(range)
-            datas.append(str.substring(with: range))
-        }
-        return MatchData(match: match, range: result.range, datas: datas, ranges: ranges)
+        let str = self.substring(from: pos)
+        return pattern.regex.match(str)
     }
     
     /// Converts pattern to a `NSRegularExpression`, then invokes its matches(in:options:range:) method.
@@ -54,7 +44,7 @@ public extension String {
                 ranges.append(range)
                 datas.append(str.substring(with: range))
             }
-            let matchData = MatchData(match: substr, range: match.range, datas: datas, ranges: ranges)
+            let matchData = MatchData(match: substr, range: match.range, captures: datas, ranges: ranges)
             matchDatas.append(matchData)
         }
         return matchDatas

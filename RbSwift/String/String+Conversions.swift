@@ -109,7 +109,6 @@ public extension String {
         } else {
             return integer.to_i.to_double * sign
         }
-        
     }
     
     /// Returns the result of interpreting the receiver in different standard.
@@ -117,5 +116,11 @@ public extension String {
     /// - SeeAlso: DateFormat
     var to_datetime: Date? {
         return Date(str: self)
+    }
+    
+    /// Try to convert `self` to a `Regexp` which used to match string or pass as parameter
+    /// into some methods.
+    var to_regex: Regex {
+        return Regex(self)
     }
 }
