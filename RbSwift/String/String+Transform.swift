@@ -89,6 +89,10 @@ public extension String {
         }).count
     }
     
+    func delete(_ strs: String...) -> String {
+        <#function body#>
+    }
+    
     /// Reverses all characters in the string.
     var reverse: String {
         return String(self.characters.reversed())
