@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Chars
 public extension String {
     /// Returns all characters in string form intead of characters form
     var chars: [String] {

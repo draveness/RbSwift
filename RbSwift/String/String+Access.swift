@@ -144,7 +144,7 @@ public extension String {
     /// - Parameter str: A substring used to find index in the receiver
     /// - Returns: The index of the first occurrence of the given substring in str or `nil`
     func index(_ str: String) -> Int? {
-        guard let data = matchAll(str).first else { return nil }
+        guard let data = scan(str).first else { return nil }
         return data.range.location
     }
     
@@ -154,7 +154,7 @@ public extension String {
     /// - Parameter str: A substring used to find rindex in the receiver
     /// - Returns: The index of the last occurrence of the given substring in str or `nil`
     func rindex(_ str: String) -> Int? {
-        guard let data = matchAll(str).last else { return nil }
+        guard let data = scan(str).last else { return nil }
         return data.range.location
     }
 }

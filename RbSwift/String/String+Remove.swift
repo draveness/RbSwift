@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Remove
 public extension String {
     /// Returns a new string with all occurrences of the patterns removed.
     ///
