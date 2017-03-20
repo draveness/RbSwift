@@ -144,7 +144,7 @@ public extension String {
     /// - Parameters:
     ///   - length: A int to indicates the return length of the new string
     ///   - padding: A string used to padding str
-    /// - Returns: A new string use padding to ljust
+    /// - Returns: A new string use padding string to ljust
     func ljust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -161,7 +161,7 @@ public extension String {
     /// - Parameters:
     ///   - length: A int to indicates the return length of the new string
     ///   - padding: A string used to padding str
-    /// - Returns: A new string use padding to rjsut
+    /// - Returns: A new string use padding string to rjsut
     func rjust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -171,6 +171,24 @@ public extension String {
             result += padding
         }
         return result.substring(to: paddingLength) + self
+    }
+    
+    /// Centers str in width. If width is greater than the length of str, 
+    /// returns a new String of length width with str centered and padded 
+    /// with padstr; otherwise, returns str.
+    ///
+    /// - Parameters:
+    ///   - length: A int to indicates the return length of the new string
+    ///   - padding: A string used to padding str
+    /// - Returns: A new string use padding string to center
+    func center(_ width: Int, _ padding: String = " ") -> String {
+        guard self.length < width else { return self }
+        let leftLength: Int = (width - self.length) / 2
+        let rightLength = width - self.length - leftLength
+        
+        let left = (padding * (leftLength / padding.length + 1)).to(leftLength - 1)!
+        let right = (padding * (rightLength / padding.length + 1)).to(rightLength - 1)!
+        return left + self + right
     }
     
     /// Returns a copy of str with leading and trailing whitespace removed.
@@ -234,20 +252,38 @@ public extension String {
         return self
     }
     
+    /// Replace the receiver string by the passing parameter
+    ///
+    /// - Parameter other: A new string used to replace self
+    /// - Returns: Self
     @discardableResult mutating func replace(_ other: String) -> String {
         self = other
         return self
     }
     
-    func partition(_ sep: String) -> [String] {
-        let comps = self.components(separatedBy: sep)
-        guard comps.length >= 2 else { return [self, "", ""] }
-        return [comps[0], sep, comps.dropFirst().joined(separator: sep)]
+    /// Searches sep or pattern (Regex) in the string and returns the part 
+    /// before it, the match, and the part after it. If it is not found,
+    /// returns two empty strings and str.
+    ///
+    /// - Parameter pattern: A string used to separate the receiver
+    /// - Returns: An array of string which separated by seperator
+    func partition(_ pattern: RegexConvertible) -> [String] {
+        guard let data = match(pattern),
+            let head = self.to(data.range.location - 1),
+            let tail = self.from(data.range.location + data.range.length) else { return [self, "", ""] }
+        return [head, data.match, tail]
     }
     
-    func rpartition(_ sep: String) -> [String] {
-        let comps = self.components(separatedBy: sep)
-        guard comps.length >= 2 else { return ["", "", self] }
-        return [comps.dropLast().joined(separator: sep), sep, comps.last!]
+    /// Searches sep or pattern (regexp) in the string from the end of the 
+    /// string, and returns the part before it, the match, and the part after it. 
+    /// If it is not found, returns two empty strings and str.
+    ///
+    /// - Parameter pattern: A string used to separate the receiver
+    /// - Returns: An array of string which separated by seperator
+    func rpartition(_ pattern: RegexConvertible) -> [String] {
+        guard let data = scan(pattern).last,
+            let head = self.to(data.range.location - 1),
+            let tail = self.from(data.range.location + data.range.length) else { return ["", "", self] }
+        return [head, data.match, tail]
     }
 }
