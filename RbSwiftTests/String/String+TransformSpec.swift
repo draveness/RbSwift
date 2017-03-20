@@ -115,6 +115,22 @@ class StringTransformSpec: QuickSpec {
             }
         }
         
+        describe(".center") {
+            context("when integer is greater than the length of str") {
+                it("returns a new String of length integer with str centered and padded with padstr") {
+                    expect("hello".center(20)).to(equal("       hello        "))
+                    expect("hello".center(20).length).to(equal(20))
+                    expect("hello".center(20, "123")).to(equal("1231231hello12312312"))
+                }
+            }
+            
+            context("otherwise") {
+                it("returns the string") {
+                    expect("hello".center(4)).to(equal("hello"))
+                }
+            }
+        }
+        
         describe(".strip") {
             it("removes both sides whitespace from str") {
                 expect("\t \nhello  ".strip).to(equal("hello"))

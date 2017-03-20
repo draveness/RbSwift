@@ -144,7 +144,7 @@ public extension String {
     /// - Parameters:
     ///   - length: A int to indicates the return length of the new string
     ///   - padding: A string used to padding str
-    /// - Returns: A new string use padding to ljust
+    /// - Returns: A new string use padding string to ljust
     func ljust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -161,7 +161,7 @@ public extension String {
     /// - Parameters:
     ///   - length: A int to indicates the return length of the new string
     ///   - padding: A string used to padding str
-    /// - Returns: A new string use padding to rjsut
+    /// - Returns: A new string use padding string to rjsut
     func rjust(_ length: Int, _ padding: String = " ") -> String {
         guard self.length < length else { return self }
         let padding = padding.length == 0 ? " " : padding
@@ -171,6 +171,24 @@ public extension String {
             result += padding
         }
         return result.substring(to: paddingLength) + self
+    }
+    
+    /// Centers str in width. If width is greater than the length of str, 
+    /// returns a new String of length width with str centered and padded 
+    /// with padstr; otherwise, returns str.
+    ///
+    /// - Parameters:
+    ///   - length: A int to indicates the return length of the new string
+    ///   - padding: A string used to padding str
+    /// - Returns: A new string use padding string to center
+    func center(_ width: Int, _ padding: String = " ") -> String {
+        guard self.length < width else { return self }
+        let leftLength: Int = (width - self.length) / 2
+        let rightLength = width - self.length - leftLength
+        
+        let left = (padding * (leftLength / padding.length + 1)).to(leftLength - 1)!
+        let right = (padding * (rightLength / padding.length + 1)).to(rightLength - 1)!
+        return left + self + right
     }
     
     /// Returns a copy of str with leading and trailing whitespace removed.
