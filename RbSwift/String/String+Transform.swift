@@ -106,13 +106,14 @@ public extension String {
     }
     
     /// Divides str into substrings based on a delimiter, returning an array of these substrings. (default is " ")
-    ///
+    /// If pattern is a `String`, then its contents are used as the delimiter when splitting str. If pattern is a single space, str is split on whitespace, with leading whitespace and runs of contiguous whitespace characters ignored.
+    /// If pattern is a `Regex`, str is divided where the pattern matches. Whenever the pattern matches a zero-length string, str is split into individual characters. If pattern contains groups, the respective matches will be returned in the array as well.
     /// - Parameter separator: A string to seperate the receiver
     /// - Returns: An array of string which separated by separator
     func split(_ separator: RegexConvertible = " ", limit: Int = 0) -> [String] {
         guard separator.pattern.length > 0 else { return self.characters.map { String($0) } }
         let result = trimmingCharacters(in: CharacterSet.whitespaces)
-        guard separator.pattern != " " else { return result.components(separatedBy: CharacterSet.whitespaces).filter { !$0.isEmpty } }
+        guard separator.pattern != " " else { return result.components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty } }
         let datas = separator.regex.scan(self)
         var results: [String] = []
         var traceIndex: Int = 0
