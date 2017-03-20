@@ -119,6 +119,16 @@ public extension String {
         return substring(to: num)
     }
     
+    /// Returns a substring in the range with from...to, both sides included.
+    ///
+    /// - Parameters:
+    ///   - from: A position indicates the start position of substring
+    ///   - to: A position indicates the end position of substring
+    /// - Returns: A substring within the range of the string to the given position
+    func range(_ from: Int, _ to: Int) -> String? {
+        guard let result = self.to(to)?.from(from) else { return nil }
+        return result
+    }
     
     /// Returns a substring from the given position to the end of the string.
     /// Uses `NSString` method substring(from:) to get a substring from the receiver.
@@ -138,7 +148,7 @@ public extension String {
         return (self as NSString).substring(to: to)
     }
     
-    /// Returns the index of the first occurrence of the given substring in str. 
+    /// Returns the index of the first occurrence of the given substring in str.
     /// Returns `nil` if not found.
     ///
     /// - Parameter str: A substring used to find index in the receiver

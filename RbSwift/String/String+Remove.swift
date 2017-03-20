@@ -37,8 +37,11 @@ public extension String {
     }
     
     /// Performs a destructive squish in place. See `squish`.
-    mutating func squished() {
+    ///
+    /// - Returns: Self
+    @discardableResult mutating func squished() -> String {
         self = squish
+        return self
     }
     
     /// Returns a new string where runs of the same character that occur in this str
@@ -72,8 +75,10 @@ public extension String {
     /// Squeezes str in place with returning nothing.
     ///
     /// - Parameter str: A str contains all characters need to squeeze
-    mutating func squeezed(_ str: String) {
+    /// - Returns: Self
+    @discardableResult mutating func squeezed(_ str: String) -> String {
         self = squeeze(str)
+        return self
     }
  
     /// Truncates the receiver string after a given length if string is longer 
