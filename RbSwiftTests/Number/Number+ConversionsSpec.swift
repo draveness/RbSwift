@@ -13,7 +13,10 @@ import RbSwift
 class NumberConversionsSpec: QuickSpec {
     
     override func spec() {
-        describe(".times") {
+        describe(".chr") {
+            it("returns a string containing the character represented by the int's value according to encoding.") {
+                expect(98.chr).to(equal("b"))
+            }
         }
     }
     

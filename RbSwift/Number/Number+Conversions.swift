@@ -55,6 +55,11 @@ public extension Int {
         if self == 0 { return false }
         return true
     }
+    
+    var chr: String {
+        guard let str = UnicodeScalar(self) else { return "" }
+        return "\(str)"
+    }
 }
 
 public extension Int32 {

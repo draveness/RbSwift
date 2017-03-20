@@ -39,6 +39,23 @@ class StringConversionsSpec: QuickSpec {
             }
         }
         
+        describe(".oct") { 
+            it("returns a oct integer from str") {
+                expect("123".oct).to(equal(83))
+                expect("-377".oct).to(equal(-255))
+                expect("377bad".oct).to(equal(255))
+                expect("bad".oct).to(equal(0))
+            }
+        }
+        
+        describe(".ord") { 
+            it("Return the Integer ordinal of a one-character string") {
+                expect("a".ord).to(equal(97))
+                expect("ab".ord).to(equal(97))
+                expect("b".ord).to(equal(98))
+            }
+        }
+        
         describe(".hex") { 
             it("returns a hex integer from str") {
                 expect("-".hex).to(equal(0))
