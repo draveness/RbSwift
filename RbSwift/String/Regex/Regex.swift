@@ -17,7 +17,7 @@ public struct Regex {
     public let pattern: String
     
     /// A regular expression converted from a pattern
-    private let regexp: NSRegularExpression
+    public let regexp: NSRegularExpression
 
     /// Designated intializer for `Regexp` which encapsulates a `NSRegularExpression` instance inside.
     /// Converts the passed-in pattern to a `NSRegularExpression` inside.
@@ -28,7 +28,7 @@ public struct Regex {
         self.regexp = try! NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
     }
     
-    /// Invokes its `firstMatch(in:options:range:)` method first to checkt it str is matched with
+    /// Invokes its `firstMatch(in:options:range:)` method first to check it str is matched with
     /// current `regexp`. Returns `nil` if `firstMatch(in:options:range:)` returns false, or this 
     /// methods will encapsulates all the data inside a `MatchData` struct.
     ///
@@ -47,6 +47,32 @@ public struct Regex {
             captures.append(str.substring(with: range))
         }
         return MatchData(match: match, range: result.range, captures: captures, ranges: ranges)
+    }
+    
+    /// Invokes its `matches(in:options:range:)` method to check it str is matched with
+    /// current `regexp`. Returns `[]` if returns false, or this methods will encapsulates all
+    /// the data inside a `MatchData` struct, and returns `[MatchData]`
+    ///
+    /// - Parameters pattern: A string
+    /// - Returns: An array of `MatchData` instance contains all match results in it
+    func scan(_ str: String) -> [MatchData] {
+        let matches = regexp.matches(in: str, options: [], range: NSMakeRange(0, str.length))
+        
+        let str = str as NSString
+        var matchDatas: [MatchData] = []
+        for match in matches {
+            let substr = str.substring(with: match.range)
+            var datas: [String] = []
+            var ranges: [NSRange] = []
+            for index in 1..<match.numberOfRanges {
+                let range = match.rangeAt(index)
+                ranges.append(range)
+                datas.append(str.substring(with: range))
+            }
+            let matchData = MatchData(match: substr, range: match.range, captures: datas, ranges: ranges)
+            matchDatas.append(matchData)
+        }
+        return matchDatas
     }
     
     /// Returns true if right string is match with left `Regexp`
