@@ -60,7 +60,20 @@ class StringTransformSpec: QuickSpec {
         }
         
         describe(".count(str:)") {
-            
+            it("returns the count of specific chars inside the receiver string") {
+                let a = "hello world"
+                expect(a.count("lo")).to(equal(5))
+                expect(a.count("lo", "o")).to(equal(2))
+                expect(a.count("hello", "^l")).to(equal(4))
+                expect(a.count("ej-m")).to(equal(4))
+
+                expect("hello^world".count("\\^aeiou")).to(equal(4))
+                expect("hello-world".count("a-eo")).to(equal(4))
+
+                let c = "hello world\\r\\n"
+                expect(c.count("\\A")).to(equal(0))
+                expect(c.count("X\\-\\\\w")).to(equal(3))
+            }
         }
         
         describe(".delete(str:)") {
