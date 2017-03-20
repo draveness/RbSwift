@@ -8,9 +8,12 @@
 
 import Foundation
 
-public struct R {
+/// A Regexp holds a regular expression, used to match a pattern against strings.
+/// Regexps are created using the `"xyz".regex` and by `init(pattern:)` constructor.
+public struct Regexp {
     let pattern: String
     init(_ pattern: String) {
         self.pattern = pattern
     }
+    
 }
