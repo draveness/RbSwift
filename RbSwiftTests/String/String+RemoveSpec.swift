@@ -28,7 +28,10 @@ class StringRemoveSpec: QuickSpec {
                 let str = "foo bar test"
                 expect(str.remove(" test")).to(equal("foo bar"))
                 expect(str.remove(" test", "bar")).to(equal("foo "))
+                expect(str.remove(".")).to(equal(""))
                 expect(str).to(equal("foo bar test"))
+                expect("returns a new string with all occurrences of the strs removed".remove("s"))
+                    .to(equal("return a new tring with all occurrence of the tr removed"))
             }
         }
         
