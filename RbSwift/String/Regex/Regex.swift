@@ -23,9 +23,11 @@ public struct Regex {
     /// Converts the passed-in pattern to a `NSRegularExpression` inside.
     ///
     /// - Parameter pattern: A string pattern
-    public init(_ pattern: String) {
+    /// - Parameter literal: A bool value indicates the `NSRegularExpression` matches a literal pattern
+    public init(_ pattern: String, literal: Bool = false) {
         self.pattern = pattern
-        self.regexp = try! NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options(rawValue: 0))
+        let options: NSRegularExpression.Options = literal ? .ignoreMetacharacters : NSRegularExpression.Options(rawValue: 0)
+        self.regexp = try! NSRegularExpression(pattern: pattern, options: options)
     }
     
     /// Invokes its `firstMatch(in:options:range:)` method first to check it str is matched with

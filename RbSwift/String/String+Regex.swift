@@ -44,7 +44,7 @@ public extension String {
     ///   - str: A string to replace the matching substring
     /// - Returns: A new string with str replacing the matched result
     func sub(_ pattern: RegexConvertible, _ str: String) -> String {
-        guard let matchData = match(pattern) else { return self }
+        guard let matchData = match(pattern.regex) else { return self }
         return (self as NSString).replacingCharacters(in: matchData.range, with: str)
     }
     

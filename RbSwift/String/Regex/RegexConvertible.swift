@@ -21,15 +21,15 @@ extension Regex: RegexConvertible {
 }
 
 extension String: RegexConvertible {
-    /// An alias to `to_regex` which returns a `Regexp` struct.
+    /// Returns a literal `Regex`.
     public var regex: Regex {
         return to_regex
     }
 }
 
 extension Character: RegexConvertible {
-    /// Returns a `Regex` by first converting to string.
+    /// Returns a literal `Regex` by first converting to string.
     public var regex: Regex {
-        return String(self).to_regex
+        return String(self).regex
     }
 }

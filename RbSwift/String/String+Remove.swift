@@ -38,9 +38,7 @@ public extension String {
     
     /// Performs a destructive squish in place. See `squish`.
     mutating func squished() {
-        self = gsub("\\A[[:space:]]+", "")
-            .gsub("[[:space:]]+\\z", "")
-            .gsub("[[:space:]]+", " ")
+        self = squish
     }
     
     /// Returns a new string where runs of the same character that occur in this str
