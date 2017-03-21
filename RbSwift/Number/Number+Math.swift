@@ -47,8 +47,51 @@ public extension Int {
     /// If there is no such bit (zero or minus one), zero is returned.
     var bitLength: Int {
         let value = self < 0 ? -self : self + 1
-        return ceil(log2(value.to_double)).to_i
-//        return log2(self.to_double).to_i
-//        return 0
+        return ceil_(log2(value.to_double)).to_i
     }
+    
+    /// Returns the Integer equal to self + 1.
+    var next: Int {
+        return self + 1
+    }
+    
+    /// Returns the Integer equal to self + 1.
+    var succ: Int {
+        return next
+    }
+    
+    /// Returns the Integer equal to self - 1.
+    var pred: Int {
+        return self - 1
+    }
+    
+    /// Returns the largest number less than or equal to int in decimal digits (default 0 digits).
+    var ceil: Int {
+        return ceil_(self.to_double)
+    }
+    
+    /// Returns the smallest number less than or equal to int in decimal digits (default 0 digits).
+    var floor: Int {
+        return floor_(self.to_double)
+    }
+}
+
+public extension Double {
+    /// Returns the largest number less than or equal to int in decimal digits (default 0 digits).
+    var ceil: Int {
+        return ceil_(self)
+    }
+    
+    /// Returns the smallest number less than or equal to int in decimal digits (default 0 digits).
+    var floor: Int {
+        return floor_(self)
+    }
+}
+
+fileprivate func ceil_(_ value: Double) -> Int {
+    return ceil(value).to_i
+}
+
+fileprivate func floor_(_ value: Double) -> Int {
+    return floor(value).to_i
 }

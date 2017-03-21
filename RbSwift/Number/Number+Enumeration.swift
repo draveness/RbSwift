@@ -83,5 +83,5 @@ public extension Int {
     /// - Parameter closure: A closure accepts an int counter and returns Void
     func times(closure: (Int) -> Void) {
         0.upto(self - 1).forEach(closure)
-    }    
+    }
 }
