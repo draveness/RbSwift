@@ -83,14 +83,5 @@ public extension Int {
     /// - Parameter closure: A closure accepts an int counter and returns Void
     func times(closure: (Int) -> Void) {
         0.upto(self - 1).forEach(closure)
-    }
-    
-    func gcd(_ another: Int) -> Int {
-        var one = self
-        var another = another
-        while another != 0 {
-            (one, another) = (another, one % another)
-        }
-        return one.abs
-    }
+    }    
 }
