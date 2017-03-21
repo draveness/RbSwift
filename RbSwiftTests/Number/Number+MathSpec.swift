@@ -71,5 +71,40 @@ class NumberMathSpec: QuickSpec {
 //                expect((2**10000+1).bitLength).to(equal(10001))
             }
         }
+        
+        describe(".next") {
+            it("returns an integer plus one") {
+                expect(1.next).to(equal(2))
+                expect((-1).next).to(equal(0))
+            }
+        }
+        
+        describe(".succ") { 
+            it("returns an integer plus one") {
+                expect(1.succ).to(equal(2))
+                expect((-1).succ).to(equal(0))
+            }
+        }
+        
+        describe(".pred") { 
+            it("returns an integer minus one") {
+                expect(1.pred).to(equal(0))
+                expect((-1).pred).to(equal(-2))
+            }
+        }
+        
+        describe(".ceil") {
+            it("returns the smallest number than or equal to int in decimal digits (default 0 digits).") {
+                expect(1.ceil).to(equal(1))
+                expect(1.5.ceil).to(equal(2))
+            }
+        }
+        
+        describe(".floor") {
+            it("returns the biggest number than or equal to int in decimal digits (default 0 digits).") {
+                expect(1.floor).to(equal(1))
+                expect(1.5.floor).to(equal(1))
+            }
+        }
     }
 }
