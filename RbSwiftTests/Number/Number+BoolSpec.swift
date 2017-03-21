@@ -13,7 +13,30 @@ import RbSwift
 class NumberBoolSpec: QuickSpec {
     
     override func spec() {
-        describe(".times") {
+        describe(".bool") {
+            expect(2.isZero).to(beFalse())
+            expect((-2).isZero).to(beFalse())
+            expect(0.isZero).to(beTrue())
+            
+            expect(2.isPositive).to(beTrue())
+            expect((-2).isPositive).to(beFalse())
+            expect(0.isPositive).to(beFalse())
+            
+            expect(2.isNegative).to(beFalse())
+            expect((-2).isNegative).to(beTrue())
+            expect(0.isNegative).to(beFalse())
+            
+            expect(0.isEven).to(beTrue())
+            expect(2.isEven).to(beTrue())
+            expect(1.isEven).to(beFalse())
+            expect((-1).isEven).to(beFalse())
+            expect((-2).isEven).to(beTrue())
+            
+            expect(0.isOdd).to(beFalse())
+            expect(1.isOdd).to(beTrue())
+            expect(2.isOdd).to(beFalse())
+            expect((-2).isOdd).to(beFalse())
+            expect((-1).isOdd).to(beTrue())
         }
     }
     

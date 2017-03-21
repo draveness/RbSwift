@@ -15,4 +15,8 @@ public extension Integer where Self: SignedNumber {
         return -self
     }
     
+    /// An alias to `abs`, returns the absolute value of `self`.
+    var magnitude: Self {
+        return abs
+    }
 }
