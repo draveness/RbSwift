@@ -12,52 +12,7 @@ import RbSwift
 
 class ArrayPatchSpec: QuickSpec {
     
-    override func spec() {
-        describe(".&") { 
-            it("returns a new array containing elements common to the two arrays, excluding any duplicates") {
-                let arr1 = [1, 1, 3, 5]
-                let arr2 = [1, 2, 3]
-                expect(arr1 & arr2).to(equal([1, 3]))
-
-                let arr3 = ["a", "b", "c", "d"]
-                let arr4 = ["b", "c", "d", "e"]
-                expect(arr3 & arr4).to(equal(["b", "c", "d"]))
-            }
-        }
-        
-        describe(".*") {
-            it("returns a new array built by concatenating the int copies of self") {
-                let arr = [1, 2, 3]
-                expect(arr * 2).to(equal([1, 2, 3, 1, 2, 3]))
-            }
-            
-            context("when passing a string as a parameter") {
-                it("behaves like a join(separator:)") {
-                    let arr = [1, 2, 3]
-                    expect(arr * ", ").to(equal("1, 2, 3"))
-                }
-            }
-        }
-        
-        describe(".==") {
-            it("returns true if the elements of both arrays are exactly the same") {
-                let arr1 = [1, 2, 3]
-                let arr2 = [3, 2, 1]
-                expect(arr1.isEqual(arr2)).to(beTrue())
-            }
-            
-            it("returns false if the elements of both arrays are not exactly the same") {
-                let arr1 = [1, 2, 3]
-                let arr2 = [3, 2, 2]
-                expect(arr1.isEqual(arr2)).to(beFalse())
-                
-                let arr3 = [1, 2, 3, 4]
-                let arr4 = [1, 2, 3]
-                expect(arr3.isEqual(arr4)).to(beFalse())
-            }
-
-        }
-        
+    override func spec() {        
         describe(".clear") {
             it("makes the array empty") {
                 var s = [1, 2, 3]
@@ -99,11 +54,15 @@ class ArrayPatchSpec: QuickSpec {
             }
         }
         
-//        describe(".dig(idxs:)") { 
-//            it("extracts the nested value specified by the sequence of idx objects by calling dig at each step") {
-//                let arr = [[1, 2, 3], [3, 4, 5]]
-//                expect(arr.dig(1, 2)).to(equal(5))
-//            }
-//        }
+        describe(".dig(idxs:)") { 
+            it("extracts the nested value specified by the sequence of idx objects by calling dig at each step") {
+                let arr = [[1, 2, 3], [3, 4, 5]]
+                expect(arr.dig(1, 2)).to(equal(5))
+                expect(arr.dig(1)).to(equal([3, 4, 5]))
+
+                let result: Int? = arr.dig(1, 2, 3)
+                expect(result).to(beNil())
+            }
+        }
     }
 }
