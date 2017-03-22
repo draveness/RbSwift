@@ -139,6 +139,21 @@ public extension Sequence {
     func first(_ num: Int) -> [Iterator.Element] {
         return take(num)
     }
+    
+    /// Calls the given block for each element n times.
+    ///
+    /// - Parameters:
+    ///   - n: An integer that indicates how many times the element in array should be called
+    ///   - closure: A closure that accepts the element in array as parameter
+    /// - Returns: An new array with every elements in array repeated for n times
+    @discardableResult func cycle(_ n: Int = 1, closure: ((Iterator.Element) -> Void)? = nil) -> [Iterator.Element] {
+        guard n > 0 else { return [] }
+        let results = self.to_a * n
+        if let closure = closure {
+            results.forEach { closure($0) }
+        }
+        return results
+    }
 }
 
 public protocol OptionalType {

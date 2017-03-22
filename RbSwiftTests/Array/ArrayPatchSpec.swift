@@ -65,29 +65,6 @@ class ArrayPatchSpec: QuickSpec {
             }
         }
         
-        describe(".isStartWith(substring:)") {
-            it("starts with substring") {
-                expect("hello".isStartWith("he")).to(beTrue())
-                expect("hello".isStartWith(["hepp", "h"])).to(beTrue())
-            }
-        }
-        
-        describe(".isEndWith(substring:)") {
-            it("ends with substring") {
-                expect("hello".isEndWith("lo")).to(beTrue())
-                expect("hello".isEndWith(["loldada", "ello"])).to(beTrue())
-                expect("hello".isEndWith(["loldada", "ellos"])).to(beFalse())
-            }
-        }
-        
-        describe(".isInclude(substring:)") {
-            it("includes substring") {
-                expect("hello".isInclude("lo")).to(beTrue())
-                expect("hello".isInclude("11")).to(beFalse())
-                expect("hello".isInclude(["11", "h"])).to(beTrue())
-            }
-        }
-        
         describe(".delete") { 
             it("deletes and returns all the object if found") {
                 var arr1 = [1, 2, 3]
@@ -119,13 +96,6 @@ class ArrayPatchSpec: QuickSpec {
                 expect([1, 2, 3].combination(3).flatMap { $0 }).to(equal([[1, 2, 3]].flatMap { $0 }))
                 expect([1, 2, 3].combination(0).flatMap { $0 }).to(equal([].flatMap { $0 }))
                 expect([1, 2, 3].combination(5).flatMap { $0 }).to(equal([[]].flatMap { $0 }))
-            }
-        }
-        
-        describe(".cycle(times:)") {
-            it("returns a new array built by concatenating the int copies of self") {
-                let arr = [1, 2, 3]
-                expect(arr.cycle(2)).to(equal([1, 2, 3, 1, 2, 3]))
             }
         }
         

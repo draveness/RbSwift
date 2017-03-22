@@ -44,10 +44,10 @@ public extension Array {
         return results
     }
     
-    func cycle(_ times: Int = 1) -> [Element] {
-        guard times > 0 else { return [] }
-        return self * times
-    }
+//    func cycle(_ times: Int = 1) -> [Element] {
+//        guard times > 0 else { return [] }
+//        return self * times
+//    }
     
 //    func dig(_ idxs: Int...) -> Int {
 //        return dig(idxs)
