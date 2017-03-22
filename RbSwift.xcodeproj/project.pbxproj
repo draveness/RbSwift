@@ -382,9 +382,9 @@
 		72541B591E7E2DF7008B49B1 /* Sequence */ = {
 			isa = PBXGroup;
 			children = (
+				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
 				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
 				724875041E7CF829007984FD /* Sequence+Transform.swift */,
-				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -401,8 +401,8 @@
 		72541B5F1E7E2EDE008B49B1 /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				724875021E7CF829007984FD /* ArrayPatch.swift */,
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
+				724875021E7CF829007984FD /* ArrayPatch.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -410,13 +410,13 @@
 		72541B601E7E2EEE008B49B1 /* Number */ = {
 			isa = PBXGroup;
 			children = (
+				7277388D1E8045A4008E83E6 /* Number+AbsoluteValue.swift */,
 				72541B671E7E32CE008B49B1 /* Number+Bool.swift */,
 				72541B681E7E32CE008B49B1 /* Number+Conversions.swift */,
 				729D3D521E7E387E00258333 /* Number+Duration.swift */,
 				727738871E8025BF008E83E6 /* Number+Enumeration.swift */,
-				7277388B1E8034C1008E83E6 /* Number+Math.swift */,
-				7277388D1E8045A4008E83E6 /* Number+AbsoluteValue.swift */,
 				72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */,
+				7277388B1E8034C1008E83E6 /* Number+Math.swift */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -432,13 +432,13 @@
 		72541B621E7E2F07008B49B1 /* Number */ = {
 			isa = PBXGroup;
 			children = (
+				7277388F1E8047D6008E83E6 /* Number+AbsoluteValueSpec.swift */,
 				72541B8B1E7E32FA008B49B1 /* Number+BoolSpec.swift */,
 				72541B8C1E7E32FA008B49B1 /* Number+ConversionsSpec.swift */,
-				727738891E802652008E83E6 /* Number+EnumerationSpec.swift */,
-				7277388F1E8047D6008E83E6 /* Number+AbsoluteValueSpec.swift */,
-				72A218FF1E80C76500EF65C9 /* Number+MathSpec.swift */,
-				72A219031E80D28100EF65C9 /* Number+ExponentiativeSpec.swift */,
 				727738911E815F29008E83E6 /* Number+DurationSpec.swift */,
+				727738891E802652008E83E6 /* Number+EnumerationSpec.swift */,
+				72A219031E80D28100EF65C9 /* Number+ExponentiativeSpec.swift */,
+				72A218FF1E80C76500EF65C9 /* Number+MathSpec.swift */,
 			);
 			path = Number;
 			sourceTree = "<group>";
