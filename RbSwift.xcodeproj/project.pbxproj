@@ -396,11 +396,11 @@
 		72541B591E7E2DF7008B49B1 /* Sequence */ = {
 			isa = PBXGroup;
 			children = (
+				727738971E82B2A3008E83E6 /* Sequence+Bool.swift */,
 				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
+				727738991E82B4B0008E83E6 /* Sequence+Equatable.swift */,
 				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
 				724875041E7CF829007984FD /* Sequence+Transform.swift */,
-				727738971E82B2A3008E83E6 /* Sequence+Bool.swift */,
-				727738991E82B4B0008E83E6 /* Sequence+Equatable.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -408,10 +408,10 @@
 		72541B5C1E7E2E0B008B49B1 /* Sequence */ = {
 			isa = PBXGroup;
 			children = (
+				7277389D1E82B4D7008E83E6 /* Sequence+BoolSpec.swift */,
+				7277389B1E82B4CE008E83E6 /* Sequence+EquatableSpec.swift */,
 				72541B8F1E7E3301008B49B1 /* Sequence+LengthSpec.swift */,
 				7248751E1E7CF850007984FD /* Sequence+TransformSpec.swift */,
-				7277389B1E82B4CE008E83E6 /* Sequence+EquatableSpec.swift */,
-				7277389D1E82B4D7008E83E6 /* Sequence+BoolSpec.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -419,9 +419,9 @@
 		72541B5F1E7E2EDE008B49B1 /* Array */ = {
 			isa = PBXGroup;
 			children = (
+				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
 				724875021E7CF829007984FD /* Array+Transform.swift */,
-				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -443,9 +443,9 @@
 		72541B611E7E2EFA008B49B1 /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
 				727738A11E82B9AB008E83E6 /* Array+BoolSpec.swift */,
 				727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */,
+				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
