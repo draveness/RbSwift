@@ -44,14 +44,22 @@ public extension Array {
         return results
     }
     
-//    func cycle(_ times: Int = 1) -> [Element] {
-//        guard times > 0 else { return [] }
-//        return self * times
-//    }
+    func dig<T>(_ idxs: Int...) -> T? {
+        return dig(idxs)
+    }
     
-//    func dig(_ idxs: Int...) -> Int {
-//        return dig(idxs)
-//    }
+    func dig<T>(_ idxs: [Int]) -> T? {
+        guard self.length > 0 && idxs.count > 0 else { return nil }
+        let firstIdx = idxs.first!
+        let element = self[firstIdx]
+        if let element = element as? [T] {
+            return element.dig(idxs.drop(1))
+        } else if idxs.count == 1 {
+            return element as? T
+        } else {
+            return nil
+        }
+    }
 }
 
 public extension Array where Element: Equatable {
@@ -74,22 +82,6 @@ public extension Array where Element: Equatable {
         }
         
         return obj
-    }
-    
-    func isEqual(_ other: [Element]) -> Bool {
-        guard self.length == other.length else { return false }
-        var lhs = self
-        var rhs = other
-        
-        for l in lhs {
-            if rhs.contains(l) {
-                _ = rhs.delete(l, all: false)
-                _ = lhs.delete(l, all: false)
-            } else {
-                return false
-            }
-        }
-        return true
     }
 }
 
