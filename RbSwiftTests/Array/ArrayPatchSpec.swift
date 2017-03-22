@@ -13,19 +13,6 @@ import RbSwift
 class ArrayPatchSpec: QuickSpec {
     
     override func spec() {
-        describe(".take(count:)") {
-            it("returns the first count element of array") {
-                let arr = [1, 2, 3, 4]
-                expect(arr.take(1)).to(equal([1]))
-                expect(arr.take(2)).to(equal([1, 2]))
-            }
-            
-            it("returns a new array with the same element if count is greater than array.count") {
-                let arr = [1, 2, 3, 4]
-                expect(arr.take(6)).to(equal([1, 2, 3, 4]))
-            }
-        }
-        
         describe(".&") { 
             it("returns a new array containing elements common to the two arrays, excluding any duplicates") {
                 let arr1 = [1, 1, 3, 5]
@@ -71,18 +58,6 @@ class ArrayPatchSpec: QuickSpec {
 
         }
         
-        describe("isAny(closure:)") {
-            it("returns true if array contains specific object") {
-                expect([1, 2, 3].isAny(obj: 1)).to(beTrue())
-                expect(["a", "b", "c"].isAny(obj: "b")).to(beTrue())
-            }
-
-            it("returns true if array does not contain specific") {
-                expect([1, 2, 3].isAny(obj: 100)).to(beFalse())
-                expect(["a", "b", "c"].isAny(obj: "bbbb")).to(beFalse())
-            }
-        }
-
         describe(".clear") {
             it("makes the array empty") {
                 var s = [1, 2, 3]
