@@ -14,19 +14,19 @@ class DurationMathSpec: QuickSpec {
     override func spec() {
         describe(".+") {
             it("returns a new duration with the sum of both duration's components") {
-                let oneYear = 1.year
-                let twoYear = 2.years
-                expect(oneYear + twoYear).to(equal(3.years))
-                expect(oneYear + twoYear + twoYear).to(equal(5.years))
+                expect(1.year + 2.years).to(equal(3.years))
+                expect(1.year + 4.years).to(equal(5.years))
+                expect(1.minute + 500.seconds).to(equal(560.seconds))
+                expect(1.hour + 500.seconds).to(equal(4100.seconds))
+                expect(1.week + 500.seconds).to(equal(605_300.seconds))
+                expect(1.week + 500.seconds).to(equal(7.days + 8.minutes + 20.seconds))
             }
         }
         
         describe(".-") {
             it("returns a new duration by subtract the first duration's components with the second") {
-                let oneYear = 1.year
-                let twoYear = 2.years
-                expect(oneYear - twoYear).to(equal((-1).years))
-                expect(oneYear - twoYear + twoYear).to(equal(1.years))
+                expect(1.year - 2.years).to(equal((-1).years))
+                expect(1.year - 2.years + 2.years).to(equal(1.years))
             }
         }
     }

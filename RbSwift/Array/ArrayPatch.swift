@@ -9,11 +9,6 @@
 import Foundation
 
 public extension Array {
-    func take(_ count: Int) -> [Iterator.Element] {
-        guard self.count >= count else { return Array(self) }
-        return Array(self[0..<count])
-    }
-
     mutating func clear() -> [Element] {
         self = []
         return self
@@ -49,10 +44,10 @@ public extension Array {
         return results
     }
     
-    func cycle(_ times: Int = 1) -> [Element] {
-        guard times > 0 else { return [] }
-        return self * times
-    }
+//    func cycle(_ times: Int = 1) -> [Element] {
+//        guard times > 0 else { return [] }
+//        return self * times
+//    }
     
 //    func dig(_ idxs: Int...) -> Int {
 //        return dig(idxs)
@@ -98,47 +93,3 @@ public extension Array where Element: Equatable {
     }
 }
 
-public func &<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
-    let lhs = left
-    var rhs = right
-    
-    var result: [T] = []
-    for l in lhs {
-        for (index, r) in rhs.enumerated() {
-            if l == r {
-                result.append(l)
-                rhs.remove(at: index)
-                break
-            }
-        }
-        
-    }
-    return result
-}
-
-public func *<T>(left: Array<T>, right: Int) -> Array<T> {
-    var result: [T] = []
-    for _ in 1...right {
-        result += left
-    }
-    return result
-}
-
-public func *<T>(left: Array<T>, right: String) -> String {
-    return left.map { "\($0)" }.joined(separator: right)
-}
-
-public func -<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
-    var lhs = left
-    let rhs = right
-    
-    for (index, l) in lhs.enumerated() {
-        for r in rhs {
-            if l == r {
-                lhs.remove(at: index)
-            }
-        }
-        
-    }
-    return lhs
-}

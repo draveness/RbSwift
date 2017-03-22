@@ -65,26 +65,58 @@ public extension Int {
         return self - 1
     }
     
-    /// Returns the largest number less than or equal to int in decimal digits (default 0 digits).
+    /// Returns the largest number less than or equal to int in decimal digits.
     var ceil: Int {
         return ceil_(self.to_double)
     }
     
-    /// Returns the smallest number less than or equal to int in decimal digits (default 0 digits).
+    /// Returns the smallest number less than or equal to int in decimal digits.
     var floor: Int {
         return floor_(self.to_double)
     }
+    
+    /// Rounds int to a given precision in decimal digits.
+    var round: Int {
+        return round_(self.to_double)
+    }
+    
+    /// Returns the array including the digits extracted by place-value notation with radix base of int.
+    var digits: [Int] {
+        return digits()
+    }
+    
+    /// Returns the array including the digits extracted by place-value notation with radix base of int.
+    ///
+    /// - Parameter base: A radix indicates the base of integer
+    /// - Returns: An array of digits
+    func digits(_ base: Int = 10) -> [Int] {
+        guard self > 0 && base >= 2 else { return [] }
+        var result: [Int] = []
+        var value = self
+        while value / base != 0 {
+            result.append(value % base)
+            value = value / base
+        }
+        result.append(value % base)
+        return result
+    }
 }
 
+// MARK: - Math
 public extension Double {
-    /// Returns the largest number less than or equal to int in decimal digits (default 0 digits).
+    /// Returns the largest number less than or equal to int in decimal digits.
     var ceil: Int {
         return ceil_(self)
     }
     
-    /// Returns the smallest number less than or equal to int in decimal digits (default 0 digits).
+    /// Returns the smallest number less than or equal to int in decimal digits.
     var floor: Int {
         return floor_(self)
+    }
+    
+    /// Rounds int to a given precision in decimal digits.
+    var round: Int {
+        return round_(self)
     }
 }
 
@@ -94,4 +126,8 @@ fileprivate func ceil_(_ value: Double) -> Int {
 
 fileprivate func floor_(_ value: Double) -> Int {
     return floor(value).to_i
+}
+
+fileprivate func round_(_ value: Double) -> Int {
+    return round(value).to_i
 }

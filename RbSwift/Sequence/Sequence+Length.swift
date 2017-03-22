@@ -8,15 +8,19 @@
 
 import Foundation
 
-public extension Sequence {    
+// MARK: - Length
+public extension Sequence {
+    /// Returns length of sequence.
     var length: Int {
         return count
     }
     
+    /// Returns length of sequence.
     var size: Int {
         return count
     }
     
+    /// Returns length of sequence.
     var count: Int {
         var i = 0
         self.forEach { _ in i += 1 }

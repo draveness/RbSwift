@@ -106,5 +106,23 @@ class NumberMathSpec: QuickSpec {
                 expect(1.5.floor).to(equal(1))
             }
         }
+        
+        describe(".round") {
+            it("rounds int to a given precision in decimal digits.") {
+                expect(1.round).to(equal(1))
+                expect(1.5.round).to(equal(2))
+                expect(1.4.round).to(equal(1))
+            }
+        }
+        
+        describe(".digits") { 
+            it("returns the array including the digits extracted by place-value notation with radix base of int") {
+                expect(12345.digits).to(equal([5, 4, 3, 2, 1]))
+                expect(12345.digits(7)).to(equal([4, 6, 6, 0, 5]))
+                expect(12345.digits(100)).to(equal([45, 23, 1]))
+                expect((-12345).digits(7)).to(equal([]))
+
+            }
+        }
     }
 }
