@@ -126,6 +126,10 @@ public extension Sequence {
         return results
     }
     
+    func take(while closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        return []
+    }
+    
     /// `drop` does the opposite of `take`, by returning the elements after n elements have been dropped
     ///
     /// - Parameter num: How many element should be dropped from the beginning
@@ -138,6 +142,10 @@ public extension Sequence {
             results.append(self.to_a[index + num])
         }
         return results
+    }
+    
+    func drop(while closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        return []
     }
     
     /// Return the first n elements of an array
