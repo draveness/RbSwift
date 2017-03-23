@@ -12,19 +12,27 @@ import RbSwift
 
 class SequenceBoolSpec: QuickSpec {
     override func spec() {
-        describe(".index(elem:)") {
-            it("returns the first index of element in array") {
-                expect([1, 2, 3].index(1)).to(equal(0))
-                expect([1, 2, 3].index(2)).to(equal(1))
-                expect([1, 2, 3, 3, 4].index(3)).to(equal(2))
+        describe("isAny(closure:)") {
+            it("returns true if array has an element satisfy specific condition") {
+                expect([1, 2, 3].isAny { $0 == 1 }).to(beTrue())
+                expect(["a", "b", "c"].isAny { $0 == "b" }).to(beTrue())
+            }
+            
+            it("returns true if any element of the array satisfy specific condition") {
+                expect([1, 2, 3].isAny { $0 == 100 }).to(beFalse())
+                expect(["a", "b", "c"].isAny { $0 == "bbb" }).to(beFalse())
             }
         }
         
-        describe(".rindex(elem:)") {
-            it("returns the last index of element in array") {
-                expect([1, 2, 3].rindex(1)).to(equal(0))
-                expect([1, 2, 3].rindex(2)).to(equal(1))
-                expect([1, 2, 3, 3, 4].rindex(3)).to(equal(3))
+        describe("isAll(closure:)") {
+            it("returns true if all the element in array satisfy specific condition") {
+                expect([1, 2, 3].isAll { $0.isPositive }).to(beTrue())
+                expect(["a", "a", "a"].isAll { $0 == "a" }).to(beTrue())
+            }
+            
+            it("returns true if some of the element in array does not satify specific condition") {
+                expect([1, 2, 3].isAll { $0 == 100 }).to(beFalse())
+                expect(["a", "b", "c"].isAll { $0 == "bbb" }).to(beFalse())
             }
         }
     }

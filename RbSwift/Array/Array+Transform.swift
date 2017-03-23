@@ -9,7 +9,6 @@
 import Foundation
 
 public extension Array {
-    
     /// When invoked with a closure, pass all combinations of length n of elements
     /// from the array and then returns the array itself.
     /// The implementation makes no guarantees about the order in which the combinations are yielded.

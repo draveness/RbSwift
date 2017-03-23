@@ -46,6 +46,40 @@ public extension Sequence {
         return result
     }
     
+    /// An alias to reject, see also Sequence#reject(closure:)
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: A new array
+    func deleteIf(_ closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        return reject(closure: closure)
+    }
+    
+    /// Drops elements up to, but not including, the first element for which the 
+    /// block returns nil or false and returns an array containing the remaining elements.
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: A new array
+    func dropWhile(_ closure: @escaping (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        var drop = true
+        return flatMap { item in
+            drop = drop && closure(item)
+            return drop ? nil : item
+        }
+    }
+    
+    /// Passes elements to the block until the block returns nil or false, then stops 
+    /// iterating and returns an array of all prior elements.
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: A new array
+    func takeWhile(_ closure: @escaping (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        var take = true
+        return flatMap { item in
+            take = take && closure(item)
+            return take ? item : nil
+        }
+    }
+    
     /// Invokes the given block once for each element of self.
     /// Creates a new array containing the values returned by the block.
     ///
@@ -57,28 +91,6 @@ public extension Sequence {
             result.append(closure(item))
         }
         return result
-    }
-    
-    /// Passes each element of the collection to the given block. The method returns
-    /// `true` if the block ever returns a value other than false.
-    ///
-    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
-    /// - Returns: A bool value indicates there is an element cause the block to return true
-    func isAny(closure: (Iterator.Element) -> Bool) -> Bool {
-        return reduce(false) { (result, element) in
-            return result || closure(element)
-        }
-    }
-    
-    /// Passes each element of the collection to the given block.
-    /// The method returns true if the block never returns false.
-    ///
-    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
-    /// - Returns: A bool value indicates all the elements in array cause the block to return true
-    func isAll(closure: (Iterator.Element) -> Bool) -> Bool {
-        return reduce(true) { (result, element) in
-            return result && closure(element)
-        }
     }
     
     /// Returns a new array with the elements of both arrays within it.
