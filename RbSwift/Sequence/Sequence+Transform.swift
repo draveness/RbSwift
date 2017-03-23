@@ -24,6 +24,14 @@ public extension Sequence {
         return result
     }
     
+    /// An alias to `select(closure:)` method.
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: A new array
+    func keep(if closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+        return select(closure: closure)
+    }
+    
     /// Returns a new array excluding all elements of `self` for which the given block returns a true value.
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value

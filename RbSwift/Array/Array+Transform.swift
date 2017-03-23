@@ -49,8 +49,9 @@ public extension Array {
     }
     
     func dig<T>(_ idxs: [Int]) -> T? {
-        guard self.length > 0 && idxs.count > 0 else { return nil }
-        let firstIdx = idxs.first!
+        guard self.length > 0 else { return nil }
+        guard let firstIdx = idxs.first else { return nil }
+        guard firstIdx < self.length else { return nil }
         let element = self[firstIdx]
         if let element = element as? [T] {
             return element.dig(idxs.drop(1))

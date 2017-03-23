@@ -21,6 +21,14 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
+        describe(".keep(if:)") {
+            it("returns a new array containing all elements of ary for which the given block returns a true value") {
+                expect([1, 2, 3].keep { $0 > 2 }).to(equal([3]))
+                expect([1, 2, 3].keep { $0 <= 2 }).to(equal([1, 2]))
+                expect([1, 2, 3].keep { _ in false }).to(equal([]))
+            }
+        }
+        
         describe(".reject(closure:)") {
             it("returns a new array excluding all elements of ary for which the given block returns a true value") {
                 expect([1, 2, 3].reject { $0 > 2 }).to(equal([1, 2]))

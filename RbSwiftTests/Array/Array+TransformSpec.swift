@@ -60,8 +60,11 @@ class ArrayPatchSpec: QuickSpec {
                 expect(arr.dig(1, 2)).to(equal(5))
                 expect(arr.dig(1)).to(equal([3, 4, 5]))
 
-                let result: Int? = arr.dig(1, 2, 3)
-                expect(result).to(beNil())
+                let result1: Int? = arr.dig(1, 2, 3)
+                expect(result1).to(beNil())
+                
+                let result2: Int? = arr.dig(10, 2, 3)
+                expect(result2).to(beNil())
             }
         }
     }
