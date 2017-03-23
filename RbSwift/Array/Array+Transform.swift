@@ -125,6 +125,22 @@ public extension Array {
             return nil
         }
     }
+    
+    func zip<T>(_ arrays: [T]...) -> [[T]] {
+        let minLength = arrays.reduce(100000) { $1.length < $0 ? $1.length : $0 }
+//        var results: [[T]] = Array<Array<T>>(repeating: [], count: minLength)
+        let results = self.first(minLength).mapWithIndex { (index, data) -> [T] in
+            var result: [T] = []
+            if let element = data as? T {
+                result.append(element)
+                for array in arrays {
+                    result.append(array[index])
+                }
+            }
+            return result
+        }
+        return results
+    }
 }
 
 

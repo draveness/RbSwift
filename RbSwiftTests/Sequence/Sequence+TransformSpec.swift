@@ -139,6 +139,14 @@ class SequencTransformSpec: QuickSpec {
                 arr.cycle(2) { result.append($0) }
                 expect(result).to(equal([1, 2, 3, 1, 2, 3]))
             }
-        }        
+        }
+        
+        describe(".zip(arrays:)") {
+            it("returns a new array built by concatenating the int copies of self") {
+                let arr: [Int] = [1, 2, 3].zip([3, 4, 5]).flatten()
+                let result: [Int] = [[1, 2, 3], [3, 4, 5]].flatten()
+                expect(arr).to(equal(result))
+            }
+        }
     }
 }
