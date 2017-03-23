@@ -28,7 +28,7 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func keep(if closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
+    func keepIf(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
         return select(closure: closure)
     }
     
