@@ -51,37 +51,40 @@ public extension Array {
     
     @discardableResult func repeatedCombination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive && !self.isEmpty else { return [] }
-        var bits = Array<Int>(Array<Int>(repeating: 0, count: num).reversed())
-        
-        func lastBit() -> Int? {
-            for (index, bit) in bits.enumerated() {
-                print("\(bits)")
-                if bit < self.length - 1 {
-                    bits[index] += 1
-                    return bit
-                } else if index < bits.length - 1 {
-                    print("+ before: \(bits) \(index)")
-                    bits[index+1] += 1
-                    bits[index] = index + 1
-                    print("+ after : \(bits)")
-                    if bits[index] + 1 {
-                        <#code#>
-                    }
+        var bits = Array<Int>(repeating: 0, count: num)
+        var largest = ([Int](repeating: 0, count: num) + [1]).to_i(self.length)
+        func lastBit() -> Bool {
+            if bits.to_i(self.length) < largest - 1 {
+                bits = (bits.to_i(self.length) + 1).digits(self.length)
+                
+                // all the bits should in desc order to remove dupliate
+                while bits.sorted(by: >) != bits {
+                    bits = (bits.to_i(self.length) + 1).digits(self.length)
                 }
+                
+                // adding placeholder integer
+                while bits.length < num {
+                    bits.append(0)
+                }
+                
+                return false
             }
-            return nil
+            return true
         }
         
         var results: [[Element]] = []
         
         while true {
             var result: [Element] = []
+            
+            print(bits)
             for index in bits.reversed() {
                 result.append(self[index])
             }
             if let closure = closure { closure(result) }
             results.append(result)
-            if lastBit() == nil {
+            print("result: \(result)")
+            if lastBit() {
                 break
             }
         }
