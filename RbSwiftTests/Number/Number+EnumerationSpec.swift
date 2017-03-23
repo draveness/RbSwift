@@ -54,6 +54,12 @@ class NumberEnumerationSpec: QuickSpec {
                 var arr1: [Int] = []
                 3.times { arr1.append(1) }
                 expect(arr1).to(equal([1, 1, 1]))
+                
+                let arr2: [Int] = 3.times { return $0 }
+                expect(arr2).to(equal([0, 1, 2]))
+                
+                let arr3: [Int] = 3.times { return 1 }
+                expect(arr3).to(equal([1, 1, 1]))
             }
         }
     }

@@ -13,9 +13,30 @@ public extension Array {
     /// Makes the current string empty
     ///
     /// - Returns: An empty string
-    mutating func clear() -> [Element] {
+    @discardableResult mutating func clear() -> [Element] {
         self = []
         return self
+    }
+    
+    /// Remove last element in array or nil
+    ///
+    /// - Returns: The last element in array
+    mutating func pop() -> Element? {
+        return self.popLast()
+    }
+    
+    mutating func pop(_ num: Int) -> [Element] {
+        guard num.isPositive else { return [] }
+        guard num < self.length else {
+            let element = self
+            self.clear()
+            return element
+        }
+        var result: [Element] = []
+        for _ in 0..<num {
+            result.append(pop()!)
+        }
+        return result.reversed()
     }
 }
 
