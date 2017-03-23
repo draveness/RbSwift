@@ -101,17 +101,17 @@ class StringAccessSpec: QuickSpec {
             }
         }
         
-        describe(".substring(to:)") {
-            it("returns a new string substring to index") {
-                expect("Hello".substring(to: 1)).to(equal("H"))
-                expect("H\n11".substring(to: 2)).to(equal("H\n"))
-            }
-        }
-        
         describe(".substring(from:)") {
             it("returns a new string substring from index") {
                 expect("Hello".substring(from: 1)).to(equal("ello"))
                 expect("H\n11".substring(from: 2)).to(equal("11"))
+            }
+        }
+        
+        describe(".substring(to:)") {
+            it("returns a new string substring to index") {
+                expect("Hello".substring(to: 1)).to(equal("H"))
+                expect("H\n11".substring(to: 2)).to(equal("H\n"))
             }
         }
         

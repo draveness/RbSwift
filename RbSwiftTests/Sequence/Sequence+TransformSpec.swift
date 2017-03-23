@@ -21,11 +21,11 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
-        describe(".keep(if:)") {
+        describe(".keepIf(closure:)") {
             it("returns a new array containing all elements of ary for which the given block returns a true value") {
-                expect([1, 2, 3].keep { $0 > 2 }).to(equal([3]))
-                expect([1, 2, 3].keep { $0 <= 2 }).to(equal([1, 2]))
-                expect([1, 2, 3].keep { _ in false }).to(equal([]))
+                expect([1, 2, 3].keepIf { $0 > 2 }).to(equal([3]))
+                expect([1, 2, 3].keepIf { $0 <= 2 }).to(equal([1, 2]))
+                expect([1, 2, 3].keepIf { _ in false }).to(equal([]))
             }
         }
         
@@ -86,6 +86,15 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
+        describe(".count(closure:)") {
+            it("returns the number of element satisfy specific closure") {
+                let a = [1, 2, 3, 10, 100, 1000]
+                expect(a.count { $0 > 10 }).to(equal(2))
+                expect(a.count { $0.isPositive }).to(equal(6))
+                expect(a.count { $0.isEven }).to(equal(4))
+            }
+        }
+        
         describe(".flatten()") { 
             it("returns a new array that is one-dimentional of self") {
                 expect([1, 2, [3, 4, 5, [6, 7, [8]]]].flatten()).to(equal([1, 2, 3, 4, 5, 6, 7, 8]))
@@ -118,6 +127,18 @@ class SequencTransformSpec: QuickSpec {
             
             it("returns a new array with the same element if count is greater than array.count") {
                 expect([1, 2, 3, 4].first(6)).to(equal([1, 2, 3, 4]))
+            }
+        }
+        
+        describe(".last(num:)") {
+            it("returns the last count element of array") {
+                let arr = [1, 2, 3, 4]
+                expect(arr.last(1)).to(equal([4]))
+                expect(arr.last(2)).to(equal([3, 4]))
+            }
+            
+            it("returns a new array with the same element if count is greater than array.count") {
+                expect([1, 2, 3, 4].last(6)).to(equal([1, 2, 3, 4]))
             }
         }
         

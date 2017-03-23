@@ -38,5 +38,15 @@ class ArrayOperatorSpec: QuickSpec {
                 }
             }
         }
+        
+        describe(".==") { 
+            it("returns true when the element in nested array equals including elements order") {
+                let value1 = [[1,2],[3,4]] == [[1,2],[3,4]]
+                expect(value1).to(beTrue())
+                
+                let value2 = [[1,2],[3,4]] == [[3,4],[1,2]]
+                expect(value2).to(beFalse())
+            }
+        }
     }
 }

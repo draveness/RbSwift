@@ -78,10 +78,35 @@ public extension Int {
         }
     }
     
+    /// Execute the block for self times
+    ///
+    /// - Parameter closure: A closure accepts Void and returns Void
+    /// - Returns: An array
+    func times<T>(closure: @escaping (Void) -> T) -> [T] {
+        var result: [T] = []
+        0.upto(self - 1).forEach { _ in
+            result.append(closure())
+        }
+        return result
+    }
+    
     /// Execute the block with counter for self times
     ///
     /// - Parameter closure: A closure accepts an int counter and returns Void
     func times(closure: (Int) -> Void) {
         0.upto(self - 1).forEach(closure)
+    }
+    
+    
+    /// Execute the block for self times
+    ///
+    /// - Parameter closure: A closure accepts Void and returns Void
+    /// - Returns: An array
+    func times<T>(closure: @escaping (Int) -> T) -> [T] {
+        var result: [T] = []
+        0.upto(self - 1).forEach { index in
+            result.append(closure(index))
+        }
+        return result
     }
 }
