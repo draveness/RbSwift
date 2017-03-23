@@ -25,6 +25,10 @@ public extension Array {
         return self.popLast()
     }
     
+    /// Return the last several elements in array.
+    ///
+    /// - Parameter num: The count of returning elements
+    /// - Returns: An new array of popped element
     mutating func pop(_ num: Int) -> [Element] {
         guard num.isPositive else { return [] }
         guard num < self.length else {
@@ -37,6 +41,32 @@ public extension Array {
             result.append(pop()!)
         }
         return result.reversed()
+    }
+    
+    /// Remove first element in array or nil
+    ///
+    /// - Returns: The first element in array
+    mutating func shift() -> Element? {
+        if self.isEmpty { return nil }
+        return self.removeFirst()
+    }
+    
+    /// Return the first several elements in array.
+    ///
+    /// - Parameter num: The count of returning elements
+    /// - Returns: An new array of shifted element
+    mutating func shift(_ num: Int) -> [Element] {
+        guard num.isPositive else { return [] }
+        guard num < self.length else {
+            let element = self
+            self.clear()
+            return element
+        }
+        var result: [Element] = []
+        for _ in 0..<num {
+            result.append(shift()!)
+        }
+        return result
     }
 }
 

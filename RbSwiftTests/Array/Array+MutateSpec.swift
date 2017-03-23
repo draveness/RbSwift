@@ -67,5 +67,29 @@ class ArrayMutateSpec: QuickSpec {
                 expect(arr4).to(equal([]))
             }
         }
+        
+        describe(".shift(num:)") {
+            it("returns the first element in array or nil") {
+                var arr = [1, 2, 3]
+                expect(arr.shift()).to(equal(1))
+                expect(arr).to(equal([2, 3]))
+                
+                var arr1: [Int] = []
+                expect(arr1.shift()).to(beNil())
+                expect(arr1).to(equal([]))
+                
+                var arr2 = [1, 2, 3]
+                expect(arr2.shift(2)).to(equal([1, 2]))
+                expect(arr2).to(equal([3]))
+                
+                var arr3 = [1, 2, 3]
+                expect(arr3.shift(-1)).to(equal([]))
+                expect(arr3).to(equal([1, 2, 3]))
+                
+                var arr4 = [1, 2, 3]
+                expect(arr4.shift(4)).to(equal([1, 2, 3]))
+                expect(arr4).to(equal([]))
+            }
+        }
     }
 }
