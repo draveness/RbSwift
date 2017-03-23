@@ -29,7 +29,6 @@ class ArrayBoolSpec: QuickSpec {
                 let arr4 = [1, 2, 3]
                 expect(arr3.isEql(arr4)).to(beFalse())
             }
-            
         }
     }
 }

@@ -14,7 +14,6 @@ public extension Array where Element: Equatable {
     /// - Parameter other: Another array
     /// - Returns: A bool value indicates the equatable between two arrays
     func isEql(_ other: [Element]) -> Bool {
-        
         guard self.length == other.length else { return false }
         var lhs = self
         var rhs = other
