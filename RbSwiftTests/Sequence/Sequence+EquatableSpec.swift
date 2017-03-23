@@ -12,10 +12,19 @@ import RbSwift
 
 class SequenceEquatableSpec: QuickSpec {
     override func spec() {
-        describe(".length") {
-            it("returns the length of array") {
-                let arr = [1, 2, 3, 4]
-                expect(arr.length).to(equal(arr.count))
+        describe(".index(elem:)") {
+            it("returns the first index of element in array") {
+                expect([1, 2, 3].index(1)).to(equal(0))
+                expect([1, 2, 3].index(2)).to(equal(1))
+                expect([1, 2, 3, 3, 4].index(3)).to(equal(2))
+            }
+        }
+        
+        describe(".rindex(elem:)") {
+            it("returns the last index of element in array") {
+                expect([1, 2, 3].rindex(1)).to(equal(0))
+                expect([1, 2, 3].rindex(2)).to(equal(1))
+                expect([1, 2, 3, 3, 4].rindex(3)).to(equal(3))
             }
         }
     }

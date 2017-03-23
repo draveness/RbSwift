@@ -37,6 +37,30 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
+        describe(".deleteIf(closure:)") {
+            it("deletes every element of self for which block evaluates to true.") {
+                expect([1, 2, 3].deleteIf { $0 > 2 }).to(equal([1, 2]))
+                expect([1, 2, 3].deleteIf { $0 <= 2 }).to(equal([3]))
+                expect([1, 2, 3].deleteIf { _ in false }).to(equal([1, 2, 3]))
+            }
+        }
+        
+        describe(".dropWhile(closure:)") {
+            it("drops elements up to, but not including, the first element for which the block returns nil or false and returns an array containing the remaining elements") {
+                expect([1, 2, 3].dropWhile { $0 > 2 }).to(equal([1, 2, 3]))
+                expect([1, 2, 3].dropWhile { $0 <= 2 }).to(equal([3]))
+                expect([1, 2, 3].dropWhile { _ in false }).to(equal([1, 2, 3]))
+            }
+        }
+        
+        describe(".takeWhile(closure:)") {
+            it("passes elements to the block until the block returns nil or false, then stops iterating and returns an array of all prior elements") {
+                expect([1, 2, 3].takeWhile { $0 > 2 }).to(equal([]))
+                expect([1, 2, 3].takeWhile { $0 <= 2 }).to(equal([1, 2]))
+                expect([1, 2, 3].takeWhile { _ in false }).to(equal([]))
+            }
+        }
+        
         describe(".collect(closure:)") {
             it("creates a new array containing the values returned by the block") {
                 expect([1, 2, 3].collect { _ in "2" }).to(equal(["2", "2", "2"]))
@@ -59,30 +83,6 @@ class SequencTransformSpec: QuickSpec {
                 let a = [1, 2, 3]
                 expect(a.concat([4, 5, 6])).to(equal([1, 2, 3, 4, 5, 6]))
                 expect(a).to(equal([1, 2, 3]))
-            }
-        }
-        
-        describe("isAny(closure:)") {
-            it("returns true if array has an element satisfy specific condition") {
-                expect([1, 2, 3].isAny { $0 == 1 }).to(beTrue())
-                expect(["a", "b", "c"].isAny { $0 == "b" }).to(beTrue())
-            }
-            
-            it("returns true if any element of the array satisfy specific condition") {
-                expect([1, 2, 3].isAny { $0 == 100 }).to(beFalse())
-                expect(["a", "b", "c"].isAny { $0 == "bbb" }).to(beFalse())
-            }
-        }
-        
-        describe("isAll(closure:)") {
-            it("returns true if all the element in array satisfy specific condition") {
-                expect([1, 2, 3].isAll { $0.isPositive }).to(beTrue())
-                expect(["a", "a", "a"].isAll { $0 == "a" }).to(beTrue())
-            }
-            
-            it("returns true if some of the element in array does not satify specific condition") {
-                expect([1, 2, 3].isAll { $0 == 100 }).to(beFalse())
-                expect(["a", "b", "c"].isAll { $0 == "bbb" }).to(beFalse())
             }
         }
         
