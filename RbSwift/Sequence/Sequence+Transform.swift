@@ -129,7 +129,7 @@ public extension Sequence {
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of first n elements
     func take(_ num: Int) -> [Iterator.Element] {
-        guard num > 0 else { return [] }
+        guard num.isPositive else { return [] }
         guard num < self.count else { return Array<Iterator.Element>(self) }
         var results: [Iterator.Element] = []
         num.times { index in
@@ -138,26 +138,18 @@ public extension Sequence {
         return results
     }
     
-    func take(while closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        return []
-    }
-    
     /// `drop` does the opposite of `take`, by returning the elements after n elements have been dropped
     ///
     /// - Parameter num: How many element should be dropped from the beginning
     /// - Returns: An new array with first n elements dropped
     func drop(_ num: Int) -> [Iterator.Element] {
-        guard num > 0 else { return Array<Iterator.Element>(self) }
+        guard num.isPositive else { return Array<Iterator.Element>(self) }
         guard num < self.count else { return [] }
         var results: [Iterator.Element] = []
         (self.count - num).times { index in
             results.append(self.to_a[index + num])
         }
         return results
-    }
-    
-    func drop(while closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        return []
     }
     
     /// Return the first n elements of an array
@@ -168,6 +160,18 @@ public extension Sequence {
         return take(num)
     }
     
+    /// Return the last n elements of an array
+    ///
+    /// - Parameter num: An integer specifies the element of the returning array
+    /// - Returns: An new array of last n elements
+    func last(_ num: Int) -> [Iterator.Element] {
+        var result = Array<Iterator.Element>(self)
+        guard num.isPositive else { return [] }
+        guard num < self.length else { return result }
+        result.removeFirst(self.length - num)
+        return result
+    }
+    
     /// Calls the given block for each element n times.
     ///
     /// - Parameters:
@@ -175,7 +179,7 @@ public extension Sequence {
     ///   - closure: A closure that accepts the element in array as parameter
     /// - Returns: An new array with every elements in array repeated for n times
     @discardableResult func cycle(_ n: Int = 1, closure: ((Iterator.Element) -> Void)? = nil) -> [Iterator.Element] {
-        guard n > 0 else { return [] }
+        guard n.isPositive else { return [] }
         let results = self.to_a * n
         if let closure = closure {
             results.forEach { closure($0) }

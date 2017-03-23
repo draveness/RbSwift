@@ -121,6 +121,18 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
+        describe(".last(num:)") {
+            it("returns the last count element of array") {
+                let arr = [1, 2, 3, 4]
+                expect(arr.last(1)).to(equal([4]))
+                expect(arr.last(2)).to(equal([3, 4]))
+            }
+            
+            it("returns a new array with the same element if count is greater than array.count") {
+                expect([1, 2, 3, 4].last(6)).to(equal([1, 2, 3, 4]))
+            }
+        }
+        
         describe(".drop(num:)") {
             it("drops the first n element of array") {
                 let arr = [1, 2, 3]
