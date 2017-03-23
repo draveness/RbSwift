@@ -49,6 +49,14 @@ public extension Array {
         return results
     }
     
+    /// When invoked with a closure, pass all **repeated** combinations of length n of elements
+    /// from the array and then returns the array itself.
+    /// The implementation makes no guarantees about the order in which the combinations are yielded.
+    ///
+    /// - Parameters:
+    ///   - num: The length of combination in the returning array
+    ///   - closure: A closure called each time finds a new combination
+    /// - Returns: An new array with all the possible repeated combination in the receiver array
     @discardableResult func repeatedCombination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive && !self.isEmpty else { return [] }
         var bits = Array<Int>(repeating: 0, count: num)
@@ -106,7 +114,7 @@ public extension Array {
     /// - Parameter idxs: A sequence of int specify the value location in the recevier array.
     /// - Returns: An value in the nested array or nil
     func dig<T>(_ idxs: [Int]) -> T? {
-        guard self.length > 0 else { return nil }
+        guard self.length.isPositive else { return nil }
         guard let firstIdx = idxs.first else { return nil }
         guard firstIdx < self.length else { return nil }
         let element = self[firstIdx]

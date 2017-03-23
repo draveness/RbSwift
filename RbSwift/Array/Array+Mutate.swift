@@ -36,7 +36,7 @@ public extension Array where Element: Equatable {
             }
         }
         
-        guard indexes.count > 0 else { return nil }
+        guard indexes.count.isPositive else { return nil }
         
         if !all {
             indexes = [indexes.first!]
