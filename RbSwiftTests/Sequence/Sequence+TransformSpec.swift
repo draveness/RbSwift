@@ -1,4 +1,4 @@
-//
+
 //  SequencePatchSpec.swift
 //  SwiftPatch
 //
@@ -143,9 +143,17 @@ class SequencTransformSpec: QuickSpec {
         
         describe(".zip(arrays:)") {
             it("returns a new array built by concatenating the int copies of self") {
-                let arr: [Int] = [1, 2, 3].zip([3, 4, 5]).flatten()
-                let result: [Int] = [[1, 2, 3], [3, 4, 5]].flatten()
-                expect(arr).to(equal(result))
+                let arr = Array([1, 2, 3].zip([3, 4, 5]).joined())
+                expect(arr).to(equal([1, 3, 2, 4, 3, 5]))
+                
+                let arr1 = Array([1, 2, 3].zip([4, 5, 6], [7, 8, 9]).joined())
+                expect(arr1).to(equal([1, 4, 7, 2, 5, 8, 3, 6, 9]))
+                
+                let arr2 = Array([1, 2, "a"].zip([4, 5, "b"], [7, 8, "c"]).joined())
+                let intArray = arr2.first(6) as! [Int]
+                let strArray = arr2.drop(6) as! [String]
+                expect(intArray).to(equal([1, 4, 7, 2, 5, 8]))
+                expect(strArray).to(equal(["a", "b", "c"]))
             }
         }
     }
