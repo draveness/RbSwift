@@ -90,7 +90,6 @@ public extension Array {
             }
             if let closure = closure { closure(result) }
             results.append(result)
-            print("result: \(result)")
             if lastBit() {
                 break
             }
@@ -125,11 +124,11 @@ public extension Array {
             return nil
         }
     }
-    
+
     func zip<T>(_ arrays: [T]...) -> [[T]] {
-        let minLength = arrays.reduce(100000) { $1.length < $0 ? $1.length : $0 }
-//        var results: [[T]] = Array<Array<T>>(repeating: [], count: minLength)
-        let results = self.first(minLength).mapWithIndex { (index, data) -> [T] in
+        let minLength = arrays.reduce(Int.max) { $1.length < $0 ? $1.length : $0 }
+        let arr = self.first(minLength)
+        let results = arr.mapWithIndex { (index, data) -> [T] in
             var result: [T] = []
             if let element = data as? T {
                 result.append(element)
@@ -137,6 +136,7 @@ public extension Array {
                     result.append(array[index])
                 }
             }
+            print(result)
             return result
         }
         return results
