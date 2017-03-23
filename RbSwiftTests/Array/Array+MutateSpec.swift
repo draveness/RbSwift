@@ -68,6 +68,19 @@ class ArrayMutateSpec: QuickSpec {
             }
         }
         
+        describe(".push(objs:)") {
+            it("prepends objects to the front of self, moving other elements upwards.") {
+                var arr = [1, 2, 3]
+                expect(arr.push(1)).to(equal([1, 2, 3, 1]))
+                expect(arr).to(equal([1, 2, 3, 1]))
+                
+                var arr1: [Int] = [1]
+                expect(arr1.push(1, 2, 3)).to(equal([1, 1, 2, 3]))
+                expect(arr1).to(equal([1, 1, 2, 3]))
+                
+            }
+        }
+
         describe(".shift(num:)") {
             it("returns the first element in array or nil") {
                 var arr = [1, 2, 3]
@@ -89,6 +102,19 @@ class ArrayMutateSpec: QuickSpec {
                 var arr4 = [1, 2, 3]
                 expect(arr4.shift(4)).to(equal([1, 2, 3]))
                 expect(arr4).to(equal([]))
+            }
+        }
+        
+        describe(".unshift(objs:)") {
+            it("prepends objects to the front of self, moving other elements upwards.") {
+                var arr = [1, 2, 3]
+                expect(arr.unshift(1)).to(equal([1, 1, 2, 3]))
+                expect(arr).to(equal([1, 1, 2, 3]))
+                
+                var arr1: [Int] = [1, 2, 3]
+                expect(arr1.unshift(1, 2)).to(equal([1, 2, 1, 2, 3]))
+                expect(arr1).to(equal([1, 2, 1, 2, 3]))
+                
             }
         }
     }

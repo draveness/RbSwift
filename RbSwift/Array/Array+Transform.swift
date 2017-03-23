@@ -125,6 +125,11 @@ public extension Array {
         }
     }
 
+    /// Converts any arguments to arrays, then merges elements of self with corresponding elements from each argument.
+    /// This generates a sequence of `minimum` n-element arrays, where n is one more than the count of arguments.
+    ///
+    /// - Parameter arrays: Another arrays with type [T]
+    /// - Returns: An new nested array
     func zip<T>(_ arrays: [T]...) -> [[T]] {
         let minLength = arrays.reduce(Int.max) { $1.length < $0 ? $1.length : $0 }
         let arr = self.first(minLength)

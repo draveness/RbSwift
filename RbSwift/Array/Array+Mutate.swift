@@ -21,7 +21,7 @@ public extension Array {
     /// Remove last element in array or nil
     ///
     /// - Returns: The last element in array
-    mutating func pop() -> Element? {
+    @discardableResult mutating func pop() -> Element? {
         return self.popLast()
     }
     
@@ -29,7 +29,7 @@ public extension Array {
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of popped element
-    mutating func pop(_ num: Int) -> [Element] {
+    @discardableResult mutating func pop(_ num: Int) -> [Element] {
         guard num.isPositive else { return [] }
         guard num < self.length else {
             let element = self
@@ -43,10 +43,19 @@ public extension Array {
         return result.reversed()
     }
     
+    /// Appends objects to the front of self. See also Array#pop for the opposite effect.
+    ///
+    /// - Parameter objs: An array of object prepend to the receiver array
+    /// - Returns: An array with objs append to self
+    @discardableResult mutating func push(_ objs: Element...) -> [Element] {
+        self += objs
+        return self
+    }
+    
     /// Remove first element in array or nil
     ///
     /// - Returns: The first element in array
-    mutating func shift() -> Element? {
+    @discardableResult mutating func shift() -> Element? {
         if self.isEmpty { return nil }
         return self.removeFirst()
     }
@@ -55,7 +64,7 @@ public extension Array {
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of shifted element
-    mutating func shift(_ num: Int) -> [Element] {
+    @discardableResult mutating func shift(_ num: Int) -> [Element] {
         guard num.isPositive else { return [] }
         guard num < self.length else {
             let element = self
@@ -68,6 +77,16 @@ public extension Array {
         }
         return result
     }
+    
+    /// Prepends objects to the front of self, moving other elements upwards
+    /// See also Array#shift for the opposite effect.
+    ///
+    /// - Parameter objs: An array of object prepend to the receiver array
+    /// - Returns: An array with objs prepend to self
+    @discardableResult mutating func unshift(_ objs: Element...) -> [Element] {
+        self = objs + self
+        return self
+    }
 }
 
 // MARK: - Mutate
@@ -79,7 +98,7 @@ public extension Array where Element: Equatable {
     ///   - obj: An object which will be deleted in the array
     ///   - all: A bool value indicates whether deletes all the same object in array (default is `true`).
     /// - Returns: The deleted object or nil.
-    mutating func delete(_ obj: Element, all: Bool = true) -> Element? {
+    @discardableResult mutating func delete(_ obj: Element, all: Bool = true) -> Element? {
         var indexes: [Int] = []
         for (index, item) in self.enumerated() {
             if item == obj {
