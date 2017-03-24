@@ -18,5 +18,14 @@ class ArrayAccessSpec: QuickSpec {
                 expect([1,2,3].at(4)).to(beNil())
             }
         }
+        
+        describe(".sample") {
+            it("chooses one random element from the original array") {
+                let arr = [1, 2, 3]
+                expect(arr).to(contain(arr.sample!))
+                expect(arr).to(contain(arr.sample(2)))
+                expect(arr).to(contain(arr.sample(3)))
+            }
+        }
     }
 }

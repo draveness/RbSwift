@@ -22,4 +22,46 @@ public extension Array {
         guard num < self.length else { return nil }
         return self[num]
     }
+    
+    /// Choose a random element from the array.
+    ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.sample      #=> 2
+    ///     arr.sample      #=> 1
+    ///     arr.sample      #=> 1
+    ///     arr.sample      #=> 2
+    ///     arr.sample      #=> 3
+    ///     arr             #=> [1, 2, 3]
+    ///
+    var sample: Element? {
+        return sample().first
+    }
+    
+    
+    /// Choose a random element or n random elements from the array.
+    /// Each element in the origianl array is only selected once.
+    ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.sample(1)       #=> [2]
+    ///     arr.sample(2)       #=> [1, 2]
+    ///     arr.sample(2)       #=> [1, 3]
+    ///     arr.sample(2)       #=> [3, 1]
+    ///     arr.sample(3)       #=> [3, 1, 2]
+    ///     arr.sample(4)       #=> [2, 3, 1]
+    ///     arr.sample(0)       #=> []
+    ///     arr                 #=> [1, 2, 3]
+    ///
+    /// - Parameter n: An integer of random elements count
+    /// - Returns: An new array with random elements
+    func sample(_ n: Int = 1) -> [Element] {
+        guard n > 0 else { return [] }
+        var candidates: [Element] = self
+        var results: [Element] = []
+        while results.count < n {
+            let random: Int = Int(arc4random() % candidates.length.to_u32)
+            results.append(candidates[random])
+            candidates.remove(at: random)
+        }
+        return results
+    }
 }
