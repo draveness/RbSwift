@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Conversions
 public extension Array {
     /// Convert an array of integer to int by base default is 10.
     ///

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Equatable
 public extension Array where Element: Equatable {
     /// Returns a new array with unique element.
     var uniq: [Element] {

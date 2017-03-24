@@ -78,6 +78,8 @@
 		727738A41E82B9DB008E83E6 /* Array+OperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */; };
 		727738A61E8403F8008E83E6 /* Array+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738A51E8403F8008E83E6 /* Array+Equatable.swift */; };
 		727738A81E8404B8008E83E6 /* Array+EquatableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738A71E8404B8008E83E6 /* Array+EquatableSpec.swift */; };
+		727738AE1E84AE87008E83E6 /* Array+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738AD1E84AE87008E83E6 /* Array+Access.swift */; };
+		727738B21E84AFDD008E83E6 /* Array+AccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */; };
 		729D3D4D1E7E355300258333 /* InflectorRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D4C1E7E355300258333 /* InflectorRule.swift */; };
 		729D3D4F1E7E357800258333 /* Date+Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D4E1E7E357800258333 /* Date+Initializer.swift */; };
 		729D3D511E7E385E00258333 /* Duration+RelativeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */; };
@@ -188,6 +190,8 @@
 		727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+OperatorSpec.swift"; sourceTree = "<group>"; };
 		727738A51E8403F8008E83E6 /* Array+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Equatable.swift"; sourceTree = "<group>"; };
 		727738A71E8404B8008E83E6 /* Array+EquatableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+EquatableSpec.swift"; sourceTree = "<group>"; };
+		727738AD1E84AE87008E83E6 /* Array+Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Access.swift"; sourceTree = "<group>"; };
+		727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+AccessSpec.swift"; sourceTree = "<group>"; };
 		729D3D4C1E7E355300258333 /* InflectorRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InflectorRule.swift; sourceTree = "<group>"; };
 		729D3D4E1E7E357800258333 /* Date+Initializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Initializer.swift"; sourceTree = "<group>"; };
 		729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+RelativeSpec.swift"; sourceTree = "<group>"; };
@@ -443,6 +447,7 @@
 				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
 				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
 				727738A51E8403F8008E83E6 /* Array+Equatable.swift */,
+				727738AD1E84AE87008E83E6 /* Array+Access.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */,
 				72FC508D1E83C851009B99F4 /* Array+ConversionsSpec.swift */,
 				727738A71E8404B8008E83E6 /* Array+EquatableSpec.swift */,
+				727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -723,6 +729,7 @@
 				72541BB41E7E34C4008B49B1 /* Date+Conversions.swift in Sources */,
 				72FC50901E83CE2E009B99F4 /* Sequence+Enumeration.swift in Sources */,
 				729D3D571E7E63F200258333 /* Duration+Math.swift in Sources */,
+				727738AE1E84AE87008E83E6 /* Array+Access.swift in Sources */,
 				72541B801E7E32E1008B49B1 /* String+Remove.swift in Sources */,
 				72541B821E7E32E1008B49B1 /* String+Inflections.swift in Sources */,
 				72541B861E7E32E1008B49B1 /* String+Transform.swift in Sources */,
@@ -786,6 +793,7 @@
 				72541B901E7E3301008B49B1 /* Sequence+LengthSpec.swift in Sources */,
 				7277388A1E802652008E83E6 /* Number+EnumerationSpec.swift in Sources */,
 				72541BA01E7E330A008B49B1 /* String+CaseSpec.swift in Sources */,
+				727738B21E84AFDD008E83E6 /* Array+AccessSpec.swift in Sources */,
 				727738A41E82B9DB008E83E6 /* Array+OperatorSpec.swift in Sources */,
 				72A219001E80C76500EF65C9 /* Number+MathSpec.swift in Sources */,
 				724875201E7CF850007984FD /* Array+TransformSpec.swift in Sources */,
