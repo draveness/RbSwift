@@ -24,6 +24,7 @@ public extension Array {
     }
     
     /// Choose a random element from the array.
+    /// If the array is empty the `Array#sample` returns nil and the `Array#sample(n:)` form returns an empty array.
     ///
     ///     let arr = [1, 2, 3]
     ///     arr.sample      #=> 2
@@ -39,7 +40,9 @@ public extension Array {
     
     
     /// Choose a random element or n random elements from the array.
-    /// Each element in the origianl array is only selected once.
+    /// The elements are chosen by using random and unique indices into the array in order to ensure that 
+    /// an element doesn’t repeat itself unless the array already contained duplicate elements.
+    /// If the array is empty the `Array#sample` returns nil and the `Array#sample(n:)` form returns an empty array.
     ///
     ///     let arr = [1, 2, 3]
     ///     arr.sample(1)       #=> [2]
