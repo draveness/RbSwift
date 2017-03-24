@@ -8,10 +8,18 @@
 
 import Foundation
 
+// MARK: - Transform
 public extension Array {
     /// When invoked with a closure, pass all combinations of length n of elements
     /// from the array and then returns the array itself.
     /// The implementation makes no guarantees about the order in which the combinations are yielded.
+    ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.combination(1) #=> [[1], [2], [3]]
+    ///     arr.combination(2) #=> [[1, 2], [1, 3], [2, 3]]
+    ///     arr.combination(3) #=> [[1, 2, 3]]
+    ///     arr.combination(0) #=> []
+    ///     arr.combination(5) #=> [[]]
     ///
     /// - Parameters:
     ///   - num: The length of combination in the returning array
@@ -51,6 +59,14 @@ public extension Array {
     /// When invoked with a closure, pass all **repeated** combinations of length n of elements
     /// from the array and then returns the array itself.
     /// The implementation makes no guarantees about the order in which the combinations are yielded.
+    ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.repeatedCombination(1) #=> [[1],[2],[3]]
+    ///     arr.repeatedCombination(2) #=> [[1,1],[1,2],[1,3],[2,2],[2,3],[3,3]]
+    ///     arr.repeatedCombination(3) #=> [[1,1,1],[1,1,2],[1,1,3],[1,2,2],[1,2,3],[1,3,3],[2,2,2],[2,2,3],[2,3,3],[3,3,3]]
+    ///     arr.repeatedCombination(4) #=> [[1,1,1,1],[1,1,1,2],[1,1,1,3],[1,1,2,2],[1,1,2,3],[1,1,3,3],
+    ///         [1,2,2,2],[1,2,2,3],[1,2,3,3],[1,3,3,3], [2,2,2,2],[2,2,2,3],[2,2,3,3],[2,3,3,3],[3,3,3,3]]
+    ///     arr.repeatedCombination(0) #=> []
     ///
     /// - Parameters:
     ///   - num: The length of combination in the returning array
@@ -100,6 +116,12 @@ public extension Array {
     /// Extracts the nested value specified by the sequence of idx objects by
     /// calling dig at each step, returning nil if any intermediate step is nil.
     ///
+    ///     let a = [[1, 2, 3], [3, 4, 5]]
+    ///     a.dig(0)                    #=> [1, 2, 3]
+    ///     a.dig(1, 2)                 #=> 5
+    ///     a.dig(1, 2, 3)              #=> nil
+    ///     a.dig(10, 2, 3)             #=> nil
+    ///
     /// - Parameter idxs: A sequence of int specify the value location in the recevier array.
     /// - Returns: An value in the nested array or nil
     func dig<T>(_ idxs: Int...) -> T? {
@@ -108,6 +130,12 @@ public extension Array {
     
     /// Extracts the nested value specified by the sequence of idx objects by 
     /// calling dig at each step, returning nil if any intermediate step is nil.
+    ///
+    ///     let a = [[1, 2, 3], [3, 4, 5]]
+    ///     a.dig(0)                    #=> [1, 2, 3]
+    ///     a.dig(1, 2)                 #=> 5
+    ///     a.dig(1, 2, 3)              #=> nil
+    ///     a.dig(10, 2, 3)             #=> nil
     ///
     /// - Parameter idxs: A sequence of int specify the value location in the recevier array.
     /// - Returns: An value in the nested array or nil
@@ -126,7 +154,15 @@ public extension Array {
     }
 
     /// Converts any arguments to arrays, then merges elements of self with corresponding elements from each argument.
-    /// This generates a sequence of `minimum` n-element arrays, where n is one more than the count of arguments.
+    ///
+    ///     let a = [ 4, 5, 6 ]
+    ///     let b = [ 7, 8, 9 ]
+    ///     [1, 2, 3].zip(a, b)   #=> [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+    ///
+    /// This generates a nested n-element arrays, where n is the least count of all the ararys including the receiver.
+    ///
+    ///     [1, 2].zip(a, b)      #=> [[1, 4, 7]]
+    ///     a.zip([1, 2], [8])    #=> [[4, 1, 8]]
     ///
     /// - Parameter arrays: Another arrays with type [T]
     /// - Returns: An new nested array
@@ -141,7 +177,6 @@ public extension Array {
                     result.append(array[index])
                 }
             }
-            print(result)
             return result
         }
         return results
@@ -171,7 +206,7 @@ public extension Array {
         }
         let allowTranspose = original.map { $0.count }.uniq.count == 1
         guard allowTranspose else { return nil }
-        let count = original[0].count
+        let count = original.first!.count
 
         var results = [[T]](repeating: [T](), count: count)
         for rows in original {
@@ -180,6 +215,35 @@ public extension Array {
             }
         }
         return results
+    }
+    
+    /// Returns a new array by rotating `self` so that the element at `count` is the first element of the new array.
+    /// 
+    /// - See also: Array#rotate(count:)
+    var rotate: [Element] {
+        return rotate()
+    }
+    
+    /// Returns a new array by rotating `self` so that the element at `count` is the first element of the new array.
+    ///
+    ///     let a = [ "a", "b", "c", "d" ]
+    ///     a.rotate         #=> ["b", "c", "d", "a"]
+    ///     a                #=> ["a", "b", "c", "d"]
+    ///     a.rotate(2)      #=> ["c", "d", "a", "b"]
+    /// 
+    /// If `count` is negative then it rotates in the opposite direction, starting from the end of `self` where -1 is
+    /// the last element.
+    ///
+    ///     a.rotate(-3)     #=> ["b", "c", "d", "a"]
+    ///
+    /// - Parameter count: The element in the first place after rotate
+    /// - Returns: A new array
+    func rotate(_ count: Int = 1) -> [Element] {
+        var rotate = count % self.length
+        while rotate < 0 { rotate += self.length }
+        let head = self.first(rotate)
+        let tail = self.dropFirst(rotate)
+        return tail + head
     }
 }
 

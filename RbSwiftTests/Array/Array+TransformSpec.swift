@@ -54,5 +54,31 @@ class ArrayPatchSpec: QuickSpec {
                 expect(bool).to(beTrue())
             }
         }
+        
+        describe(".zip(arrays:)") {
+            it("converts any arguments to arrays, then merges elements of self with corresponding elements from each argument") {
+                let a = [4, 5, 6]
+                let b = [7, 8, 9]
+                
+                let bool1 = [1, 2, 3].zip(a, b) == [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+                expect(bool1).to(beTrue())
+                
+                let bool2 = [1, 2].zip(a, b) == [[1, 4, 7], [2, 5, 8]]
+                expect(bool2).to(beTrue())
+                
+                let bool3 = a.zip([1, 2], [8]) == [[4, 1, 8]]
+                expect(bool3).to(beTrue())
+            }
+        }
+        
+        describe(".rotate(count:)") {
+            it("returns a new array by rotating self so that the element at count is the first element of the new array") {
+                let a = [ "a", "b", "c", "d" ]
+                expect(a.rotate).to(equal(["b", "c", "d", "a"]))
+                expect(a).to(equal(["a", "b", "c", "d"]))
+                expect(a.rotate(2)).to(equal(["c", "d", "a", "b"]))
+                expect(a.rotate(-3)).to(equal(["b", "c", "d", "a"]))
+            }
+        }
     }
 }
