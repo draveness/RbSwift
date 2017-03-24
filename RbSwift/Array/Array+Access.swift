@@ -12,6 +12,10 @@ import Foundation
 public extension Array {
     /// Returns the nth element in the array or nil.
     ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.at(0) #=> 1
+    ///     arr.at(4) #=> nil
+    ///
     /// - Parameter num: The element index
     /// - Returns: An element at specific index or nil
     func at(_ num: Int) -> Element? {

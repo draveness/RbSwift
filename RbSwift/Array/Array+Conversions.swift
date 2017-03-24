@@ -12,6 +12,10 @@ import Foundation
 public extension Array {
     /// Convert an array of integer to int by base default is 10.
     ///
+    ///     [1,2,3].to_i()      #=> 321
+    ///     [1,2,3,4].to_i()    #=> 4321
+    ///     [0,0,0,1].to_i(2)   #=> 8
+    ///
     /// - Parameter base: An integer indicates the integer's base
     /// - Returns: An integer
     func to_i(_ base: Int = 10) -> Int {

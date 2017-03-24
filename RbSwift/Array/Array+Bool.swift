@@ -11,6 +11,18 @@ import Foundation
 public extension Array where Element: Equatable {
     /// Returns true if self and other are the same object, or are both arrays with the same content
     ///
+    ///     let arr1 = [1, 2, 3]
+    ///     let arr2 = [3, 2, 1]
+    ///     arr1.isEql(arr2)    #=> true
+    ///
+    ///     let arr3 = [3, 2, 3]
+    ///     let arr4 = [3, 2, 1]
+    ///     arr3.isEql(arr4)    #=> false
+    ///
+    ///     let arr5 = [1, 2, 3, 4, 5, 6]
+    ///     let arr6 = [3, 2, 1]
+    ///     arr5.isEql(arr6)    #=> false
+    ///
     /// - Parameter other: Another array
     /// - Returns: A bool value indicates the equatable between two arrays
     func isEql(_ other: [Element]) -> Bool {
