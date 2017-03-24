@@ -147,19 +147,18 @@ public extension Array {
         return results
     }
     
-    public func transpose<T>(input: [[T]]) -> [[T]] {
-        if input.isEmpty { return [[T]]() }
-        let count = input[0].count
-        var out = [[T]](repeating: [T](), count: count)
-        for outer in input {
-            for (index, inner) in outer.enumerated() {
-                out[index].append(inner)
-            }
-        }
-        
-        return out
-    }
-
+    /// Returns the tranpose of the current two-dimentional array.
+    ///
+    ///     let a = [[1, 2], [3, 4], [5, 6]]
+    ///     a.transpose()   #=> [[1, 3, 5], [2, 4, 6]]
+    ///
+    /// If the receiver's elements have different length, `Array#transpose()` will
+    /// return `nil`.
+    ///
+    ///     let b = [[1, 2], [3], [5, 6, 7]]
+    ///     b.transpose()   #=> nil
+    ///
+    /// - Returns: An new array or nil
     func tranpose<T>() -> [[T]]? {
         if self.isEmpty { return [[T]]() }
         var original: [[T]] = []
@@ -180,7 +179,6 @@ public extension Array {
                 results[index].append(item)
             }
         }
-        
         return results
     }
 }
