@@ -51,3 +51,7 @@ public func -<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
     }
     return lhs
 }
+
+public func ==<Element : Equatable> (lhs: [[Element]], rhs: [[Element]]) -> Bool {
+    return lhs.elementsEqual(rhs, by: ==)
+}

@@ -50,8 +50,8 @@ class ArrayPatchSpec: QuickSpec {
         describe(".transpose()") {
             it("returns the transpose of current array") {
                 let result: [[Int]] = [[1,2,3], [4,5,6]].tranpose()!
-                expect(result).to(equal([[1, 4], [2, 5], [3, 6]]))
-//                print(result)
+                let bool = result == [[1, 4], [2, 5], [3, 6]]
+                expect(bool).to(beTrue())
             }
         }
     }

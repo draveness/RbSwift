@@ -19,11 +19,3 @@ public extension Array where Element: Equatable {
         return result
     }
 }
-
-public extension Array where Element: Any {
-    static func ==<T>(lhs: [[T]], rhs: [[T]]) -> Bool {
-        guard lhs.count == rhs.count else { return false }
-         lhs.zip(rhs)
-        return true
-    }
-}
