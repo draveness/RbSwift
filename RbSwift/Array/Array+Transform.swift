@@ -146,6 +146,43 @@ public extension Array {
         }
         return results
     }
+    
+    public func transpose<T>(input: [[T]]) -> [[T]] {
+        if input.isEmpty { return [[T]]() }
+        let count = input[0].count
+        var out = [[T]](repeating: [T](), count: count)
+        for outer in input {
+            for (index, inner) in outer.enumerated() {
+                out[index].append(inner)
+            }
+        }
+        
+        return out
+    }
+
+    func tranpose<T>() -> [[T]]? {
+        if self.isEmpty { return [[T]]() }
+        var original: [[T]] = []
+        for element in self {
+            if let element = element as? [T] {
+                original.append(element)
+            } else {
+                return nil
+            }
+        }
+        let allowTranspose = original.map { $0.count }.uniq.count == 1
+        guard allowTranspose else { return nil }
+        let count = original[0].count
+
+        var results = [[T]](repeating: [T](), count: count)
+        for rows in original {
+            for (index, item) in rows.enumerated() {
+                results[index].append(item)
+            }
+        }
+        
+        return results
+    }
 }
 
 
