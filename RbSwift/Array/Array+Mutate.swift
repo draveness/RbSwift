@@ -12,6 +12,10 @@ import Foundation
 public extension Array {
     /// Makes the current string empty
     ///
+    ///     var arr = [1, 2, 3]
+    ///     arr.clear()     #=> []
+    ///     arr             #=> []
+    ///
     /// - Returns: An empty string
     @discardableResult mutating func clear() -> [Element] {
         self = []
@@ -20,12 +24,27 @@ public extension Array {
     
     /// Remove last element in array or nil
     ///
+    ///     var arr = [1, 2, 3]
+    ///     arr.pop()       #=> 3
+    ///     arr.pop()       #=> 2
+    ///     arr.pop()       #=> 1
+    ///     arr.pop()       #=> nil
+    ///     arr             #=> []
+    ///
     /// - Returns: The last element in array
     @discardableResult mutating func pop() -> Element? {
         return self.popLast()
     }
     
     /// Return the last several elements in array.
+    ///
+    ///     var arr = [1, 2, 3]
+    ///     arr.pop()       #=> [3]
+    ///     arr.pop(2)      #=> [1, 2]
+    ///     arr             #=> []
+    ///     arr.pop()       #=> []
+    ///     arr.pop()       #=> []
+    ///     arr             #=> []
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of popped element
@@ -43,16 +62,30 @@ public extension Array {
         return result.reversed()
     }
     
-    /// Appends objects to the front of self. See also Array#pop for the opposite effect.
+    /// Appends objects to the front of self.
+    ///
+    ///     var arr = ["a", "b", "c"]
+    ///     arr.push("d")           #=> ["a", "b", "c", "d"]
+    ///     arr.push("e", "f")      #=> ["a", "b", "c", "d", "e", "f"]
+    ///     arr                     #=> ["a", "b", "c", "d", "e", "f"]
     ///
     /// - Parameter objs: An array of object prepend to the receiver array
     /// - Returns: An array with objs append to self
+    /// - See also: Array#pop(num:) for the opposite effect.
     @discardableResult mutating func push(_ objs: Element...) -> [Element] {
         self += objs
         return self
     }
     
     /// Remove first element in array or nil
+    ///
+    ///     var arr = ["a", "b", "c"]
+    ///     arr.shift()     #=> "a"
+    ///     arr             #=> ["b", "c"]
+    ///     arr.shift()     #=> "b"
+    ///     arr.shift()     #=> "c"
+    ///     arr.shift()     #=> nil
+    ///     arr             #=> []
     ///
     /// - Returns: The first element in array
     @discardableResult mutating func shift() -> Element? {
@@ -61,6 +94,13 @@ public extension Array {
     }
     
     /// Return the first several elements in array.
+    ///
+    ///     var arr = ["a", "b", "c"]
+    ///     arr.shift()     #=> "a"
+    ///     arr             #=> ["b", "c"]
+    ///     arr.shift(2)     #=> ["b", "c"]
+    ///     arr.shift()     #=> []
+    ///     arr             #=> []
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of shifted element
@@ -79,10 +119,15 @@ public extension Array {
     }
     
     /// Prepends objects to the front of self, moving other elements upwards
-    /// See also Array#shift for the opposite effect.
+    ///
+    ///     var arr = [1]
+    ///     arr.unshift(2)      #=> [2, 1]
+    ///     arr.unshift(2, 3)   #=> [2, 3, 2, 1]
+    ///     arr                 #=> [2, 3, 2, 1]
     ///
     /// - Parameter objs: An array of object prepend to the receiver array
     /// - Returns: An array with objs prepend to self
+    /// - See also: Array#shift(num:) for the opposite effect.
     @discardableResult mutating func unshift(_ objs: Element...) -> [Element] {
         self = objs + self
         return self
@@ -93,6 +138,16 @@ public extension Array {
 public extension Array where Element: Equatable {
     /// Deletes all items from self that are equal to obj.
     /// If all is `false`, delete the first object the the array.
+    ///
+    ///     var arr = [1, 2, 3, 4, 1, 2, 3, 5, 6]
+    ///     arr.delete(1)                   #=> 1
+    ///     arr                             #=> [2, 3, 4, 2, 3, 5, 6]
+    ///     arr.delete(2)                   #=> 2
+    ///     arr                             #=> [3, 4, 3, 5, 6]
+    ///     arr.delete(3, all: false)       #=> 3
+    ///     arr                             #=> [4, 3, 5, 6]
+    ///     arr.delete(1000)                #=> nil
+    ///     arr                             #=> [4, 3, 5, 6]
     ///
     /// - Parameters:
     ///   - obj: An object which will be deleted in the array
