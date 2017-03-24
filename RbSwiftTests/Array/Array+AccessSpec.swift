@@ -27,5 +27,13 @@ class ArrayAccessSpec: QuickSpec {
                 expect(arr).to(contain(arr.sample(3)))
             }
         }
+        
+        describe(".shuffle") {
+            it("returns a new array with elements of self shuffled.") {
+                let arr = [1, 2, 3]
+                expect(arr.shuffle.count).to(equal(3))
+                expect(arr.shuffle.sorted { $0 < $1 }).to(equal([1,2,3]))
+            }
+        }
     }
 }

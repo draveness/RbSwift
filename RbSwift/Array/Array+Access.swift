@@ -38,7 +38,6 @@ public extension Array {
         return sample().first
     }
     
-    
     /// Choose a random element or n random elements from the array.
     /// The elements are chosen by using random and unique indices into the array in order to ensure that 
     /// an element doesn’t repeat itself unless the array already contained duplicate elements.
@@ -66,5 +65,18 @@ public extension Array {
             candidates.remove(at: random)
         }
         return results
+    }
+    
+    /// Returns a new array with elements of `self` shuffled.
+    ///
+    ///     let arr = [1, 2, 3]
+    ///     arr.shuffle         #=> [1, 2, 3]
+    ///     arr.shuffle         #=> [3, 2, 1]
+    ///     arr.shuffle         #=> [2, 1, 3]
+    ///     arr.shuffle         #=> [1, 3, 2]
+    ///     arr                 #=> [1, 3, 2]
+    ///
+    var shuffle: [Element] {
+        return sample(self.length)
     }
 }
