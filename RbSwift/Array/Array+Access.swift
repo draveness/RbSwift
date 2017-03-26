@@ -24,7 +24,6 @@ public extension Array {
     }
     
     /// Choose a random element from the array.
-    /// If the array is empty the `Array#sample` returns nil and the `Array#sample(n:)` form returns an empty array.
     ///
     ///     let arr = [1, 2, 3]
     ///     arr.sample      #=> 2
@@ -33,6 +32,10 @@ public extension Array {
     ///     arr.sample      #=> 2
     ///     arr.sample      #=> 3
     ///     arr             #=> [1, 2, 3]
+    ///
+    /// If the array is empty `Array#sample` returns `nil`.
+    ///
+    ///     [].sample       #=> nil
     ///
     var sample: Element? {
         return sample().first
@@ -52,6 +55,10 @@ public extension Array {
     ///     arr.sample(4)       #=> [2, 3, 1]
     ///     arr.sample(0)       #=> []
     ///     arr                 #=> [1, 2, 3]
+    ///
+    /// If the array is empty `Array#sample(n:)` returns an empty array.
+    ///
+    ///     [].sample()         #=> []
     ///
     /// - Parameter n: An integer of random elements count
     /// - Returns: An new array with random elements
