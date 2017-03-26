@@ -12,6 +12,10 @@ import Foundation
 public extension Sequence {
     /// Returns a new array containing all elements of `self` for which the given block returns a true value.
     ///
+    ///     [1, 2, 3].select { $0 > 2 }         #=> [3]
+    ///     [1, 2, 3].select { $0 <= 2 }        #=> [1, 2]
+    ///     [1, 2, 3].select { _ in false }     #=> []
+    ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
     func select(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {

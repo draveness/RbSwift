@@ -132,6 +132,27 @@ public extension Array {
         self = objs + self
         return self
     }
+    
+    /// A mutating version of `Sequence#select(closure:)`
+    ///
+    ///     var arr1 = [1, 2, 3]
+    ///     arr1.select { $0 > 2 }       #=> [3]
+    ///     arr1                         #=> [3]
+    ///
+    ///     var arr2 = [1, 2, 3]
+    ///     arr2.select { $0 <= 2 }      #=> [1, 2]
+    ///     arr2                         #=> [1, 2]
+    ///
+    ///     var arr3 = [1, 2, 3]
+    ///     arr3.select { _ in false }   #=> []
+    ///     arr3                         #=> []
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: Self
+    @discardableResult mutating func selected(closure: (Element) -> Bool) -> [Element] {
+        self = select(closure: closure)
+        return self
+    }
 }
 
 // MARK: - Mutate

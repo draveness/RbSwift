@@ -219,6 +219,10 @@ public extension Array {
     
     /// Returns a new array by rotating `self` so that the element at `count` is the first element of the new array.
     /// 
+    ///     let a = [ "a", "b", "c", "d" ]
+    ///     a.rotate         #=> ["b", "c", "d", "a"]
+    ///     a                #=> ["a", "b", "c", "d"]
+    ///
     /// - See also: Array#rotate(count:)
     var rotate: [Element] {
         return rotate()
