@@ -153,6 +153,27 @@ public extension Array {
         self = select(closure: closure)
         return self
     }
+    
+    /// A mutating version of `Sequence#reject(closure:)`
+    ///
+    ///     var arr1 = [1, 2, 3]
+    ///     arr1.reject { $0 > 2 }       #=> [1, 2]
+    ///     arr1                         #=> [1, 2]
+    ///
+    ///     var arr2 = [1, 2, 3]
+    ///     arr2.reject { $0 <= 2 }      #=> [3]
+    ///     arr2                         #=> [3]
+    ///
+    ///     var arr3 = [1, 2, 3]
+    ///     arr3.reject { _ in false }   #=> [1, 2, 3]
+    ///     arr3                         #=> [1, 2, 3]
+    ///
+    /// - Parameter closure: A block accepts element in the receiver and returns a bool value
+    /// - Returns: Self
+    @discardableResult mutating func rejected(closure: (Element) -> Bool) -> [Element] {
+        self = reject(closure: closure)
+        return self
+    }
 }
 
 // MARK: - Mutate

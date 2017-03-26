@@ -30,6 +30,10 @@ public extension Sequence {
     
     /// An alias to `select(closure:)` method.
     ///
+    ///     [1, 2, 3].keepIf { $0 > 2 }         #=> [3]
+    ///     [1, 2, 3].keepIf { $0 <= 2 }        #=> [1, 2]
+    ///     [1, 2, 3].keepIf { _ in false }     #=> []
+    ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
     func keepIf(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
@@ -37,6 +41,10 @@ public extension Sequence {
     }
     
     /// Returns a new array excluding all elements of `self` for which the given block returns a true value.
+    ///
+    ///     [1, 2, 3].reject { $0 > 2 }         #=> [1, 2]
+    ///     [1, 2, 3].reject { $0 <= 2 }        #=> [3]
+    ///     [1, 2, 3].reject { _ in false }     #=> [1, 2, 3]
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
@@ -50,7 +58,11 @@ public extension Sequence {
         return result
     }
     
-    /// An alias to reject, see also Sequence#reject(closure:)
+    /// An alias to reject, see also `Sequence#reject(closure:)`
+    ///
+    ///     [1, 2, 3].deleteIf { $0 > 2 }         #=> [1, 2]
+    ///     [1, 2, 3].deleteIf { $0 <= 2 }        #=> [3]
+    ///     [1, 2, 3].deleteIf { _ in false }     #=> [1, 2, 3]
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
@@ -60,6 +72,10 @@ public extension Sequence {
     
     /// Drops elements up to, but not including, the first element for which the 
     /// block returns nil or false and returns an array containing the remaining elements.
+    ///
+    ///     [1, 2, 3].dropWhile { $0 > 2 }         #=> [1, 2, 3]
+    ///     [1, 2, 3].dropWhile { $0 <= 2 }        #=> [3]
+    ///     [1, 2, 3].dropWhile { _ in false }     #=> [1, 2, 3]
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
@@ -74,6 +90,10 @@ public extension Sequence {
     /// Passes elements to the block until the block returns nil or false, then stops 
     /// iterating and returns an array of all prior elements.
     ///
+    ///     [1, 2, 3].takeWhile { $0 > 2 }         #=> []
+    ///     [1, 2, 3].takeWhile { $0 <= 2 }        #=> [1, 2]
+    ///     [1, 2, 3].takeWhile { _ in false }     #=> []
+    ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
     func takeWhile(_ closure: @escaping (Iterator.Element) -> Bool) -> [Iterator.Element] {
@@ -87,6 +107,10 @@ public extension Sequence {
     /// Invokes the given block once for each element of self.
     /// Creates a new array containing the values returned by the block.
     ///
+    ///     [1, 2, 3].collect { _ in "2" }              #=> ["2", "2", "2"]
+    ///     [1, 2, 3].collect { $0 * 2 }                #=> [2, 4, 6]
+    ///     ["1", "2", "3"].collect { $0 + "!" }        #=> ["1!", "2!", "3!"]
+    ///
     /// - Parameter closure: A block accepts element in the receiver and returns a value
     /// - Returns: A new array
     func collect<T>(closure: (Iterator.Element) -> T) -> [T] {
@@ -99,13 +123,38 @@ public extension Sequence {
     
     /// Returns a new array with the elements of both arrays within it.
     ///
+    ///     let a = [1, 2, 3]
+    ///     a.concat([4, 5, 6])     #=> [1, 2, 3, 4, 5, 6]
+    ///     a                       #=> [1, 2, 3]
+    ///     a.concat(7, 8, 9)       #=> [1, 2, 3, 7, 8, 9]
+    ///     a                       #=> [1, 2, 3]
+    ///
     /// - Parameter other: Another array
     /// - Returns: A new array contains all the element in both array
     func concat(_ other: [Iterator.Element]) -> [Iterator.Element] {
         return self + other
     }
     
+    /// Returns a new array with the elements of both arrays within it.
+    ///
+    ///     let a = [1, 2, 3]
+    ///     a.concat([4, 5, 6])     #=> [1, 2, 3, 4, 5, 6]
+    ///     a                       #=> [1, 2, 3]
+    ///     a.concat(7, 8, 9)       #=> [1, 2, 3, 7, 8, 9]
+    ///     a                       #=> [1, 2, 3]
+    ///
+    /// - Parameter other: Another array
+    /// - Returns: A new array contains all the element in both array
+    func concat(_ others: Iterator.Element...) -> [Iterator.Element] {
+        return self.concat(others)
+    }
+    
     /// Counts the number of elements for which the block returns a true value.
+    ///
+    ///     let a = [1, 2, 3, 10, 100, 1000]
+    ///     a.count { $0 > 10 }             #=> 2
+    ///     a.count { $0.isPositive }       #=> 6
+    ///     expect(a.count { $0.isEven }    #=> 4
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: An integer of the count of element make the block returns true

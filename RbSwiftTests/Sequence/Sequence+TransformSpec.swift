@@ -21,7 +21,7 @@ class SequencTransformSpec: QuickSpec {
             }
         }
         
-        describe(".keep(if:)") {
+        describe(".keepIf(closure:)") {
             it("returns a new array containing all elements of ary for which the given block returns a true value") {
                 expect([1, 2, 3].keepIf { $0 > 2 }).to(equal([3]))
                 expect([1, 2, 3].keepIf { $0 <= 2 }).to(equal([1, 2]))
@@ -83,6 +83,15 @@ class SequencTransformSpec: QuickSpec {
                 let a = [1, 2, 3]
                 expect(a.concat([4, 5, 6])).to(equal([1, 2, 3, 4, 5, 6]))
                 expect(a).to(equal([1, 2, 3]))
+            }
+        }
+        
+        describe(".count(closure:)") {
+            it("returns the number of element satisfy specific closure") {
+                let a = [1, 2, 3, 10, 100, 1000]
+                expect(a.count { $0 > 10 }).to(equal(2))
+                expect(a.count { $0.isPositive }).to(equal(6))
+                expect(a.count { $0.isEven }).to(equal(4))
             }
         }
         
