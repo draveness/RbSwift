@@ -177,7 +177,17 @@ public extension Sequence {
         return results
     }
     
-    /// Return the first n elements of an array
+    /// Returns the first n elements of an array
+    ///
+    ///     let arr = [1, 2, 3, 4]
+    ///     arr.take(1)         #=> [1]
+    ///     arr.take(2)         #=> [1, 2]
+    ///     arr.take(100)       #=> [1, 2, 3, 4]
+    ///
+    /// Returns an empty array if `num` is not positive
+    ///
+    ///     arr.take(0)         #=> []
+    ///     arr.take(-1)        #=> []
     ///
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of first n elements
@@ -191,7 +201,17 @@ public extension Sequence {
         return results
     }
     
-    /// `drop` does the opposite of `take`, by returning the elements after n elements have been dropped
+    /// `drop` does the opposite of `take`, by returning the elements after n elements have been dropped.
+    ///
+    ///     let arr = [1, 2, 3, 4]
+    ///     arr.drop(1)         #=> [2, 3, 4]
+    ///     arr.drop(2)         #=> [3, 4]
+    ///     arr.drop(100)       #=> []
+    ///
+    /// Returns an new array with the same element if `num` is not positive.
+    ///
+    ///     arr.take(0)         #=> [1, 2, 3, 4]
+    ///     arr.take(-1)        #=> [1, 2, 3, 4]
     ///
     /// - Parameter num: How many element should be dropped from the beginning
     /// - Returns: An new array with first n elements dropped
@@ -205,15 +225,30 @@ public extension Sequence {
         return results
     }
     
-    /// Return the first n elements of an array
+    /// Return the first n elements of an array. An alias to `Sequence#take(num:)` method.
+    ///
+    ///     let arr = [1, 2, 3, 4]
+    ///     arr.first(1)        #=> [1]
+    ///     arr.first(2)        #=> [1, 2]
+    ///     arr.first(100)      #=> [1, 2, 3, 4]
+    ///     arr.first(0)        #=> []
+    ///     arr.first(-1)       #=> []
     ///
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of first n elements
+    /// - See Also: `Sequence#take(num:)`
     func first(_ num: Int) -> [Iterator.Element] {
         return take(num)
     }
     
-    /// Return the last n elements of an array
+    /// Return the last n elements of an array.
+    ///
+    ///     let arr = [1, 2, 3, 4]
+    ///     arr.last(1)        #=> [4]
+    ///     arr.last(2)        #=> [3, 4]
+    ///     arr.last(100)      #=> [1, 2, 3, 4]
+    ///     arr.last(0)        #=> []
+    ///     arr.last(-1)       #=> []
     ///
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of last n elements
@@ -226,6 +261,13 @@ public extension Sequence {
     }
     
     /// Calls the given block for each element n times.
+    ///
+    ///     let arr = [1, 2, 3, 4]
+    ///     arr.cycle(2)        #=> [1, 2, 3, 4, 1, 2, 3, 4]
+    ///
+    ///     arr.cycle(10) { elem in
+    ///         print(elem)     #=> 1, 2, 3, 4, 1, 2, 3, 4...
+    ///     }
     ///
     /// - Parameters:
     ///   - n: An integer that indicates how many times the element in array should be called
@@ -251,6 +293,11 @@ extension Optional: OptionalType {}
 public extension Sequence where Iterator.Element: OptionalType {
     /// Returns a copy of self with all nil elements removed.
     /// See: http://stackoverflow.com/questions/28190631/creating-an-extension-to-filter-nils-from-an-array-in-swift
+    ///
+    ///     let arr = [1, 2, 3, nil, 4, nil]
+    ///     arr.compact         #=> [1, 2, 3, 4]
+    ///     arr                 #=> [1, 2, 3, nil, 4, nil]
+    ///
     var compact: [Iterator.Element.Wrapped] {
         var result: [Iterator.Element.Wrapped] = []
         for element in self {
