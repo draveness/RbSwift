@@ -211,7 +211,8 @@ public extension String {
     
     /// Returns the result of interpreting the receiver in different standard.
     /// This methods returns `nil`, if the receiver is not in Custom, ISO8601, RFC2822 or CTime form.
-    /// - SeeAlso: DateFormat
+    ///
+    /// - See Also: DateFormat
     var to_datetime: Date? {
         return Date(str: self)
     }
