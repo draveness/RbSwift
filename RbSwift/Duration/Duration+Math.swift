@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Math
 public extension Duration {
     static func +(lhs: Duration, rhs: Duration) -> Duration {
         var newValues: [Duration.DurationComponent: Int] = [:]

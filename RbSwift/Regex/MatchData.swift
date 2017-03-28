@@ -8,10 +8,15 @@
 
 import Foundation
 
+/// Including all the necessary infomation when using `Regex`
 public struct MatchData {
+    /// A match
     public let match: String
+    /// A range for the match
     public let range: NSRange
+    /// The array of captures
     public let captures: [String]
+    /// The array of all captures ranges
     public let ranges: [NSRange]
     
     /// Returns the number of elements in the match array.

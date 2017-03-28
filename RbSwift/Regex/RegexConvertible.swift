@@ -15,7 +15,6 @@ public protocol RegexConvertible {
 }
 
 extension Regex: RegexConvertible {
-
     /// An alias to self
     public var regex: Regex {
         return self

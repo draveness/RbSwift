@@ -9,6 +9,7 @@ target 'RbSwift' do
 
   target 'RbSwiftTests' do
     inherit! :search_paths
+    inhibit_all_warnings!
     pod 'Nimble'
     pod 'Quick'
   end
