@@ -56,6 +56,11 @@ public extension Int {
         return true
     }
     
+    /// Returns a string containing the character represented by the int's value according to encoding.
+    ///
+    ///     97.chr      #=> "a"
+    ///     98.chr      #=> "b"
+    ///
     var chr: String {
         guard let str = UnicodeScalar(self) else { return "" }
         return "\(str)"

@@ -1,5 +1,14 @@
-                expect("hello".partition("l")).to(equal(["he", "l", "lo"]))
-                expect("hello".partition("le")).to(equal(["hello", "", ""]))
-                expect("hello".rpartition("l")).to(equal(["hel", "l", "o"]))
-                expect("hello".rpartition("le")).to(equal(["", "", "hello"]))
+                var arr: [Int] = []
+                3.times { arr.append($0) }
+                expect(arr).to(equal([0, 1, 2]))
+                
+                var arr1: [Int] = []
+                3.times { arr1.append(1) }
+                expect(arr1).to(equal([1, 1, 1]))
+                
+                let arr2: [Int] = 3.times { return $0 }
+                expect(arr2).to(equal([0, 1, 2]))
+                
+                let arr3: [Int] = 3.times { return 1 }
+                expect(arr3).to(equal([1, 1, 1]))
 
