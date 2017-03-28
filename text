@@ -1,0 +1,2 @@
+                expect("HellHEo".swapcase).to(equal("hELLheO"))
+
