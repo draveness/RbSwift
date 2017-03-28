@@ -100,10 +100,31 @@ public extension String {
         return first.value
     }
     
-    /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36).
-    /// Extraneous characters past the end of a valid number are ignored.
-    /// If there is not a valid number at the start of str, 0 is returned.
+    /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36),
+    /// default is 10, extraneous characters past the end of a valid number are ignored.
+    ///
+    /// 	"0a".to_i(16)           #=> 10
+    /// 	"0xa".to_i(16)          #=> 0
+    /// 	"12".to_i               #=> 12
+    /// 	"-1100101".to_i(2)		#=> -101
+    /// 	"1100101".to_i(2)		#=> 101
+    /// 	"1100101".to_i(8)		#=> 294977
+    /// 	"1100101".to_i(10)		#=> 1100101
+    /// 	"1100101".to_i(16)		#=> 17826049
+    ///
     /// This method returns 0 when base is invalid.
+    ///
+    /// 	"0a".to_i(1)            #=> 0
+    /// 	"0a".to_i(37)           #=> 0
+    ///
+    /// If there is not a valid number at the start of str, 0 is returned.
+    ///
+    /// 	"-".to_i                #=> 0
+    /// 	"d-1".to_i              #=> 0
+    /// 	"0a".to_i               #=> 0
+    /// 	"hello".to_i            #=> 0
+    /// 	"".to_i                 #=> 0
+    /// 	"  ".to_i               #=> 0
     ///
     /// - Parameter base: A int indicates the integer base
     /// - Returns: A integer based on the integer base
