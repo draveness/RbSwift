@@ -10,8 +10,15 @@ import Foundation
 
 // MARK: - Regex
 public extension String {
-    /// Converts pattern to a `Regex`, then invokes its firstMatch(in:options:range:) method.
+    /// Converts pattern to a `Regex`, then invokes its `Regex#match(str:)` method.
     /// If the second parameter is present, it specifies the position in the string to begin the search.
+    ///
+    ///     let matchData = "hello".match("(.)ll(o)")!  #=> <MatchData>
+    /// 	matchData.match                             #=> "ello"
+    /// 	matchData.captures[0]                       #=> "e"
+    /// 	matchData.captures[1]                       #=> "o"
+    ///
+    ///     let matchData = "hello".match("aha")        #=> nil
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -22,7 +29,14 @@ public extension String {
         return pattern.regex.match(str)
     }
     
-    /// Converts pattern to a `Regex`, then invokes its scans(str:) method.
+    /// Converts pattern to a `Regex`, then invokes its `Regex#scans(str:)` method which returns
+    /// an sequence of `MatchData`.
+    ///
+    ///     let str = "abcxxabcxxsbc"
+    ///     let scanResults = str.scan("(.)bc")
+    /// 	scanResults[0].to_a		#=> ["abc", "a"]
+    /// 	scanResults[1].to_a		#=> ["abc", "a"]
+    /// 	scanResults[2].to_a		#=> ["sbc", "s"]
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -39,6 +53,10 @@ public extension String {
     /// Converts pattern to a `Regex`, then invokes its match(pattern:) method to get
     /// the `MatchData` and replace the first matchig result with passing str.
     ///
+    /// 	"hello".sub("l", "abc")         #=> "heabclo"
+    /// 	"hello".sub("le", "lll")		#=> "hello"
+    /// 	"hello".sub(".", "a")           #=> "aello"
+    ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
@@ -50,6 +68,10 @@ public extension String {
     
     /// Converts pattern to a `Regex`, then invokes its match(pattern:) method to get
     /// the `MatchData` and replace the first matchig result with passing str, and eventually mutating itself.
+    ///
+    ///     var hello = "hello"
+    ///     hello.subed("l", "abc")     #=> "heabclo"
+    /// 	hello                       #=> "heabclo"
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -63,6 +85,12 @@ public extension String {
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
     /// the `MatchData` array and replace the all matchig result with passing str.
     ///
+    /// 	"hello".gsub("l", "abc")                #=> "heabcabco"
+    /// 	"hello".gsub("le", "lll")               #=> "hello"
+    /// 	"hello".gsub(".".literal, "lll")		#=> "hello"
+    /// 	"hello".gsub(".", "lll")                #=> "lll" * 5
+    /// 	"hello".gsub("^he", "lll")              #=> "lllllo"
+    ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
@@ -73,6 +101,10 @@ public extension String {
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
     /// the `MatchData` array and replace the all matchig result with passing str, and eventually mutating itself.
+    ///
+    ///     var hello = "hello"
+    ///     hello.gsubed("l", "abc")        #=> "heabcabco"
+    /// 	hello                           #=> "heabcabco"
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -86,6 +118,11 @@ public extension String {
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
     /// the `MatchData` array and invoke the closure with all matchig result and replace 
     /// current string with the invocation of the closure.
+    ///
+    /// 	let result = "my name is draven".gsub("\\b(?<!['’`])[a-z]") { _ in
+    ///         return "a"
+    ///     }
+    ///     result      #=> "ay aame as araven"
     ///
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
@@ -104,6 +141,11 @@ public extension String {
     /// the `MatchData` array and invoke the closure with all matchig result and replace current string with the invokation
     /// of the closure , and eventually mutating itself.
     ///
+    ///     var intro = "my name is draven"
+    /// 	intro.gsubed("\\b(?<!['’`])[a-z]") { _ in
+    ///         return "a"
+    ///     }           #=> "ay aame as araven"
+    ///     intro       #=> "ay aame as araven"
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - closure: A closure accepts the matching result as input and return output to change the origianl string

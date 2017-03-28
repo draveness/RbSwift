@@ -33,6 +33,9 @@ public func =~(left: Character, right: RegexConvertible) -> Bool {
 /// Returns a new String containing integer copies of the receiver. integer must be greater than or equal to 0.
 /// If integer is less than of equal to 0, this methods will return an empty string.
 ///
+///     let string = "String"
+///     string * 3              #=> "StringStringString"
+///
 /// - Parameters:
 ///   - left: A string
 ///   - right: A integer indicates how many times the string will duplicate
@@ -49,6 +52,9 @@ public func *(left: String, right: Int) -> String {
 /// Returns a new String containing integer copies of the receiver. integer must be greater than or equal to 0.
 /// If integer is less than of equal to 0, this methods will return an empty string.
 ///
+///     let string = "String"
+///     3 * string              #=> "StringStringString"
+///
 /// - Parameters:
 ///   - left: A integer indicates how many times the string will duplicate
 ///   - right: A string
@@ -58,6 +64,8 @@ public func *(left: Int, right: String) -> String {
 }
 
 /// Returns a new String containing the two strings passed into this operator.
+///
+///     "Hello" << " World"     #=> "Hello World"
 ///
 /// - Parameters:
 ///   - left: A string

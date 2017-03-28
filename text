@@ -1,7 +1,5 @@
-                expect("person".pluralize).to(equal("people"))
-                expect("monkey".pluralize).to(equal("monkeys"))
-                expect("user".pluralize).to(equal("users"))
-                expect("man".pluralize).to(equal("men"))
-            
-                expect("men".pluralize(1)).to(equal("man"))
+                expect("hello".partition("l")).to(equal(["he", "l", "lo"]))
+                expect("hello".partition("le")).to(equal(["hello", "", ""]))
+                expect("hello".rpartition("l")).to(equal(["hel", "l", "o"]))
+                expect("hello".rpartition("le")).to(equal(["", "", "hello"]))
 

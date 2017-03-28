@@ -105,6 +105,7 @@ class StringTransformSpec: QuickSpec {
                 expect(" now's  the time".split).to(equal(["now's", "the", "time"]))
                 expect(" now's\nthe time\n\t".split).to(equal(["now's", "the", "time"]))
                 expect("hello".split("")).to(equal(["h", "e", "l", "l", "o"]))
+                expect("hello".split("l+")).to(equal(["he", "o"]))
                 expect(" now's  the time".split(" ")).to(equal(["now's", "the", "time"]))
                 expect("mellow yellow".split("ello")).to(equal(["m", "w y", "w"]))
                 expect("1,2,,3,4,,".split(",")).to(equal(["1", "2", "", "3", "4"]))
@@ -183,16 +184,16 @@ class StringTransformSpec: QuickSpec {
         describe(".prepend(other:)") {
             it("prepends the given string to str") {
                 var str = "yz"
-                expect(str.prepend("x")).to(match("xyz"))
-                expect(str).to(match("xyz"))
+                expect(str.prepend("x")).to(equal("xyz"))
+                expect(str).to(equal("xyz"))
             }
         }
         
         describe(".replace(other:)") {
             it("replaces the contents and taintedness of str with the corresponding values in other str") {
                 var str = "yz"
-                expect(str.replace("x")).to(match("x"))
-                expect(str).to(match("x"))
+                expect(str.replace("x")).to(equal("x"))
+                expect(str).to(equal("x"))
             }
         }
         
