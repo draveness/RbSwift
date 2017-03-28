@@ -89,10 +89,6 @@
 		729D3D5B1E7E68A900258333 /* Date+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5A1E7E68A900258333 /* Date+Math.swift */; };
 		729D3D5D1E7EB46900258333 /* String+Chars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5C1E7EB46900258333 /* String+Chars.swift */; };
 		729D3D5F1E7EB51700258333 /* String+CharsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729D3D5E1E7EB51700258333 /* String+CharsSpec.swift */; };
-		72A218F51E7F8A7100EF65C9 /* Pods-RbSwift.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F31E7F8A7100EF65C9 /* Pods-RbSwift.debug.xcconfig */; };
-		72A218F61E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F41E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig */; };
-		72A218F91E7F8A7D00EF65C9 /* Pods-RbSwiftTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F71E7F8A7D00EF65C9 /* Pods-RbSwiftTests.debug.xcconfig */; };
-		72A218FA1E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 72A218F81E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig */; };
 		72A218FE1E7FB38E00EF65C9 /* RegexConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */; };
 		72A219001E80C76500EF65C9 /* Number+MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A218FF1E80C76500EF65C9 /* Number+MathSpec.swift */; };
 		72A219021E80CE1600EF65C9 /* Number+Exponentiative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */; };
@@ -564,12 +560,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = draveness;
 				TargetAttributes = {
 					724874F61E7CF813007984FD = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					7248750F1E7CF843007984FD = {
@@ -601,10 +597,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72A218F51E7F8A7100EF65C9 /* Pods-RbSwift.debug.xcconfig in Resources */,
-				72A218F91E7F8A7D00EF65C9 /* Pods-RbSwiftTests.debug.xcconfig in Resources */,
-				72A218F61E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig in Resources */,
-				72A218FA1E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
