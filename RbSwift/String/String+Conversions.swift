@@ -157,7 +157,21 @@ public extension String {
     
     /// Returns the result of interpreting leading characters in str as a double
     /// Extraneous characters past the end of a valid number are ignored.
+    ///
+    /// 	"0a".to_double              #=> 0
+    /// 	"1100101.11".to_double		#=> 1100101.11
+    /// 	"123.456".to_double         #=> 123.456
+    /// 	"123.456ddddd".to_double    #=> 123.456
+    /// 	".456ddddd".to_double		#=> 0.456
+    ///
     /// If there is not a valid number at the start of str, 0.0 is returned.
+    ///
+    /// 	"-".to_double           #=> 0
+    /// 	"d-1".to_double         #=> 0
+    /// 	"0a".to_double          #=> 0
+    /// 	"..12".to_double		#=> 0
+    /// 	"hello".to_double		#=> 0
+    ///
     var to_double: Double {
         var chars = self.chars
         
