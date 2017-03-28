@@ -49,7 +49,14 @@ public extension String {
     }
     
     /// Creates a foreign key name from a class name.
+    ///
+    /// 	"people".foreignKey             #=> "people_id"
+    /// 	"people".foreignKey             #=> "people_id"
+    /// 	"MessageQueue".foreignKey		#=> "message_queue_id"
+    ///
     /// Separate flag sets whether the method should put '_' between the name and 'id'.
+    ///
+    /// 	"MessageQueue".foreignKey(false)		#=> "message_queueid"
     ///
     /// - Parameter separate: A bool value sets whether the method should put '_' between the name and 'id'
     /// - Returns: A foreign key name string
@@ -78,22 +85,42 @@ public extension String {
     }
     
     /// Returns the plural form of the word in the string.
+    ///
+    /// 	"person".pluralize		#=> "people"
+    /// 	"monkey".pluralize		#=> "monkeys"
+    /// 	"user".pluralize		#=> "users"
+    /// 	"man".pluralize		#=> "men"
+    ///
     /// If the parameter count is specified, the singular form will be returned if count == 1.
+    ///
+    /// 	"men".pluralize(1)		#=> "man"
+    ///
     /// For any other value of count the plural will be returned.
     ///
     /// - Parameter count: If specified, the singular form will be returned if count == 1
     /// - Returns: A string in plural form of the word
-    func pluralize(_ count: Int) -> String {
+    func pluralize(_ count: Int = 2) -> String {
         if count == 1 { return singularize }
         return pluralize
     }
     
     /// The reverse of `pluralize`, returns the singular form of a word in a string.
+    ///
+    /// 	"people".singularize		#=> "person"
+    /// 	"monkeys".singularize		#=> "monkey"
+    /// 	"users".singularize         #=> "user"
+    /// 	"men".singularize           #=> "man"
+    ///
     var singularize: String {
         return inflector.singularize(string: self)
     }
     
     /// The reverse of `camelize`. Makes an underscored, lowercase form from the expression in the string.
+    ///
+    /// 	"OsVersionTen".underscore		#=> "os_version_ten"
+    /// 	"osVersionTen".underscore		#=> "os_version_ten"
+    /// 	"osVerSionTen".underscore		#=> "os_ver_sion_ten"
+    ///
     var underscore: String {
         var word = self.gsub("([A-Z\\d]+)([A-Z][a-z])", "$1_$2")
         word.gsubed("([a-z\\d])([A-Z])", "$1_$2")
@@ -103,12 +130,22 @@ public extension String {
     }
     
     /// Creates the name of a table.
-    /// This method uses the pluralize method on the last word in the string.
+    /// This method uses the `String#pluralize` method on the last word in the string.
+    ///
+    /// 	"RawScaledScorer".tableize		#=> "raw_scaled_scorers"
+    /// 	"egg_and_ham".tableize		#=> "egg_and_hams"
+    /// 	"fancyCategory".tableize		#=> "fancy_categories"
+    ///
     var tableize: String {
         return underscore.pluralize
     }
     
     /// Creates a foreign key name from a class name.
+    ///
+    /// 	"people".foreignKey             #=> "people_id"
+    /// 	"people".foreignKey             #=> "people_id"
+    /// 	"MessageQueue".foreignKey		#=> "message_queue_id"
+    ///
     var foreignKey: String {
         return foreignKey()
     }
