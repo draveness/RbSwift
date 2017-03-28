@@ -1,5 +1,7 @@
-                expect("os_version".camelize).to(equal("OsVersion"))
-                expect("os_version_ten".camelize).to(equal("OsVersionTen"))
-                expect("os_version_TEn".camelize).to(equal("OsVersionTen"))
-                expect("os_version".camelize(.lower)).to(equal("osVersion"))
+                expect("person".pluralize).to(equal("people"))
+                expect("monkey".pluralize).to(equal("monkeys"))
+                expect("user".pluralize).to(equal("users"))
+                expect("man".pluralize).to(equal("men"))
+            
+                expect("men".pluralize(1)).to(equal("man"))
 
