@@ -1,2 +1,4 @@
-                expect("HellHEo".swapcase).to(equal("hELLheO"))
+                expect("a".ord).to(equal(97))
+                expect("ab".ord).to(equal(97))
+                expect("b".ord).to(equal(98))
 

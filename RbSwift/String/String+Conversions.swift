@@ -14,16 +14,44 @@ fileprivate let integers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 // MARK: - Conversions
 public extension String {
-    /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36).
-    /// Extraneous characters past the end of a valid number are ignored. 
-    /// If there is not a valid number at the start of str, 0 is returned. 
+    /// Returns the result of interpreting leading characters in str as an integer base (between 2 and 36),
+    /// default is 10, extraneous characters past the end of a valid number are ignored.
+    ///
+    /// 	"0a".to_i(16)           #=> 10
+    /// 	"0xa".to_i(16)          #=> 0
+    /// 	"12".to_i               #=> 12
+    /// 	"-1100101".to_i(2)		#=> -101
+    /// 	"1100101".to_i(2)		#=> 101
+    /// 	"1100101".to_i(8)		#=> 294977
+    /// 	"1100101".to_i(10)		#=> 1100101
+    /// 	"1100101".to_i(16)		#=> 17826049
+    ///
     /// This method returns 0 when base is invalid.
+    ///
+    /// 	"0a".to_i(1)            #=> 0
+    /// 	"0a".to_i(37)           #=> 0
+    ///
+    /// If there is not a valid number at the start of str, 0 is returned.
+    ///
+    /// 	"-".to_i                #=> 0
+    /// 	"d-1".to_i              #=> 0
+    /// 	"0a".to_i               #=> 0
+    /// 	"hello".to_i            #=> 0
+    /// 	"".to_i                 #=> 0
+    /// 	"  ".to_i               #=> 0
+    ///
     var to_i: Int {
         return to_i(10)
     }
     
     /// Treats leading characters from str as a string of hexadecimal digits (with an optional sign and an optional 0x)
     /// and returns the corresponding number. Zero is returned on error.
+    ///
+    /// 	"-".to_hex          #=> 0
+    /// 	"0xa".to_hex        #=> 10
+    /// 	"-0xa".to_hex		#=> -10
+    /// 	"a".to_hex          #=> 10
+    ///
     var to_hex: Int {
         let sign = isStartWith("-") ? -1 : 1
         let str = isStartWith("-") ? self.substring(from: 1) : self
@@ -31,19 +59,42 @@ public extension String {
         return str.substring(from: 2).to_i(16) * sign
     }
     
-    /// An alias to `to_hex` method.
+    /// An alias to `String#to_hex` method.
+    ///
+    /// 	"-".hex         #=> 0
+    /// 	"0xa".hex		#=> 10
+    /// 	"-0xa".hex		#=> -10
+    /// 	"a".hex         #=> 10
+    ///
     var hex: Int {
         return to_hex
     }
     
     /// Treats leading characters of str as a string of octal digits (with an optional sign) 
-    /// and returns the corresponding number. Returns 0 if the conversion fails.
+    /// and returns the corresponding number.
+    ///
+    /// 	"123".oct           #=> 83
+    /// 	"-377".oct          #=> -255
+    /// 	"377bad".oct		#=> 255
+    ///
+    /// Returns 0 if the conversion fails.
+    ///
+    /// 	"bad".oct           #=> 0
+    ///
     var oct: Int {
         return to_i(8)
     }
     
     /// Return the Integer ordinal of a one-character string.
+    ///
+    /// 	"a".ord         #=> 97
+    /// 	"ab".ord        #=> 97
+    /// 	"b".ord         #=> 98
+    ///
     /// Return 0 if the receiver is an empty string.
+    ///
+    /// 	"".ord          #=> 0
+    ///
     var ord: UInt32 {
         guard let first = self.unicodeScalars.first else { return 0 }
         return first.value

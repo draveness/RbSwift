@@ -22,6 +22,7 @@ class StringCharsSpec: QuickSpec {
         describe(".lines") {
             it("all lines in string form separated by newline `\n`") {
                 expect("a\nb\nc\nd\ne".lines).to(equal(["a", "b", "c", "d", "e"]))
+                expect("a\tb\tc\td\te".lines("\t")).to(equal(["a", "b", "c", "d", "e"]))
             }
         }
     }
