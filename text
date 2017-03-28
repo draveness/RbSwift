@@ -1,5 +1,8 @@
-                expect(12345.digits).to(equal([5, 4, 3, 2, 1]))
-                expect(12345.digits(7)).to(equal([4, 6, 6, 0, 5]))
-                expect(12345.digits(100)).to(equal([45, 23, 1]))
-                expect((-12345).digits(7)).to(equal([]))
+                let str = "hello"
+                expect("l".regex.replace(str, "abc")).to(equal("heabcabco"))
+                expect("le".regex.replace(str, "lll")).to(equal("hello"))
+                expect(".".literal.replace(str, "lll")).to(equal("hello"))
+                expect(".".regex.replace(str, "lll")).to(equal("lll" * 5))
+                expect("^he".regex.replace(str, "lll")).to(equal("lllllo"))
+                expect("\\b(?<!['’`])[a-z]".regex.replace("my name is draven", "a")).to(equal("ay aame as araven"))
 

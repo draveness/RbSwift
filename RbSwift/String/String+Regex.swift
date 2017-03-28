@@ -87,7 +87,7 @@ public extension String {
     ///
     /// 	"hello".gsub("l", "abc")                #=> "heabcabco"
     /// 	"hello".gsub("le", "lll")               #=> "hello"
-    /// 	"hello".gsub(".".literal, "lll")		#=> "hello"
+    /// 	"hello".gsub(".".literal, "lll")        #=> "hello"
     /// 	"hello".gsub(".", "lll")                #=> "lll" * 5
     /// 	"hello".gsub("^he", "lll")              #=> "lllllo"
     ///
@@ -96,7 +96,7 @@ public extension String {
     ///   - str: A string to replace the matching substring
     /// - Returns: A new string with str replacing the matched result
     func gsub(_ pattern: RegexConvertible, _ str: String) -> String {
-        return pattern.regex.replace(self, template: str)
+        return pattern.regex.replace(self, str)
     }
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
@@ -132,7 +132,7 @@ public extension String {
         let regex = pattern.regex
         var result: String = self
         for matchData in scan(regex).reversed() {
-            result = regex.replace(result, template: closure(matchData.match))
+            result = regex.replace(result, closure(matchData.match))
         }
         return result as String
     }

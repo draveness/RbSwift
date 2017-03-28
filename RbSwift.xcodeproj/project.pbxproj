@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1734AE0417F567A72978FAC4 /* Pods_RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */; };
+		723AA3401E8AD4A20000A612 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AA33F1E8AD4A20000A612 /* RegexSpec.swift */; };
 		724874FC1E7CF813007984FD /* RbSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 724874FA1E7CF813007984FD /* RbSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724875061E7CF829007984FD /* Array+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875021E7CF829007984FD /* Array+Transform.swift */; };
 		724875081E7CF829007984FD /* Sequence+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875041E7CF829007984FD /* Sequence+Transform.swift */; };
@@ -114,6 +115,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		723AA33F1E8AD4A20000A612 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		724874FA1E7CF813007984FD /* RbSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RbSwift.h; sourceTree = "<group>"; };
 		724874FB1E7CF813007984FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724875021E7CF829007984FD /* Array+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Transform.swift"; sourceTree = "<group>"; };
@@ -258,6 +260,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		723AA33E1E8AD4970000A612 /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				723AA33F1E8AD4A20000A612 /* RegexSpec.swift */,
+			);
+			name = Regex;
+			path = Regex;
+			sourceTree = "<group>";
+		};
 		724874ED1E7CF813007984FD = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +305,7 @@
 				72541B071E7D629E008B49B1 /* Date */,
 				7248753F1E7CFF96007984FD /* Duration */,
 				72541B621E7E2F07008B49B1 /* Number */,
+				723AA33E1E8AD4970000A612 /* Regex */,
 				72541B5C1E7E2E0B008B49B1 /* Sequence */,
 				72541B1C1E7D9617008B49B1 /* String */,
 				724875141E7CF843007984FD /* Info.plist */,
@@ -414,10 +426,10 @@
 			children = (
 				727738971E82B2A3008E83E6 /* Sequence+Bool.swift */,
 				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
+				72FC508F1E83CE2E009B99F4 /* Sequence+Enumeration.swift */,
 				727738991E82B4B0008E83E6 /* Sequence+Equatable.swift */,
 				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
 				724875041E7CF829007984FD /* Sequence+Transform.swift */,
-				72FC508F1E83CE2E009B99F4 /* Sequence+Enumeration.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -426,10 +438,10 @@
 			isa = PBXGroup;
 			children = (
 				7277389D1E82B4D7008E83E6 /* Sequence+BoolSpec.swift */,
+				72FC50911E83CE86009B99F4 /* Sequence+EnumerationSpec.swift */,
 				7277389B1E82B4CE008E83E6 /* Sequence+EquatableSpec.swift */,
 				72541B8F1E7E3301008B49B1 /* Sequence+LengthSpec.swift */,
 				7248751E1E7CF850007984FD /* Sequence+TransformSpec.swift */,
-				72FC50911E83CE86009B99F4 /* Sequence+EnumerationSpec.swift */,
 			);
 			path = Sequence;
 			sourceTree = "<group>";
@@ -437,13 +449,13 @@
 		72541B5F1E7E2EDE008B49B1 /* Array */ = {
 			isa = PBXGroup;
 			children = (
-				72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */,
+				727738AD1E84AE87008E83E6 /* Array+Access.swift */,
 				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
+				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
+				72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */,
+				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
 				724875021E7CF829007984FD /* Array+Transform.swift */,
-				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
-				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
-				727738AD1E84AE87008E83E6 /* Array+Access.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -465,13 +477,13 @@
 		72541B611E7E2EFA008B49B1 /* Array */ = {
 			isa = PBXGroup;
 			children = (
+				727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */,
 				727738A11E82B9AB008E83E6 /* Array+BoolSpec.swift */,
-				727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */,
-				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
-				72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */,
 				72FC508D1E83C851009B99F4 /* Array+ConversionsSpec.swift */,
 				727738A71E8404B8008E83E6 /* Array+EquatableSpec.swift */,
-				727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */,
+				72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */,
+				727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */,
+				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -759,6 +771,7 @@
 				72541B9E1E7E330A008B49B1 /* String+AccessSpec.swift in Sources */,
 				729D3D591E7E651600258333 /* Duration+MathSpec.swift in Sources */,
 				72541BA11E7E330A008B49B1 /* String+ConversionsSpec.swift in Sources */,
+				723AA3401E8AD4A20000A612 /* RegexSpec.swift in Sources */,
 				72541BA51E7E330A008B49B1 /* String+InflectionSpec.swift in Sources */,
 				72FC50921E83CE86009B99F4 /* Sequence+EnumerationSpec.swift in Sources */,
 				72FC508E1E83C851009B99F4 /* Array+ConversionsSpec.swift in Sources */,

@@ -30,15 +30,33 @@ public struct Regex {
         self.regexp = try! NSRegularExpression(pattern: pattern, options: options)
     }
     
-    /// Invokes its `firstMatch(in:options:range:)` method first to check it str is matched with
-    /// current `regexp`. Returns `nil` if `firstMatch(in:options:range:)` returns false, or this 
+    /// Invokes its `NSRegularExpression#firstMatch(in:options:range:)` method first to check it str is matched with
+    /// current `regexp`. Returns `nil` if `NSRegularExpression#firstMatch(in:options:range:)` returns false, or this
     /// methods will encapsulates all the data inside a `MatchData` struct.
     ///
-    /// - Parameters pattern: A string
+    ///     "[a-e]+".regex.match("hello") { data in
+    ///         print(data.match)       #=> "e"
+    ///     }
+    ///
+    ///     "[a-e]+".regex.match("hello") { data in
+    ///         print(data.match)       #=> "e"
+    ///     }
+    ///
+    /// If the second parameter is present, it specifies the position in the string to begin the search.
+    ///
+    ///     "[a-e]+".regex.match("hello", 1) { data in
+    ///         print(data.match)       #=> "e"
+    ///         print(data.range)       #=> NSRange< loc: 1, length: 1 }>
+    ///     }
+    ///
+    /// - Parameters:
+    ///   - str: A string
+    ///   - pos: The position in the string to begin the search
+    ///   - closure: A closure invoked if there is a match
     /// - Returns: A `MatchData` instance contains all match results in it
-    public func match(_ str: String) -> MatchData? {
+    @discardableResult public func match(_ str: String, _ pos: Int = 0, closure: ((MatchData) -> Void)? = nil) -> MatchData? {
         let str = str as NSString
-        guard let result = regexp.firstMatch(in: str as String, options: [], range: NSMakeRange(0, str.length)) else { return nil }
+        guard let result = regexp.firstMatch(in: str as String, options: [], range: NSMakeRange(pos, str.length - pos)) else { return nil }
 
         let match = str.substring(with: result.range)
         var captures: [String] = []
@@ -48,16 +66,24 @@ public struct Regex {
             ranges.append(range)
             captures.append(str.substring(with: range))
         }
-        return MatchData(match: match, range: result.range, captures: captures, ranges: ranges)
+        let matchData = MatchData(match: match, range: result.range, captures: captures, ranges: ranges)
+        if let closure = closure { closure(matchData) }
+        return matchData
     }
     
-    /// Invokes its `matches(in:options:range:)` method to check it str is matched with
+    /// Invokes its `NSRegularExpression#matches(in:options:range:)` method to check it str is matched with
     /// current `regexp`. Returns `[]` if returns false, or this methods will encapsulates all
     /// the data inside a `MatchData` struct, and returns `[MatchData]`
     ///
-    /// - Parameters pattern: A string
+    ///     "[aeiou]+".regex.scan("hello") { data in
+    ///         print(data.match)       #=> e, o
+    ///     }
+    ///
+    /// - Parameters:
+    ///   - pattern: A string
+    ///   - closure: A closure invoked if there is a match
     /// - Returns: An array of `MatchData` instance contains all match results in it
-    public func scan(_ str: String) -> [MatchData] {
+    @discardableResult public func scan(_ str: String, closure: ((MatchData) -> Void)? = nil) -> [MatchData] {
         let matches = regexp.matches(in: str, options: [], range: NSMakeRange(0, str.length))
         
         let str = str as NSString
@@ -72,23 +98,42 @@ public struct Regex {
                 datas.append(str.substring(with: range))
             }
             let matchData = MatchData(match: substr, range: match.range, captures: datas, ranges: ranges)
+            if let closure = closure { closure(matchData) }
             matchDatas.append(matchData)
         }
         return matchDatas
     }
     
-    /// Invokes `stringByReplacingMatches(in:options:range:withTemplate:)` method to replace original match
+    /// Invokes `NSRegularExpression#stringByReplacingMatches(in:options:range:withTemplate:)` method to replace original match
     /// result with template, $1, $2... are used to capture the match group in the str.
+    ///
+    ///     let str = "hello"
+    /// 	"l".regex.replace(str, "abc")		#=> "heabcabco"
+    /// 	"le".regex.replace(str, "lll")		#=> "hello"
+    /// 	".".literal.replace(str, "lll")		#=> "hello"
+    /// 	".".regex.replace(str, "lll")		#=> "lllllllllllllll"
+    /// 	"^he".regex.replace(str, "lll")		#=> "lllllo"
+    ///
+    /// 	"\\b(?<!['’`])[a-z]".regex.replace("my name is draven", "a")		#=> "ay aame as araven"
     ///
     /// - Parameters:
     ///   - str: A string waiting for replacing
     ///   - template: A template string used to replace original str
     /// - Returns: A new string with all matching result replaced by template
-    public func replace(_ str: String, template: String) -> String {
+    public func replace(_ str: String,  _ template: String) -> String {
         return regexp.stringByReplacingMatches(in: str, options: [], range: NSMakeRange(0, str.length), withTemplate: template)
     }
     
-    /// Returns true if right string is match with left `Regexp`
+    /// Returns true if string is match with `Regex`
+    ///
+    ///     let regex = "hello".regex
+    ///     if regex =~ "hello world" {
+    ///         print("this will match")
+    ///     }
+    ///
+    ///     if regex =~ "world" {
+    ///         print("this won't match")
+    ///     }
     ///
     /// - Parameters:
     ///   - regex: A Regex struct used to match the string
@@ -98,7 +143,7 @@ public struct Regex {
         return regex.match(str) != nil
     }
     
-    /// Returns true if right string is match with left `Regexp`
+    /// Returns true if string is match with `Regex`
     ///
     ///     let regex = "hello".regex
     ///     if "hello world" =~ regex {
