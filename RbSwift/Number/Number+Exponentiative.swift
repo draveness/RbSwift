@@ -18,6 +18,12 @@ infix operator ** : ExponentiationPrecedence
 /// Raises integer to the power of numeric, which may be negative or fractional.
 /// The result may be **overflow**.
 ///
+/// 	1 ** 2		#=> 1
+/// 	2 ** 2		#=> 4
+/// 	-2 ** 2		#=> 4
+/// 	-(2 ** 2)   #=> -4
+/// 	-2 ** 0		#=> 1
+///
 /// - Parameters:
 ///   - integer: An integer indicates the numeric
 ///   - numeric: An integer indicates the power
@@ -27,6 +33,12 @@ public func **(integer: Int, numeric: Int) -> Int {
 }
 
 /// Raises integer to the power of numeric, which may be negative or fractional.
+///
+/// 	1 ** 2		#=> 1
+/// 	2 ** 2		#=> 4
+/// 	-2 ** 2		#=> 4
+/// 	-(2 ** 2)   #=> -4
+/// 	-2 ** 0		#=> 1
 ///
 /// - Parameters:
 ///   - double: An double indicates the numeric

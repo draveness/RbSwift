@@ -1,14 +1,5 @@
-                var arr: [Int] = []
-                3.times { arr.append($0) }
-                expect(arr).to(equal([0, 1, 2]))
-                
-                var arr1: [Int] = []
-                3.times { arr1.append(1) }
-                expect(arr1).to(equal([1, 1, 1]))
-                
-                let arr2: [Int] = 3.times { return $0 }
-                expect(arr2).to(equal([0, 1, 2]))
-                
-                let arr3: [Int] = 3.times { return 1 }
-                expect(arr3).to(equal([1, 1, 1]))
+                expect(12345.digits).to(equal([5, 4, 3, 2, 1]))
+                expect(12345.digits(7)).to(equal([4, 6, 6, 0, 5]))
+                expect(12345.digits(100)).to(equal([45, 23, 1]))
+                expect((-12345).digits(7)).to(equal([]))
 

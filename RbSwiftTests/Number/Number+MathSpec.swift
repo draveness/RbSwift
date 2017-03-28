@@ -28,6 +28,8 @@ class NumberMathSpec: QuickSpec {
             it("returns the least common multiple (always positive).") {
                 expect(2.lcm(2)).to(equal(2))
                 expect(3.lcm(-7)).to(equal(21))
+                expect(0.lcm(10)).to(equal(0))
+                expect(10.lcm(0)).to(equal(0))
             }
         }
         
@@ -121,7 +123,6 @@ class NumberMathSpec: QuickSpec {
                 expect(12345.digits(7)).to(equal([4, 6, 6, 0, 5]))
                 expect(12345.digits(100)).to(equal([45, 23, 1]))
                 expect((-12345).digits(7)).to(equal([]))
-
             }
         }
     }
