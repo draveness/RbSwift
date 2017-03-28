@@ -1,12 +1,5 @@
-                expect("0a".to_double).to(equal(0))
-                expect("1100101.11".to_double).to(equal(1100101.11))
-                expect("123.456".to_double).to(equal(123.456))
-                expect("123.456ddddd".to_double).to(equal(123.456))
-                expect(".456ddddd".to_double).to(equal(0.456))
-            
-                expect("-".to_double).to(equal(0))
-                expect("d-1".to_double).to(equal(0))
-                expect("0a".to_double).to(equal(0))
-                expect("..12".to_double).to(equal(0))
-                expect("hello".to_double).to(equal(0))
+                expect("os_version".camelize).to(equal("OsVersion"))
+                expect("os_version_ten".camelize).to(equal("OsVersionTen"))
+                expect("os_version_TEn".camelize).to(equal("OsVersionTen"))
+                expect("os_version".camelize(.lower)).to(equal("osVersion"))
 

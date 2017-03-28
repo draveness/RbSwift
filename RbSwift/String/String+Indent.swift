@@ -12,6 +12,10 @@ import Foundation
 public extension String {
     /// Indents the lines in the receiver
     ///
+    /// 	"  foo".indent(2)                   #=> "\t\tfoo"
+    /// 	"  foo".indent(2, "  ")             #=> "    foo"
+    /// 	"  foo\n\tbar".indent(2, "  ")		#=> "    foo\n    bar"
+    ///
     /// - Parameters:
     ///   - amount: A int specifies the amount of indentString for one level idnentation
     ///   - indentString: A string specifies which indent string to use. The default is \t.
@@ -22,6 +26,10 @@ public extension String {
     }
     
     /// Indents the lines in the receiver and changes self
+    ///
+    ///     var str = "  foo\n\tbar"
+    ///     str.indented(2, "  ")
+    /// 	str         #=> "    foo\n    bar"
     ///
     /// - Parameters:
     ///   - amount: A int specifies the amount of indentString for one level idnentation

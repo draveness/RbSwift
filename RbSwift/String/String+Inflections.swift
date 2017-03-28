@@ -20,7 +20,14 @@ public extension String {
     }
     
     /// By default, `camelize` converts strings to UpperCamelCase.
+    ///
+    /// 	"os_version".camelize		#=> "OsVersion"
+    /// 	"os_version_ten".camelize		#=> "OsVersionTen"
+    /// 	"os_version_TEn".camelize		#=> "OsVersionTen"
+    ///
     /// If the argument to camelize is set to `.lower` then camelize produces lowerCamelCase.
+    ///
+    /// 	"os_version".camelize(.lower)		#=> "osVersion"
     ///
     /// - Parameter firstLetter: A flag to control result between UpperCamelCase(.upper) and lowerCamelCase(.lower), See also LetterCase
     /// - Returns: A string converts to camel case
@@ -55,6 +62,12 @@ public extension String {
     }
 
     /// Converts strings to UpperCamelCase.
+    ///
+    /// 	"os_version".camelize		#=> "OsVersion"
+    /// 	"os_version_ten".camelize		#=> "OsVersionTen"
+    /// 	"os_version_TEn".camelize		#=> "OsVersionTen"
+    ///
+    /// - See Also: `String#camelize(firstLetter:)`
     var camelize: String {
         return camelize()
     }
