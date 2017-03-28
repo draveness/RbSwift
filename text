@@ -1,19 +1,4 @@
-                expect("0a".to_i(16)).to(equal(10))
-                expect("0xa".to_i(16)).to(equal(0))
-                expect("12".to_i).to(equal(12))
-                expect("-1100101".to_i(2)).to(equal(-101))
-                expect("1100101".to_i(2)).to(equal(101))
-                expect("1100101".to_i(8)).to(equal(294977))
-                expect("1100101".to_i(10)).to(equal(1100101))
-                expect("1100101".to_i(16)).to(equal(17826049))
-
-                expect("".to_i).to(equal(0))
-                expect("  ".to_i).to(equal(0))
-                expect("0a".to_i(1)).to(equal(0))
-                expect("0a".to_i(37)).to(equal(0))
-            
-                expect("-".to_i).to(equal(0))
-                expect("d-1".to_i).to(equal(0))
-                expect("0a".to_i).to(equal(0))
-                expect("hello".to_i).to(equal(0))
+                expect("a".ord).to(equal(97))
+                expect("ab".ord).to(equal(97))
+                expect("b".ord).to(equal(98))
 
