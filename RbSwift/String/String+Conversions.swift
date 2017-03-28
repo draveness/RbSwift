@@ -212,6 +212,9 @@ public extension String {
     /// Returns the result of interpreting the receiver in different standard.
     /// This methods returns `nil`, if the receiver is not in Custom, ISO8601, RFC2822 or CTime form.
     ///
+    ///     "Sun Mar 19 01:04:21 2017".to_datetime!         #=> 2017-03-19 01:04:21 +0000
+    ///     "2017-03-19 00:35:36 +0800".to_datetime!        #=> 2017-03-19 00:35:36 +0800
+    ///
     /// - See Also: DateFormat
     var to_datetime: Date? {
         return Date(str: self)

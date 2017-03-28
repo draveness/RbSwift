@@ -100,6 +100,15 @@ public struct Regex {
     
     /// Returns true if right string is match with left `Regexp`
     ///
+    ///     let regex = "hello".regex
+    ///     if "hello world" =~ regex {
+    ///         print("this will match")
+    ///     }
+    ///
+    ///     if "world" =~ regex {
+    ///         print("this won't match")
+    ///     }
+    ///
     /// - Parameters:
     ///   - str: A string waiting to match
     ///   - regex: A Regex struct used to match the string
