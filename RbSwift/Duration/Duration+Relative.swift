@@ -8,11 +8,16 @@
 
 import Foundation
 
+// MARK: - Relative
 public extension Duration {
     var since: Date {
         return since()
     }
     
+    var fromNow: Date {
+        return fromNow()
+    }
+
     var later: Date {
         return since
     }
