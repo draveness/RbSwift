@@ -37,6 +37,10 @@ public extension Duration {
         return Calendar.current.date(byAdding: self.to_dateComponents, to: date)!
     }
     
+    func fromNow(_ date: Date = Date.now) -> Date {
+        return since(date)
+    }
+    
     func ago(_ date: Date = Date.now) -> Date {
         return Calendar.current.date(byAdding: self.to_dateComponents(before: true), to: date)!
     }
