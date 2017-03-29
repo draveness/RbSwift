@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class InitializeSpec: QuickSpec {
+class DateInitializeSpec: QuickSpec {
     override func spec() {
         describe(".init(str:)") {
             it("parses str into date correctly") {
@@ -31,6 +31,18 @@ class InitializeSpec: QuickSpec {
                 expect(date.hour).to(equal(0))
                 expect(date.minute).to(equal(35))
                 expect(date.second).to(equal(36))
+            }
+        }
+        
+        describe(".init(year:month:day:hour:minute:second:)") {
+            it("returns date correctly") {
+                let date = Date(2017, 1, 2, 3, 4, 5)!
+                expect(date.year).to(equal(2017))
+                expect(date.month).to(equal(1))
+                expect(date.day).to(equal(2))
+                expect(date.hour).to(equal(3))
+                expect(date.minute).to(equal(4))
+                expect(date.second).to(equal(5))
             }
         }
     }

@@ -14,6 +14,10 @@ public extension Duration {
         return since()
     }
     
+    var `in`: Date {
+        return since
+    }
+    
     var fromNow: Date {
         return fromNow()
     }
