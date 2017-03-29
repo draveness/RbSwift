@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ComponentsSpec: QuickSpec {
+class DateComponentsSpec: QuickSpec {
     override func spec() {
         
         describe(".dateComponents") {

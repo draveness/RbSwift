@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class NumberAbsoluteValueSpec: QuickSpec {
-    
     override func spec() {
         describe(".abs") {
             it("returns the absolute value of self") {
