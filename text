@@ -1,8 +1,0 @@
-                let str = "hello"
-                expect("l".regex.replace(str, "abc")).to(equal("heabcabco"))
-                expect("le".regex.replace(str, "lll")).to(equal("hello"))
-                expect(".".literal.replace(str, "lll")).to(equal("hello"))
-                expect(".".regex.replace(str, "lll")).to(equal("lll" * 5))
-                expect("^he".regex.replace(str, "lll")).to(equal("lllllo"))
-                expect("\\b(?<!['’`])[a-z]".regex.replace("my name is draven", "a")).to(equal("ay aame as araven"))
-
