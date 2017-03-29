@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1734AE0417F567A72978FAC4 /* Pods_RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */; };
+		72369CA31E8B933600C876A5 /* Date+MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72369CA21E8B933600C876A5 /* Date+MathSpec.swift */; };
 		723AA3401E8AD4A20000A612 /* RegexSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AA33F1E8AD4A20000A612 /* RegexSpec.swift */; };
 		724874FC1E7CF813007984FD /* RbSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 724874FA1E7CF813007984FD /* RbSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724875061E7CF829007984FD /* Array+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724875021E7CF829007984FD /* Array+Transform.swift */; };
@@ -115,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72369CA21E8B933600C876A5 /* Date+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MathSpec.swift"; sourceTree = "<group>"; };
 		723AA33F1E8AD4A20000A612 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		724874FA1E7CF813007984FD /* RbSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RbSwift.h; sourceTree = "<group>"; };
 		724874FB1E7CF813007984FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,7 +267,6 @@
 			children = (
 				723AA33F1E8AD4A20000A612 /* RegexSpec.swift */,
 			);
-			name = Regex;
 			path = Regex;
 			sourceTree = "<group>";
 		};
@@ -376,6 +377,7 @@
 			children = (
 				72541B871E7E32F2008B49B1 /* Date+ComponentsSpec.swift */,
 				72541B881E7E32F2008B49B1 /* Date+InitializeSpec.swift */,
+				72369CA21E8B933600C876A5 /* Date+MathSpec.swift */,
 				72541B0C1E7D6803008B49B1 /* Date+TimeZoneSpec.swift */,
 				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
 			);
@@ -780,6 +782,7 @@
 				72541B9F1E7E330A008B49B1 /* String+BoolSpec.swift in Sources */,
 				727738A21E82B9AB008E83E6 /* Array+BoolSpec.swift in Sources */,
 				724875231E7CF850007984FD /* Sequence+TransformSpec.swift in Sources */,
+				72369CA31E8B933600C876A5 /* Date+MathSpec.swift in Sources */,
 				7277389C1E82B4CE008E83E6 /* Sequence+EquatableSpec.swift in Sources */,
 				7277389E1E82B4D7008E83E6 /* Sequence+BoolSpec.swift in Sources */,
 				72541B221E7D986B008B49B1 /* DateFormatSpec.swift in Sources */,
