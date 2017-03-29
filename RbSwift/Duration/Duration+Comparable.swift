@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Comparable
 extension Duration: Comparable, Equatable {
     /// Returns a Boolean value indicating whether the value of the first
     /// argument is less than that of the second argument.

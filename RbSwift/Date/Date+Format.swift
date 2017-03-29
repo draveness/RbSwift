@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Format
 public extension Date {
     static func parse(str: String) -> Date? {
         guard let date = DateFormat.parse(str: str) else { return nil }

@@ -39,6 +39,16 @@ public struct Duration {
         self.values[.seconds] = seconds
     }
     
+    /// Convert duration to seconds
+    ///
+    ///     1.year.toSeconds        #=> 31556952 (length of a gregorian year 365.2425 days)
+    ///     1.month.toSeconds       #=> 2629746  (1/12 of a gregorian year)
+    ///     1.week.toSeconds        #=> 604800
+    ///     1.day.toSeconds         #=> 86400
+    ///     1.hour.toSeconds        #=> 3600
+    ///     1.minute.toSeconds      #=> 60
+    ///     1.second.toSeconds      #=> 1
+    ///
     public var toSeconds: Int {
         return values.reduce(0) { $0 + secondsPerComponent[$1.0]! * $1.1 }
     }
