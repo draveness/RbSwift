@@ -377,9 +377,9 @@
 			children = (
 				72541B871E7E32F2008B49B1 /* Date+ComponentsSpec.swift */,
 				72541B881E7E32F2008B49B1 /* Date+InitializeSpec.swift */,
+				72369CA21E8B933600C876A5 /* Date+MathSpec.swift */,
 				72541B0C1E7D6803008B49B1 /* Date+TimeZoneSpec.swift */,
 				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
-				72369CA21E8B933600C876A5 /* Date+MathSpec.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
