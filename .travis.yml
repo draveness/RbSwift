@@ -9,10 +9,10 @@ env:
   global:
   - FRAMEWORK_NAME=RbSwift
 before_install:
+- pod update Nimble
 - brew update
 - brew outdated carthage || brew upgrade carthage
 before_script:
-- pod update Nimble
 - carthage bootstrap
 script:
 - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwift -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES
