@@ -1,10 +1,10 @@
 language: objective-c
 os: osx
 osx_image: xcode8.2
-xcode_workspace: RbSwift.xcworkspace
-xcode_scheme: RbSwiftTests
+# xcode_workspace: RbSwift.xcworkspace
+# xcode_scheme: RbSwiftTests
 podfile: Podfile
-xcode_sdk: iphonesimulator10.3
+# xcode_sdk: iphonesimulator10.3
 env:
   global:
   - FRAMEWORK_NAME=RbSwift
@@ -14,6 +14,7 @@ before_install:
 before_script:
 - carthage bootstrap
 script:
+- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwift -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES
 - pod lib lint
 before_deploy:
 - carthage build --no-skip-current
