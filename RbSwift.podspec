@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   to write.
                    DESC
   s.homepage     = "http://github.com/Draveness/RbSwift"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "draveness" => "i@draveness.me" }
   s.source       = { :git => "git@github.com:Draveness/RbSwift.git", :tag => "#{s.version}" }
 
