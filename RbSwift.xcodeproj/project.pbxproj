@@ -365,13 +365,13 @@
 			isa = PBXGroup;
 			children = (
 				729D3D4B1E7E353000258333 /* DateFormat */,
+				72E276A91E8BF1E700F41D1B /* Date+Bool.swift */,
 				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
 				72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */,
-				729D3D541E7E5F7100258333 /* Date+Time.swift */,
 				72541B051E7D5DD6008B49B1 /* Date+Initialize.swift */,
 				729D3D5A1E7E68A900258333 /* Date+Math.swift */,
+				729D3D541E7E5F7100258333 /* Date+Time.swift */,
 				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
-				72E276A91E8BF1E700F41D1B /* Date+Bool.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -379,13 +379,13 @@
 		72541B071E7D629E008B49B1 /* Date */ = {
 			isa = PBXGroup;
 			children = (
+				72E276AB1E8BF38300F41D1B /* Date+BoolSpec.swift */,
 				72541B871E7E32F2008B49B1 /* Date+ComponentsSpec.swift */,
 				72541B881E7E32F2008B49B1 /* Date+InitializeSpec.swift */,
 				72369CA21E8B933600C876A5 /* Date+MathSpec.swift */,
+				72E276A71E8BE86C00F41D1B /* Date+TimeSpec.swift */,
 				72541B0C1E7D6803008B49B1 /* Date+TimeZoneSpec.swift */,
 				72541B211E7D986B008B49B1 /* DateFormatSpec.swift */,
-				72E276A71E8BE86C00F41D1B /* Date+TimeSpec.swift */,
-				72E276AB1E8BF38300F41D1B /* Date+BoolSpec.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";

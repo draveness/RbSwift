@@ -10,6 +10,12 @@ import Foundation
 
 // MARK: - Format
 public extension Date {
+    /// Returns a date from given string or nil.
+    /// `Date#parse(str:)` can only parse string in several forms.
+    ///
+    /// - Parameter str: A string
+    /// - Returns: A date object or nil
+    /// - See Also: `DateFormat#parse(str:)`
     static func parse(str: String) -> Date? {
         guard let date = DateFormat.parse(str: str) else { return nil }
         return date
