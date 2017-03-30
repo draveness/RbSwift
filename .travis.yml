@@ -1,6 +1,6 @@
 language: objective-c
 os: osx
 osx_image: xcode8.3
-xcode_workspace: RbSwift.xcodeworkspace
+xcode_workspace: RbSwift.xcworkspace
 xcode_scheme: RbSwiftTests
 podfile: Podfile
