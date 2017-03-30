@@ -279,14 +279,14 @@
 			children = (
 				7062BA3357BD5C5CD6608FDD /* Frameworks */,
 				28D74309F6A6B8E1E2C4BCA2 /* Pods */,
-				724874F91E7CF813007984FD /* RbSwift */,
 				724875111E7CF843007984FD /* RbSwiftTests */,
+				724874F91E7CF813007984FD /* Sources */,
 				72A218FB1E7F8A9B00EF65C9 /* RbSwift.framework */,
 				72A218FC1E7F8A9B00EF65C9 /* RbSwiftTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		724874F91E7CF813007984FD /* RbSwift */ = {
+		724874F91E7CF813007984FD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				72541B5F1E7E2EDE008B49B1 /* Array */,
@@ -300,7 +300,8 @@
 				724874FB1E7CF813007984FD /* Info.plist */,
 				724874FA1E7CF813007984FD /* RbSwift.h */,
 			);
-			path = RbSwift;
+			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		724875111E7CF843007984FD /* RbSwiftTests */ = {
@@ -937,7 +938,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RbSwift/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.draveness.RbSwift;
@@ -958,7 +959,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RbSwift/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.draveness.RbSwift;
