@@ -20,6 +20,6 @@ before_deploy:
   - carthage archive $FRAMEWORK_NAME
 skip_cleanup: true
 on:
-  repo: repo/repo
+  repo: Draveness/RbSwift
   tags: true
 
