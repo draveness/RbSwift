@@ -1,0 +1,16 @@
+language: objective-c
+os: osx
+osx_image: xcode8.3
+
+env:
+  matrix:
+    - TEST_TYPE=iOS
+-before_install:
+ - gem install xcpretty -N --no-ri --no-rdoc
+script:
+- |
+    if [ "$TEST_TYPE" = iOS ]; then
+      set -o pipefail
+      xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwift -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES | xcpretty
+    fi
+    
