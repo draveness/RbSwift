@@ -1,0 +1,27 @@
+language: objective-c
+os: osx
+osx_image: xcode8.3
+podfile: Podfile
+env:
+  global:
+  - FRAMEWORK_NAME=RbSwift
+before_install:
+- pod update Nimble
+- brew update
+- brew outdated carthage || brew upgrade carthage
+- pod install
+- gem install xcpretty
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+script:
+- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwiftTests -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
+deploy:
+  provider: releases
+  api_key:
+    secure: QdpZSPHwKank8GFnIbVDqkPTNNIRwrVg8vKGfTiEqo/qImEx/QH19mo3cNGZ9LmR0BClXE1efjb/xYrYljmUHH/RQNSToVmyOCb8MRSeZ5m29bruZbSVQSS/tZRWMzh57uF2SxK3d25RWx/zFXS5ZldsU1fbUrB0JY+9rRflyApPRlCuppgqlLEQBOLP7/F04xLR4vhsyJuLz0HXBZcOmduijsS1VTaNVjeBfL378DsO/0OY8gYGnI8xJ34lWSxwPUCciNTd08HGlcDhQAAg5wr8ckIRWw/6aJxYLG8zQC/uysO1I8zvHzvFmWaGvv+09KGrq//lc7oxpQVO7fWPCBdxInV0q9+Xia8+GMN/2Rm3EwidjHb1ndUgH7ws86C2RTkhi8hzr0aVITZ5R2LMR2t0Q+GKjS5TGiPL/TQ2ZSLvxDXFbrjU0kRobRyE3ROpqnls+Rw4r//O7ecyrPuqmro28p4y9uzhTxpZZMwm+IrJNb75fstjZQOR7wX12dMVk6r30paYX3b5oShUvW9JNolUbAovHN5WStoMPiKLmdCklIehMYVS8QQfa6v78vdNkRonUHvRZ2LHNkBnwVCCN8mefOr/zD+o/IdK54U0kV7YVA5C+1QoQ+I0CjXQDm7SE5R7AIbkCF8jzWIOY5FI+C+fwcJ9E94C77/OvXcQj9c=
+  file: RbSwift.framework.zip
+  skip_cleanup: true
+  on:
+    repo: Draveness/RbSwift
+    tags: true

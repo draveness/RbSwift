@@ -12,6 +12,14 @@ import RbSwift
 
 class DateInitializeSpec: QuickSpec {
     override func spec() {
+        beforeEach {
+            GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
+        }
+        
+        afterEach {
+            GlobalTimeZone = TimeZone.current
+        }
+        
         describe(".init(str:)") {
             it("parses str into date correctly") {
                 let date = Date(str: "Sun Mar 19 01:04:21 2017")!
@@ -36,6 +44,8 @@ class DateInitializeSpec: QuickSpec {
         
         describe(".init(year:month:day:hour:minute:second:)") {
             it("returns date correctly") {
+                GlobalTimeZone = TimeZone.current
+
                 let date = Date(2017, 1, 2, 3, 4, 5)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(1))

@@ -92,10 +92,12 @@ public struct Regex {
             let substr = str.substring(with: match.range)
             var datas: [String] = []
             var ranges: [NSRange] = []
-            for index in 1..<match.numberOfRanges {
-                let range = match.rangeAt(index)
-                ranges.append(range)
-                datas.append(str.substring(with: range))
+            autoreleasepool {
+                for index in 1..<match.numberOfRanges {
+                    let range = match.rangeAt(index)
+                    ranges.append(range)
+                    datas.append(str.substring(with: range))
+                }
             }
             let matchData = MatchData(match: substr, range: match.range, captures: datas, ranges: ranges)
             if let closure = closure { closure(matchData) }

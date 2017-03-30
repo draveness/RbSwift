@@ -10,12 +10,12 @@ import Foundation
 
 // MARK: - Conversions
 public extension Duration {
-    /// Convert duration to seconds in string form
+    /// Convert duration to seconds in string form.
     var to_s: String {
         return "\(toSeconds)"
     }
     
-    /// Convert duration to seconds
+    /// Convert duration to seconds.
     ///
     ///     1.year.to_i     #=> 31556952 (length of a gregorian year 365.2425 days)
     ///     1.month.to_i    #=> 2629746 ( 1/12 of a gregorian year)

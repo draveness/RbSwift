@@ -11,6 +11,7 @@ import Foundation
 fileprivate let calendar = Calendar.current
 fileprivate let allComponents: [Calendar.Component] = [.era, .year, .month, .day, .hour, .minute, .second, .nanosecond, .weekday, .weekdayOrdinal, .quarter, .timeZone, .weekOfMonth, .weekOfYear, .yearForWeekOfYear, .calendar]
 
+// MARK: - Components
 public extension Date {
     var _components: DateComponents {
         return calendar.dateComponents(in: currentTimeZone, from: self)

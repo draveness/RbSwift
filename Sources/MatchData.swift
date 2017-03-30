@@ -33,6 +33,13 @@ public struct MatchData {
     public var to_s: String {
         return match
     }
+    
+    public init(match: String, range: NSRange, captures: [String], ranges: [NSRange]) {
+        self.match = match
+        self.range = range
+        self.captures = captures
+        self.ranges = ranges
+    }
 }
 
 extension NSRange: Equatable, Hashable {

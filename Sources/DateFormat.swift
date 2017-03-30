@@ -6,7 +6,7 @@
 //  Copyright © 2017 draveness. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// A dateformatter which provides default `DateFormatter` converts string to `Date` object.
 public struct DateFormat {

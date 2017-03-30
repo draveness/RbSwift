@@ -105,78 +105,115 @@ public extension Date {
         }
     }
     
+    /// Converts Date with the time portion set to the beginning of the day (0:00)
     var beginningOfDay: Date {
         return change(hour: 0, minute: 0, second: 0)
     }
     
+    /// Converts Date with the time portion set to the beginning of the day (0:00)
     var midnight: Date {
         return beginningOfDay
     }
     
+    /// Converts Date with the time portion set to the middle of the day (12:00)
     var middleOfDay: Date {
         return change(hour: 12, minute: 0, second: 0)
     }
     
+    /// Converts Date with the time portion set to the middle of the day (12:00)
     var midday: Date {
         return middleOfDay
     }
     
+    /// Converts Date with the time portion set to the middle of the day (12:00)
     var noon: Date {
         return middleOfDay
     }
     
+    /// Converts Date with the time portion set to the end of the day (23:59:59)
     var endOfDay: Date {
         return change(hour: 23, minute: 59, second: 59)
     }
     
+    /// Returns a date object denoting the following day.
     var next: Date {
         return self + 1.day
     }
     
+    /// Returns a date object denoting the following day.
     var nextDay: Date {
         return nextDay()
     }
     
+    /// Returns a date object denoting the following month.
     var nextMonth: Date {
         return nextMonth()
     }
     
+    /// Returns a date object denoting the following year.
     var nextYear: Date {
         return nextYear()
     }
     
+    /// Returns a date object denoting the previous day.
     var prevDay: Date {
         return prevDay()
     }
     
+    /// Returns a date object denoting the previous month.
     var prevMonth: Date {
         return prevMonth()
     }
     
+    /// Returns a date object denoting the previous year.
     var prevYear: Date {
         return prevYear()
     }
     
+    /// Returns a date object pointing other days after self. The other should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func nextDay(_ n: Int = 1) -> Date {
         return self + n.days
     }
     
+    /// Returns a date object pointing n months after self. The argument n should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func nextMonth(_ n: Int = 1) -> Date {
         return self + n.months
     }
     
+    /// Returns a date object pointing n years after self. The argument n should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func nextYear(_ n: Int = 1) -> Date {
         return self + n.years
     }
     
+    /// Returns a date object pointing other days before self. The other should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func prevDay(_ n: Int = 1) -> Date {
         return self - n.days
     }
 
+    /// Returns a date object pointing n months before self. The argument n should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func prevMonth(_ n: Int = 1) -> Date {
         return self - n.months
     }
     
+    /// Returns a date object pointing n years before self. The argument n should be a numeric value.
+    ///
+    /// - Parameter n: A integer value
+    /// - Returns: A new date
     func prevYear(_ n: Int = 1) -> Date {
         return self - n.years
     }

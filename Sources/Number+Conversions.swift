@@ -19,10 +19,6 @@ public extension Int {
         return Float(self)
     }
     
-    var to_f80: Float80 {
-        return Float80(self)
-    }
-    
     var to_double: Double {
         return Double(self)
     }
@@ -72,10 +68,6 @@ public extension Int32 {
         return Float(self)
     }
     
-    var to_f80: Float80 {
-        return Float80(self)
-    }
-    
     var to_double: Double {
         return Double(self)
     }
@@ -113,10 +105,6 @@ public extension Int32 {
 public extension Int64 {
     var to_f: Float {
         return Float(self)
-    }
-    
-    var to_f80: Float80 {
-        return Float80(self)
     }
     
     var to_double: Double {
@@ -158,10 +146,6 @@ public extension Float {
         return Float(self)
     }
     
-    var to_f80: Float80 {
-        return Float80(self)
-    }
-    
     var to_double: Double {
         return Double(self)
     }
@@ -199,10 +183,6 @@ public extension Float {
 public extension Double {
     var to_f: Float {
         return Float(self)
-    }
-    
-    var to_f80: Float80 {
-        return Float80(self)
     }
     
     var to_double: Double {
