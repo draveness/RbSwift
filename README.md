@@ -1,4 +1,4 @@
-# RbSwift
+![](./RbSwift.jpg)
 
 <p align="center">
 <a href="https://travis-ci.org/draveness/RbSwift"><img src="https://img.shields.io/travis/draveness/RbSwift/master.svg"></a>
