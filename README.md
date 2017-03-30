@@ -73,7 +73,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ### Contact
 
-Follow and contact me with [email](mailto:i@draveness.me) or [Sina Weibo](http://weibo.com/draveness). If you find an issue, just [open a ticket](https://github.com/draveness/rbswift/issues/new). Pull requests are warmly welcome as well.
+Follow and contact me with [email](mailto:i@draveness.me). If you find an issue, just [open a ticket](https://github.com/draveness/rbswift/issues/new). Pull requests are warmly welcome as well.
 
 ### License
 
