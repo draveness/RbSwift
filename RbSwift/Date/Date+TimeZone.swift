@@ -6,7 +6,7 @@
 //  Copyright © 2017 draveness. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public var GlobalTimeZone: TimeZone = TimeZone.current
 
