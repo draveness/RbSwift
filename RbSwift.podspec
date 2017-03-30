@@ -17,12 +17,14 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/Draveness/RbSwift"
   s.license      = "MIT"
   s.author             = { "draveness" => "i@draveness.me" }
-  s.platform     = :ios
   s.source       = { :git => "git@github.com:Draveness/RbSwift.git", :tag => "#{s.version}" }
 
-
+  s.platform     = :ios
+  s.ios.deployment_target = "8.0"
 
   s.source_files  = "RbSwift", "RbSwift/**/*.{h,swift}"
   s.public_header_files = "RbSwift/RbSwift.h"
+
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.1' }
 end
