@@ -13,6 +13,10 @@ import RbSwift
 class DateFormatSpec: QuickSpec {
     override func spec() {
         describe("#parse") {
+            beforeEach {
+                GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
+            }
+            
             it("parses custom date format string correctly") {
                 let date = DateFormat.parse(str: "2017-03-19 00:35:36 +0800")!
                 expect(date.year).to(equal(2017))
