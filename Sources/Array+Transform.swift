@@ -100,7 +100,6 @@ public extension Array {
         while true {
             var result: [Element] = []
             
-            print(bits)
             for index in bits.reversed() {
                 result.append(self[index])
             }
