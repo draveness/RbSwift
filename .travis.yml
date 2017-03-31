@@ -1,10 +1,7 @@
 language: objective-c
 os: osx
-osx_image: xcode8.2
-# xcode_workspace: RbSwift.xcworkspace
-# xcode_scheme: RbSwiftTests
+osx_image: xcode8.3
 podfile: Podfile
-# xcode_sdk: iphonesimulator10.3
 env:
   global:
   - FRAMEWORK_NAME=RbSwift
@@ -12,9 +9,9 @@ before_install:
 - pod update Nimble
 - brew update
 - brew outdated carthage || brew upgrade carthage
+- gem install xcpretty
 script:
-- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwiftTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES
-- pod lib lint
+- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwiftTests -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME

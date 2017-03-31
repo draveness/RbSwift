@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   ActiveSupport. It provides hundred of convenient functions to make Swift code easier
   to write.
                    DESC
-  s.homepage     = "http://github.com/Draveness/RbSwift"
+  s.homepage     = "https://github.com/Draveness/RbSwift"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "draveness" => "i@draveness.me" }
   s.source       = { :git => "https://github.com/Draveness/RbSwift.git", :tag => "#{s.version}" }
