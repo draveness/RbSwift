@@ -12,8 +12,6 @@ before_install:
 - pod update Nimble
 - brew update
 - brew outdated carthage || brew upgrade carthage
-before_script:
-- carthage bootstrap
 script:
 - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwift -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES
 - pod lib lint
