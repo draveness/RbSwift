@@ -14,7 +14,7 @@ before_install:
 - brew outdated carthage || brew upgrade carthage
 - gem install xcpretty
 script:
-- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwiftTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES | xcpretty
+- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme RbSwiftTests -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' | xcpretty
 - pod lib lint
 before_deploy:
 - carthage build --no-skip-current
