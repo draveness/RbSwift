@@ -9,6 +9,56 @@
 <a href="http://cocoadocs.org/docsets/RbSwift"><img src="https://img.shields.io/cocoapods/p/RbSwift.svg?style=flat"></a>
 </p>
 
+RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](http://cocoadocs.org/docsets/RbSwift/0.1.4/index.html).
+
+## Features
+
++ [x] Transform functions support for `Sequence` and `Array`
+
+    ```swift
+    [1, 2, 3, nil, nil, 4, 5, 6, 7]
+        .flatten()              #=> [1, 2, 3, 4, 5, 6, 7]
+        .select { $0 > 2 }      #=> [3, 4, 5, 6, 7]      
+        .reject { $0.isEven }   #=> [3, 5, 7]
+        .count                  #=> 3
+    ```
+
++ [x] Built-in `Regex` support for `String` 
+
+    ```swift
+    "hello".gsub("l", "abc")    #=> "heabcabco"
+    "hello".gsub("l", "lll")    #=> "lllllllllllllll"
+
+    if "hello world" =~ "hello" {
+        print("this will match")
+    }
+    ```
+
++ [x] Convenient methods build `Date` instance
+
+    ```
+    Date.now + 1.day            #=> 2017-01-01 12:00:00 +0000
+    2.years + 1.day > 1.year    #=> true
+    ```
+
+## Usage
+
+<p align="center">
+    <a href="#number">Number</a> • <a href="#string">String</a> • <a href="#array">Array</a> • <a href="#data">Date</a> • <a href="#regex">Regex</a> • <a href="#hash">Hash</a>
+</p>
+
+### Number
+
+### String
+
+### Array
+
+### Date
+
+### Regex
+
+### Hash
+
 ## Installation
 
 ### CocoaPods
