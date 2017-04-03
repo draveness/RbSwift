@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - Conversions
 public extension Date {
     /// Returns a new date with utc format.
     var to_utc: Date {
