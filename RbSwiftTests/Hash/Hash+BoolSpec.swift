@@ -15,8 +15,8 @@ class HashBoolSpec: QuickSpec {
         describe(".isAny(closures:)") {
             it("returns true if the block ever returns a value other than false or nil") {
                 let h1 = ["a": 100, "b": 200]
-                expect(h1.isAny { $0 == "a" }).to(beTrue())
-                expect(h1.isAny { $0 == "c" }).to(beFalse())
+                expect(h1.isAny { (key, _) in key == "a" }).to(beTrue())
+                expect(h1.isAny { (key, _) in key == "c" }).to(beFalse())
             }
         }
     }
