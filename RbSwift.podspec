@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
   s.ios.deployment_target = "8.0"
+  s.mac.deployment_target = "10.12"
 
   s.source_files  = "RbSwift", "RbSwift/**/*.{h,swift}"
   s.public_header_files = "RbSwift/RbSwift.h"
