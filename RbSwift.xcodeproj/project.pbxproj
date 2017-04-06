@@ -573,12 +573,142 @@
 		723049ED1E96758C00D5427E /* Hash */ = {
 			isa = PBXGroup;
 			children = (
+				72304A031E967C5400D5427E /* Hash+BoolSpec.swift */,
 				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
-				72304A031E967C5400D5427E /* Hash+BoolSpec.swift */,
 			);
 			path = Hash;
+			sourceTree = "<group>";
+		};
+		72304A0C1E967D7200D5427E /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				727738AD1E84AE87008E83E6 /* Array+Access.swift */,
+				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
+				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
+				72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */,
+				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
+				727738931E81810A008E83E6 /* Array+Operator.swift */,
+				724875021E7CF829007984FD /* Array+Transform.swift */,
+			);
+			name = Array;
+			path = Array;
+			sourceTree = "<group>";
+		};
+		72304A0D1E967D7A00D5427E /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				723049E31E96706500D5427E /* Calendar+Global.swift */,
+				72E276A91E8BF1E700F41D1B /* Date+Bool.swift */,
+				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
+				72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */,
+				72541B051E7D5DD6008B49B1 /* Date+Initialize.swift */,
+				729D3D5A1E7E68A900258333 /* Date+Math.swift */,
+				729D3D541E7E5F7100258333 /* Date+Time.swift */,
+				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
+				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
+			);
+			name = Date;
+			path = Date;
+			sourceTree = "<group>";
+		};
+		72304A0E1E967D8400D5427E /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				72541BB11E7E33F9008B49B1 /* Duration+Comparable.swift */,
+				72541BAD1E7E33A3008B49B1 /* Duration+Components.swift */,
+				72541BAF1E7E33C1008B49B1 /* Duration+Conversions.swift */,
+				729D3D561E7E63F200258333 /* Duration+Math.swift */,
+				72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */,
+				7248753D1E7CFC95007984FD /* Duration.swift */,
+			);
+			name = Duration;
+			path = Duration;
+			sourceTree = "<group>";
+		};
+		72304A0F1E967D8A00D5427E /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				723049FE1E967C3500D5427E /* Hash+Bool.swift */,
+				723049F41E967A7900D5427E /* Hash+Mutate.swift */,
+				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
+				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
+				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
+			);
+			name = Hash;
+			path = Hash;
+			sourceTree = "<group>";
+		};
+		72304A101E967D9000D5427E /* Inflector */ = {
+			isa = PBXGroup;
+			children = (
+				724875251E7CF883007984FD /* Inflector.swift */,
+				729D3D4C1E7E355300258333 /* InflectorRule.swift */,
+			);
+			name = Inflector;
+			path = Inflector;
+			sourceTree = "<group>";
+		};
+		72304A111E967D9A00D5427E /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				72541B191E7D95B5008B49B1 /* MatchData.swift */,
+				724875261E7CF883007984FD /* Regex.swift */,
+				72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */,
+			);
+			name = Regex;
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		72304A121E967D9F00D5427E /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				7277388D1E8045A4008E83E6 /* Number+AbsoluteValue.swift */,
+				72541B671E7E32CE008B49B1 /* Number+Bool.swift */,
+				72541B681E7E32CE008B49B1 /* Number+Conversions.swift */,
+				729D3D521E7E387E00258333 /* Number+Duration.swift */,
+				727738871E8025BF008E83E6 /* Number+Enumeration.swift */,
+				72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */,
+				7277388B1E8034C1008E83E6 /* Number+Math.swift */,
+			);
+			name = Number;
+			path = Number;
+			sourceTree = "<group>";
+		};
+		72304A131E967DA200D5427E /* String */ = {
+			isa = PBXGroup;
+			children = (
+				72541B6E1E7E32E1008B49B1 /* String+Access.swift */,
+				72541B6F1E7E32E1008B49B1 /* String+Bool.swift */,
+				72541B701E7E32E1008B49B1 /* String+Case.swift */,
+				729D3D5C1E7EB46900258333 /* String+Chars.swift */,
+				72541B711E7E32E1008B49B1 /* String+Conversions.swift */,
+				72541B721E7E32E1008B49B1 /* String+Enumeration.swift */,
+				72541B741E7E32E1008B49B1 /* String+Indent.swift */,
+				72541B751E7E32E1008B49B1 /* String+Inflections.swift */,
+				72541B761E7E32E1008B49B1 /* String+Length.swift */,
+				72541B771E7E32E1008B49B1 /* String+Operator.swift */,
+				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
+				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
+				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
+			);
+			name = String;
+			path = String;
+			sourceTree = "<group>";
+		};
+		72304A141E967DA500D5427E /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				727738971E82B2A3008E83E6 /* Sequence+Bool.swift */,
+				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
+				72FC508F1E83CE2E009B99F4 /* Sequence+Enumeration.swift */,
+				727738991E82B4B0008E83E6 /* Sequence+Equatable.swift */,
+				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
+				724875041E7CF829007984FD /* Sequence+Transform.swift */,
+			);
+			name = Sequence;
+			path = Sequence;
 			sourceTree = "<group>";
 		};
 		723AA33E1E8AD4970000A612 /* Regex */ = {
@@ -594,9 +724,9 @@
 			children = (
 				7062BA3357BD5C5CD6608FDD /* Frameworks */,
 				28D74309F6A6B8E1E2C4BCA2 /* Pods */,
+				724874F91E7CF813007984FD /* RbSwift */,
 				724875111E7CF843007984FD /* RbSwiftTests */,
 				72F39AC61E9640830050D91B /* Resources */,
-				724874F91E7CF813007984FD /* Sources */,
 				72D2F0021E9630AD004CE666 /* Package.swift */,
 				723048BF1E966BC800D5427E /* RbSwift tvOS.framework */,
 				723048B21E966B9A00D5427E /* RbSwift watchOS.framework */,
@@ -607,70 +737,22 @@
 			);
 			sourceTree = "<group>";
 		};
-		724874F91E7CF813007984FD /* Sources */ = {
+		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
-				727738AD1E84AE87008E83E6 /* Array+Access.swift */,
-				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
-				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
-				72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */,
-				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
-				727738931E81810A008E83E6 /* Array+Operator.swift */,
-				724875021E7CF829007984FD /* Array+Transform.swift */,
-				723049E31E96706500D5427E /* Calendar+Global.swift */,
-				72E276A91E8BF1E700F41D1B /* Date+Bool.swift */,
-				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
-				72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */,
-				72541B051E7D5DD6008B49B1 /* Date+Initialize.swift */,
-				729D3D5A1E7E68A900258333 /* Date+Math.swift */,
-				729D3D541E7E5F7100258333 /* Date+Time.swift */,
-				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
-				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
-				72541BB11E7E33F9008B49B1 /* Duration+Comparable.swift */,
-				72541BAD1E7E33A3008B49B1 /* Duration+Components.swift */,
-				72541BAF1E7E33C1008B49B1 /* Duration+Conversions.swift */,
-				729D3D561E7E63F200258333 /* Duration+Math.swift */,
-				72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */,
-				7248753D1E7CFC95007984FD /* Duration.swift */,
-				723049F41E967A7900D5427E /* Hash+Mutate.swift */,
-				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
-				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
-				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
-				724875251E7CF883007984FD /* Inflector.swift */,
-				729D3D4C1E7E355300258333 /* InflectorRule.swift */,
-				72541B191E7D95B5008B49B1 /* MatchData.swift */,
-				7277388D1E8045A4008E83E6 /* Number+AbsoluteValue.swift */,
-				72541B671E7E32CE008B49B1 /* Number+Bool.swift */,
-				72541B681E7E32CE008B49B1 /* Number+Conversions.swift */,
-				729D3D521E7E387E00258333 /* Number+Duration.swift */,
-				727738871E8025BF008E83E6 /* Number+Enumeration.swift */,
-				72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */,
-				7277388B1E8034C1008E83E6 /* Number+Math.swift */,
+				72304A0C1E967D7200D5427E /* Array */,
+				72304A0D1E967D7A00D5427E /* Date */,
+				72304A0E1E967D8400D5427E /* Duration */,
+				72304A0F1E967D8A00D5427E /* Hash */,
+				72304A101E967D9000D5427E /* Inflector */,
+				72304A121E967D9F00D5427E /* Number */,
+				72304A111E967D9A00D5427E /* Regex */,
+				72304A141E967DA500D5427E /* Sequence */,
+				72304A131E967DA200D5427E /* String */,
 				724874FA1E7CF813007984FD /* RbSwift.h */,
-				724875261E7CF883007984FD /* Regex.swift */,
-				72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */,
-				727738971E82B2A3008E83E6 /* Sequence+Bool.swift */,
-				727738951E8182F0008E83E6 /* Sequence+Conversions.swift */,
-				72FC508F1E83CE2E009B99F4 /* Sequence+Enumeration.swift */,
-				727738991E82B4B0008E83E6 /* Sequence+Equatable.swift */,
-				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
-				724875041E7CF829007984FD /* Sequence+Transform.swift */,
-				72541B6E1E7E32E1008B49B1 /* String+Access.swift */,
-				72541B6F1E7E32E1008B49B1 /* String+Bool.swift */,
-				72541B701E7E32E1008B49B1 /* String+Case.swift */,
-				729D3D5C1E7EB46900258333 /* String+Chars.swift */,
-				72541B711E7E32E1008B49B1 /* String+Conversions.swift */,
-				72541B721E7E32E1008B49B1 /* String+Enumeration.swift */,
-				72541B741E7E32E1008B49B1 /* String+Indent.swift */,
-				72541B751E7E32E1008B49B1 /* String+Inflections.swift */,
-				72541B761E7E32E1008B49B1 /* String+Length.swift */,
-				72541B771E7E32E1008B49B1 /* String+Operator.swift */,
-				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
-				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
-				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
-				723049FE1E967C3500D5427E /* Hash+Bool.swift */,
 			);
-			path = Sources;
+			name = RbSwift;
+			path = RbSwift;
 			sourceTree = "<group>";
 		};
 		724875111E7CF843007984FD /* RbSwiftTests */ = {
