@@ -17,17 +17,22 @@
 		<key>RbSwift tvOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>4</integer>
 		</dict>
 		<key>RbSwift watchOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>3</integer>
 		</dict>
-		<key>RbSwiftTests.xcscheme_^#shared#^_</key>
+		<key>RbSwiftTests iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>10</integer>
+		</dict>
+		<key>RbSwiftTests macOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -38,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>723048BE1E966BC800D5427E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>723049741E966D8700D5427E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>723049831E966E9C00D5427E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
