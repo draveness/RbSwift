@@ -27,6 +27,10 @@ public extension Hash {
     
     /// Returns `true` if the given key is present in hsh.
     ///
+    ///     let hash = ["a": 100, "b": 200]
+    /// 	hash.hasKey("a")		#=> true
+    /// 	hash.hasKey("c")		#=> false
+    ///
     /// - Parameter key: A string represent key in hsh.
     /// - Returns: A bool value.
     func hasKey(_ key: Key) -> Bool {
@@ -34,11 +38,27 @@ public extension Hash {
             return result || key == element.key
         }
     }
+    
+    /// Returns `true` if the given key is present in hsh. An alias to `isMember(key:)` methods.、
+    ///
+    ///     let hash = ["a": 100, "b": 200]
+    /// 	hash.isMember("a")		#=> true
+    /// 	hash.isMember("c")		#=> false
+    ///
+    /// - Parameter key: A string represent key in hsh.
+    /// - Returns: A bool value.
+    func isMember(_ key: Key) -> Bool {
+        return hasKey(key)
+    }
 }
 
 public extension Hash where Value: Equatable {
     
     /// Returns `true` if the given value is present in hsh.
+    ///
+    ///     let hash = ["a": 100, "b": 200]
+    /// 	hash.hasValue(100)		#=> true
+    /// 	hash.hasValue(2000)		#=> false
     ///
     /// - Parameter key: A string represent value in hsh.
     /// - Returns: A bool value.
