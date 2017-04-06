@@ -8,19 +8,13 @@
 
 import Foundation
 
-/// Creates a hash with the merging result of two passed in `Hash` struct
+/// Returns a new hash containing the contents of `otherHash` and the contents of hsh. the value
+/// for entries with duplicate keys will be that of `rhs`
 ///
 /// - Parameters:
-///   - left: <#left description#>
-///   - right: <#right description#>
-/// - Returns: <#return value description#>
-public func + <K, V>(left: Hash<K, V>, right: Hash<K, V>) -> Hash<K, V> {
-    var map = Hash<K, V>()
-    for (k, v) in left {
-        map[k] = v
-    }
-    for (k, v) in right {
-        map[k] = v
-    }
-    return map
+///   - left: A hash.
+///   - right: Another hash.
+/// - Returns:  Returns a new hash containing the contents of `otherHash` and the contents of hsh.
+public func +<K, V>(lhs: Hash<K, V>, rhs: Hash<K, V>) -> Hash<K, V> {
+    return lhs.merge(rhs)
 }
