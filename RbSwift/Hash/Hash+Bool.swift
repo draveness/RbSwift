@@ -24,4 +24,27 @@ public extension Hash {
             return result || closure(element.key, element.value)
         }
     }
+    
+    /// Returns `true` if the given key is present in hsh.
+    ///
+    /// - Parameter key: A string represent key in hsh.
+    /// - Returns: A bool value.
+    func hasKey(_ key: Key) -> Bool {
+        return reduce(false) { (result, element) in
+            return result || key == element.key
+        }
+    }
+}
+
+public extension Hash where Value: Equatable {
+    
+    /// Returns `true` if the given value is present in hsh.
+    ///
+    /// - Parameter key: A string represent value in hsh.
+    /// - Returns: A bool value.
+    func hasValue(_ value: Value) -> Bool {
+        return reduce(false) { (result, element) in
+            return result || value == element.value
+        }
+    }
 }
