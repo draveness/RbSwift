@@ -13,7 +13,7 @@ public struct DateFormat {
     static func Custom() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
-        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.timeZone = GlobalTimeZone
         dateFormatter.locale = Locale.current
         return dateFormatter
     }
@@ -21,7 +21,7 @@ public struct DateFormat {
     static func ISO8601() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.timeZone = GlobalTimeZone
         dateFormatter.locale = Locale.current
         return dateFormatter
     }
@@ -30,7 +30,7 @@ public struct DateFormat {
         // "Sun, 19 Mar 2017 01:02:04 +0800"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, d MMM yyyy HH:mm:ss ZZZ"
-        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.timeZone = GlobalTimeZone
         dateFormatter.locale = Locale.current
         return dateFormatter
     }
@@ -39,7 +39,7 @@ public struct DateFormat {
         // "Sun Mar 19 01:04:21 2017"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE MMM d HH:mm:ss yyyy"
-        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.timeZone = GlobalTimeZone
         dateFormatter.locale = Locale.current
         return dateFormatter
     }

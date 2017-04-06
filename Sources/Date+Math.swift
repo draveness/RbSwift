@@ -23,7 +23,7 @@ public extension Date {
     ///   - rhs: A duration
     /// - Returns: A new date which add the duration to the old date
     static func +(lhs: Date, rhs: Duration) -> Date {
-        return Calendar.current.date(byAdding: rhs.to_dateComponents, to: lhs)!
+        return Calendar.global.date(byAdding: rhs.to_dateComponents, to: lhs)!
     }
     
     /// Converting the right hand side argument `Duration` to `DateComponents` first and minus
@@ -38,6 +38,6 @@ public extension Date {
     ///   - rhs: A duration
     /// - Returns: A new date which minus the duration to the old date
     static func -(lhs: Date, rhs: Duration) -> Date {
-        return Calendar.current.date(byAdding: rhs.to_dateComponents(before: true), to: lhs)!
+        return Calendar.global.date(byAdding: rhs.to_dateComponents(before: true), to: lhs)!
     }
 }

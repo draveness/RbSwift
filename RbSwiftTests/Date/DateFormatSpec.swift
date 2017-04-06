@@ -17,10 +17,6 @@ class DateFormatSpec: QuickSpec {
                 GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
             }
             
-            afterEach {
-                GlobalTimeZone = TimeZone.current
-            }
-            
             it("parses custom date format string correctly") {
                 let date = DateFormat.parse(str: "2017-03-19 00:35:36 +0800")!
                 expect(date.year).to(equal(2017))
@@ -53,8 +49,6 @@ class DateFormatSpec: QuickSpec {
             }
             
             it("parses ctime date format string correctly") {
-                GlobalTimeZone = TimeZone.current
-
                 let date = DateFormat.parse(str: "Sun Mar 19 01:04:21 2017")!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
