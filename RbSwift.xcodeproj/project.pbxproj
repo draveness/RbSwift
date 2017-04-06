@@ -175,8 +175,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0251220F4AC3B1F1F2A16DB4 /* Pods-RbSwift iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		1691E350F4092E3F61EA650E /* Pods-RbSwift iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.release.xcconfig"; sourceTree = "<group>"; };
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AD32A8D076BD2F0DCA0BB54 /* Pods-RbSwift iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		723048B21E966B9A00D5427E /* RbSwift watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RbSwift watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723048B51E966B9A00D5427E /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-watchOS.plist"; path = "../RbSwift watchOS/Info-watchOS.plist"; sourceTree = "<group>"; };
+		723048BF1E966BC800D5427E /* RbSwift tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RbSwift tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723048C21E966BC800D5427E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "../RbSwift tvOS/Info-tvOS.plist"; sourceTree = "<group>"; };
 		72369CA21E8B933600C876A5 /* Date+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MathSpec.swift"; sourceTree = "<group>"; };
 		723AA33F1E8AD4A20000A612 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		724874FA1E7CF813007984FD /* RbSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RbSwift.h; sourceTree = "<group>"; };
@@ -288,12 +293,25 @@
 		72FC508D1E83C851009B99F4 /* Array+ConversionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ConversionsSpec.swift"; sourceTree = "<group>"; };
 		72FC508F1E83CE2E009B99F4 /* Sequence+Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Enumeration.swift"; sourceTree = "<group>"; };
 		72FC50911E83CE86009B99F4 /* Sequence+EnumerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+EnumerationSpec.swift"; sourceTree = "<group>"; };
-		75F198E54CAD8E0E714CE93B /* Pods-RbSwift iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		723048AE1E966B9A00D5427E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723048BB1E966BC800D5427E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7248750D1E7CF843007984FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,8 +345,8 @@
 				72A218F81E7F8A7D00EF65C9 /* Pods-RbSwiftTests.release.xcconfig */,
 				72A218F31E7F8A7100EF65C9 /* Pods-RbSwift.debug.xcconfig */,
 				72A218F41E7F8A7100EF65C9 /* Pods-RbSwift.release.xcconfig */,
-				4AD32A8D076BD2F0DCA0BB54 /* Pods-RbSwift iOS.debug.xcconfig */,
-				75F198E54CAD8E0E714CE93B /* Pods-RbSwift iOS.release.xcconfig */,
+				0251220F4AC3B1F1F2A16DB4 /* Pods-RbSwift iOS.debug.xcconfig */,
+				1691E350F4092E3F61EA650E /* Pods-RbSwift iOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -363,6 +381,8 @@
 				72D2EF671E961842004CE666 /* RbSwift.framework */,
 				72D2EEE11E96170E004CE666 /* RbSwift.framework */,
 				72A218FC1E7F8A9B00EF65C9 /* RbSwiftTests.xctest */,
+				723048B21E966B9A00D5427E /* RbSwift watchOS.framework */,
+				723048BF1E966BC800D5427E /* RbSwift tvOS.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -531,6 +551,8 @@
 		72F39AC61E9640830050D91B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				723048C21E966BC800D5427E /* Info-tvOS.plist */,
+				723048B51E966B9A00D5427E /* Info-watchOS.plist */,
 				72D2EEF11E961716004CE666 /* Info-iOS.plist */,
 				72D2EEE41E96170E004CE666 /* Info-macOS.plist */,
 				724874FB1E7CF813007984FD /* Info.plist */,
@@ -541,6 +563,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		723048AF1E966B9A00D5427E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723048BC1E966BC800D5427E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		72D2EEDE1E96170E004CE666 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,6 +596,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		723048B11E966B9A00D5427E /* RbSwift watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 723048B71E966B9A00D5427E /* Build configuration list for PBXNativeTarget "RbSwift watchOS" */;
+			buildPhases = (
+				723048AD1E966B9A00D5427E /* Sources */,
+				723048AE1E966B9A00D5427E /* Frameworks */,
+				723048AF1E966B9A00D5427E /* Headers */,
+				723048B01E966B9A00D5427E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RbSwift watchOS";
+			productName = "RbSwift watchOS";
+			productReference = 723048B21E966B9A00D5427E /* RbSwift watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		723048BE1E966BC800D5427E /* RbSwift tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 723048C41E966BC800D5427E /* Build configuration list for PBXNativeTarget "RbSwift tvOS" */;
+			buildPhases = (
+				723048BA1E966BC800D5427E /* Sources */,
+				723048BB1E966BC800D5427E /* Frameworks */,
+				723048BC1E966BC800D5427E /* Headers */,
+				723048BD1E966BC800D5427E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RbSwift tvOS";
+			productName = "RbSwift tvOS";
+			productReference = 723048BF1E966BC800D5427E /* RbSwift tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7248750F1E7CF843007984FD /* RbSwiftTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 724875181E7CF843007984FD /* Build configuration list for PBXNativeTarget "RbSwiftTests" */;
@@ -629,6 +701,14 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = draveness;
 				TargetAttributes = {
+					723048B11E966B9A00D5427E = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					723048BE1E966BC800D5427E = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 					7248750F1E7CF843007984FD = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -657,12 +737,28 @@
 			targets = (
 				72D2EF661E961842004CE666 /* RbSwift iOS */,
 				72D2EEE01E96170E004CE666 /* RbSwift macOS */,
+				723048B11E966B9A00D5427E /* RbSwift watchOS */,
+				723048BE1E966BC800D5427E /* RbSwift tvOS */,
 				7248750F1E7CF843007984FD /* RbSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		723048B01E966B9A00D5427E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723048BD1E966BC800D5427E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7248750E1E7CF843007984FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -765,6 +861,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		723048AD1E966B9A00D5427E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		723048BA1E966BC800D5427E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7248750C1E7CF843007984FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -948,6 +1058,96 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		723048B81E966B9A00D5427E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Resources/info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		723048B91E966B9A00D5427E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Resources/info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		723048C51E966BC800D5427E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Resources/info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		723048C61E966BC800D5427E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Resources/info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		724874FD1E7CF813007984FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1119,7 +1319,7 @@
 		};
 		72D2EF6D1E961843004CE666 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AD32A8D076BD2F0DCA0BB54 /* Pods-RbSwift iOS.debug.xcconfig */;
+			baseConfigurationReference = 0251220F4AC3B1F1F2A16DB4 /* Pods-RbSwift iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
@@ -1140,7 +1340,7 @@
 		};
 		72D2EF6E1E961843004CE666 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75F198E54CAD8E0E714CE93B /* Pods-RbSwift iOS.release.xcconfig */;
+			baseConfigurationReference = 1691E350F4092E3F61EA650E /* Pods-RbSwift iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
@@ -1162,6 +1362,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		723048B71E966B9A00D5427E /* Build configuration list for PBXNativeTarget "RbSwift watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				723048B81E966B9A00D5427E /* Debug */,
+				723048B91E966B9A00D5427E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		723048C41E966BC800D5427E /* Build configuration list for PBXNativeTarget "RbSwift tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				723048C51E966BC800D5427E /* Debug */,
+				723048C61E966BC800D5427E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		724874F11E7CF813007984FD /* Build configuration list for PBXProject "RbSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
