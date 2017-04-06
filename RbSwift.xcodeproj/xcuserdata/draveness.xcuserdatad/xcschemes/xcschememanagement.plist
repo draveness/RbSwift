@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RbSwift-macOS.xcscheme</key>
+		<key>RbSwift iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>8</integer>
 		</dict>
-		<key>RbSwift.xcscheme_^#shared#^_</key>
+		<key>RbSwift macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>7</integer>
 		</dict>
 		<key>RbSwiftTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -33,6 +33,21 @@
 			<true/>
 		</dict>
 		<key>72D2EE401E960152004CE666</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72D2EEE01E96170E004CE666</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72D2EEED1E961716004CE666</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72D2EF661E961842004CE666</key>
 		<dict>
 			<key>primary</key>
 			<true/>

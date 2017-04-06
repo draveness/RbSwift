@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "724874F61E7CF813007984FD"
+               BlueprintIdentifier = "72D2EEE01E96170E004CE666"
                BuildableName = "RbSwift.framework"
-               BlueprintName = "RbSwift"
+               BlueprintName = "RbSwift macOS"
                ReferencedContainer = "container:RbSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "724874F61E7CF813007984FD"
+            BlueprintIdentifier = "72D2EEE01E96170E004CE666"
             BuildableName = "RbSwift.framework"
-            BlueprintName = "RbSwift"
+            BlueprintName = "RbSwift macOS"
             ReferencedContainer = "container:RbSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "724874F61E7CF813007984FD"
+            BlueprintIdentifier = "72D2EEE01E96170E004CE666"
             BuildableName = "RbSwift.framework"
-            BlueprintName = "RbSwift"
+            BlueprintName = "RbSwift macOS"
             ReferencedContainer = "container:RbSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
