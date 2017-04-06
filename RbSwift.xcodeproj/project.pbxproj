@@ -582,6 +582,7 @@
 				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
 				724875021E7CF829007984FD /* Array+Transform.swift */,
+				723049E31E96706500D5427E /* Calendar+Global.swift */,
 				72E276A91E8BF1E700F41D1B /* Date+Bool.swift */,
 				72541B1F1E7D96F3008B49B1 /* Date+Components.swift */,
 				72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */,
@@ -631,7 +632,6 @@
 				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
 				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
-				723049E31E96706500D5427E /* Calendar+Global.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
