@@ -1,4 +1,4 @@
                 let h1 = ["a": 100, "b": 200]
-                let h2 = ["b": 254, "c": 300]
-                expect(h1 + h2).to(equal(["a": 100, "b": 254, "c": 300]))
+                expect(h1.isAny { (key, _) in key == "a" }).to(beTrue())
+                expect(h1.isAny { (key, _) in key == "c" }).to(beFalse())
 
