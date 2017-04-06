@@ -43,7 +43,7 @@ public extension Duration {
     }
     
     func since(_ date: Date = Date.now) -> Date {
-        return Calendar.current.date(byAdding: self.to_dateComponents, to: date)!
+        return Calendar.global.date(byAdding: self.to_dateComponents, to: date)!
     }
     
     func fromNow(_ date: Date = Date.now) -> Date {
@@ -51,6 +51,6 @@ public extension Duration {
     }
     
     func ago(_ date: Date = Date.now) -> Date {
-        return Calendar.current.date(byAdding: self.to_dateComponents(before: true), to: date)!
+        return Calendar.global.date(byAdding: self.to_dateComponents(before: true), to: date)!
     }
 }

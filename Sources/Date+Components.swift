@@ -8,7 +8,8 @@
 
 import Foundation
 
-fileprivate let calendar = Calendar.current
+fileprivate var calendar = Calendar.global
+
 fileprivate let allComponents: [Calendar.Component] = [.era, .year, .month, .day, .hour, .minute, .second, .nanosecond, .weekday, .weekdayOrdinal, .quarter, .timeZone, .weekOfMonth, .weekOfYear, .yearForWeekOfYear, .calendar]
 
 // MARK: - Components

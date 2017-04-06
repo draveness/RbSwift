@@ -55,14 +55,14 @@ public extension Date {
     /// - Returns: A new date
     func change(year: Int? = nil, month: Int? = nil, day: Int? = nil,
                 hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> Date {
-        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
+        var dateComponents = Calendar.global.dateComponents([.year, .month, .day, .hour, .minute, .second], from: self)
         if let year = year      { dateComponents.setValue(year,   for: .year) }
         if let month = month    { dateComponents.setValue(month,  for: .month) }
         if let day = day        { dateComponents.setValue(day,    for: .day) }
         if let hour = hour      { dateComponents.setValue(hour,   for: .hour) }
         if let minute = minute  { dateComponents.setValue(minute, for: .minute) }
         if let second = second  { dateComponents.setValue(second, for: .second) }
-        return Calendar.current.date(from: dateComponents)!
+        return Calendar.global.date(from: dateComponents)!
     }
     
     /// Returns and changes `self` where one or more of the elements have been changed according to the passing parameter.

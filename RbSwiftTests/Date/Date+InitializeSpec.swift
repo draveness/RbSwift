@@ -16,9 +16,9 @@ class DateInitializeSpec: QuickSpec {
             GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
         }
         
-        afterEach {
-            GlobalTimeZone = TimeZone.current
-        }
+//        afterEach {
+//            GlobalTimeZone = TimeZone.current
+//        }
         
         describe(".init(str:)") {
             it("parses str into date correctly") {
@@ -44,8 +44,6 @@ class DateInitializeSpec: QuickSpec {
         
         describe(".init(year:month:day:hour:minute:second:)") {
             it("returns date correctly") {
-                GlobalTimeZone = TimeZone.current
-
                 let date = Date(2017, 1, 2, 3, 4, 5)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(1))
