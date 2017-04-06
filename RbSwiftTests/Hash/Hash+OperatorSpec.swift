@@ -13,9 +13,10 @@ import RbSwift
 class HashOperatorSpec: QuickSpec {
     override func spec() {
         describe(".+") {
-            it("returns timezone with static variable") {
-                expect(TimeZone.utc).to(equal(TimeZone(abbreviation: "UTC")!))
-                expect(TimeZone.gmt).to(equal(TimeZone(abbreviation: "GMT")!))
+            it(("returns a new hash containing the contents of otherHash and the contents of receiver")) {
+                let h1 = ["a": 100, "b": 200]
+                let h2 = ["b": 254, "c": 300]
+                expect(h1 + h2).to(equal(["a": 100, "b": 254, "c": 300]))
             }
         }
     }
