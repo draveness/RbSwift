@@ -8,15 +8,19 @@
 
 import Foundation
 
-public var GlobalTimeZone: TimeZone = TimeZone.current
+private var GlobalTimeZone: TimeZone = TimeZone.current
 
+// MARK: - Initialize
 public extension TimeZone {
     static let utc: TimeZone = TimeZone(abbreviation: "UTC")!
     static let gmt: TimeZone = TimeZone(abbreviation: "GMT")!
-}
 
-public extension Date {
-    var currentTimeZone: TimeZone {
-        return GlobalTimeZone
+    static var global: TimeZone {
+        set {
+            GlobalTimeZone = newValue
+        }
+        get {
+            return GlobalTimeZone
+        }
     }
 }

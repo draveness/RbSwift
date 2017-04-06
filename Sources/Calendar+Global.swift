@@ -13,7 +13,7 @@ public extension Calendar {
     /// Returns a Calendar with `GlobalTimeZone`.
     static var global: Calendar {
         var result = Calendar.current
-        result.timeZone = GlobalTimeZone
+        result.timeZone = TimeZone.global
         return result
     }
 }

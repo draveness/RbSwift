@@ -15,11 +15,11 @@ class DateComponentsSpec: QuickSpec {
         
         describe(".dateComponents") {
             beforeEach {
-                RbSwift.GlobalTimeZone = TimeZone.utc
+                TimeZone.global = TimeZone.utc
             }
             
             afterEach {
-                RbSwift.GlobalTimeZone = TimeZone.current
+                TimeZone.global = TimeZone.current
             }
 
             it("returns date's components correctly") {
