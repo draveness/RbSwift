@@ -162,6 +162,16 @@
 		EB0B86ED90E27DC2018745E6 /* Pods_RbSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		72F39AC71E96454F0050D91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 724874EE1E7CF813007984FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72D2EF661E961842004CE666;
+			remoteInfo = "RbSwift iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD32A8D076BD2F0DCA0BB54 /* Pods-RbSwift iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -558,6 +568,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				72F39AC81E96454F0050D91B /* PBXTargetDependency */,
 			);
 			name = RbSwiftTests;
 			productName = RbSwiftTests;
@@ -919,6 +930,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72F39AC81E96454F0050D91B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72D2EF661E961842004CE666 /* RbSwift iOS */;
+			targetProxy = 72F39AC71E96454F0050D91B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		724874FD1E7CF813007984FD /* Debug */ = {
