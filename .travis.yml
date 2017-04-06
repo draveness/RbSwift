@@ -9,6 +9,7 @@ before_install:
 - pod update Nimble
 - brew update
 - brew outdated carthage || brew upgrade carthage
+- pod install
 - gem install xcpretty
 before_deploy:
 - carthage build --no-skip-current
