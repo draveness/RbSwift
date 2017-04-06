@@ -369,9 +369,9 @@
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS.release.xcconfig"; sourceTree = "<group>"; };
 		64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS.release.xcconfig"; sourceTree = "<group>"; };
-		723048B21E966B9A00D5427E /* RbSwift watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RbSwift watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723048B21E966B9A00D5427E /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723048B51E966B9A00D5427E /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
-		723048BF1E966BC800D5427E /* RbSwift tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RbSwift tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723048BF1E966BC800D5427E /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723048C21E966BC800D5427E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RbSwiftTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723049791E966D8700D5427E /* Info-macOS-test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS-test.plist"; sourceTree = "<group>"; };
@@ -592,7 +592,6 @@
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
 				724875021E7CF829007984FD /* Array+Transform.swift */,
 			);
-			name = Array;
 			path = Array;
 			sourceTree = "<group>";
 		};
@@ -609,7 +608,6 @@
 				72541B0A1E7D6771008B49B1 /* Date+TimeZone.swift */,
 				72541B031E7D5D90008B49B1 /* DateFormat.swift */,
 			);
-			name = Date;
 			path = Date;
 			sourceTree = "<group>";
 		};
@@ -623,7 +621,6 @@
 				72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */,
 				7248753D1E7CFC95007984FD /* Duration.swift */,
 			);
-			name = Duration;
 			path = Duration;
 			sourceTree = "<group>";
 		};
@@ -636,7 +633,6 @@
 				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
 			);
-			name = Hash;
 			path = Hash;
 			sourceTree = "<group>";
 		};
@@ -646,7 +642,6 @@
 				724875251E7CF883007984FD /* Inflector.swift */,
 				729D3D4C1E7E355300258333 /* InflectorRule.swift */,
 			);
-			name = Inflector;
 			path = Inflector;
 			sourceTree = "<group>";
 		};
@@ -657,7 +652,6 @@
 				724875261E7CF883007984FD /* Regex.swift */,
 				72A218FD1E7FB38E00EF65C9 /* RegexConvertible.swift */,
 			);
-			name = Regex;
 			path = Regex;
 			sourceTree = "<group>";
 		};
@@ -672,7 +666,6 @@
 				72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */,
 				7277388B1E8034C1008E83E6 /* Number+Math.swift */,
 			);
-			name = Number;
 			path = Number;
 			sourceTree = "<group>";
 		};
@@ -693,7 +686,6 @@
 				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
 			);
-			name = String;
 			path = String;
 			sourceTree = "<group>";
 		};
@@ -707,7 +699,6 @@
 				72541B6B1E7E32D5008B49B1 /* Sequence+Length.swift */,
 				724875041E7CF829007984FD /* Sequence+Transform.swift */,
 			);
-			name = Sequence;
 			path = Sequence;
 			sourceTree = "<group>";
 		};
@@ -728,8 +719,8 @@
 				724875111E7CF843007984FD /* RbSwiftTests */,
 				72F39AC61E9640830050D91B /* Resources */,
 				72D2F0021E9630AD004CE666 /* Package.swift */,
-				723048BF1E966BC800D5427E /* RbSwift tvOS.framework */,
-				723048B21E966B9A00D5427E /* RbSwift watchOS.framework */,
+				723048BF1E966BC800D5427E /* RbSwift.framework */,
+				723048B21E966B9A00D5427E /* RbSwift.framework */,
 				72D2EF671E961842004CE666 /* RbSwift.framework */,
 				72D2EEE11E96170E004CE666 /* RbSwift.framework */,
 				723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */,
@@ -751,7 +742,6 @@
 				72304A131E967DA200D5427E /* String */,
 				724874FA1E7CF813007984FD /* RbSwift.h */,
 			);
-			name = RbSwift;
 			path = RbSwift;
 			sourceTree = "<group>";
 		};
@@ -920,7 +910,7 @@
 			);
 			name = "RbSwift watchOS";
 			productName = "RbSwift watchOS";
-			productReference = 723048B21E966B9A00D5427E /* RbSwift watchOS.framework */;
+			productReference = 723048B21E966B9A00D5427E /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723048BE1E966BC800D5427E /* RbSwift tvOS */ = {
@@ -938,7 +928,7 @@
 			);
 			name = "RbSwift tvOS";
 			productName = "RbSwift tvOS";
-			productReference = 723048BF1E966BC800D5427E /* RbSwift tvOS.framework */;
+			productReference = 723048BF1E966BC800D5427E /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723049741E966D8700D5427E /* RbSwiftTests macOS */ = {
@@ -1646,7 +1636,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RbSwift;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1669,7 +1659,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RbSwift;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1691,7 +1681,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RbSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1713,7 +1703,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RbSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

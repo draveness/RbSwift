@@ -20,5 +20,13 @@ class HashMutateSpec: QuickSpec {
                 expect(h1).to(equal(["a": 100, "b": 254, "c": 300]))
             }
         }
+        
+        describe(".clear()") {
+            it("removes all key value pairs from hash") {
+                var hash = ["a": 100]
+                expect(hash.clear()).to(equal([:]))
+                expect(hash).to(equal([:]))
+            }
+        }
     }
 }

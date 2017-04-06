@@ -26,4 +26,12 @@ public extension Hash {
         self = self.merge(otherHash, closure: closure)
         return self
     }
+    
+    /// Removes all key-value pairs from hsh.
+    ///
+    /// - Returns: Self with empty hash.
+    @discardableResult mutating func clear() -> Hash<Key, Value> {
+        self = [:]
+        return self
+    }
 }
