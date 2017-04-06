@@ -35,6 +35,14 @@ class HashBoolSpec: QuickSpec {
             }
         }
         
+        describe("isMember(key:)") {
+            it("returns true if the given key is present in hsh.") {
+                let hash = ["a": 100, "b": 200]
+                expect(hash.isMember("a")).to(beTrue())
+                expect(hash.isMember("c")).to(beFalse())
+            }
+        }
+        
         describe("hasValue(value:)") {
             it("returns true if the given value is present in hsh.") {
                 let hash = ["a": 100, "b": 200]
