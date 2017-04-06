@@ -30,16 +30,16 @@ class HashBoolSpec: QuickSpec {
         describe("hasKey(key:)") {
             it("returns true if the given key is present in hsh.") {
                 let hash = ["a": 100, "b": 200]
-                expect(hash.hasKey("a")).to(beTrue()))
-                expect(hash.hasKey("c")).to(beFalse()))
+                expect(hash.hasKey("a")).to(beTrue())
+                expect(hash.hasKey("c")).to(beFalse())
             }
         }
         
         describe("hasValue(value:)") {
             it("returns true if the given value is present in hsh.") {
                 let hash = ["a": 100, "b": 200]
-                expect(hash.hasValue(100)).to(beTrue()))
-                expect(hash.hasValue(2000)).to(beFalse()))
+                expect(hash.hasValue(100)).to(beTrue())
+                expect(hash.hasValue(2000)).to(beFalse())
             }
         }
     }
