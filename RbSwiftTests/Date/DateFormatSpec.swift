@@ -14,7 +14,7 @@ class DateFormatSpec: QuickSpec {
     override func spec() {
         describe("#parse") {
             beforeEach {
-                GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
+                TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!
             }
             
             it("parses custom date format string correctly") {

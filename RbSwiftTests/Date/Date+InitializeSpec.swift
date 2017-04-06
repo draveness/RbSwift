@@ -13,12 +13,8 @@ import RbSwift
 class DateInitializeSpec: QuickSpec {
     override func spec() {
         beforeEach {
-            GlobalTimeZone = TimeZone(identifier: "Asia/Shanghai")!
+            TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!
         }
-        
-//        afterEach {
-//            GlobalTimeZone = TimeZone.current
-//        }
         
         describe(".init(str:)") {
             it("parses str into date correctly") {

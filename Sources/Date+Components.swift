@@ -15,7 +15,7 @@ fileprivate let allComponents: [Calendar.Component] = [.era, .year, .month, .day
 // MARK: - Components
 public extension Date {
     var _components: DateComponents {
-        return calendar.dateComponents(in: currentTimeZone, from: self)
+        return calendar.dateComponents(in: TimeZone.global, from: self)
     }
     
     /// The number of era units for the receiver.
