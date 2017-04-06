@@ -16,7 +16,7 @@ before_deploy:
 - carthage archive $FRAMEWORK_NAME
 script:
 - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests iOS' -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
-- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests macOS' -sdk macosx -enableCodeCoverage YES | xcpretty
+  #- xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests macOS' -sdk macosx -enableCodeCoverage YES | xcpretty
 deploy:
   provider: releases
   api_key:
