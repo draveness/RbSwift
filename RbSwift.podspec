@@ -24,8 +24,8 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.watchos.deployment_target = "2.0"
 
-  s.source_files  = "Sources", "Sources/**/*.{h,swift}"
-  s.public_header_files = "Sources/RbSwift.h"
+  s.source_files  = "RbSwift", "RbSwift/**/*.{h,swift}"
+  s.public_header_files = "RbSwift/RbSwift.h"
 
   s.requires_arc = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.1' }
