@@ -278,6 +278,14 @@
 		723049FB1E967AD700D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
 		723049FC1E967AD800D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
 		723049FD1E967AD800D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
+		723049FF1E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
+		72304A001E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
+		72304A011E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
+		72304A021E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
+		72304A081E967CF500D5427E /* Hash+BoolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A031E967C5400D5427E /* Hash+BoolSpec.swift */; };
+		72304A091E967CF500D5427E /* Hash+BoolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A031E967C5400D5427E /* Hash+BoolSpec.swift */; };
+		72304A0A1E967D3E00D5427E /* String+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */; };
+		72304A0B1E967D3E00D5427E /* String+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */; };
 		72D2EF6F1E96186F004CE666 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B031E7D5D90008B49B1 /* DateFormat.swift */; };
 		72D2EF701E96186F004CE666 /* Date+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E276A91E8BF1E700F41D1B /* Date+Bool.swift */; };
 		72D2EF711E96186F004CE666 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B1F1E7D96F3008B49B1 /* Date+Components.swift */; };
@@ -373,6 +381,8 @@
 		723049F11E9675C600D5427E /* Hash+TransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+TransformSpec.swift"; sourceTree = "<group>"; };
 		723049F41E967A7900D5427E /* Hash+Mutate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Mutate.swift"; sourceTree = "<group>"; };
 		723049F71E967AA000D5427E /* Hash+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+MutateSpec.swift"; sourceTree = "<group>"; };
+		723049FE1E967C3500D5427E /* Hash+Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Bool.swift"; sourceTree = "<group>"; };
+		72304A031E967C5400D5427E /* Hash+BoolSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+BoolSpec.swift"; sourceTree = "<group>"; };
 		72369CA21E8B933600C876A5 /* Date+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MathSpec.swift"; sourceTree = "<group>"; };
 		723AA33F1E8AD4A20000A612 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		724874FA1E7CF813007984FD /* RbSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RbSwift.h; sourceTree = "<group>"; };
@@ -566,8 +576,8 @@
 				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
+				72304A031E967C5400D5427E /* Hash+BoolSpec.swift */,
 			);
-			name = Hash;
 			path = Hash;
 			sourceTree = "<group>";
 		};
@@ -658,6 +668,7 @@
 				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
 				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
+				723049FE1E967C3500D5427E /* Hash+Bool.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1182,6 +1193,7 @@
 				723048D41E966C5600D5427E /* Date+TimeZone.swift in Sources */,
 				723048F81E966C5600D5427E /* String+Indent.swift in Sources */,
 				723048E21E966C5600D5427E /* Number+AbsoluteValue.swift in Sources */,
+				72304A011E967C3500D5427E /* Hash+Bool.swift in Sources */,
 				723048D11E966C5600D5427E /* Date+Initialize.swift in Sources */,
 				723048F51E966C5600D5427E /* String+Chars.swift in Sources */,
 				723048E61E966C5600D5427E /* Number+Enumeration.swift in Sources */,
@@ -1246,6 +1258,7 @@
 				7230490C1E966C5600D5427E /* Date+TimeZone.swift in Sources */,
 				723049301E966C5600D5427E /* String+Indent.swift in Sources */,
 				7230491A1E966C5600D5427E /* Number+AbsoluteValue.swift in Sources */,
+				72304A021E967C3500D5427E /* Hash+Bool.swift in Sources */,
 				723049091E966C5600D5427E /* Date+Initialize.swift in Sources */,
 				7230492D1E966C5600D5427E /* String+Chars.swift in Sources */,
 				7230491E1E966C5600D5427E /* Number+Enumeration.swift in Sources */,
@@ -1310,11 +1323,13 @@
 				723049C31E966ECA00D5427E /* Date+MathSpec.swift in Sources */,
 				723049C71E966ECA00D5427E /* Duration+MathSpec.swift in Sources */,
 				723049F31E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
+				72304A0B1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049DB1E966ECA00D5427E /* String+ConversionsSpec.swift in Sources */,
 				723049BA1E966ECA00D5427E /* Array+BoolSpec.swift in Sources */,
 				723049BD1E966ECA00D5427E /* Array+MutateSpec.swift in Sources */,
 				723049BC1E966ECA00D5427E /* Array+EquatableSpec.swift in Sources */,
 				723049D41E966ECA00D5427E /* Sequence+EquatableSpec.swift in Sources */,
+				72304A091E967CF500D5427E /* Hash+BoolSpec.swift in Sources */,
 				723049D21E966ECA00D5427E /* Sequence+BoolSpec.swift in Sources */,
 				723049C21E966ECA00D5427E /* Date+InitializeSpec.swift in Sources */,
 				723049CD1E966ECA00D5427E /* Number+DurationSpec.swift in Sources */,
@@ -1362,11 +1377,13 @@
 				723049A21E966ECA00D5427E /* Number+ConversionsSpec.swift in Sources */,
 				723049971E966ECA00D5427E /* Date+ComponentsSpec.swift in Sources */,
 				723049F21E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
+				72304A0A1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049B41E966ECA00D5427E /* String+InflectionSpec.swift in Sources */,
 				723049AD1E966ECA00D5427E /* String+AccessSpec.swift in Sources */,
 				723049B61E966ECA00D5427E /* String+OperatorSpec.swift in Sources */,
 				7230499D1E966ECA00D5427E /* Duration+MathSpec.swift in Sources */,
 				723049A01E966ECA00D5427E /* Number+AbsoluteValueSpec.swift in Sources */,
+				72304A081E967CF500D5427E /* Hash+BoolSpec.swift in Sources */,
 				723049B11E966ECA00D5427E /* String+ConversionsSpec.swift in Sources */,
 				723049A11E966ECA00D5427E /* Number+BoolSpec.swift in Sources */,
 				723049B31E966ECA00D5427E /* String+IndentSpec.swift in Sources */,
@@ -1414,6 +1431,7 @@
 				723049461E966C5700D5427E /* Date+TimeZone.swift in Sources */,
 				7230496A1E966C5700D5427E /* String+Indent.swift in Sources */,
 				723049541E966C5700D5427E /* Number+AbsoluteValue.swift in Sources */,
+				72304A001E967C3500D5427E /* Hash+Bool.swift in Sources */,
 				723049431E966C5700D5427E /* Date+Initialize.swift in Sources */,
 				723049671E966C5700D5427E /* String+Chars.swift in Sources */,
 				723049581E966C5700D5427E /* Number+Enumeration.swift in Sources */,
@@ -1478,6 +1496,7 @@
 				72D2EF871E961882004CE666 /* Number+AbsoluteValue.swift in Sources */,
 				72D2EF891E961882004CE666 /* Number+Conversions.swift in Sources */,
 				72D2EF791E961872004CE666 /* Array+Conversions.swift in Sources */,
+				723049FF1E967C3500D5427E /* Hash+Bool.swift in Sources */,
 				72D2EF9F1E961882004CE666 /* String+Length.swift in Sources */,
 				72D2EF8B1E961882004CE666 /* Number+Enumeration.swift in Sources */,
 				72D2EF9B1E961882004CE666 /* String+Conversions.swift in Sources */,
