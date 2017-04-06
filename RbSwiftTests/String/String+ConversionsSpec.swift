@@ -84,12 +84,7 @@ class StringConversionsSpec: QuickSpec {
         }
         
         describe(".to_datetime") {
-            beforeEach {
-                TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!
-            }
-
             it("returns a Date with RFC2822 form") {
-                
                 let date = "Sun Mar 19 01:04:21 2017".to_datetime!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
