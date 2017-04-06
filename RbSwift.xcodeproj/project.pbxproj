@@ -390,6 +390,8 @@
 				729D3D561E7E63F200258333 /* Duration+Math.swift */,
 				72541BAB1E7E3384008B49B1 /* Duration+Relative.swift */,
 				7248753D1E7CFC95007984FD /* Duration.swift */,
+				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
+				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
 				724875251E7CF883007984FD /* Inflector.swift */,
 				729D3D4C1E7E355300258333 /* InflectorRule.swift */,
@@ -423,8 +425,6 @@
 				72541B781E7E32E1008B49B1 /* String+Regex.swift */,
 				72541B731E7E32E1008B49B1 /* String+Remove.swift */,
 				72541B791E7E32E1008B49B1 /* String+Transform.swift */,
-				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
-				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
