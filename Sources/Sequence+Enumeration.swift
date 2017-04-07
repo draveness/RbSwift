@@ -17,8 +17,10 @@ public extension Sequence {
     ///     }
     ///
     /// - Parameter closure: An closure will passed to forEach method
-    func each(_ closure: (Iterator.Element) -> Void) {
+    /// - Returns: Self
+    @discardableResult func each(_ closure: (Iterator.Element) -> Void) -> Self {
         forEach(closure)
+        return self
     }
     
     /// Iterate the receiver arrays with index which produced by a `for...in` and
@@ -29,10 +31,12 @@ public extension Sequence {
     ///     }
     ///
     /// - Parameter closure: A closure which accepts a index and an element
-    func eachWithIndex(_ closure: (Int, Iterator.Element) -> Void) {
+    /// - Returns: Self
+    @discardableResult func eachWithIndex(_ closure: (Int, Iterator.Element) -> Void) -> Self {
         for (index, item) in self.enumerated() {
             closure(index, item)
         }
+        return self
     }
     
     /// Iterate the receiver arrays with index which produced by a `for...in` and
@@ -62,7 +66,9 @@ public extension Sequence {
     ///     }
     ///
     /// - Parameter closure: A closure will eventually passed to forEach method
-    func reverseEach(_ closure: (Iterator.Element) -> Void) {
+    /// - Returns: Self
+    @discardableResult func reverseEach(_ closure: (Iterator.Element) -> Void) -> Self {
         self.reversed().each(closure)
+        return self
     }
 }
