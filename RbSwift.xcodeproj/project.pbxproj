@@ -582,10 +582,10 @@
 			isa = PBXGroup;
 			children = (
 				72304A031E967C5400D5427E /* Hash+BoolSpec.swift */,
+				72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */,
 				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
-				72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -637,11 +637,11 @@
 			isa = PBXGroup;
 			children = (
 				723049FE1E967C3500D5427E /* Hash+Bool.swift */,
+				72304A171E97230300D5427E /* Hash+Enumeration.swift */,
 				723049F41E967A7900D5427E /* Hash+Mutate.swift */,
 				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
 				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
-				72304A171E97230300D5427E /* Hash+Enumeration.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";

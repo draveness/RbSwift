@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "723048B11E966B9A00D5427E"
-               BuildableName = "RbSwift watchOS.framework"
+               BuildableName = "RbSwift.framework"
                BlueprintName = "RbSwift watchOS"
                ReferencedContainer = "container:RbSwift.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "723048B11E966B9A00D5427E"
-            BuildableName = "RbSwift watchOS.framework"
+            BuildableName = "RbSwift.framework"
             BlueprintName = "RbSwift watchOS"
             ReferencedContainer = "container:RbSwift.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "723048B11E966B9A00D5427E"
-            BuildableName = "RbSwift watchOS.framework"
+            BuildableName = "RbSwift.framework"
             BlueprintName = "RbSwift watchOS"
             ReferencedContainer = "container:RbSwift.xcodeproj">
          </BuildableReference>
