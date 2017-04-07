@@ -346,6 +346,12 @@
 		72D2EFA41E9619A6004CE666 /* RbSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 724874FA1E7CF813007984FD /* RbSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72F39ACB1E964AD50050D91B /* Hash+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39ACA1E964AD50050D91B /* Hash+Operator.swift */; };
 		72F39ACD1E964C0B0050D91B /* Hash+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */; };
+		72F39AE71E97772A0050D91B /* Hash+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AE61E97772A0050D91B /* Hash+Access.swift */; };
+		72F39AE81E97772A0050D91B /* Hash+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AE61E97772A0050D91B /* Hash+Access.swift */; };
+		72F39AE91E97772A0050D91B /* Hash+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AE61E97772A0050D91B /* Hash+Access.swift */; };
+		72F39AEA1E97772A0050D91B /* Hash+Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AE61E97772A0050D91B /* Hash+Access.swift */; };
+		72F39AF01E9777360050D91B /* Hash+AccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */; };
+		72F39AF11E9777360050D91B /* Hash+AccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -488,6 +494,8 @@
 		72F39AE31E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F39AE41E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-watchos/RbSwift.framework"; sourceTree = "<absolute>"; };
 		72F39AE51E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-appletvos/RbSwift.framework"; sourceTree = "<absolute>"; };
+		72F39AE61E97772A0050D91B /* Hash+Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Access.swift"; sourceTree = "<group>"; };
+		72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+AccessSpec.swift"; sourceTree = "<group>"; };
 		72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Mutate.swift"; sourceTree = "<group>"; };
 		72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MutateSpec.swift"; sourceTree = "<group>"; };
 		72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Conversions.swift"; sourceTree = "<group>"; };
@@ -582,6 +590,7 @@
 				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
+				72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -638,6 +647,7 @@
 				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
 				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
+				72F39AE61E97772A0050D91B /* Hash+Access.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -1297,6 +1307,7 @@
 				723048F91E966C5600D5427E /* String+Inflections.swift in Sources */,
 				723048ED1E966C5600D5427E /* Sequence+Conversions.swift in Sources */,
 				723048DB1E966C5600D5427E /* Duration.swift in Sources */,
+				72F39AE91E97772A0050D91B /* Hash+Access.swift in Sources */,
 				723048EA1E966C5600D5427E /* Regex.swift in Sources */,
 				723048CE1E966C5600D5427E /* Date+Bool.swift in Sources */,
 				723048F61E966C5600D5427E /* String+Conversions.swift in Sources */,
@@ -1363,6 +1374,7 @@
 				723049311E966C5600D5427E /* String+Inflections.swift in Sources */,
 				723049251E966C5600D5427E /* Sequence+Conversions.swift in Sources */,
 				723049131E966C5600D5427E /* Duration.swift in Sources */,
+				72F39AEA1E97772A0050D91B /* Hash+Access.swift in Sources */,
 				723049221E966C5600D5427E /* Regex.swift in Sources */,
 				723049061E966C5600D5427E /* Date+Bool.swift in Sources */,
 				7230492E1E966C5600D5427E /* String+Conversions.swift in Sources */,
@@ -1402,6 +1414,7 @@
 				723049F31E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
 				72304A0B1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049DB1E966ECA00D5427E /* String+ConversionsSpec.swift in Sources */,
+				72F39AF11E9777360050D91B /* Hash+AccessSpec.swift in Sources */,
 				723049BA1E966ECA00D5427E /* Array+BoolSpec.swift in Sources */,
 				723049BD1E966ECA00D5427E /* Array+MutateSpec.swift in Sources */,
 				723049BC1E966ECA00D5427E /* Array+EquatableSpec.swift in Sources */,
@@ -1457,6 +1470,7 @@
 				723049F21E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
 				72304A0A1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049B41E966ECA00D5427E /* String+InflectionSpec.swift in Sources */,
+				72F39AF01E9777360050D91B /* Hash+AccessSpec.swift in Sources */,
 				723049AD1E966ECA00D5427E /* String+AccessSpec.swift in Sources */,
 				723049B61E966ECA00D5427E /* String+OperatorSpec.swift in Sources */,
 				7230499D1E966ECA00D5427E /* Duration+MathSpec.swift in Sources */,
@@ -1539,6 +1553,7 @@
 				7230496B1E966C5700D5427E /* String+Inflections.swift in Sources */,
 				7230495F1E966C5700D5427E /* Sequence+Conversions.swift in Sources */,
 				7230494D1E966C5700D5427E /* Duration.swift in Sources */,
+				72F39AE81E97772A0050D91B /* Hash+Access.swift in Sources */,
 				7230495C1E966C5700D5427E /* Regex.swift in Sources */,
 				723049401E966C5700D5427E /* Date+Bool.swift in Sources */,
 				723049681E966C5700D5427E /* String+Conversions.swift in Sources */,
@@ -1605,6 +1620,7 @@
 				72D2EF7A1E961872004CE666 /* Array+Equatable.swift in Sources */,
 				72D2EF8C1E961882004CE666 /* Number+Exponentiative.swift in Sources */,
 				72D2EF921E961882004CE666 /* Sequence+Conversions.swift in Sources */,
+				72F39AE71E97772A0050D91B /* Hash+Access.swift in Sources */,
 				72D2EF741E96186F004CE666 /* Date+Math.swift in Sources */,
 				72D2EF801E96187A004CE666 /* Duration+Components.swift in Sources */,
 				72F39ACD1E964C0B0050D91B /* Hash+Transform.swift in Sources */,
