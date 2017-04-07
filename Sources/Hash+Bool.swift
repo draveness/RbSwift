@@ -28,12 +28,12 @@ public extension Hash {
     /// Returns `true` if the given key is present in hsh.
     ///
     ///     let hash = ["a": 100, "b": 200]
-    /// 	hash.hasKey("a")		#=> true
-    /// 	hash.hasKey("c")		#=> false
+    /// 	hash.has(key: "a")		#=> true
+    /// 	hash.has(key: "c")		#=> false
     ///
     /// - Parameter key: A string represent key in hsh.
     /// - Returns: A bool value.
-    func hasKey(_ key: Key) -> Bool {
+    func has(key: Key) -> Bool {
         return reduce(false) { (result, element) in
             return result || key == element.key
         }
@@ -48,7 +48,7 @@ public extension Hash {
     /// - Parameter key: A string represent key in hsh.
     /// - Returns: A bool value.
     func isMember(_ key: Key) -> Bool {
-        return hasKey(key)
+        return has(key: key)
     }
 }
 
@@ -57,12 +57,12 @@ public extension Hash where Value: Equatable {
     /// Returns `true` if the given value is present in hsh.
     ///
     ///     let hash = ["a": 100, "b": 200]
-    /// 	hash.hasValue(100)		#=> true
-    /// 	hash.hasValue(2000)		#=> false
+    /// 	hash.has(value: 100)		#=> true
+    /// 	hash.has(value: 2000)		#=> false
     ///
     /// - Parameter key: A string represent value in hsh.
     /// - Returns: A bool value.
-    func hasValue(_ value: Value) -> Bool {
+    func has(value: Value) -> Bool {
         return reduce(false) { (result, element) in
             return result || value == element.value
         }
