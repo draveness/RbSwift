@@ -178,8 +178,6 @@
 		7230496E1E966C5700D5427E /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B781E7E32E1008B49B1 /* String+Regex.swift */; };
 		7230496F1E966C5700D5427E /* String+Remove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B731E7E32E1008B49B1 /* String+Remove.swift */; };
 		723049701E966C5700D5427E /* String+Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B791E7E32E1008B49B1 /* String+Transform.swift */; };
-		7230497A1E966D8700D5427E /* RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D2EEE11E96170E004CE666 /* RbSwift.framework */; };
-		723049891E966E9C00D5427E /* RbSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D2EF671E961842004CE666 /* RbSwift.framework */; };
 		7230498F1E966EC900D5427E /* Array+AccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738B11E84AFDD008E83E6 /* Array+AccessSpec.swift */; };
 		723049901E966EC900D5427E /* Array+BoolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727738A11E82B9AB008E83E6 /* Array+BoolSpec.swift */; };
 		723049911E966EC900D5427E /* Array+ConversionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FC508D1E83C851009B99F4 /* Array+ConversionsSpec.swift */; };
@@ -375,13 +373,11 @@
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS.release.xcconfig"; sourceTree = "<group>"; };
 		64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS.release.xcconfig"; sourceTree = "<group>"; };
-		723048B21E966B9A00D5427E /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723048B51E966B9A00D5427E /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
-		723048BF1E966BC800D5427E /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723048C21E966BC800D5427E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RbSwiftTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "RbSwiftTests macOS.xctest"; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug/RbSwiftTests macOS.xctest"; sourceTree = "<absolute>"; };
 		723049791E966D8700D5427E /* Info-macOS-test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS-test.plist"; sourceTree = "<group>"; };
-		723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RbSwiftTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "RbSwiftTests iOS.xctest"; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-iphoneos/RbSwiftTests iOS.xctest"; sourceTree = "<absolute>"; };
 		723049E31E96706500D5427E /* Calendar+Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+Global.swift"; sourceTree = "<group>"; };
 		723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+OperatorSpec.swift"; sourceTree = "<group>"; };
 		723049F11E9675C600D5427E /* Hash+TransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+TransformSpec.swift"; sourceTree = "<group>"; };
@@ -479,10 +475,8 @@
 		72A219011E80CE1600EF65C9 /* Number+Exponentiative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Exponentiative.swift"; sourceTree = "<group>"; };
 		72A219031E80D28100EF65C9 /* Number+ExponentiativeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+ExponentiativeSpec.swift"; sourceTree = "<group>"; };
 		72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Equatable.swift"; sourceTree = "<group>"; };
-		72D2EEE11E96170E004CE666 /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D2EEE41E96170E004CE666 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		72D2EEF11E961716004CE666 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		72D2EF671E961842004CE666 /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D2F0021E9630AD004CE666 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		72E276A71E8BE86C00F41D1B /* Date+TimeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TimeSpec.swift"; sourceTree = "<group>"; };
 		72E276A91E8BF1E700F41D1B /* Date+Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Bool.swift"; sourceTree = "<group>"; };
@@ -490,6 +484,10 @@
 		72E276AE1E8FFAD300F41D1B /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		72F39ACA1E964AD50050D91B /* Hash+Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Operator.swift"; sourceTree = "<group>"; };
 		72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Transform.swift"; sourceTree = "<group>"; };
+		72F39AE21E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F39AE31E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F39AE41E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-watchos/RbSwift.framework"; sourceTree = "<absolute>"; };
+		72F39AE51E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-appletvos/RbSwift.framework"; sourceTree = "<absolute>"; };
 		72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Mutate.swift"; sourceTree = "<group>"; };
 		72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MutateSpec.swift"; sourceTree = "<group>"; };
 		72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Conversions.swift"; sourceTree = "<group>"; };
@@ -521,7 +519,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7230497A1E966D8700D5427E /* RbSwift.framework in Frameworks */,
 				4FBC9036C31B34A74F1A58A8 /* Pods_RbSwiftTests_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,7 +527,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723049891E966E9C00D5427E /* RbSwift.framework in Frameworks */,
 				60996B5075D4B1530985316D /* Pods_RbSwiftTests_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,12 +725,8 @@
 				724875111E7CF843007984FD /* RbSwiftTests */,
 				72F39AC61E9640830050D91B /* Resources */,
 				72D2F0021E9630AD004CE666 /* Package.swift */,
-				723048BF1E966BC800D5427E /* RbSwift.framework */,
-				723048B21E966B9A00D5427E /* RbSwift.framework */,
-				72D2EF671E961842004CE666 /* RbSwift.framework */,
-				72D2EEE11E96170E004CE666 /* RbSwift.framework */,
-				723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */,
-				723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */,
+				72F39AE21E9775210050D91B /* RbSwift.framework */,
+				72F39AE31E9775210050D91B /* RbSwift.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -920,7 +912,7 @@
 			);
 			name = "RbSwift watchOS";
 			productName = "RbSwift watchOS";
-			productReference = 723048B21E966B9A00D5427E /* RbSwift.framework */;
+			productReference = 72F39AE41E9775210050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723048BE1E966BC800D5427E /* RbSwift tvOS */ = {
@@ -938,7 +930,7 @@
 			);
 			name = "RbSwift tvOS";
 			productName = "RbSwift tvOS";
-			productReference = 723048BF1E966BC800D5427E /* RbSwift.framework */;
+			productReference = 72F39AE51E9775210050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723049741E966D8700D5427E /* RbSwiftTests macOS */ = {
@@ -998,7 +990,7 @@
 			);
 			name = "RbSwift macOS";
 			productName = "RbSwift macOS";
-			productReference = 72D2EEE11E96170E004CE666 /* RbSwift.framework */;
+			productReference = 72F39AE31E9775210050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		72D2EF661E961842004CE666 /* RbSwift iOS */ = {
@@ -1018,7 +1010,7 @@
 			);
 			name = "RbSwift iOS";
 			productName = "RbSwift iOS";
-			productReference = 72D2EF671E961842004CE666 /* RbSwift.framework */;
+			productReference = 72F39AE21E9775210050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
