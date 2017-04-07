@@ -48,6 +48,16 @@ public extension Hash {
         return map
     }
     
+    /// An alias to `Hash#merge(otherHash:)` methods.
+    ///
+    /// - Parameters:
+    ///   - otherHash: Another hash instance.
+    ///   - closure: A closure returns a new value if duplicate happens.
+    /// - Returns: A new hash containing the contents of both hash.
+    func update(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
+        return merge(otherHash, closure: closure)
+    }
+    
     /// A mutating version of `Hash#merge(otherHash:closure:)`
     ///
     ///     let h1 = ["a": 100, "b": 200]
@@ -65,7 +75,21 @@ public extension Hash {
         return self
     }
     
+    /// An alias to `Hash#merged(otherHash:)` methods.
+    ///
+    /// - Parameters:
+    ///   - otherHash: Another hash instance.
+    ///   - closure: A closure returns a new value if duplicate happens.
+    /// - Returns: Self
+    @discardableResult mutating func updated(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
+        return merged(otherHash, closure: closure)
+    }
+
     /// Removes all key-value pairs from hsh.
+    ///
+    ///     var hash = ["a": 100]
+    /// 	hash.clear()		#=> [:]
+    /// 	hash                #=> [:]
     ///
     /// - Returns: Self with empty hash.
     @discardableResult mutating func clear() -> Hash<Key, Value> {
@@ -75,9 +99,26 @@ public extension Hash {
     
     /// An alias to `Hash#removeValue(forKey:)`.
     ///
+    ///     var hash = ["a": 100, "b": 200]
+    /// 	hash.delete("a")		#=> 100
+    /// 	hash                    #=> ["b": 200]
+    ///
     /// - Parameter key: A key of hash.
     /// - Returns: Corresponding value or nil.
     @discardableResult mutating func delete(_ key: Key) -> Value? {
         return self.removeValue(forKey: key)
+    }
+    
+    /// Replaces the contents of hsh with the contents of otherHash.
+    ///
+    ///     var hash = ["a": 100, "b": 200]
+    /// 	hash.replace(["c": 300])		#=> ["c": 300]
+    /// 	hash                            #=> ["c": 300]
+    ///
+    /// - Parameter otherHash: Another hash instance.
+    /// - Returns: Self
+    @discardableResult mutating func replace(_ otherHash: Hash<Key, Value>) -> Hash<Key, Value> {
+        self = otherHash
+        return self
     }
 }
