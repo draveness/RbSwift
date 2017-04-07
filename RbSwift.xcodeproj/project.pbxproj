@@ -286,6 +286,12 @@
 		72304A091E967CF500D5427E /* Hash+BoolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A031E967C5400D5427E /* Hash+BoolSpec.swift */; };
 		72304A0A1E967D3E00D5427E /* String+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */; };
 		72304A0B1E967D3E00D5427E /* String+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B9D1E7E330A008B49B1 /* String+TransformSpec.swift */; };
+		72304A181E97230300D5427E /* Hash+Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A171E97230300D5427E /* Hash+Enumeration.swift */; };
+		72304A191E97230300D5427E /* Hash+Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A171E97230300D5427E /* Hash+Enumeration.swift */; };
+		72304A1A1E97230300D5427E /* Hash+Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A171E97230300D5427E /* Hash+Enumeration.swift */; };
+		72304A1B1E97230300D5427E /* Hash+Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A171E97230300D5427E /* Hash+Enumeration.swift */; };
+		72304A1D1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */; };
+		72304A1E1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */; };
 		72D2EF6F1E96186F004CE666 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B031E7D5D90008B49B1 /* DateFormat.swift */; };
 		72D2EF701E96186F004CE666 /* Date+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E276A91E8BF1E700F41D1B /* Date+Bool.swift */; };
 		72D2EF711E96186F004CE666 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B1F1E7D96F3008B49B1 /* Date+Components.swift */; };
@@ -383,6 +389,8 @@
 		723049F71E967AA000D5427E /* Hash+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+MutateSpec.swift"; sourceTree = "<group>"; };
 		723049FE1E967C3500D5427E /* Hash+Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Bool.swift"; sourceTree = "<group>"; };
 		72304A031E967C5400D5427E /* Hash+BoolSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+BoolSpec.swift"; sourceTree = "<group>"; };
+		72304A171E97230300D5427E /* Hash+Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Enumeration.swift"; sourceTree = "<group>"; };
+		72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+EnumerationSpec.swift"; sourceTree = "<group>"; };
 		72369CA21E8B933600C876A5 /* Date+MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+MathSpec.swift"; sourceTree = "<group>"; };
 		723AA33F1E8AD4A20000A612 /* RegexSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegexSpec.swift; sourceTree = "<group>"; };
 		724874FA1E7CF813007984FD /* RbSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RbSwift.h; sourceTree = "<group>"; };
@@ -577,6 +585,7 @@
 				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
+				72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -632,6 +641,7 @@
 				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
 				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
+				72304A171E97230300D5427E /* Hash+Enumeration.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -1281,6 +1291,7 @@
 				723048CC1E966C5600D5427E /* Array+Operator.swift in Sources */,
 				723048F21E966C5600D5427E /* String+Access.swift in Sources */,
 				723048DF1E966C5600D5427E /* Inflector.swift in Sources */,
+				72304A1A1E97230300D5427E /* Hash+Enumeration.swift in Sources */,
 				723048D61E966C5600D5427E /* Duration+Comparable.swift in Sources */,
 				723048EB1E966C5600D5427E /* RegexConvertible.swift in Sources */,
 				723048FE1E966C5600D5427E /* String+Transform.swift in Sources */,
@@ -1346,6 +1357,7 @@
 				723049041E966C5600D5427E /* Array+Operator.swift in Sources */,
 				7230492A1E966C5600D5427E /* String+Access.swift in Sources */,
 				723049171E966C5600D5427E /* Inflector.swift in Sources */,
+				72304A1B1E97230300D5427E /* Hash+Enumeration.swift in Sources */,
 				7230490E1E966C5600D5427E /* Duration+Comparable.swift in Sources */,
 				723049231E966C5600D5427E /* RegexConvertible.swift in Sources */,
 				723049361E966C5600D5427E /* String+Transform.swift in Sources */,
@@ -1394,6 +1406,7 @@
 				723049F01E9675AB00D5427E /* Hash+OperatorSpec.swift in Sources */,
 				723049C31E966ECA00D5427E /* Date+MathSpec.swift in Sources */,
 				723049C71E966ECA00D5427E /* Duration+MathSpec.swift in Sources */,
+				72304A1E1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */,
 				723049F31E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
 				72304A0B1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049DB1E966ECA00D5427E /* String+ConversionsSpec.swift in Sources */,
@@ -1448,6 +1461,7 @@
 				723049EF1E9675AB00D5427E /* Hash+OperatorSpec.swift in Sources */,
 				723049A21E966ECA00D5427E /* Number+ConversionsSpec.swift in Sources */,
 				723049971E966ECA00D5427E /* Date+ComponentsSpec.swift in Sources */,
+				72304A1D1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */,
 				723049F21E9675C600D5427E /* Hash+TransformSpec.swift in Sources */,
 				72304A0A1E967D3E00D5427E /* String+TransformSpec.swift in Sources */,
 				723049B41E966ECA00D5427E /* String+InflectionSpec.swift in Sources */,
@@ -1519,6 +1533,7 @@
 				7230493E1E966C5700D5427E /* Array+Operator.swift in Sources */,
 				723049641E966C5700D5427E /* String+Access.swift in Sources */,
 				723049511E966C5700D5427E /* Inflector.swift in Sources */,
+				72304A191E97230300D5427E /* Hash+Enumeration.swift in Sources */,
 				723049481E966C5700D5427E /* Duration+Comparable.swift in Sources */,
 				7230495D1E966C5700D5427E /* RegexConvertible.swift in Sources */,
 				723049701E966C5700D5427E /* String+Transform.swift in Sources */,
@@ -1584,6 +1599,7 @@
 				72D2EF711E96186F004CE666 /* Date+Components.swift in Sources */,
 				72D2EF7E1E96187A004CE666 /* Hash.swift in Sources */,
 				72D2EFA11E961882004CE666 /* String+Regex.swift in Sources */,
+				72304A181E97230300D5427E /* Hash+Enumeration.swift in Sources */,
 				72D2EF961E961882004CE666 /* Sequence+Transform.swift in Sources */,
 				72D2EF851E96187A004CE666 /* Inflector.swift in Sources */,
 				72D2EF9E1E961882004CE666 /* String+Inflections.swift in Sources */,
