@@ -12,7 +12,7 @@ import RbSwift
 
 class DateFormatSpec: QuickSpec {
     override func spec() {
-        describe("#parse") {
+        describe(".parse") {
             beforeEach {
                 TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!
             }
