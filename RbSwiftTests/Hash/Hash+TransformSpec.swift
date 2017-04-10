@@ -109,13 +109,24 @@ class HashTransformSpec: QuickSpec {
         }
         
         describe(".fetch(values:closure:)") {
-            it("eeturns an array containing the values associated with the given keys") {
+            it("returns an array containing the values associated with the given keys") {
                 let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
                 expect(hash.fetchValues("cow", "cat")!).to(equal(["bovine", "feline"]))
                 expect(hash.fetchValues("cow", "bird")).to(beNil())
                 expect(hash.fetchValues("cow", "bird") { key in
                     return key.upcase
                 }).to(equal(["bovine", "BIRD"]))
+            }
+        }
+        
+        describe(".invert") {
+            it("returns a new hash created by using hsh’s values as keys, and the keys as values.") {
+                let hash1 = ["a": 100, "b": 200]
+                expect(hash1.invert).to(equal([100: "a", 200: "b"]))
+                let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+                expect(hash2.invert.invert).to(equal(hash2))
+                let hash3 = ["cat": 1, "dog": 1]
+                expect(hash3.invert).to(equal([1: "dog"]))
             }
         }
     }

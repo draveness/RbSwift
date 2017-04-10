@@ -152,3 +152,27 @@ public extension Hash {
         return nil
     }
 }
+
+public extension Hash where Value: Hashable {
+    /// Returns a new hash created by using hsh’s values as keys, and the keys as values. 
+    ///
+    ///     let hash1 = ["a": 100, "b": 200]
+    /// 	hash1.invert            #=> [100: "a", 200: "b"]
+    ///
+    ///     let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+    /// 	hash2.invert.invert		#=> ["cat": "feline", "dog": "canine", "cow": "bovine"]
+    ///
+    /// If a key with the same value already exists in the hsh, then the last one defined
+    /// will be used, the earlier value(s) will be discarded.
+    ///
+    ///     let hash3 = ["cat": 1, "dog": 1]
+    /// 	hash3.invert    #=> [1: "dog"]
+    ///
+    var invert: [Value: Key] {
+        var results: [Value: Key] = [:]
+        for (key, value) in self {
+            results[value] = key
+        }
+        return results
+    }
+}
