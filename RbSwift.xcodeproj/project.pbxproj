@@ -270,12 +270,6 @@
 		723049F01E9675AB00D5427E /* Hash+OperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */; };
 		723049F21E9675C600D5427E /* Hash+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F11E9675C600D5427E /* Hash+TransformSpec.swift */; };
 		723049F31E9675C600D5427E /* Hash+TransformSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F11E9675C600D5427E /* Hash+TransformSpec.swift */; };
-		723049F81E967AA000D5427E /* Hash+MutateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F71E967AA000D5427E /* Hash+MutateSpec.swift */; };
-		723049F91E967AA000D5427E /* Hash+MutateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F71E967AA000D5427E /* Hash+MutateSpec.swift */; };
-		723049FA1E967AD700D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
-		723049FB1E967AD700D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
-		723049FC1E967AD800D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
-		723049FD1E967AD800D5427E /* Hash+Mutate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049F41E967A7900D5427E /* Hash+Mutate.swift */; };
 		723049FF1E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
 		72304A001E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
 		72304A011E967C3500D5427E /* Hash+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723049FE1E967C3500D5427E /* Hash+Bool.swift */; };
@@ -381,14 +375,10 @@
 		64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		723048B51E966B9A00D5427E /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		723048C21E966BC800D5427E /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "RbSwiftTests macOS.xctest"; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug/RbSwiftTests macOS.xctest"; sourceTree = "<absolute>"; };
 		723049791E966D8700D5427E /* Info-macOS-test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS-test.plist"; sourceTree = "<group>"; };
-		723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "RbSwiftTests iOS.xctest"; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-iphoneos/RbSwiftTests iOS.xctest"; sourceTree = "<absolute>"; };
 		723049E31E96706500D5427E /* Calendar+Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Calendar+Global.swift"; sourceTree = "<group>"; };
 		723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+OperatorSpec.swift"; sourceTree = "<group>"; };
 		723049F11E9675C600D5427E /* Hash+TransformSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+TransformSpec.swift"; sourceTree = "<group>"; };
-		723049F41E967A7900D5427E /* Hash+Mutate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Mutate.swift"; sourceTree = "<group>"; };
-		723049F71E967AA000D5427E /* Hash+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+MutateSpec.swift"; sourceTree = "<group>"; };
 		723049FE1E967C3500D5427E /* Hash+Bool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Bool.swift"; sourceTree = "<group>"; };
 		72304A031E967C5400D5427E /* Hash+BoolSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+BoolSpec.swift"; sourceTree = "<group>"; };
 		72304A171E97230300D5427E /* Hash+Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Enumeration.swift"; sourceTree = "<group>"; };
@@ -492,10 +482,12 @@
 		72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Transform.swift"; sourceTree = "<group>"; };
 		72F39AE21E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F39AE31E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72F39AE41E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-watchos/RbSwift.framework"; sourceTree = "<absolute>"; };
-		72F39AE51E9775210050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RbSwift.framework; path = "/Users/draveness/Desktop/workspace/RbSwift/build/Debug-appletvos/RbSwift.framework"; sourceTree = "<absolute>"; };
 		72F39AE61E97772A0050D91B /* Hash+Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+Access.swift"; sourceTree = "<group>"; };
 		72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+AccessSpec.swift"; sourceTree = "<group>"; };
+		72F39AF21E9B607F0050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F39AF31E9B607F0050D91B /* RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F39AF41E9B607F0050D91B /* RbSwiftTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RbSwiftTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F39AF51E9B607F0050D91B /* RbSwiftTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RbSwiftTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Mutate.swift"; sourceTree = "<group>"; };
 		72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MutateSpec.swift"; sourceTree = "<group>"; };
 		72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Conversions.swift"; sourceTree = "<group>"; };
@@ -588,7 +580,6 @@
 				72F39AEB1E9777310050D91B /* Hash+AccessSpec.swift */,
 				72304A031E967C5400D5427E /* Hash+BoolSpec.swift */,
 				72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */,
-				723049F71E967AA000D5427E /* Hash+MutateSpec.swift */,
 				723049EE1E9675AB00D5427E /* Hash+OperatorSpec.swift */,
 				723049F11E9675C600D5427E /* Hash+TransformSpec.swift */,
 			);
@@ -644,7 +635,6 @@
 				72F39AE61E97772A0050D91B /* Hash+Access.swift */,
 				723049FE1E967C3500D5427E /* Hash+Bool.swift */,
 				72304A171E97230300D5427E /* Hash+Enumeration.swift */,
-				723049F41E967A7900D5427E /* Hash+Mutate.swift */,
 				72F39ACA1E964AD50050D91B /* Hash+Operator.swift */,
 				72F39ACC1E964C0B0050D91B /* Hash+Transform.swift */,
 				72E276AE1E8FFAD300F41D1B /* Hash.swift */,
@@ -737,6 +727,10 @@
 				72D2F0021E9630AD004CE666 /* Package.swift */,
 				72F39AE21E9775210050D91B /* RbSwift.framework */,
 				72F39AE31E9775210050D91B /* RbSwift.framework */,
+				72F39AF21E9B607F0050D91B /* RbSwift.framework */,
+				72F39AF31E9B607F0050D91B /* RbSwift.framework */,
+				72F39AF41E9B607F0050D91B /* RbSwiftTests iOS.xctest */,
+				72F39AF51E9B607F0050D91B /* RbSwiftTests macOS.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -922,7 +916,7 @@
 			);
 			name = "RbSwift watchOS";
 			productName = "RbSwift watchOS";
-			productReference = 72F39AE41E9775210050D91B /* RbSwift.framework */;
+			productReference = 72F39AF21E9B607F0050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723048BE1E966BC800D5427E /* RbSwift tvOS */ = {
@@ -940,7 +934,7 @@
 			);
 			name = "RbSwift tvOS";
 			productName = "RbSwift tvOS";
-			productReference = 72F39AE51E9775210050D91B /* RbSwift.framework */;
+			productReference = 72F39AF31E9B607F0050D91B /* RbSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		723049741E966D8700D5427E /* RbSwiftTests macOS */ = {
@@ -961,7 +955,7 @@
 			);
 			name = "RbSwiftTests macOS";
 			productName = "RbSwiftTests macOS";
-			productReference = 723049751E966D8700D5427E /* RbSwiftTests macOS.xctest */;
+			productReference = 72F39AF51E9B607F0050D91B /* RbSwiftTests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		723049831E966E9C00D5427E /* RbSwiftTests iOS */ = {
@@ -982,7 +976,7 @@
 			);
 			name = "RbSwiftTests iOS";
 			productName = "RbSwiftTests iOS";
-			productReference = 723049841E966E9C00D5427E /* RbSwiftTests iOS.xctest */;
+			productReference = 72F39AF41E9B607F0050D91B /* RbSwiftTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		72D2EEE01E96170E004CE666 /* RbSwift macOS */ = {
@@ -1302,7 +1296,6 @@
 				723048CA1E966C5600D5427E /* Array+Equatable.swift in Sources */,
 				723048DC1E966C5600D5427E /* Hash+Operator.swift in Sources */,
 				723048C81E966C5600D5427E /* Array+Bool.swift in Sources */,
-				723049FB1E967AD700D5427E /* Hash+Mutate.swift in Sources */,
 				723049E61E9670A500D5427E /* Calendar+Global.swift in Sources */,
 				723048F91E966C5600D5427E /* String+Inflections.swift in Sources */,
 				723048ED1E966C5600D5427E /* Sequence+Conversions.swift in Sources */,
@@ -1369,7 +1362,6 @@
 				723049021E966C5600D5427E /* Array+Equatable.swift in Sources */,
 				723049141E966C5600D5427E /* Hash+Operator.swift in Sources */,
 				723049001E966C5600D5427E /* Array+Bool.swift in Sources */,
-				723049FA1E967AD700D5427E /* Hash+Mutate.swift in Sources */,
 				723049E71E9670A600D5427E /* Calendar+Global.swift in Sources */,
 				723049311E966C5600D5427E /* String+Inflections.swift in Sources */,
 				723049251E966C5600D5427E /* Sequence+Conversions.swift in Sources */,
@@ -1404,7 +1396,6 @@
 				723049DD1E966ECA00D5427E /* String+IndentSpec.swift in Sources */,
 				723049BE1E966ECA00D5427E /* Array+OperatorSpec.swift in Sources */,
 				723049C61E966ECA00D5427E /* DateFormatSpec.swift in Sources */,
-				723049F91E967AA000D5427E /* Hash+MutateSpec.swift in Sources */,
 				723049E11E966ECA00D5427E /* String+RegexSpec.swift in Sources */,
 				723049D91E966ECA00D5427E /* String+CaseSpec.swift in Sources */,
 				723049F01E9675AB00D5427E /* Hash+OperatorSpec.swift in Sources */,
@@ -1460,7 +1451,6 @@
 				723049921E966EC900D5427E /* Array+EquatableSpec.swift in Sources */,
 				723049A61E966ECA00D5427E /* Number+MathSpec.swift in Sources */,
 				723049911E966EC900D5427E /* Array+ConversionsSpec.swift in Sources */,
-				723049F81E967AA000D5427E /* Hash+MutateSpec.swift in Sources */,
 				7230499C1E966ECA00D5427E /* DateFormatSpec.swift in Sources */,
 				7230498F1E966EC900D5427E /* Array+AccessSpec.swift in Sources */,
 				723049EF1E9675AB00D5427E /* Hash+OperatorSpec.swift in Sources */,
@@ -1548,7 +1538,6 @@
 				7230493C1E966C5700D5427E /* Array+Equatable.swift in Sources */,
 				7230494E1E966C5700D5427E /* Hash+Operator.swift in Sources */,
 				7230493A1E966C5700D5427E /* Array+Bool.swift in Sources */,
-				723049FC1E967AD800D5427E /* Hash+Mutate.swift in Sources */,
 				723049E51E9670A400D5427E /* Calendar+Global.swift in Sources */,
 				7230496B1E966C5700D5427E /* String+Inflections.swift in Sources */,
 				7230495F1E966C5700D5427E /* Sequence+Conversions.swift in Sources */,
@@ -1615,7 +1604,6 @@
 				72F39ACB1E964AD50050D91B /* Hash+Operator.swift in Sources */,
 				72D2EF721E96186F004CE666 /* Date+Conversions.swift in Sources */,
 				72D2EF991E961882004CE666 /* String+Case.swift in Sources */,
-				723049FD1E967AD800D5427E /* Hash+Mutate.swift in Sources */,
 				723049E41E96706500D5427E /* Calendar+Global.swift in Sources */,
 				72D2EF7A1E961872004CE666 /* Array+Equatable.swift in Sources */,
 				72D2EF8C1E961882004CE666 /* Number+Exponentiative.swift in Sources */,

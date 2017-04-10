@@ -77,5 +77,23 @@ class HashTransformSpec: QuickSpec {
                 expect(hash).to(equal(["c": 300]))
             }
         }
+        
+        describe(".store(key:value:)") {
+            it("associates the value given by value with the key given by key.") {
+                var hash = ["a": 4]
+                expect(hash.store("b", 5)).to(equal(5))
+                expect(hash).to(equal(["a": 4, "b": 5]))
+            }
+        }
+        
+        describe(".shift()") {
+            it("associates the value given by value with the key given by key.") {
+                var hash = ["a": 4]
+                let result = hash.shift()!
+                expect(result.0).to(equal("a"))
+                expect(result.1).to(equal(4))
+                expect(hash.shift()).to(beNil())
+            }
+        }
     }
 }
