@@ -95,5 +95,17 @@ class HashTransformSpec: QuickSpec {
                 expect(hash.shift()).to(beNil())
             }
         }
+        
+        describe(".fetch(key:default:closure:)") {
+            it("returns a value from the hash for the given key") {
+                let hash = ["a": 100, "b": 200]
+                expect(hash.fetch("a")).to(equal(100))
+                expect(hash.fetch("z")).to(beNil())
+                expect(hash.fetch("z", 500)).to(equal(500))
+                expect(hash.fetch("z", closure: { _ in
+                    return 1000
+                })).to(equal(1000))
+            }
+        }
     }
 }
