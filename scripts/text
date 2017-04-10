@@ -1,4 +1,4 @@
                 var hash = ["a": 4]
-                expect(hash.store("b", 5)).to(equal(5))
-                expect(hash).to(equal(["a": 4, "b": 5]))
+                expect(hash.shift()).to(equal(("b", 5)))
+                expect(hash.shift()).to(beNil())
 

@@ -121,4 +121,34 @@ public extension Hash {
         self = otherHash
         return self
     }
+    
+    /// Associates the value given by value with the key given by key.
+    ///
+    ///     var hash = ["a": 4]
+    /// 	hash.store("b", 5)		#=> 5
+    /// 	hash                    #=> ["a": 4, "b": 5]
+    ///
+    /// - Parameters:
+    ///   - key: A key
+    ///   - value: A value
+    /// - Returns: The passing value
+    @discardableResult mutating func store(_ key: Key, _ value: Value) -> Value {
+        self[key] = value
+        return value
+    }
+    
+    /// Removes a key-value pair from hsh and returns it as the two-item 
+    /// array ( key, value ), or nil if the hash is empty.
+    ///
+    ///     var hash = ["a": 4]
+    /// 	hash.shift()		#=> ("b", 5)
+    /// 	hash.shift()		#=> nil
+    ///
+    /// - Returns: A key-value pair
+    @discardableResult mutating func shift() -> (Key, Value)? {
+        if let key = self.keys.first {
+            return (key, delete(key)!)
+        }
+        return nil
+    }
 }
