@@ -93,6 +93,43 @@ public extension Hash {
         }
         return value
     }
+    
+    /// Returns an array containing the values associated with the given keys or `nil` 
+    /// when one of keys can’t be found. Also see Hash#values(at:) and Hash#fetch(key:).
+    ///
+    ///     let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+    /// 	hash.fetchValues("cow", "cat")!		#=> ["bovine", "feline"]
+    /// 	hash.fetchValues("cow", "bird")		#=> nil
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: An array of values or nil.
+    func fetchValues(_ keys: Key...) -> [Value]? {
+        var results: [Value] = []
+        for key in keys {
+            guard let result = fetch(key) else { return nil }
+            results.append(result)
+        }
+        return results
+    }
+    
+    /// Returns an array containing the values associated with the given keys or `nil`
+    /// when one of keys can’t be found. Also see Hash#values(at:) and Hash#fetch(key:).
+    ///
+    ///     let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+    /// 	hash.fetchValues("cow", "bird") { key in
+    ///         return key.upcase
+    ///     }		#=> ["bovine", "BIRD"]
+    ///
+    /// - Parameters:
+    ///   - keys: An array of keys.
+    ///   - closure: A closure executs each time value is not found.
+    /// - Returns: An array of values.
+    func fetchValues(_ keys: Key..., closure: ((Key) -> Value)) -> [Value] {
+        return keys.map { key in
+            guard let result = fetch(key) else { return closure(key) }
+            return result
+        }
+    }
 }
 
 // MARK: - Access

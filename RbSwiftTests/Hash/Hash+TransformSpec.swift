@@ -107,5 +107,16 @@ class HashTransformSpec: QuickSpec {
                 })).to(equal(1000))
             }
         }
+        
+        describe(".fetch(values:closure:)") {
+            it("eeturns an array containing the values associated with the given keys") {
+                let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+                expect(hash.fetchValues("cow", "cat")!).to(equal(["bovine", "feline"]))
+                expect(hash.fetchValues("cow", "bird")).to(beNil())
+                expect(hash.fetchValues("cow", "bird") { key in
+                    return key.upcase
+                }).to(equal(["bovine", "BIRD"]))
+            }
+        }
     }
 }
