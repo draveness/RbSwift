@@ -151,6 +151,45 @@ public extension Hash {
         }
         return nil
     }
+    
+    /// Return a new with the results of running block once for every value.
+    /// This method does not change the keys.
+    ///
+    ///     let hash = ["a": 1, "b": 2, "c": 3]
+    /// 	hash.transformValues { $0 * $0 + 1 }    #=> ["a": 2, "b": 5, "c": 10]
+    /// 	hash.transformValues { $0.to_s }		#=> ["a": "1", "b": "2", "c": "3"]
+    ///
+    /// - Parameter closure: An closure accepts a value return an new value.
+    /// - Returns: An new hash with key-value pair
+    func transformValues<T>(_ closure: @escaping (Value) -> T) -> [Key: T] {
+        var results: [Key: T] = [:]
+        for (key, value) in self {
+            results[key] = closure(value)
+        }
+        return results
+    }
+    
+    /// Return a new with the results of running block once for every value.
+    /// This method does not change the keys. The mutates version of
+    /// `Hash#transformedValues(closure:)` can only accepts a closure with
+    /// `(Value) -> Value` type.
+    ///
+    ///     var hash = ["a": 1, "b": 2, "c": 3]
+    /// 	hash.transformedValues { 
+    ///         $0 * $0 + 1 
+    ///     }		#=> ["a": 2, "b": 5, "c": 10]
+    /// 	hash    #=> ["a": 2, "b": 5, "c": 10]
+    ///
+    /// - Parameter closure: An closure accepts a value return an new value.
+    /// - Returns: Self
+    @discardableResult mutating func transformedValues(_ closure: @escaping (Value) -> Value) -> [Key: Value] {
+        var results: [Key: Value] = [:]
+        for (key, value) in self {
+            results[key] = closure(value)
+        }
+        self = results
+        return self
+    }
 }
 
 public extension Hash where Value: Hashable {

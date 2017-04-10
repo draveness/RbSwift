@@ -129,5 +129,17 @@ class HashTransformSpec: QuickSpec {
                 expect(hash3.invert).to(equal([1: "dog"]))
             }
         }
+        
+        describe(".transformValues(closure:)") {
+            it("return a new with the results of running block once for every value.") {
+                let hash = ["a": 1, "b": 2, "c": 3]
+                expect(hash.transformValues { $0 * $0 + 1 }).to(equal(["a": 2, "b": 5, "c": 10]))
+                expect(hash.transformValues { $0.to_s }).to(equal(["a": "1", "b": "2", "c": "3"]))
+                
+                var hash1 = ["a": 1, "b": 2, "c": 3]
+                expect(hash1.transformedValues { $0 * $0 + 1 }).to(equal(["a": 2, "b": 5, "c": 10]))
+                expect(hash1).to(equal(["a": 2, "b": 5, "c": 10]))
+            }
+        }
     }
 }
