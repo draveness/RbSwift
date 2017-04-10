@@ -1,8 +1,7 @@
-                let hash = ["a": 100, "b": 200]
-                expect(hash.fetch("a")).to(equal(100))
-                expect(hash.fetch("z")).to(beNil())
-                expect(hash.fetch("z", 500)).to(equal(500))
-                expect(hash.fetch("z", closure: { _ in
-                    return 1000
-                })).to(equal(1000))
+                let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+                expect(hash.fetchValues("cow", "cat")!).to(equal(["bovine", "feline"]))
+                expect(hash.fetchValues("cow", "bird")).to(beNil())
+                expect(hash.fetchValues("cow", "bird") { key in
+                    return key.upcase
+                }).to(equal(["bovine", "BIRD"]))
 
