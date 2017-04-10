@@ -12,5 +12,12 @@ import RbSwift
 
 class HashMutateSpec: QuickSpec {
     override func spec() {
+        describe(".store(key:value:)") { 
+            it("associates the value given by value with the key given by key.") {
+                var hash = ["a": 4]
+                expect(hash.store("b", 5)).to(equal(5))
+                expect(hash).to(equal(["a": 4, "b": 5]))
+            }
+        }
     }
 }
