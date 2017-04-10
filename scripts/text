@@ -1,4 +1,8 @@
-                var hash = ["a": 4]
-                expect(hash.shift()).to(equal(("b", 5)))
-                expect(hash.shift()).to(beNil())
+                let hash = ["a": 100, "b": 200]
+                expect(hash.fetch("a")).to(equal(100))
+                expect(hash.fetch("z")).to(beNil())
+                expect(hash.fetch("z", 500)).to(equal(500))
+                expect(hash.fetch("z", closure: { _ in
+                    return 1000
+                })).to(equal(1000))
 

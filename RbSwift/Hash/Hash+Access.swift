@@ -47,6 +47,52 @@ public extension Hash {
         guard let value = self[key] else { return nil }
         return (key, value)
     }
+    
+    /// Returns a value from the hash for the given key.
+    ///
+    ///     let hash = ["a": 100, "b": 200]
+    /// 	hash.fetch("a")		#=> 100
+    ///
+    /// If the key can’t be found, there are several options:
+    /// With no other arguments, it will return nil; 
+    ///
+    /// 	hash.fetch("z")		#=> nil
+    ///
+    /// if default is given, then that will be returned;
+    ///
+    /// 	hash.fetch("z", 500)		#=> 500
+    ///
+    /// - Parameters:
+    ///   - key: A key.
+    ///   - default: Default value if key can't be found.
+    /// - Returns: A value or nil
+    func fetch(_ key: Key, _ default: Value) -> Value {
+        return self[key] ?? `default`
+    }
+    
+    /// Returns a value from the hash for the given key.
+    ///
+    ///     let hash = ["a": 100, "b": 200]
+    /// 	hash.fetch("a")		#=> 100
+    ///
+    /// If the key can’t be found, there are several options:
+    /// if the optional code block is specified, then that will be run and its result returned.
+    ///
+    /// 	hash.fetch("z", closure: { _ in
+    ///         return 1000
+    ///     })		#=> 1000
+    ///
+    /// - Parameters:
+    ///   - key: A key.
+    ///   - closure: A code block will executes on the key if not found.
+    /// - Returns: A value or nil
+    func fetch(_ key: Key, closure: ((Key) -> Value)? = nil) -> Value? {
+        guard let value = self[key] else {
+            guard let closure = closure else { return nil }
+            return closure(key)
+        }
+        return value
+    }
 }
 
 // MARK: - Access
