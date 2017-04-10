@@ -19,6 +19,11 @@ public struct Pathname {
         let newPath = (lhs.path as NSString).appendingPathComponent(rhs.path)
         return Pathname(newPath)
     }
+    
+    /// Returns the current working directory as a Pathname.
+    static var getwd: Pathname {
+        return Pathname(Dir.getwd)
+    }
 }
 
 extension Pathname: Equatable {
