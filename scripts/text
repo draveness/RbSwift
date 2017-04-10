@@ -1,7 +1,4 @@
-                let hash1 = ["a": 100, "b": 200]
-                expect(hash1.invert).to(equal([100: "a", 200: "b"]))
-                let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
-                expect(hash2.invert.invert).to(equal(hash2))
-                let hash3 = ["cat": 1, "dog": 1]
-                expect(hash3.invert).to(equal([1: "dog"]))
+                var hash1 = ["a": 1, "b": 2, "c": 3]
+                expect(hash1.transformedValues { $0 * $0 + 1 }).to(equal(["a": 2, "b": 5, "c": 10]))
+                expect(hash1).to(equal(["a": 2, "b": 5, "c": 10]))
 
