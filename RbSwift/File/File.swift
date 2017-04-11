@@ -17,9 +17,11 @@ public class File {
             return
         }
     }
+
     @discardableResult public static func new(_ path: String) -> File {
         return File(path)
     }
+    
     /// Returns the last component of the filename given in `filename`.
     ///
     /// 	File.basename("/home/work/file.swift")		#=> "file.swift"
