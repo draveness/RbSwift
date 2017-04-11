@@ -32,10 +32,33 @@ class DirSpec: QuickSpec {
         }
         
         describe(".exist(path:)") {
-            it("Returns true if the named file is a directory, false otherwise.") {
-                expect(Dir.isExist("what/the/fuck/is/not/exists")).to(beFalse())
-                try! Dir.mkdir(("what/the/fuck/is/not/exists"), recursive: true)
-                expect(Dir.isExist("what/the/fuck/is/not/exists")).to(beTrue())
+            it("returns true if the named file is a directory, false otherwise.") {
+                let path = "what/the/fuck/is/not/exists"
+                try? Dir.rmdir(path)
+                expect(Dir.isExist(path)).to(beFalse())
+                try! Dir.mkdir((path), recursive: true)
+                expect(Dir.isExist(path)).to(beTrue())
+                try! Dir.rmdir(path)
+                expect(Dir.isExist(path)).to(beFalse())
+            }
+        }
+        
+        describe(".rmdir(path:)") {
+            it("throws error if the directory isn’t exits.") {
+                let path = "rmdir/what/the/fuck/is/not/exists"
+                expect { try Dir.rmdir(path) }.to(throwError())
+            }
+
+            it("throws error if the directory isn’t empty.") {
+                let path = "rmdir/what/the/fuck/is/not/exists"
+
+                // Creates directory and file
+                try! Dir.mkdir(path, recursive: true)
+                File.new(path + "/file.swift")
+                
+                expect {
+                    try Dir.rmdir(path)
+                }.to(throwError())
             }
         }
     }
