@@ -25,6 +25,11 @@ public class Dir {
     }
     
     /// Returns the home directory of the current user or the named user if given.
+    public static var home: String {
+        return home()
+    }
+    
+    /// Returns the home directory of the current user or the named user if given.
     ///
     ///     Dir.home()       #=> "/Users/username"
     ///     Dir.home("user") #=> "/user"

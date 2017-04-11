@@ -66,7 +66,6 @@ public class File {
     /// point. The given pathname may start with a “~”, which expands to the process owner’s home directory 
     /// (the environment variable HOME must be set correctly).
     ///
-    ///     let home = Dir.home()
     /// 	File.expand(path: "~/file.swift")                   #=> "/absolute/path/to/home/file.swift"
     /// 	File.expand(path: "file.swift", in: "/usr/bin")		#=> "/usr/bin/file.swift"
     ///
@@ -83,6 +82,14 @@ public class File {
         return File.absolutePath(filepath.path)
     }
     
+    /// Converts a pathname to an absolute pathname.
+    ///
+    ///
+    /// 	File.absolutePath("~/file.swift")		#=> Dir.home + "/file.swift"
+    /// 	File.absolutePath("./file.swift")		#=> Dir.pwd + "/file.swift"
+    ///
+    /// - Parameter path: A files path.
+    /// - Returns: A absolute path of given file path.
     public static func absolutePath(_ path: String) -> String {
         let pathname = Pathname(path)
         if pathname.isAbsolute {
