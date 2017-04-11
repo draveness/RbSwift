@@ -11,11 +11,7 @@ import Foundation
 public class Dir {
     /// Returns the path to the current working directory of this process as a string.
     public static var getwd: String {
-        let origianlDirectoryPath = FileManager.default.currentDirectoryPath
-        Dir.chdir(Dir.home)
-        let result = FileManager.default.currentDirectoryPath
-        Dir.chdir(origianlDirectoryPath)
-        return result
+        return FileManager.default.currentDirectoryPath
     }
     
     /// Returns the path to the current working directory of this process as a string.

@@ -53,5 +53,12 @@ class FileSpec: QuickSpec {
                 expect(File.absolutePath("./file.swift")).to(equal(Dir.pwd + "/file.swift"))
             }
         }
+        
+        describe(".split(path:)") {
+            it("splits the given string into a directory and a file component and returns them in a tuple.") {
+                expect(File.split("/home/gumby/.profile").0).to(equal("/home/gumby"))
+                expect(File.split("/home/gumby/.profile").1).to(equal(".profile"))
+            }
+        }
     }
 }
