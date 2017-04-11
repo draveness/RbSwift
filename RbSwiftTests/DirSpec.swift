@@ -27,7 +27,7 @@ class DirSpec: QuickSpec {
 
         describe(".home(path:)") {
             it("returns the home directory of the current user or the named user if given.") {
-                expect(Dir.home("user")).to(equal("/user"))
+                expect(try! Dir.home("user")).to(equal("/user"))
             }
         }
         

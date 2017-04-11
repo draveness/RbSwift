@@ -11,7 +11,11 @@ import Foundation
 public class Dir {
     /// Returns the path to the current working directory of this process as a string.
     public static var getwd: String {
-        return FileManager.default.currentDirectoryPath
+        let origianlDirectoryPath = FileManager.default.currentDirectoryPath
+        Dir.chdir(Dir.home)
+        let result = FileManager.default.currentDirectoryPath
+        Dir.chdir(origianlDirectoryPath)
+        return result
     }
     
     /// Returns the path to the current working directory of this process as a string.
@@ -32,6 +36,9 @@ public class Dir {
         return NSHomeDirectory()
     }
     
+    /// Error throws when user doesn't exists.
+    ///
+    /// - notExists: User doesn't exists
     public enum HomeDirectory: Error {
         case notExists
     }
