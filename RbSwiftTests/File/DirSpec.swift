@@ -24,6 +24,12 @@ class DirSpec: QuickSpec {
             FileUtils.rm_rf(path)
 //            Dir.chdir(originalPath)
         }
+        
+        describe(".pwd") { 
+            it("returns the current working directory") {
+                expect(Dir.pwd).to(equal(path))
+            }
+        }
 
         describe(".home(path:)") {
             it("returns the home directory of the current user or the named user if given.") {
