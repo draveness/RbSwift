@@ -12,6 +12,19 @@ import RbSwift
 
 class DirSpec: QuickSpec {
     override func spec() {
+        let path: String = File.absolutePath("RbSwift/DirSpec")
+//        let originalPath = Dir.pwd
+
+        beforeEach {
+            try! Dir.mkdir(path, recursive: true)
+            Dir.chdir(path)
+        }
+        
+        afterEach {
+            FileUtils.rm_rf(path)
+//            Dir.chdir(originalPath)
+        }
+
         describe(".home(path:)") {
             it("returns the home directory of the current user or the named user if given.") {
                 expect(Dir.home("user")).to(equal("/user"))

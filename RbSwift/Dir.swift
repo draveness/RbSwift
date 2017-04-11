@@ -25,8 +25,15 @@ public class Dir {
     }
     
     /// Returns the home directory of the current user or the named user if given.
+    ///
+    ///     Dir.home       #=> "/Users/username"
+    ///
     public static var home: String {
-        return home()
+        return NSHomeDirectory()
+    }
+    
+    public enum HomeDirectory: Error {
+        case notExists
     }
     
     /// Returns the home directory of the current user or the named user if given.
@@ -36,10 +43,10 @@ public class Dir {
     ///
     /// - Parameter path: The name of user.
     /// - Returns: Home directory.
-    public static func home(_ path: String = "~") -> String {
-        let result = (path as NSString).expandingTildeInPath
-        guard result.hasPrefix("/") else { return "/" + result }
-        return result
+    /// - Throws: HomeDirectory.notExists if user doesn't exist.
+    public static func home(_ user: String? = nil) throws -> String {
+        if let home = NSHomeDirectoryForUser(user) { return home }
+        throw HomeDirectory.notExists
     }
     
     /// Changes the current working directory of the process to the given string.
