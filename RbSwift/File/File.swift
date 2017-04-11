@@ -116,4 +116,14 @@ public class File {
         
         return (Pathname(Dir.pwd) + pathname).path
     }
+    
+    /// Splits the given string into a directory and a file component and returns a tuple with `(File.dirname, File.basename)`.
+    ///
+    ///     File.split("/home/gumby/.profile")   #=> ("/home/gumby", ".profile")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A tuple with a directory and a file component.
+    public static func split(_ path: String) -> (String, String) {
+        return (File.dirname(path), File.basename(path))
+    }
 }

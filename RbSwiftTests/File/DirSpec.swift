@@ -13,7 +13,7 @@ import RbSwift
 class DirSpec: QuickSpec {
     override func spec() {
         let path: String = File.absolutePath("RbSwift/DirSpec")
-//        let originalPath = Dir.pwd
+        let originalPath = Dir.pwd
 
         beforeEach {
             try! Dir.mkdir(path, recursive: true)
@@ -22,7 +22,7 @@ class DirSpec: QuickSpec {
         
         afterEach {
             FileUtils.rm_rf(path)
-//            Dir.chdir(originalPath)
+            Dir.chdir(originalPath)
         }
         
         describe(".pwd") { 
@@ -33,7 +33,7 @@ class DirSpec: QuickSpec {
 
         describe(".home(path:)") {
             it("returns the home directory of the current user or the named user if given.") {
-                expect(try! Dir.home("user")).to(equal("/user"))
+                expect(try! Dir.home("user")).to(equal(Dir.home))
             }
         }
         
