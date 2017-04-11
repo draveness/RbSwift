@@ -9,6 +9,17 @@
 import Foundation
 
 public class File {
+    public let path: String
+    public init(_ path: String) {
+        self.path = path
+        guard FileManager.default.createFile(atPath: path, contents: nil, attributes: [:]) else {
+            print("Failed to create file at path: \(path)")
+            return
+        }
+    }
+    @discardableResult public static func new(_ path: String) -> File {
+        return File(path)
+    }
     /// Returns the last component of the filename given in `filename`.
     ///
     /// 	File.basename("/home/work/file.swift")		#=> "file.swift"
@@ -103,8 +114,4 @@ public class File {
         
         return (Pathname(Dir.pwd) + pathname).path
     }
-    
-//    public static func touch(_ path: String) -> File? {
-//        
-//    }
 }

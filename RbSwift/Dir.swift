@@ -89,14 +89,30 @@ public class Dir {
     ///   - permissions: An integer represents the posix permission.
     /// - Throws: When `FileManager#createDirectory(atPath:withIntermediateDirectories:attributes:)` throws.
     public static func mkdir(_ path: String, recursive: Bool = false, _ permissions: Int? = nil) throws {
+        var attributes: [String: Any] = [:]
         if let permissions = permissions {
-            try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: [FileAttributeKey.posixPermissions.rawValue: permissions])
-        } else {
-            try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: nil)
+            attributes[FileAttributeKey.posixPermissions.rawValue] = permissions
         }
+        try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: attributes)
+    }
+    
+    /// Deletes the named directory.
+    ///
+    ///     try Dir.rmdir("/a/folder/path")
+    ///
+    /// - Parameter path: A directory path
+    /// - Throws: Raises exception if the directory isn’t empty.
+    public static func rmdir(_ path: String) throws {
+        if Dir.isEmpty(path) {
+            
+        }
+        try FileManager.default.removeItem(atPath: path)
     }
     
     /// Returns true if the named file is a directory, false otherwise.
+    ///
+    ///     Dir.isEist("/a/folder/path/not/exists")     #=> false
+    ///     Dir.isEist("/a/folder/path/exists")         #=> true
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value indicates whether there is a directory in given path.
@@ -104,5 +120,21 @@ public class Dir {
         var isDirectory = false as ObjCBool
         let exist = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)
         return exist && isDirectory.boolValue
+    }
+    
+    /// Returns true if the named file is an empty directory, false if it is
+    /// not a directory or non-empty.
+    ///
+    ///     Dir.isEist("/a/empty/folder")           #=> true
+    ///     Dir.isEist("/a/folder/not/exists")      #=> false
+    ///     Dir.isEist("/a/folder/with/files")      #=> true
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: A bool value indicates the directory is not exists or is empty.
+    public static func isEmpty(_ path: String) -> Bool {
+        if let result = try? FileManager.default.contentsOfDirectory(atPath: path) {
+            return result.isEmpty
+        }
+        return true
     }
 }
