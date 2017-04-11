@@ -61,11 +61,43 @@ public class File {
         return ext
     }
     
-    public static func expand(path: String, in dir: String? = nil) -> String {
+    /// Converts a pathname to an absolute pathname. Relative paths are referenced from the current
+    /// working directory of the process unless `dir` is given, in which case it will be used as the starting
+    /// point. The given pathname may start with a “~”, which expands to the process owner’s home directory 
+    /// (the environment variable HOME must be set correctly).
+    ///
+    ///     let home = Dir.home()
+    /// 	File.expand(path: "~/file.swift")                   #=> "/absolute/path/to/home/file.swift"
+    /// 	File.expand(path: "file.swift", in: "/usr/bin")		#=> "/usr/bin/file.swift"
+    ///
+    /// - Parameters:
+    ///   - path: A file path.
+    ///   - dir: A directory path.
+    /// - Returns: A absolute path.
+    public static func expand(_ path: String, in dir: String? = nil) -> String {
         var filepath = Pathname(path)
         if let dir = dir {
             filepath = Pathname(dir) + filepath
+            return (filepath.path as NSString).standardizingPath
         }
-        return (filepath.path as NSString).expandingTildeInPath
+        return File.absolutePath(filepath.path)
     }
+    
+    public static func absolutePath(_ path: String) -> String {
+        let pathname = Pathname(path)
+        if pathname.isAbsolute {
+            return (path as NSString).standardizingPath
+        }
+        
+        let expandingPath = Pathname((path as NSString).expandingTildeInPath)
+        if expandingPath.isAbsolute {
+            return (expandingPath.path as NSString).standardizingPath
+        }
+        
+        return (Pathname(Dir.pwd) + pathname).path
+    }
+    
+//    public static func touch(_ path: String) -> File? {
+//        
+//    }
 }

@@ -30,5 +30,13 @@ class DirSpec: QuickSpec {
                 expect(value).to(equal("Inside another directory"))
             }
         }
+        
+        describe(".exist(path:)") {
+            it("Returns true if the named file is a directory, false otherwise.") {
+                expect(Dir.isExist("what/the/fuck/is/not/exists")).to(beFalse())
+                try! Dir.mkdir(("what/the/fuck/is/not/exists"), recursive: true)
+                expect(Dir.isExist("what/the/fuck/is/not/exists")).to(beTrue())
+            }
+        }
     }
 }
