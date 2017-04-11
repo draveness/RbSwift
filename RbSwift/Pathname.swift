@@ -52,6 +52,8 @@ public func +(lhs: Pathname, rhs: String) -> Pathname {
     return lhs.path.appendPath(rhs)
 }
 
+/// Appends a String fragment to another String to produce a new Path
+/// Origianally from https://github.com/kylef/PathKit/blob/master/Sources/PathKit.swift#L750
 private extension String {
     func appendPath(_ path: String) -> Pathname {
         if path.hasPrefix("/") {
@@ -102,8 +104,3 @@ private extension String {
         }
     }
 }
-
-/// Appends a String fragment to another String to produce a new Path
-/// Origianally from https://github.com/kylef/PathKit/blob/master/Sources/PathKit.swift#L750
-//private func +(lhs: String, rhs: String) -> Pathname {
-//}
