@@ -96,23 +96,36 @@ public class Dir {
         try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: attributes)
     }
     
+    /// Error throws when called `Dir#rmdir(path:)` method.
+    ///
+    /// - notEmpty: Directory is not empty.
+    /// - notExists: Directory is not exists.
+    public enum RemoveDirectoryError: Error {
+        case notEmpty
+        case cocoa(String)
+    }
+    
     /// Deletes the named directory.
     ///
     ///     try Dir.rmdir("/a/folder/path")
     ///
     /// - Parameter path: A directory path
-    /// - Throws: Raises exception if the directory isn’t empty.
+    /// - Throws: `RemoveDirectoryError` if the directory isn’t empty.
     public static func rmdir(_ path: String) throws {
-        if Dir.isEmpty(path) {
-            
+        if !Dir.isEmpty(path) {
+            throw RemoveDirectoryError.notEmpty
         }
-        try FileManager.default.removeItem(atPath: path)
+        do {
+            try FileManager.default.removeItem(atPath: path)
+        } catch {
+            throw RemoveDirectoryError.cocoa(error.localizedDescription)
+        }
     }
     
     /// Returns true if the named file is a directory, false otherwise.
     ///
-    ///     Dir.isEist("/a/folder/path/not/exists")     #=> false
-    ///     Dir.isEist("/a/folder/path/exists")         #=> true
+    ///     Dir.isExist("/a/folder/path/not/exists")     #=> false
+    ///     Dir.isExist("/a/folder/path/exists")         #=> true
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value indicates whether there is a directory in given path.
@@ -125,9 +138,9 @@ public class Dir {
     /// Returns true if the named file is an empty directory, false if it is
     /// not a directory or non-empty.
     ///
-    ///     Dir.isEist("/a/empty/folder")           #=> true
-    ///     Dir.isEist("/a/folder/not/exists")      #=> false
-    ///     Dir.isEist("/a/folder/with/files")      #=> true
+    ///     Dir.isEmpty("/a/empty/folder")           #=> true
+    ///     Dir.isEmpty("/a/folder/not/exists")      #=> false
+    ///     Dir.isEmpty("/a/folder/with/files")      #=> true
     ///
     /// - Parameter path: A directory path.
     /// - Returns: A bool value indicates the directory is not exists or is empty.
