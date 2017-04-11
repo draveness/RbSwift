@@ -15,7 +15,7 @@ class PathnameSpec: QuickSpec {
         describe(".+") {
             it("concat two path successfully.") {
                 expect(Pathname("home") + Pathname("work")).to(equal(Pathname("home/work")))
-                expect(Pathname("where/is/home") + Pathname("/work/dont/know")).to(equal(Pathname("where/is/home/work/dont/know")))
+                expect(Pathname("where/is/home") + Pathname("/work/dont/know")).to(equal(Pathname("/work/dont/know")))
                 expect(Pathname("where/is/home") + Pathname("work/dont/know")).to(equal(Pathname("where/is/home/work/dont/know")))
             }
         }

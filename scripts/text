@@ -1,2 +1,4 @@
-                expect(File.dirname("/home/work/file.swift")).to(equal("/home/work"))
+                let home = Dir.home()
+                expect(File.expand(path: "~/file.swift")).to(equal(home + "/file.swift"))
+                expect(File.expand(path: "file.swift", in: "/usr/bin")).to(equal("/usr/bin/file.swift"))
 

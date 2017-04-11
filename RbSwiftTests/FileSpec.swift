@@ -42,8 +42,9 @@ class FileSpec: QuickSpec {
         describe(".expand(path:in:)") {
             it("converts a pathname to an absolute pathname.") {
                 let home = Dir.home()
-                expect(File.expand(path: "~/file.swift")).to(equal(home + "/file.swift"))
-                expect(File.expand(path: "file.swift", in: "/usr/bin")).to(equal("/usr/bin/file.swift"))
+                expect(File.expand("~/file.swift")).to(equal(home + "/file.swift"))
+                expect(File.expand("file.swift", in: "/usr/bin")).to(equal("/usr/bin/file.swift"))
+                expect(File.expand("./file.swift")).to(equal(Dir.pwd + "/file.swift"))
             }
         }
     }

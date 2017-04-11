@@ -90,4 +90,14 @@ public class Dir {
             try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: nil)
         }
     }
+    
+    /// Returns true if the named file is a directory, false otherwise.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value indicates whether there is a directory in given path.
+    public static func isExist(_ path: String) -> Bool {
+        var isDirectory = false as ObjCBool
+        let exist = FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory)
+        return exist && isDirectory.boolValue
+    }
 }
