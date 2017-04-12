@@ -160,4 +160,12 @@ public class Dir {
         }
         return true
     }
+    
+    public static func entries(_ path: String) -> [String] {
+        do {
+            return try FileManager.default.contentsOfDirectory(atPath: path)
+        } catch {
+            return []
+        }
+    }
 }
