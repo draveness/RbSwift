@@ -65,3 +65,4 @@ iOSInjectionProject/
 .DS_Store
 
 .build/
+RbSwift.framework.zip
