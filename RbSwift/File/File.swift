@@ -127,14 +127,6 @@ public class File {
         return (File.dirname(path), File.basename(path))
     }
     
-    /// Returns true if the named file is a directory, and false otherwise.
-    ///
-    /// - Parameter path: A file path.
-    /// - Returns: A bool value.
-    public static func isDirectory(_ path: String) -> Bool {
-        return Dir.isExist(path)
-    }
-    
     /// Returns a new string formed by joining the strings using "/".
     ///
     /// 	File.join("usr", "bin", "swift")		#=> "usr/bin/swift"
@@ -153,5 +145,90 @@ public class File {
             return result.path
         }
         return ""
+    }
+    
+    /// Returns true if the named file is a directory, and false otherwise.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isDirectory(_ path: String) -> Bool {
+        return Dir.isExist(path)
+    }
+    
+    /// Returns true if the named file is executable.
+    /// 
+    ///     File.isExecutable("file.sh")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isExecutable(_ path: String) -> Bool {
+        return FileManager.default.isExecutableFile(atPath: path)
+    }
+    
+    /// Returns true if the named file is readable.
+    ///
+    ///     File.isReadable("file.swift")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isReadable(_ path: String) -> Bool {
+        return FileManager.default.isReadableFile(atPath: path)
+    }
+    
+    /// Returns true if the named file is writable.
+    ///
+    ///     File.isWritable("file.rb")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isWritable(_ path: String) -> Bool {
+        return FileManager.default.isWritableFile(atPath: path)
+    }
+    
+    /// Returns true if the named file is deletable.
+    ///
+    ///     File.isDeletable("file.py")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isDeletable(_ path: String) -> Bool {
+        return FileManager.default.isDeletableFile(atPath: path)
+    }
+    
+    /// Returns true if the named file exists, and false otherwise.
+    ///
+    ///     File.isExist("file.exs")
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isExist(_ path: String) -> Bool {
+        return FileManager.default.fileExists(atPath: path)
+    }
+
+    /// Changes permission bits on the named file(s) to the bit pattern represented by `permission`.
+    ///
+    ///     File.chmod(0o777, "file.swift)
+    ///
+    /// - Parameters:
+    ///   - permission: A permission bits.
+    ///   - paths: An array of file path.
+    public static func chmod(_ permission: Int, _ paths: String...) {
+        for path in paths {
+            var attributes = try! FileManager.default.attributesOfItem(atPath: path)
+            attributes[FileAttributeKey.posixPermissions] = permission
+            try! FileManager.default.setAttributes(attributes, ofItemAtPath: path)
+        }
+    }
+    
+    /// Returns the file size of the named file.
+    ///
+    ///     File.size("somefile")       #=> 1234
+    ///     File.size("emptyfile")      #=> 0
+    ///
+    /// - Parameter path: An file path.
+    /// - Returns: The size of file.
+    public static func size(_ path: String) -> Int {
+        let attributes = try! FileManager.default.attributesOfItem(atPath: path)
+        return attributes[FileAttributeKey.size] as! Int
     }
 }
