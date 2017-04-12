@@ -7,7 +7,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RbSwift"
-  s.version      = "0.2.2"
+  s.version      = "0.3.0"
   s.summary      = "A Swift port of convenient methods in Ruby and ActiveSupport"
   s.description  = <<-DESC
   RbSwift introduces a series of methods which is inspired by Ruby core library and
