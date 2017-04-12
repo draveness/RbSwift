@@ -1,3 +1,2 @@
-                expect(File.absolutePath("~/file.swift")).to(equal(home + "/file.swift"))
-                expect(File.absolutePath("./file.swift")).to(equal(Dir.pwd + "/file.swift"))
+                expect(File.join("usr", "bin", "swift")).to(equal("usr/bin/swift"))
 

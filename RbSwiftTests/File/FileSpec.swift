@@ -60,5 +60,11 @@ class FileSpec: QuickSpec {
                 expect(File.split("/home/gumby/.profile").1).to(equal(".profile"))
             }
         }
+        
+        describe(".join(paths:)") {
+            it("returns a new string formed by joining the strings using \"/\".") {
+                expect(File.join("usr", "bin", "swift")).to(equal("usr/bin/swift"))
+            }
+        }
     }
 }
