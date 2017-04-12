@@ -135,14 +135,20 @@ public class File {
         return Dir.isExist(path)
     }
     
+    /// Returns a new string formed by joining the strings using "/".
+    ///
+    /// 	File.join("usr", "bin", "swift")		#=> "usr/bin/swift"
+    ///
+    /// - Parameter paths: An array of file path.
+    /// - Returns: A new file path.
     public static func join(_ paths: String...) -> String {
         var pathnames = paths.flatMap(Pathname.init)
         if pathnames.count == 1 {
             return pathnames.first!.path
-        } else if pathnames.count == 2 {
-            var result = pathnames.pop()! + pathnames.pop()!
+        } else if pathnames.count >= 2 {
+            var result = pathnames.shift()! + pathnames.shift()!
             while pathnames.count > 0 {
-                result = result + pathnames.pop()!
+                result = result + pathnames.shift()!
             }
             return result.path
         }
