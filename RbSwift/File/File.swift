@@ -126,4 +126,26 @@ public class File {
     public static func split(_ path: String) -> (String, String) {
         return (File.dirname(path), File.basename(path))
     }
+    
+    /// Returns true if the named file is a directory, and false otherwise.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public static func isDirectory(_ path: String) -> Bool {
+        return Dir.isExist(path)
+    }
+    
+    public static func join(_ paths: String...) -> String {
+        var pathnames = paths.flatMap(Pathname.init)
+        if pathnames.count == 1 {
+            return pathnames.first!.path
+        } else if pathnames.count == 2 {
+            var result = pathnames.pop()! + pathnames.pop()!
+            while pathnames.count > 0 {
+                result = result + pathnames.pop()!
+            }
+            return result.path
+        }
+        return ""
+    }
 }
