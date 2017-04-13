@@ -16,7 +16,7 @@ class DirSpec: QuickSpec {
         let originalPath = Dir.pwd
 
         beforeEach {
-            try! Dir.mkdir(path, recursive: true)
+            FileUtils.mkdir_p(path)
             Dir.chdir(path)
         }
         
@@ -39,7 +39,7 @@ class DirSpec: QuickSpec {
         
         describe(".chdir(path:)") {
             it("changes the curernt working directory of the process to the ginven string.") {
-                try! Dir.mkdir("draveness/spool/mail", recursive: true)
+                FileUtils.mkdir_p("draveness/spool/mail")
                 Dir.chdir("draveness/spool/mail")
                 expect(Dir.pwd.hasSuffix("draveness/spool/mail")).to(beTrue())
                 
@@ -55,7 +55,7 @@ class DirSpec: QuickSpec {
                 let path = "what/the/fuck/is/not/exists"
                 try? Dir.rmdir(path)
                 expect(Dir.isExist(path)).to(beFalse())
-                try! Dir.mkdir((path), recursive: true)
+                FileUtils.mkdir_p((path))
                 expect(Dir.isExist(path)).to(beTrue())
                 try! Dir.rmdir(path)
                 expect(Dir.isExist(path)).to(beFalse())
@@ -72,12 +72,73 @@ class DirSpec: QuickSpec {
                 let path = "rmdir/what/the/fuck/is/not/exists"
 
                 // Creates directory and file
-                try! Dir.mkdir(path, recursive: true)
+                FileUtils.mkdir_p(path)
                 File.new(path + "/file.swift")
                 
                 expect {
                     try Dir.rmdir(path)
                 }.to(throwError())
+            }
+        }
+        
+        describe(".isExist(path:)") {
+            beforeEach {
+                FileUtils.mkdir_p("a/folder/with/files")
+                File.new("a/folder/with/files/text.swift")
+            }
+            
+            afterEach {
+                FileUtils.rm_rf("a/folder/with/files")
+            }
+
+            it("returns true if the folder is exists.") {
+                expect(Dir.isExist("a/folder/not/exists")).to(equal(false))
+                expect(Dir.isExist("a/folder/with/files")).to(equal(true))
+                expect(Dir.isExist("a/folder/with/files/text.swift")).to(equal(false))
+            }
+        }
+        
+        describe(".isEmpty(path:)") {
+            beforeEach {
+                FileUtils.mkdir_p("a/empty/folder")
+                FileUtils.mkdir_p("a/folder/with/files")
+                File.new("a/folder/with/files/text.swift")
+            }
+            
+            afterEach {
+                FileUtils.rm_rf("a/empty/folder")
+                FileUtils.rm_rf("a/folder/with/files")
+            }
+            
+            it("returns true if the folder is empty or not exists.") {
+                expect(Dir.isEmpty("a/empty/folder")).to(equal(true))
+                expect(Dir.isEmpty("a/folder/not/exists")).to(equal(true))
+            }
+            
+            it("returns false if the folder is not empty") {
+                expect(Dir.isEmpty("a/folder/with/files")).to(equal(false))
+            }
+        }
+        
+        describe(".entries(path:)") {
+            let entriesDir = "entries"
+            let files = ["hello.swift", "world.rb"]
+
+            beforeEach {
+                FileUtils.mkdir_p(entriesDir)
+                files.map { File.join(entriesDir, $0) }.each { FileUtils.touch($0) }
+            }
+
+            afterEach {
+                FileUtils.rm_rf(entriesDir)
+            }
+            
+            it("returns an array containing all named filenames.") {
+                expect(Dir.entries(entriesDir)).to(equal([".", ".."] + files))
+            }
+            
+            it("returns an empty array with not existing folder.") {
+                expect(Dir.entries("wtf/directory")).to(equal([]))
             }
         }
     }

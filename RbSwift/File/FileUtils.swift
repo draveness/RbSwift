@@ -17,8 +17,18 @@ public class FileUtils {
             try paths.forEach { try FileManager.default.removeItem(atPath: $0) }
         } catch { }
     }
-
-    @discardableResult public static func touch(_ path: String) -> Bool {
-        return FileManager.default.createFile(atPath: path, contents: nil, attributes: [:])
+    
+    public static func mkdir_p(_ paths: String...) {
+        do {
+            try paths.forEach { try Dir.mkdir($0, recursive: true) }
+        } catch { }
+    }
+    
+    public static func touch(_ paths: String...) {
+        paths.forEach { FileManager.default.createFile(atPath: $0, contents: nil, attributes: [:]) }
+    }
+    
+    public static func touch(_ paths: [String]) {
+        paths.forEach { FileManager.default.createFile(atPath: $0, contents: nil, attributes: [:]) }
     }
 }
