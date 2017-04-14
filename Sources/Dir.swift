@@ -149,8 +149,8 @@ public class Dir {
     /// not a directory or non-empty.
     ///
     ///     Dir.isEmpty("/a/empty/folder")           #=> true
-    ///     Dir.isEmpty("/a/folder/not/exists")      #=> false
-    ///     Dir.isEmpty("/a/folder/with/files")      #=> true
+    ///     Dir.isEmpty("/a/folder/not/exists")      #=> true
+    ///     Dir.isEmpty("/a/folder/with/files")      #=> false
     ///
     /// - Parameter path: A directory path.
     /// - Returns: A bool value indicates the directory is not exists or is empty.
@@ -159,5 +159,19 @@ public class Dir {
             return result.isEmpty
         }
         return true
+    }
+    
+    ///  Returns an array containing all of the filenames in the given directory. Will return an empty array
+    ///  if the named directory doesn’t exist.
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: An array of all filenames in the given directory.
+    public static func entries(_ path: String) -> [String] {
+        do {
+            let filenames = try FileManager.default.contentsOfDirectory(atPath: path)
+            return [".", ".."] + filenames
+        } catch {
+            return []
+        }
     }
 }
