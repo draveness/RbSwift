@@ -40,4 +40,8 @@ public extension Array where Element: Equatable {
         }
         return true
     }
+    
+    func isInclude(_ value: Element) -> Bool {
+        return isAny { $0 == value }
+    }
 }
