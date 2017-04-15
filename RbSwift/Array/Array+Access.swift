@@ -19,7 +19,7 @@ public extension Array {
     /// - Parameter num: The element index
     /// - Returns: An element at specific index or nil
     func at(_ num: Int) -> Element? {
-        guard num < self.length else { return nil }
+        guard num < length else { return nil }
         return self[num]
     }
     
@@ -63,7 +63,7 @@ public extension Array {
     /// - Parameter n: An integer of random elements count
     /// - Returns: An new array with random elements
     func sample(_ n: Int = 1) -> [Element] {
-        guard n > 0 else { return [] }
+        guard n.isPositive else { return [] }
         var candidates: [Element] = self
         var results: [Element] = []
         while results.count < n {
@@ -85,5 +85,52 @@ public extension Array {
     ///
     var shuffle: [Element] {
         return sample(self.length)
+    }
+    
+    /// Returns the tail of the array from the `position`.
+    ///
+    /// 	["a", "b", "c", "d"].from(0)		#=> ["a", "b", "c", "d"]
+    /// 	["a", "b", "c", "d"].from(2)		#=> ["c", "d"]
+    /// 	["a", "b", "c", "d"].from(10)   #=> []
+    /// 	[].from(0)                      #=> []
+    /// 	["a", "b", "c", "d"].from(-2)   #=> ["c", "d"]
+    /// 	["a", "b", "c"].from(-10)		#=> []
+    ///
+    /// - Parameter position: An integer value.
+    /// - Returns: An sub array of Element.
+    func from(_ position: Int) -> [Element] {
+        guard position <= length && position >= -length else { return [] }
+        let startIndex = position >= 0 ? position : position + length
+        return self[startIndex..<length].to_a
+    }
+    
+    /// Returns the beginning of the array up to the `position`.
+    ///
+    /// 	["a", "b", "c", "d"].to(0)		#=> ["a"]
+    /// 	["a", "b", "c", "d"].to(2)		#=> ["a", "b", "c"]
+    /// 	["a", "b", "c", "d"].to(10)		#=> ["a", "b", "c", "d"]
+    /// 	[].to(0)                        #=> []
+    /// 	["a", "b", "c", "d"].to(-2)		#=> ["a", "b", "c"]
+    /// 	["a", "b", "c"].to(-10)         #=> []
+    ///
+    /// - Parameter position: An integer value.
+    /// - Returns: An sub array of Element.
+    func to(_ position: Int) -> [Element] {
+        guard position >= -length else { return [] }
+        let endIndex = position >= 0 ? Swift.min(position + 1, length) : position + length + 1
+        return self[0..<endIndex].to_a
+    }
+}
+
+public extension Array where Element: Equatable {
+    /// Returns a copy of the Array without the specified elements.
+    ///
+    ///     let people = ["David", "Rafael", "Aaron", "Todd"]
+    /// 	people.without("David", "Aaron")		#=> ["Rafael", "Todd"]
+    ///
+    /// - Parameter elements: An array of specific elements.
+    /// - Returns: An new array.
+    func without(_ elements: Element...) -> [Element] {
+        return self - elements
     }
 }

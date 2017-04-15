@@ -35,5 +35,34 @@ class ArrayAccessSpec: QuickSpec {
                 expect(arr.shuffle.sorted { $0 < $1 }).to(equal([1,2,3]))
             }
         }
+        
+        describe(".from(position:)") {
+            it("returns the tail of the array from the `position`") {
+                expect(["a", "b", "c", "d"].from(0)).to(equal(["a", "b", "c", "d"]))
+                expect(["a", "b", "c", "d"].from(2)).to(equal(["c", "d"]))
+                expect(["a", "b", "c", "d"].from(10)).to(equal([]))
+                expect([].from(0).isEmpty).to(beTrue())
+                expect(["a", "b", "c", "d"].from(-2)).to(equal(["c", "d"]))
+                expect(["a", "b", "c"].from(-10)).to(equal([]))
+            }
+        }
+        
+        describe(".to(position:)") {
+            it("returns the tail of the array from the `position`") {
+                expect(["a", "b", "c", "d"].to(0)).to(equal(["a"]))
+                expect(["a", "b", "c", "d"].to(2)).to(equal(["a", "b", "c"]))
+                expect(["a", "b", "c", "d"].to(10)).to(equal(["a", "b", "c", "d"]))
+                expect([].to(0).isEmpty).to(beTrue())
+                expect(["a", "b", "c", "d"].to(-2)).to(equal(["a", "b", "c"]))
+                expect(["a", "b", "c"].to(-10)).to(equal([]))
+            }
+        }
+        
+        describe(".without(elements:)") {
+            it("returns a copy of the Array without the specified elements.") {
+                let people = ["David", "Rafael", "Aaron", "Todd"]
+                expect(people.without("David", "Aaron")).to(equal(["Rafael", "Todd"]))
+            }
+        }
     }
 }
