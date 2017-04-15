@@ -30,5 +30,17 @@ class ArrayBoolSpec: QuickSpec {
                 expect(arr3.isEql(arr4)).to(beFalse())
             }
         }
+        
+        describe("isInclude(value:)") {
+            it("returns true if array contains the element") {
+                expect([1, 2, 3].isInclude(1)).to(beTrue())
+                expect(["a", "b", "c"].isInclude("b")).to(beTrue())
+            }
+            
+            it("returns false if any element of the array satisfy specific condition") {
+                expect([1, 2, 3].isInclude(100)).to(beFalse())
+                expect(["a", "b", "c"].isInclude("bbb")).to(beFalse())
+            }
+        }
     }
 }

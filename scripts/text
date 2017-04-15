@@ -1,2 +1,6 @@
-                expect(File.join("usr", "bin", "swift")).to(equal("usr/bin/swift"))
+                expect([1, 2, 3].isInclude(1)).to(beTrue())
+                expect(["a", "b", "c"].isInclude("b")).to(beTrue())
+
+                expect([1, 2, 3].isInclude(100)).to(beFalse())
+                expect(["a", "b", "c"].isInclude("bbb")).to(beFalse())
 
