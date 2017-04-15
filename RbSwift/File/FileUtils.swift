@@ -25,7 +25,7 @@ public class FileUtils {
     }
     
     public static func touch(_ paths: String...) {
-        paths.forEach { FileManager.default.createFile(atPath: $0, contents: nil, attributes: [:]) }
+        touch(paths)
     }
     
     public static func touch(_ paths: [String]) {
