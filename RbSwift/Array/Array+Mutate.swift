@@ -150,7 +150,7 @@ public extension Array {
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: Self
     @discardableResult mutating func selected(closure: (Element) -> Bool) -> [Element] {
-        self = select(closure: closure)
+        self = select(closure)
         return self
     }
     
@@ -171,7 +171,7 @@ public extension Array {
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: Self
     @discardableResult mutating func rejected(closure: (Element) -> Bool) -> [Element] {
-        self = reject(closure: closure)
+        self = reject(closure)
         return self
     }
 }

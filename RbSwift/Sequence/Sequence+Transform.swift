@@ -18,14 +18,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func select(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        var result: [Iterator.Element] = []
-        for item in self {
-            if closure(item) {
-                result.append(item)
-            }
-        }
-        return result
+    func select(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> [Self.Iterator.Element] {
+        return try filter(closure)
     }
     
     /// An alias to `select(closure:)` method.
@@ -36,8 +30,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func keepIf(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        return select(closure: closure)
+    func keepIf(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> [Self.Iterator.Element] {
+        return try select(closure)
     }
     
     /// Returns a new array excluding all elements of `self` for which the given block returns a true value.
@@ -48,14 +42,10 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func reject(closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        var result: [Iterator.Element] = []
-        for item in self {
-            if !closure(item) {
-                result.append(item)
-            }
-        }
-        return result
+    func reject(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> [Self.Iterator.Element] {
+        return try filter({ element in
+            try !closure(element)
+        })
     }
     
     /// An alias to reject, see also `Sequence#reject(closure:)`
@@ -66,8 +56,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func deleteIf(_ closure: (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        return reject(closure: closure)
+    func deleteIf(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> [Self.Iterator.Element] {
+        return try reject(closure)
     }
     
     /// Drops elements up to, but not including, the first element for which the 
@@ -79,12 +69,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func dropWhile(_ closure: @escaping (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        var drop = true
-        return flatMap { item in
-            drop = drop && closure(item)
-            return drop ? nil : item
-        }
+    func dropWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.SubSequence {
+        return try drop(while: closure)
     }
     
     /// Passes elements to the block until the block returns nil or false, then stops 
@@ -96,12 +82,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func takeWhile(_ closure: @escaping (Iterator.Element) -> Bool) -> [Iterator.Element] {
-        var take = true
-        return flatMap { item in
-            take = take && closure(item)
-            return take ? item : nil
-        }
+    func takeWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.SubSequence {
+        return try prefix(while: closure)
     }
     
     /// Invokes the given block once for each element of self.
@@ -113,12 +95,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a value
     /// - Returns: A new array
-    func collect<T>(closure: (Iterator.Element) -> T) -> [T] {
-        var result: [T] = []
-        for item in self {
-            result.append(closure(item))
-        }
-        return result
+    func collect<T>(closure: (Self.Iterator.Element) throws -> T) rethrows -> [T] {
+        return try map(closure)
     }
     
     /// Returns a new array with the elements of both arrays within it.
@@ -131,7 +109,7 @@ public extension Sequence {
     ///
     /// - Parameter other: Another array
     /// - Returns: A new array contains all the element in both array
-    func concat(_ other: [Iterator.Element]) -> [Iterator.Element] {
+    func concat(_ other: [Self.Iterator.Element]) -> [Self.Iterator.Element] {
         return self + other
     }
     
@@ -145,8 +123,8 @@ public extension Sequence {
     ///
     /// - Parameter other: Another array
     /// - Returns: A new array contains all the element in both array
-    func concat(_ others: Iterator.Element...) -> [Iterator.Element] {
-        return self.concat(others)
+    func concat(_ others: Self.Iterator.Element...) -> [Self.Iterator.Element] {
+        return concat(others)
     }
     
     /// Counts the number of elements for which the block returns a true value.
@@ -158,11 +136,13 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: An integer of the count of element make the block returns true
-    func count(closure: (Iterator.Element) -> Bool) -> Int {
-        return self.filter(closure).count
+    func count(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Int {
+        return try filter(closure).count
     }
     
     /// Returns a new array that is a one-dimensional flattening of self (recursively)
+    ///
+    /// 	[1, 2, [3, 4, 5, [6, 7, [8]]]].flatten()		#=> [1, 2, 3, 4, 5, 6, 7, 8]
     ///
     /// - Returns: A new array that is a one-dimensional flattening of self
     func flatten<T>() -> [T] {
@@ -191,9 +171,9 @@ public extension Sequence {
     ///
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of first n elements
-    func take(_ num: Int) -> [Iterator.Element] {
+    func take(_ num: Int) -> [Self.Iterator.Element] {
         guard num.isPositive else { return [] }
-        guard num < self.count else { return Array<Iterator.Element>(self) }
+        guard num < self.count else { return self.to_a }
         var results: [Iterator.Element] = []
         num.times { index in
             results.append(self.to_a[index])
@@ -215,8 +195,8 @@ public extension Sequence {
     ///
     /// - Parameter num: How many element should be dropped from the beginning
     /// - Returns: An new array with first n elements dropped
-    func drop(_ num: Int) -> [Iterator.Element] {
-        guard num.isPositive else { return Array<Iterator.Element>(self) }
+    func drop(_ num: Int) -> [Self.Iterator.Element] {
+        guard num.isPositive else { return self.to_a }
         guard num < self.count else { return [] }
         var results: [Iterator.Element] = []
         (self.count - num).times { index in
@@ -237,7 +217,7 @@ public extension Sequence {
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of first n elements
     /// - See Also: `Sequence#take(num:)`
-    func first(_ num: Int) -> [Iterator.Element] {
+    func first(_ num: Int) -> [Self.Iterator.Element] {
         return take(num)
     }
     
@@ -252,8 +232,8 @@ public extension Sequence {
     ///
     /// - Parameter num: An integer specifies the element of the returning array
     /// - Returns: An new array of last n elements
-    func last(_ num: Int) -> [Iterator.Element] {
-        var result = Array<Iterator.Element>(self)
+    func last(_ num: Int) -> [Self.Iterator.Element] {
+        var result = self.to_a
         guard num.isPositive else { return [] }
         guard num < self.length else { return result }
         result.removeFirst(self.length - num)
@@ -273,11 +253,11 @@ public extension Sequence {
     ///   - n: An integer that indicates how many times the element in array should be called
     ///   - closure: A closure that accepts the element in array as parameter
     /// - Returns: An new array with every elements in array repeated for n times
-    @discardableResult func cycle(_ n: Int = 1, closure: ((Iterator.Element) -> Void)? = nil) -> [Iterator.Element] {
+    @discardableResult func cycle(_ n: Int = 1, closure: ((Self.Iterator.Element) throws -> Void)? = nil) rethrows -> [Self.Iterator.Element] {
         guard n.isPositive else { return [] }
         let results = self.to_a * n
         if let closure = closure {
-            results.forEach { closure($0) }
+            try results.forEach { try closure($0) }
         }
         return results
     }

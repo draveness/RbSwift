@@ -47,17 +47,17 @@ class SequencTransformSpec: QuickSpec {
         
         describe(".dropWhile(closure:)") {
             it("drops elements up to, but not including, the first element for which the block returns nil or false and returns an array containing the remaining elements") {
-                expect([1, 2, 3].dropWhile { $0 > 2 }).to(equal([1, 2, 3]))
-                expect([1, 2, 3].dropWhile { $0 <= 2 }).to(equal([3]))
-                expect([1, 2, 3].dropWhile { _ in false }).to(equal([1, 2, 3]))
+                expect([1, 2, 3].dropWhile { $0 > 2 }.to_a).to(equal([1, 2, 3]))
+                expect([1, 2, 3].dropWhile { $0 <= 2 }.to_a).to(equal([3]))
+                expect([1, 2, 3].dropWhile { _ in false }.to_a).to(equal([1, 2, 3]))
             }
         }
         
         describe(".takeWhile(closure:)") {
             it("passes elements to the block until the block returns nil or false, then stops iterating and returns an array of all prior elements") {
-                expect([1, 2, 3].takeWhile { $0 > 2 }).to(equal([]))
-                expect([1, 2, 3].takeWhile { $0 <= 2 }).to(equal([1, 2]))
-                expect([1, 2, 3].takeWhile { _ in false }).to(equal([]))
+                expect([1, 2, 3].takeWhile { $0 > 2 }.to_a).to(equal([]))
+                expect([1, 2, 3].takeWhile { $0 <= 2 }.to_a).to(equal([1, 2]))
+                expect([1, 2, 3].takeWhile { _ in false }.to_a).to(equal([]))
             }
         }
         

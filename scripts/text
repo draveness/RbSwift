@@ -1,6 +1,2 @@
-                expect([1, 2, 3].isInclude(1)).to(beTrue())
-                expect(["a", "b", "c"].isInclude("b")).to(beTrue())
-
-                expect([1, 2, 3].isInclude(100)).to(beFalse())
-                expect(["a", "b", "c"].isInclude("bbb")).to(beFalse())
+                expect([1, 2, [3, 4, 5, [6, 7, [8]]]].flatten()).to(equal([1, 2, 3, 4, 5, 6, 7, 8]))
 

@@ -244,8 +244,8 @@ public extension Array {
     func rotate(_ count: Int = 1) -> [Element] {
         var rotate = count % self.length
         while rotate < 0 { rotate += self.length }
-        let head = self.first(rotate)
-        let tail = self.dropFirst(rotate)
+        let head = self.first(rotate).to_a
+        let tail = self.dropFirst(rotate).to_a
         return tail + head
     }
 }

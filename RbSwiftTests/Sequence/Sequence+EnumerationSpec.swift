@@ -56,5 +56,18 @@ class SequenceEnumerationSpec: QuickSpec {
                 expect(result).to(equal([3, 2, 1]))
             }
         }
+        
+        describe(".withIndex") {
+            it("returns an enumerated seqeuence") {
+                var indexes: [Int] = []
+                var result: [Int] = []
+                for (index, element) in [10, 20, 30].withIndex {
+                    indexes.append(index)
+                    result.append(element)
+                }
+                expect(indexes).to(equal([0, 1, 2]))
+                expect(result).to(equal([10, 20, 30]))
+            }
+        }
     }
 }
