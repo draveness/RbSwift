@@ -29,9 +29,9 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A bool value indicates there is an element cause the block to return true
-    func isAny(closure: (Iterator.Element) -> Bool) -> Bool {
-        return reduce(false) { (result, element) in
-            return result || closure(element)
+    func isAny(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
+        return try reduce(false) { (result, element) in
+            return try closure(element) || result
         }
     }
     
@@ -45,9 +45,9 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A bool value indicates all the elements in array cause the block to return true
-    func isAll(closure: (Iterator.Element) -> Bool) -> Bool {
-        return reduce(true) { (result, element) in
-            return result && closure(element)
+    func isAll(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Bool {
+        return try reduce(true) { (result, element) in
+            return try closure(element) && result
         }
     }
 }

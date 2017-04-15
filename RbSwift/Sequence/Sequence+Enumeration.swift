@@ -18,8 +18,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: An closure will passed to forEach method
     /// - Returns: Self
-    @discardableResult func each(_ closure: (Iterator.Element) -> Void) -> Self {
-        forEach(closure)
+    @discardableResult func each(_ closure: (Self.Iterator.Element) throws -> Void) rethrows -> Self {
+        try forEach(closure)
         return self
     }
     
@@ -32,9 +32,9 @@ public extension Sequence {
     ///
     /// - Parameter closure: A closure which accepts a index and an element
     /// - Returns: Self
-    @discardableResult func eachWithIndex(_ closure: (Int, Iterator.Element) -> Void) -> Self {
+    @discardableResult func eachWithIndex(_ closure: (Int, Self.Iterator.Element) throws -> Void) rethrows -> Self {
         for (index, item) in self.enumerated() {
-            closure(index, item)
+            try closure(index, item)
         }
         return self
     }
@@ -51,10 +51,10 @@ public extension Sequence {
     ///
     /// - Parameter closure: A closure which accepts a index and an element
     /// - Returns: An new array with mapped value
-    func mapWithIndex<T>(_ closure: (Int, Iterator.Element) -> T) -> [T] {
+    func mapWithIndex<T>(_ closure: (Int, Iterator.Element) throws -> T) rethrows -> [T] {
         var results: [T] = []
         for (index, item) in self.enumerated() {
-            results.append(closure(index, item))
+            try results.append(closure(index, item))
         }
         return results
     }
@@ -67,8 +67,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A closure will eventually passed to forEach method
     /// - Returns: Self
-    @discardableResult func reverseEach(_ closure: (Iterator.Element) -> Void) -> Self {
-        self.reversed().each(closure)
+    @discardableResult func reverseEach(_ closure: (Self.Iterator.Element) throws -> Void) rethrows -> Self {
+        try self.reversed().each(closure)
         return self
     }
 }

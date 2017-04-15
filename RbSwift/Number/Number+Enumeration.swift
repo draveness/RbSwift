@@ -48,8 +48,8 @@ public extension Int {
     ///   - limit: A integer specifies the last int to enumerate
     ///   - step: A int used to step the array
     ///   - closure: A closure accepts an integer
-    func downto(_ limit: Int, step: Int = 1, closure: (Int) -> Void) {
-        return downto(limit).forEach(closure)
+    func downto(_ limit: Int, step: Int = 1, closure: (Int) throws -> Void) rethrows {
+        return try downto(limit).forEach(closure)
     }
     
     /// Returns an array of int from self up to and including limit.
@@ -90,8 +90,8 @@ public extension Int {
     ///   - limit: A integer specifies the last int to enumerate
     ///   - step: A int used to step the array
     ///   - closure: A closure accepts an integer
-    func upto(_ limit: Int, step: Int = 1, closure: (Int) -> Void) {
-        return upto(limit).forEach(closure)
+    func upto(_ limit: Int, step: Int = 1, closure: (Int) throws -> Void) rethrows {
+        return try upto(limit).forEach(closure)
     }
     
     /// Execute the block for self times
@@ -105,9 +105,9 @@ public extension Int {
     ///     }
     ///
     /// - Parameter closure: A closure accepts Void and returns Void
-    func times(closure: @escaping (Void) -> Void) {
-        0.upto(self - 1).forEach { _ in
-            closure()
+    func times(_ closure: @escaping (Void) throws -> Void) rethrows {
+        try 0.upto(self - 1).forEach { _ in
+            try closure()
         }
     }
     
@@ -120,10 +120,10 @@ public extension Int {
     ///
     /// - Parameter closure: A closure accepts Void and returns Void
     /// - Returns: An array
-    @discardableResult func times<T>(closure: @escaping (Void) -> T) -> [T] {
+    @discardableResult func times<T>(_ closure: @escaping (Void) throws -> T) rethrows -> [T] {
         var result: [T] = []
-        0.upto(self - 1).forEach { _ in
-            result.append(closure())
+        try 0.upto(self - 1).forEach { _ in
+            try result.append(closure())
         }
         return result
     }
@@ -139,8 +139,8 @@ public extension Int {
     ///     }
     ///
     /// - Parameter closure: A closure accepts an int counter and returns Void
-    func times(closure: (Int) -> Void) {
-        0.upto(self - 1).forEach(closure)
+    func times(_ closure: (Int) throws -> Void) rethrows {
+        try 0.upto(self - 1).forEach(closure)
     }
     
     
@@ -153,10 +153,10 @@ public extension Int {
     ///
     /// - Parameter closure: A closure accepts Void and returns Void
     /// - Returns: An array
-    @discardableResult func times<T>(closure: @escaping (Int) -> T) -> [T] {
+    @discardableResult func times<T>(_ closure: @escaping (Int) throws -> T) rethrows -> [T] {
         var result: [T] = []
-        0.upto(self - 1).forEach { index in
-            result.append(closure(index))
+        try 0.upto(self - 1).forEach { index in
+            try result.append(closure(index))
         }
         return result
     }

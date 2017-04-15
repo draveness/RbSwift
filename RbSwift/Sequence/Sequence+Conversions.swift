@@ -10,7 +10,7 @@ import Foundation
 
 public extension Sequence {
     /// Returns an array with all elements in sequence.
-    var to_a: [Iterator.Element] {
+    var to_a: [Self.Iterator.Element] {
         return self.map { $0 }
     }
 }
