@@ -131,19 +131,25 @@ public extension Hash {
         }
     }
     
-    func except(_ keys: Key...) -> Hash<Key, Value> {
-        return self
+    func except(_ keys: Key...) -> [Key: Value] {
+        return except(keys)
     }
     
-    func except(_ keys: [Key]) -> Hash<Key, Value> {
-        return self
+    func except(_ keys: [Key]) -> [Key: Value] {
+        var results: [Key: Value] = [:]
+        for (key, value) in self {
+            if !keys.contains(key) {
+                results[key] = value
+            }
+        }
+        return results
     }
     
-    @discardableResult mutating func excepted(_ keys: Key...) -> Hash<Key, Value> {
+    @discardableResult mutating func excepted(_ keys: Key...) -> [Key: Value] {
         return excepted(keys)
     }
     
-    @discardableResult mutating func excepted(_ keys: [Key]) -> Hash<Key, Value> {
+    @discardableResult mutating func excepted(_ keys: [Key]) -> [Key: Value] {
         self = except(keys)
         return self
     }
