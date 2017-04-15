@@ -54,4 +54,14 @@ public extension Array {
     var tenth: Element {
         return self[9]
     }
+    
+    /// Equals to `self[-2]`
+    var secondToLast: Element {
+        return self[length-2]
+    }
+    
+    /// Equals to `self[-3]`
+    var thirdToLast: Element {
+        return self[length-3]
+    }
 }

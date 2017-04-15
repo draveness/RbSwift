@@ -26,6 +26,8 @@ class ArrayOrdinalSpec: QuickSpec {
                 expect(arr.eighth).to(equal(8))
                 expect(arr.ninth).to(equal(9))
                 expect(arr.tenth).to(equal(10))
+                expect(arr.secondToLast).to(equal(9))
+                expect(arr.thirdToLast).to(equal(8))
             }
         }
     }
