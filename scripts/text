@@ -1,4 +1,7 @@
-                let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                expect(arr.split(3) == [[1, 2], [4, 5, 6, 7, 8, 9, 10]]).to(beTrue())
-                expect(arr.split { $0 % 3 == 0 } == [[1, 2], [4, 5], [7, 8], [10]]).to(beTrue())
+                expect([].to_sentence).to(equal(""))
+                expect(["one"].to_sentence).to(equal("one"))
+                expect(["one", "two"].to_sentence).to(equal("one and two"))
+                expect(["one", "two", "three"].to_sentence).to(equal("one, two, and three"))
+                expect(["one", "two"].to_sentence(twoWordsConnector: "-")).to(equal("one-two"))
+                expect(["one", "two", "three"].to_sentence(wordsConnector: " or ", lastWordConnector: " or at least ")).to(equal("one or two or at least three"))
 
