@@ -1,7 +1,7 @@
-                expect([].to_sentence).to(equal(""))
-                expect(["one"].to_sentence).to(equal("one"))
-                expect(["one", "two"].to_sentence).to(equal("one and two"))
-                expect(["one", "two", "three"].to_sentence).to(equal("one, two, and three"))
-                expect(["one", "two"].to_sentence(twoWordsConnector: "-")).to(equal("one-two"))
-                expect(["one", "two", "three"].to_sentence(wordsConnector: " or ", lastWordConnector: " or at least ")).to(equal("one or two or at least three"))
+                let hash = [1: "one", 2: "two", 3: "three"]
+                expect(hash.except(1, 2)).to(equal([3: "three"]))
+                expect(hash).to(equal([1: "one", 2: "two", 3: "three"]))
+                var hash = [1: "one", 2: "two", 3: "three"]
+                expect(hash.excepted(1, 2)).to(equal([3: "three"]))
+                expect(hash).to(equal([3: "three"]))
 

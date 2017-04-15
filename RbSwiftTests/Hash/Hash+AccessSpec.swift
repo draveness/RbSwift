@@ -37,5 +37,31 @@ class HashAccessSpec: QuickSpec {
                 expect(hash.rassoc("forty-two")).to(beNil())
             }
         }
+        
+        describe(".except(keys:)") {
+            it("returns a hash that includes everything except given keys.") {
+                let hash = [1: "one", 2: "two", 3: "three"]
+                expect(hash.except(1, 2)).to(equal([3: "three"]))
+                expect(hash).to(equal([1: "one", 2: "two", 3: "three"]))
+            }
+            
+            it("removes the given keys from hash and returns it.") {
+                var hash = [1: "one", 2: "two", 3: "three"]
+                expect(hash.excepted(1, 2)).to(equal([3: "three"]))
+                expect(hash).to(equal([3: "three"]))
+            }
+        }
+        
+        describe(".extract(keys:)") {
+            it("removes and returns the key/value pairs matching the given keys.") {
+                var hash1 = [1: "one", 2: "two", 3: "three"]
+                expect(hash1.extract(1, 2)).to(equal([1: "one", 2: "two"]))
+                expect(hash1).to(equal([3: "three"]))
+                
+                var hash2 = [1: "one", 2: "two", 3: "three"]
+                expect(hash2.extract([1, 4])).to(equal([1: "one"]))
+                expect(hash2).to(equal([2: "two", 3: "three"]))
+            }
+        }
     }
 }

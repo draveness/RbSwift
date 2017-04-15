@@ -131,10 +131,26 @@ public extension Hash {
         }
     }
     
+    /// Returns a hash that includes everything except given keys.
+    ///
+    ///     let hash = [1: "one", 2: "two", 3: "three"]
+    /// 	hash.except(1, 2)		#=> [3: "three"]
+    /// 	hash                    #=> [1: "one", 2: "two", 3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: An new hash without passing keys.
     func except(_ keys: Key...) -> [Key: Value] {
         return except(keys)
     }
     
+    /// Returns a hash that includes everything except given keys.
+    ///
+    ///     let hash = [1: "one", 2: "two", 3: "three"]
+    /// 	hash.except(1, 2)		#=> [3: "three"]
+    /// 	hash                    #=> [1: "one", 2: "two", 3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: An new hash without passing keys.
     func except(_ keys: [Key]) -> [Key: Value] {
         var results: [Key: Value] = [:]
         for (key, value) in self {
@@ -145,13 +161,68 @@ public extension Hash {
         return results
     }
     
+    /// Removes the given keys from hash and returns it.
+    ///
+    ///     var hash = [1: "one", 2: "two", 3: "three"]
+    /// 	hash.excepted(1, 2)		#=> [3: "three"]
+    /// 	hash	             	#=> [3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: Key/value pairs with given keys.
     @discardableResult mutating func excepted(_ keys: Key...) -> [Key: Value] {
         return excepted(keys)
     }
     
+    /// Removes the given keys from hash and returns it.
+    ///
+    ///     var hash = [1: "one", 2: "two", 3: "three"]
+    /// 	hash.excepted(1, 2)		#=> [3: "three"]
+    /// 	hash	             	#=> [3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: Key/value pairs with given keys.
     @discardableResult mutating func excepted(_ keys: [Key]) -> [Key: Value] {
         self = except(keys)
         return self
+    }
+    
+    /// Removes and returns the key/value pairs matching the given keys.
+    ///
+    ///     var hash1 = [1: "one", 2: "two", 3: "three"]
+    /// 	hash1.extract(1, 2)		#=> [1: "one", 2: "two"]
+    /// 	hash1                   #=> [3: "three"]
+    ///
+    ///     var hash2 = [1: "one", 2: "two", 3: "three"]
+    /// 	hash2.extract(1, 4)		#=> [1: "one"]
+    /// 	hash2                   #=> [2: "two", 3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: Key-value pairs matching the given keys
+    @discardableResult mutating func extract(_ keys: Key...) -> [Key: Value] {
+        return extract(keys)
+    }
+    
+    /// Removes and returns the key/value pairs matching the given keys.
+    ///
+    ///     var hash1 = [1: "one", 2: "two", 3: "three"]
+    /// 	hash1.extract(1, 2)		#=> [1: "one", 2: "two"]
+    /// 	hash1                   #=> [3: "three"]
+    ///
+    ///     var hash2 = [1: "one", 2: "two", 3: "three"]
+    /// 	hash2.extract(1, 4)		#=> [1: "one"]
+    /// 	hash2                   #=> [2: "two", 3: "three"]
+    ///
+    /// - Parameter keys: An array of keys.
+    /// - Returns: Key-value pairs matching the given keys
+    @discardableResult mutating func extract(_ keys: [Key]) -> [Key: Value] {
+        var results: [Key: Value] = [:]
+        for (key, value) in self {
+            if keys.contains(key) {
+                results[key] = value
+                removeValue(forKey: key)
+            }
+        }
+        return results
     }
 }
 
