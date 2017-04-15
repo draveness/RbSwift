@@ -77,4 +77,52 @@ public extension Array {
         }
         return groups
     }
+    
+    /// Divides the array into one or more subarrays based on a delimiting `value`
+    /// or the result of an block.
+    ///
+    ///     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    /// 	arr.split(3)    #=> [[1, 2], [4, 5, 6, 7, 8, 9, 10]]
+    ///
+    /// 	arr.split { 
+    ///         $0 % 3 == 0 
+    ///     }   #=> [[1, 2], [4, 5], [7, 8], [10]]
+    ///
+    /// - Parameter closure: A closure accepts element and returns bool value.
+    /// - Returns: A nested array.
+    @discardableResult func split(_ closure: (Element) -> Bool) -> [[Element]] {
+        var groups: [[Element]] = []
+        var lastGroup: [Element] = []
+        eachWithIndex { (index, elem) in
+            if closure(elem) {
+                groups.append(lastGroup)
+                lastGroup = []
+            } else {
+                lastGroup.append(elem)
+            }
+            
+            if index == self.length - 1 {
+                groups.append(lastGroup)
+            }
+        }
+        return groups
+    }
+}
+
+public extension Array where Element: Equatable {
+    /// Divides the array into one or more subarrays based on a delimiting `value`
+    /// or the result of an block.
+    ///
+    ///     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    /// 	arr.split(3)    #=> [[1, 2], [4, 5, 6, 7, 8, 9, 10]]
+    ///
+    /// 	arr.split {
+    ///         $0 % 3 == 0
+    ///     }   #=> [[1, 2], [4, 5], [7, 8], [10]]
+    ///
+    /// - Parameter value: A value used to split the array.
+    /// - Returns: A nested array.
+    @discardableResult func split(_ value: Element) -> [[Element]] {
+        return split { $0 == value }
+    }
 }

@@ -1,5 +1,4 @@
-                expect(arr.inGroup(of: 0) == []).to(beTrue())
-                expect(arr.inGroup(of: 3) == [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]).to(beTrue())
-                expect(arr.inGroup(of: 4) == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10]]).to(beTrue())
-                expect(arr.inGroup(of: 4, fill: 0) == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 0, 0]]).to(beTrue())
+                let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                expect(arr.split(3) == [[1, 2], [4, 5, 6, 7, 8, 9, 10]]).to(beTrue())
+                expect(arr.split { $0 % 3 == 0 } == [[1, 2], [4, 5], [7, 8], [10]]).to(beTrue())
 
