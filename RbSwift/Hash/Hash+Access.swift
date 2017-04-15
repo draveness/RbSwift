@@ -130,6 +130,23 @@ public extension Hash {
             return result
         }
     }
+    
+    func except(_ keys: Key...) -> Hash<Key, Value> {
+        return self
+    }
+    
+    func except(_ keys: [Key]) -> Hash<Key, Value> {
+        return self
+    }
+    
+    @discardableResult mutating func excepted(_ keys: Key...) -> Hash<Key, Value> {
+        return excepted(keys)
+    }
+    
+    @discardableResult mutating func excepted(_ keys: [Key]) -> Hash<Key, Value> {
+        self = except(keys)
+        return self
+    }
 }
 
 // MARK: - Access
