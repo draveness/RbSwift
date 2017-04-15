@@ -21,7 +21,7 @@ public extension Array {
     }
     
     /// Equals to `self[3]`.
-    var forth: Element {
+    var fourth: Element {
         return self[3]
     }
     

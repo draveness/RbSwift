@@ -18,7 +18,7 @@ class ArrayOrdinalSpec: QuickSpec {
                 expect(arr.first).to(equal(1))
                 expect(arr.second).to(equal(2))
                 expect(arr.third).to(equal(3))
-                expect(arr.forth).to(equal(4))
+                expect(arr.fourth).to(equal(4))
                 expect(arr.fifth).to(equal(5))
                 expect(arr.sixth).to(equal(6))
                 expect(arr.seventh).to(equal(7))
