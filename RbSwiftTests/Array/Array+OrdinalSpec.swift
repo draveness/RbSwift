@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class ArrayOrdinalSpec: QuickSpec {
-    
     override func spec() {
         describe(".ordinals") {
             it("returns element with specific index.") {

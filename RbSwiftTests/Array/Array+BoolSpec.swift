@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class ArrayBoolSpec: QuickSpec {
-    
     override func spec() {
         describe(".isEql(other:)") {
             it("returns true if the elements of both arrays are exactly the same") {

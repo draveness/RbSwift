@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class ArrayMutateSpec: QuickSpec {
-    
     override func spec() {
         describe(".clear") {
             it("makes the array empty") {

@@ -1,3 +1,5 @@
-                let people = ["David", "Rafael", "Aaron", "Todd"]
-                expect(people.without("David", "Aaron")).to(equal(["Rafael", "Todd"]))
+                expect(arr.inGroup(of: 0) == []).to(beTrue())
+                expect(arr.inGroup(of: 3) == [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]).to(beTrue())
+                expect(arr.inGroup(of: 4) == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10]]).to(beTrue())
+                expect(arr.inGroup(of: 4, fill: 0) == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 0, 0]]).to(beTrue())
 

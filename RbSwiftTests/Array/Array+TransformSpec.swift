@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class ArrayPatchSpec: QuickSpec {
-    
     override func spec() {        
         describe(".combination(num:)") {
             it("creates a new array containing the values returned by the block") {

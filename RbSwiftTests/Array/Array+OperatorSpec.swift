@@ -11,7 +11,6 @@ import Nimble
 import RbSwift
 
 class ArrayOperatorSpec: QuickSpec {
-    
     override func spec() {
         describe(".&") {
             it("returns a new array containing elements common to the two arrays, excluding any duplicates") {
