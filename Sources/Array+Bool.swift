@@ -40,4 +40,20 @@ public extension Array where Element: Equatable {
         }
         return true
     }
+    
+    /// Returns true if the given object is present in self (that is, if any element == object).
+    ///
+    /// 	[1, 2, 3].isInclude(1)              #=> true
+    /// 	["a", "b", "c"].isInclude("b")		#=> true
+    ///
+    /// Otherwise returns false.
+    ///
+    /// 	[1, 2, 3].isInclude(100)            #=> false
+    /// 	["a", "b", "c"].isInclude("bbb")		#=> false
+    ///
+    /// - Parameter value: An `Element` value.
+    /// - Returns: A bool value.
+    func isInclude(_ value: Element) -> Bool {
+        return isAny { $0 == value }
+    }
 }

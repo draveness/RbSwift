@@ -244,10 +244,29 @@ public extension Array {
     func rotate(_ count: Int = 1) -> [Element] {
         var rotate = count % self.length
         while rotate < 0 { rotate += self.length }
-        let head = self.first(rotate)
-        let tail = self.dropFirst(rotate)
+        let head = self.first(rotate).to_a
+        let tail = self.dropFirst(rotate).to_a
         return tail + head
     }
+    
 }
 
-
+public extension Array where Element == String {
+    /// Returns a new string by concatenating the elements of the sequence,
+    /// adding the given separator between each element.
+    ///
+    /// The following example shows how an array of strings can be joined to a
+    /// single, comma-separated string:
+    ///
+    ///     let cast = ["Vivien", "Marlon", "Kim", "Karl"]
+    ///     let list = cast.join(", ")
+    ///     print(list)
+    ///     // Prints "Vivien, Marlon, Kim, Karl"
+    ///
+    /// - Parameter separator: A string to insert between each of the elements
+    ///   in this sequence. The default separator is an empty string.
+    /// - Returns: A single, concatenated string.
+    func join(_ separator: String = "") -> String {
+        return joined(separator: separator)
+    }
+}

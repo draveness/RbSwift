@@ -72,3 +72,55 @@ public extension Sequence {
         return self
     }
 }
+
+public extension Sequence {
+    /// Returns a sequence of pairs (*n*, *x*), where *n* represents a
+    /// consecutive integer starting at zero, and *x* represents an element of
+    /// the sequence.
+    ///
+    /// This example enumerates the characters of the string "Swift" and prints
+    /// each character along with its place in the string.
+    ///
+    ///     for (n, c) in "Swift".characters.withIndex {
+    ///         print("\(n): '\(c)'")
+    ///     }
+    ///     // Prints "0: 'S'"
+    ///     // Prints "1: 'w'"
+    ///     // Prints "2: 'i'"
+    ///     // Prints "3: 'f'"
+    ///     // Prints "4: 't'"
+    ///
+    /// When enumerating a collection, the integer part of each pair is a counter
+    /// for the enumeration, not necessarily the index of the paired value.
+    /// These counters can only be used as indices in instances of zero-based,
+    /// integer-indexed collections, such as `Array` and `ContiguousArray`. For
+    /// other collections the counters may be out of range or of the wrong type
+    /// to use as an index. To iterate over the elements of a collection with its
+    /// indices, use the `zip(_:_:)` function.
+    ///
+    /// This example iterates over the indices and elements of a set, building a
+    /// list of indices of names with five or fewer letters.
+    ///
+    ///     let names: Set = ["Sofia", "Camilla", "Martina", "Mateo", "Nicolás"]
+    ///     var shorterIndices: [SetIndex<String>] = []
+    ///     for (i, name) in zip(names.indices, names) {
+    ///         if name.characters.count <= 5 {
+    ///             shorterIndices.append(i)
+    ///         }
+    ///     }
+    ///
+    /// Now that the `shorterIndices` array holds the indices of the shorter
+    /// names in the `names` set, you can use those indices to access elements in
+    /// the set.
+    ///
+    ///     for i in shorterIndices {
+    ///         print(names[i])
+    ///     }
+    ///     // Prints "Sofia"
+    ///     // Prints "Mateo"
+    ///
+    /// - Returns: A sequence of pairs enumerating the sequence.
+    var withIndex: EnumeratedSequence<Self> {
+        return enumerated()
+    }
+}

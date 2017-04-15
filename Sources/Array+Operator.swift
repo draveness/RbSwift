@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func &<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
+public func &<T: Equatable>(left: [T], right: [T]) -> [T] {
     let lhs = left
     var rhs = right
     
@@ -21,35 +21,22 @@ public func &<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
                 break
             }
         }
-        
     }
     return result
 }
 
-public func *<T>(left: Array<T>, right: Int) -> Array<T> {
+public func *<T>(left: [T], right: Int) -> [T] {
     var result: [T] = []
-    for _ in 1...right {
-        result += left
-    }
+    right.times { result += left }
     return result
 }
 
-public func *<T>(left: Array<T>, right: String) -> String {
-    return left.map { "\($0)" }.joined(separator: right)
+public func *<T>(left: [T], right: String) -> String {
+    return left.map { "\($0)" }.join(right)
 }
 
-public func -<T: Equatable>(left: Array<T>, right: Array<T>) -> Array<T> {
-    var lhs = left
-    let rhs = right
-    
-    for (index, l) in lhs.enumerated() {
-        for r in rhs {
-            if l == r {
-                lhs.remove(at: index)
-            }
-        }
-    }
-    return lhs
+public func -<T: Equatable>(lhs: [T], rhs: [T]) -> [T] {
+    return lhs.reject { rhs.contains($0) }
 }
 
 public func ==<Element : Equatable> (lhs: [[Element]], rhs: [[Element]]) -> Bool {
