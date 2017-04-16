@@ -122,13 +122,13 @@ public class File {
         if pathname.isAbsolute {
             return (path as NSString).standardizingPath
         }
-        
+
         let expandingPath = Pathname((path as NSString).expandingTildeInPath)
         if expandingPath.isAbsolute {
             return (expandingPath.path as NSString).standardizingPath
         }
-        
-        return (Pathname(Dir.pwd) + pathname).path
+
+        return URL(fileURLWithPath: pathname.path).absoluteString.from(7)!
     }
     
     /// Splits the given string into a directory and a file component and returns a tuple with `(File.dirname, File.basename)`.
