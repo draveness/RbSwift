@@ -17,6 +17,20 @@ public class File {
             return
         }
     }
+    
+    /// Returns the current umask value for this process. If the optional argument is given, 
+    /// set the umask to that value and return the previous value. Umask values are subtracted 
+    /// from the default permissions, so a umask of 0222 would make a file read-only for everyone.
+    static var umask: Int {
+        get {
+            let omask = Darwin.umask(0)
+            _ = Darwin.umask(omask)
+            return Int(omask)
+        }
+        set {
+            _ = Darwin.umask(mode_t(newValue))
+        }
+    }
 
     @discardableResult public static func new(_ path: String) -> File {
         return File(path)
