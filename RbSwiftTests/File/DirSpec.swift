@@ -73,7 +73,7 @@ class DirSpec: QuickSpec {
 
                 // Creates directory and file
                 FileUtils.mkdir_p(path)
-                File.new(path + "/file.swift")
+                FileUtils.touch(path + "/file.swift")
                 
                 expect {
                     try Dir.rmdir(path)
@@ -84,7 +84,7 @@ class DirSpec: QuickSpec {
         describe(".isExist(path:)") {
             beforeEach {
                 FileUtils.mkdir_p("a/folder/with/files")
-                File.new("a/folder/with/files/text.swift")
+                FileUtils.touch("a/folder/with/files/text.swift")
             }
             
             afterEach {
@@ -102,7 +102,7 @@ class DirSpec: QuickSpec {
             beforeEach {
                 FileUtils.mkdir_p("a/empty/folder")
                 FileUtils.mkdir_p("a/folder/with/files")
-                File.new("a/folder/with/files/text.swift")
+                FileUtils.touch("a/folder/with/files/text.swift")
             }
             
             afterEach {

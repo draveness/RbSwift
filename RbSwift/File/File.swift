@@ -8,20 +8,17 @@
 
 import Foundation
 
-public class File {
+public class File: IO {
     public let path: String
-    public init(_ path: String) {
+    public init(_ path: String, mode: String = "r") {
         self.path = path
-        guard FileManager.default.createFile(atPath: path, contents: nil, attributes: [:]) else {
-            print("Failed to create file at path: \(path)")
-            return
-        }
+        super.init(file: fopen(path, mode))
     }
     
     /// Returns the current umask value for this process. If the optional argument is given, 
     /// set the umask to that value and return the previous value. Umask values are subtracted 
     /// from the default permissions, so a umask of 0222 would make a file read-only for everyone.
-    static var umask: Int {
+    class var umask: Int {
         get {
             let omask = Darwin.umask(0)
             _ = Darwin.umask(omask)
@@ -31,9 +28,13 @@ public class File {
             _ = Darwin.umask(mode_t(newValue))
         }
     }
-
-    @discardableResult public static func new(_ path: String) -> File {
+    
+    @discardableResult public class func new(_ path: String, mode: String = "r") -> File {
         return File(path)
+    }
+    
+    @discardableResult public class func open(_ path: String, mode: String = "r") -> File {
+        return new(path)
     }
     
     /// Returns the last component of the filename given in `filename`.
@@ -53,7 +54,7 @@ public class File {
     ///   - filename: A file path string.
     ///   - suffix: A string will be removed from the filename.
     /// - Returns: The last component with or without extension.
-    public static func basename(_ filename: String, _ suffix: String = "") -> String {
+    public class func basename(_ filename: String, _ suffix: String = "") -> String {
         let filename = filename as NSString
         let base = filename.lastPathComponent
         if suffix == ".*" { return (base as NSString).deletingPathExtension }
@@ -68,7 +69,7 @@ public class File {
     ///
     /// - Parameter filename: A file path string.
     /// - Returns: The directory of given filename.
-    public static func dirname(_ filename: String) -> String {
+    public class func dirname(_ filename: String) -> String {
         let filename = filename as NSString
         return filename.deletingLastPathComponent
     }
@@ -82,7 +83,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A file extension of empty string.
-    public static func extname(_ path: String) -> String {
+    public class func extname(_ path: String) -> String {
         let ext = (path as NSString).pathExtension
         guard ext.isEmpty else { return "." + ext }
         return ext
@@ -100,7 +101,7 @@ public class File {
     ///   - path: A file path.
     ///   - dir: A directory path.
     /// - Returns: A absolute path.
-    public static func expand(_ path: String, in dir: String? = nil) -> String {
+    public class func expand(_ path: String, in dir: String? = nil) -> String {
         var filepath = Pathname(path)
         if let dir = dir {
             filepath = Pathname(dir) + filepath
@@ -117,7 +118,7 @@ public class File {
     ///
     /// - Parameter path: A files path.
     /// - Returns: A absolute path of given file path.
-    public static func absolutePath(_ path: String) -> String {
+    public class func absolutePath(_ path: String) -> String {
         let pathname = Pathname(path)
         if pathname.isAbsolute {
             return (path as NSString).standardizingPath
@@ -128,7 +129,14 @@ public class File {
             return (expandingPath.path as NSString).standardizingPath
         }
 
-        return URL(fileURLWithPath: pathname.path).absoluteString.from(7)!
+        let path = URL(fileURLWithPath: pathname.path).absoluteString.from(7)!
+        
+        // remove trailing `/` if path is directory.
+        if path.hasSuffix("/") && path.length.isPositive {
+            return path.to(path.length-1)!
+        } else {
+            return path
+        }
     }
     
     /// Splits the given string into a directory and a file component and returns a tuple with `(File.dirname, File.basename)`.
@@ -137,7 +145,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A tuple with a directory and a file component.
-    public static func split(_ path: String) -> (String, String) {
+    public class func split(_ path: String) -> (String, String) {
         return (File.dirname(path), File.basename(path))
     }
     
@@ -147,7 +155,7 @@ public class File {
     ///
     /// - Parameter paths: An array of file path.
     /// - Returns: A new file path.
-    public static func join(_ paths: String...) -> String {
+    public class func join(_ paths: String...) -> String {
         var pathnames = paths.flatMap(Pathname.init)
         if pathnames.count == 1 {
             return pathnames.first!.path
@@ -165,7 +173,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isDirectory(_ path: String) -> Bool {
+    public class func isDirectory(_ path: String) -> Bool {
         return Dir.isExist(path)
     }
     
@@ -175,7 +183,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isExecutable(_ path: String) -> Bool {
+    public class func isExecutable(_ path: String) -> Bool {
         return FileManager.default.isExecutableFile(atPath: path)
     }
     
@@ -185,7 +193,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isReadable(_ path: String) -> Bool {
+    public class func isReadable(_ path: String) -> Bool {
         return FileManager.default.isReadableFile(atPath: path)
     }
     
@@ -195,7 +203,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isWritable(_ path: String) -> Bool {
+    public class func isWritable(_ path: String) -> Bool {
         return FileManager.default.isWritableFile(atPath: path)
     }
     
@@ -205,7 +213,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isDeletable(_ path: String) -> Bool {
+    public class func isDeletable(_ path: String) -> Bool {
         return FileManager.default.isDeletableFile(atPath: path)
     }
     
@@ -215,7 +223,7 @@ public class File {
     ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
-    public static func isExist(_ path: String) -> Bool {
+    public class func isExist(_ path: String) -> Bool {
         return FileManager.default.fileExists(atPath: path)
     }
 
@@ -226,7 +234,7 @@ public class File {
     /// - Parameters:
     ///   - permission: A permission bits.
     ///   - paths: An array of file path.
-    public static func chmod(_ permission: Int, _ paths: String...) {
+    public class func chmod(_ permission: Int, _ paths: String...) {
         for path in paths {
             var attributes = try! FileManager.default.attributesOfItem(atPath: path)
             attributes[FileAttributeKey.posixPermissions] = permission
@@ -241,7 +249,7 @@ public class File {
     ///
     /// - Parameter path: An file path.
     /// - Returns: The size of file.
-    public static func size(_ path: String) -> Int {
+    public class func size(_ path: String) -> Int {
         let attributes = try! FileManager.default.attributesOfItem(atPath: path)
         return attributes[FileAttributeKey.size] as! Int
     }
