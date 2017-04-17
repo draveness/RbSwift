@@ -20,3 +20,38 @@ public extension String {
     }
 }
 
+public extension NSData {
+    var bridge: Data {
+        return self as Data
+    }
+}
+
+public extension Data {
+    var bridge: NSData {
+        return self as NSData
+    }
+}
+
+public extension NSURL {
+    var bridge: URL {
+        return self as URL
+    }
+}
+
+public extension URL {
+    var bridge: NSURL {
+        return self as NSURL
+    }
+}
+
+public extension NSIndexPath {
+    var bridge: IndexPath {
+        return self as IndexPath
+    }
+}
+
+public extension IndexPath {
+    var bridge: NSIndexPath {
+        return self as NSIndexPath
+    }
+}
