@@ -10,7 +10,7 @@ import Foundation
 import Darwin
 
 public class IO {
-    fileprivate var _file: UnsafeMutablePointer<FILE>?
+    private var _file: UnsafeMutablePointer<FILE>?
     open var file: UnsafeMutablePointer<FILE>? {
         get {
             return _file
