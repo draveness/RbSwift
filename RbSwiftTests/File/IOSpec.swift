@@ -12,8 +12,8 @@ import RbSwift
 
 class IOSpec: BaseSpec {
     override func spec() {
-        describe(".read(name:)") {
-            it("Reads length bytes from the I/O stream.") {
+        describe("#read(name:)") {
+            it("reads length bytes from the I/O stream.") {
                 let file = Fixture.name("RbSwift.txt")
                 expect(File.read(file)).to(equal("RbSwift\n"))
                 expect(File.read(file, offset: 1)).to(equal("bSwift\n"))
@@ -21,8 +21,23 @@ class IOSpec: BaseSpec {
             }
         }
         
+        describe(".read(name:)") {
+            it("reads length bytes from the I/O stream.") {
+                let file = Fixture.open("RbSwift.txt")
+                expect(file.read()).to(equal("RbSwift\n"))
+            }
+        }
+        
+        describe("#write(name:)") {
+            it("reads length bytes from the I/O stream.") {
+                let file = Fixture.name("empty.txt")
+                expect(File.write(file, "content")).to(equal(7))
+                expect(File.read(file)).to(equal("content"))
+            }
+        }
+
         describe(".write(string:)") {
-            it("") {
+            it("writes the given string to I/O stream.") {
                 File.open("empty.txt", "w") { file in
                     file.write("Content")
                 }

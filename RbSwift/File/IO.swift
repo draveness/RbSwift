@@ -26,11 +26,11 @@ public class IO {
     }
     
     open class func open(_ fd: Int, mode: String = "r") -> IO {
-        return forfd(fd, mode: mode)
+        return new(fd, mode: mode)
     }
 
-    open class func new(_ fd: Int, mode: String) -> IO {
-        return open(fd, mode: mode)
+    open class func new(_ fd: Int, mode: String = "r") -> IO {
+        return forfd(fd, mode: mode)
     }
 
     /// Reads length bytes from the I/O stream.
@@ -54,6 +54,15 @@ public class IO {
         return file.read(length)
     }
     
+    /// Opens the file with `File#open` and writes the given string to I/O stream.
+    /// The stream must be opened for writing.
+    ///
+    /// - Parameters:
+    ///   - name: The name of a file.
+    ///   - string: A string to write to the specific file.
+    ///   - offset: The starting position of the I/O Stream.
+    ///   - mode: A string for `File#open`
+    /// - Returns: The number of bytes written.
     @discardableResult open class func write(_ name: String, _ string: String, offset: Int = 0, mode: String = "w") -> Int {
         let file = File.open(name, mode)
         defer { file.close() }
@@ -84,7 +93,11 @@ public class IO {
         return result.to(length)!
     }
     
-    /// Writes the given string to ios. The stream must be opened for writing.
+    /// Writes the given string to I/O stream. The stream must be opened for writing.
+    ///
+    ///     File.open("empty.txt", "w") { file in
+    ///         file.write("Content")   #=> 7
+    ///     }
     ///
     /// - Parameter string: A string written to I/O Stream.
     /// - Returns: The number of bytes written.
@@ -92,7 +105,7 @@ public class IO {
         return fwrite(string, 1, string.length, file)
     }
     
-    /// An enum valu as the mapping of `SEEK_SET/SEEK_CUR/SEEK_END`
+    /// An enum value as the mapping of `SEEK_SET/SEEK_CUR/SEEK_END`
     ///
     /// - set: SEEK_SEK
     /// - cur: SEEK_CUR
