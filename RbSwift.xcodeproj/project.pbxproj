@@ -643,11 +643,11 @@
 				7277389F1E82B932008E83E6 /* Array+Bool.swift */,
 				72FC508B1E83B69B009B99F4 /* Array+Conversions.swift */,
 				72B79D2B1E84CC5500BF7C35 /* Array+Equatable.swift */,
+				7291CCF31EA22E010033BAEC /* Array+Grouping.swift */,
 				72FC50871E83AC3B009B99F4 /* Array+Mutate.swift */,
 				727738931E81810A008E83E6 /* Array+Operator.swift */,
-				724875021E7CF829007984FD /* Array+Transform.swift */,
 				7291CCEB1EA213980033BAEC /* Array+Ordinal.swift */,
-				7291CCF31EA22E010033BAEC /* Array+Grouping.swift */,
+				724875021E7CF829007984FD /* Array+Transform.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -883,11 +883,11 @@
 				727738A11E82B9AB008E83E6 /* Array+BoolSpec.swift */,
 				72FC508D1E83C851009B99F4 /* Array+ConversionsSpec.swift */,
 				727738A71E8404B8008E83E6 /* Array+EquatableSpec.swift */,
+				7291CCF81EA22F3D0033BAEC /* Array+GroupingSpec.swift */,
 				72FC50891E83AC61009B99F4 /* Array+MutateSpec.swift */,
 				727738A31E82B9DB008E83E6 /* Array+OperatorSpec.swift */,
-				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
 				7291CCF01EA2151F0033BAEC /* Array+OrdinalSpec.swift */,
-				7291CCF81EA22F3D0033BAEC /* Array+GroupingSpec.swift */,
+				7248751B1E7CF850007984FD /* Array+TransformSpec.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -925,8 +925,8 @@
 				72273DE01E9B9CD00022D52C /* Dir.swift */,
 				72F39AF81E9B74F30050D91B /* File.swift */,
 				72F39B081E9C83F50050D91B /* FileUtils.swift */,
-				72F39B001E9B7BD30050D91B /* Pathname.swift */,
 				7291CCFB1EA3CE240033BAEC /* IO.swift */,
+				72F39B001E9B7BD30050D91B /* Pathname.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
