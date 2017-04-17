@@ -33,25 +33,41 @@ public class IO {
         return open(fd, mode: mode)
     }
 
-    open class func read(_ name: String, length: Int? = nil, offset: Int? = nil) -> String {
+    open class func read(_ name: String, length: Int = Int.max, offset: Int? = nil) -> String {
         let file = File.open(name)
         if let offset = offset {
             file.seek(offset)
         }
-        return file.read( length )
+        return file.read(length)
     }
     
-    open func read(_ length: Int? = nil) -> String {
+    @discardableResult open class func write(_ name: String, _ string: String, offset: Int? = nil) -> Int {
+        return 1
+    }
+    
+    /// Reads length bytes from the I/O stream.
+    /// Length must be a non-negative integer or `File#read` will return 
+    /// empty string.
+    ///
+    /// - Parameter length: The length of bytes from I/O stream.
+    /// - Returns: A string read from the I/O Stream.
+    open func read(_ length: Int = Int.max) -> String {
+        guard length.isPositive else { return "" }
         let buffer = [CChar](repeating: 0, count: 1024)
-        var string = ""
-        while fgets(UnsafeMutablePointer(mutating: buffer), Int32(buffer.count), file) != nil {
+        var result = ""
+        while result.length < length && fgets(UnsafeMutablePointer(mutating: buffer), Int32(buffer.count), file) != nil {
             buffer.withUnsafeBufferPointer { ptr in
-                string += String(cString: ptr.baseAddress!)
+                result += String(cString: ptr.baseAddress!)
             }
         }
-        return string
+        return result.to(length)!
     }
     
+    /// An enum valu as the mapping of `SEEK_SET/SEEK_CUR/SEEK_END`
+    ///
+    /// - set: SEEK_SEK
+    /// - cur: SEEK_CUR
+    /// - end: SEEK_END
     public enum SeekPosition {
         case set
         case cur
