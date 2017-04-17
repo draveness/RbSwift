@@ -35,9 +35,9 @@ public class IO {
 
     open class func read(_ name: String, length: Int? = nil, offset: Int? = nil) -> String {
         let file = File.open(name)
-//        if offset != nil {
-//            file.seek(offset!, Int(SEEK_SET))
-//        }
+        if let offset = offset {
+            file.seek(offset)
+        }
         return file.read( length )
     }
     
@@ -50,5 +50,32 @@ public class IO {
             }
         }
         return string
+    }
+    
+    public enum SeekPosition {
+        case set
+        case cur
+        case end
+        
+        func to_i() -> Int32 {
+            switch self {
+            case .set:
+                return SEEK_SET
+            case .cur:
+                return SEEK_CUR
+            case .end:
+                return SEEK_END
+            }
+        }
+    }
+    
+    /// Seeks to a given `offset` in the stream according to the value of whence.
+    ///
+    /// - Parameters:
+    ///   - offset: An integer offset.
+    ///   - whence: An whenece
+    /// - SeeAlso: SeekPosition
+    open func seek(_ offset: Int, whence: SeekPosition = .set) {
+        fseek(file, offset, whence.to_i())
     }
 }
