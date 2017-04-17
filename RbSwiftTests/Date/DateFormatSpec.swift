@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DateFormatSpec: QuickSpec {
+class DateFormatSpec: BaseSpec {
     override func spec() {
         describe(".parse") {
             beforeEach {

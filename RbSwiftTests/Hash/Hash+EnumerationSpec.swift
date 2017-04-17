@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class HashEnumerationSpec: QuickSpec {
+class HashEnumerationSpec: BaseSpec {
     override func spec() {
         describe(".eachPair(closure:)") {
             it("calls block once for each key in hsh, passing the key-value pair as parameters.") {

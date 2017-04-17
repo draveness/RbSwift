@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringLengthSpec: QuickSpec {
+class StringLengthSpec: BaseSpec {
     override func spec() {
         describe(".length") {
             it("returns the length of string") {

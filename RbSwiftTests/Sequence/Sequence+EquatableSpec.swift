@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class SequenceEquatableSpec: QuickSpec {
+class SequenceEquatableSpec: BaseSpec {
     override func spec() {
         describe(".index(elem:)") {
             it("returns the first index of element in array") {

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class HashOperatorSpec: QuickSpec {
+class HashOperatorSpec: BaseSpec {
     override func spec() {
         describe(".+") {
             it(("returns a new hash containing the contents of otherHash and the contents of receiver")) {

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringCharsSpec: QuickSpec {
+class StringCharsSpec: BaseSpec {
     
     override func spec() {
         describe(".chars") { 

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class SequenceEnumerationSpec: QuickSpec {
+class SequenceEnumerationSpec: BaseSpec {
     override func spec() {
         describe(".each(closure:)") {
             it("is an alias to forEach(body:)") {

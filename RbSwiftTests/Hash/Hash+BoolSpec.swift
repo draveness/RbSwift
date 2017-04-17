@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class HashBoolSpec: QuickSpec {
+class HashBoolSpec: BaseSpec {
     override func spec() {
         describe(".isAny(closures:)") {
             it("returns true if the block ever returns a value other than false or nil") {

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringTransformSpec: QuickSpec {
+class StringTransformSpec: BaseSpec {
     override func spec() {
         describe(".concat") {
             it("concats two strings together") {

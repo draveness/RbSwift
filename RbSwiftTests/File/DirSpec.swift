@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DirSpec: QuickSpec {
+class DirSpec: BaseSpec {
     override func spec() {
         let path: String = File.absolutePath("RbSwift/DirSpec")
         let originalPath = Dir.pwd

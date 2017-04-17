@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayGroupingSpec: QuickSpec {
+class ArrayGroupingSpec: BaseSpec {
     override func spec() {
         describe(".inGroups(of:with:)") {
             it("splits or iterates over the array in groups of size number") {

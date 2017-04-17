@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class SequencTransformSpec: QuickSpec {
+class SequencTransformSpec: BaseSpec {
     
     override func spec() {
         describe(".select(closure:)") {

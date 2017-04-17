@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberMathSpec: QuickSpec {
+class NumberMathSpec: BaseSpec {
     
     override func spec() {
         describe(".gcd(other:)") {

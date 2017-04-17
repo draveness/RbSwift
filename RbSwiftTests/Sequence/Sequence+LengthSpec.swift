@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class SequenceLengthSpec: QuickSpec {
+class SequenceLengthSpec: BaseSpec {
     override func spec() {
         describe(".length") {
             it("returns the length of array") {

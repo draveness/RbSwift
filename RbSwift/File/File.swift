@@ -10,7 +10,7 @@ import Foundation
 
 public class File: IO {
     public let path: String
-    public init(_ path: String, mode: String = "r") {
+    public init(_ path: String, _ mode: String = "r") {
         self.path = path
         super.init(file: fopen(path, mode))
     }
@@ -29,12 +29,17 @@ public class File: IO {
         }
     }
     
-    @discardableResult public class func new(_ path: String, mode: String = "r") -> File {
-        return File(path)
+    @discardableResult public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+        let file = File(path, mode)
+        if let closure = closure {
+            defer { file.close() }
+            closure(file)
+        }
+        return file
     }
     
-    @discardableResult public class func open(_ path: String, mode: String = "r") -> File {
-        return new(path)
+    @discardableResult public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+        return new(path, mode, closure: closure)
     }
     
     /// Returns the last component of the filename given in `filename`.

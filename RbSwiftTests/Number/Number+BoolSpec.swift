@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberBoolSpec: QuickSpec {
+class NumberBoolSpec: BaseSpec {
     
     override func spec() {
         describe(".bool") {

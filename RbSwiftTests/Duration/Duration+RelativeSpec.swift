@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DurationRelativeSpec: QuickSpec {
+class DurationRelativeSpec: BaseSpec {
     override func spec() {
         describe(".ago/before") {
             it("returns a date minus current duration") {

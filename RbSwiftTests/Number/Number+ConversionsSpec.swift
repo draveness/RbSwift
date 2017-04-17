@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberConversionsSpec: QuickSpec {
+class NumberConversionsSpec: BaseSpec {
     
     override func spec() {
         describe(".chr") {

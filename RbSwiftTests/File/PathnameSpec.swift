@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class PathnameSpec: QuickSpec {
+class PathnameSpec: BaseSpec {
     override func spec() {
         describe(".+") {
             it("concat two path successfully.") {

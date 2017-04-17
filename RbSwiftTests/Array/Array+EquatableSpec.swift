@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayEquatableSpec: QuickSpec {
+class ArrayEquatableSpec: BaseSpec {
     override func spec() {
         describe(".uniq") {
             it("returns an new array with unique element") {

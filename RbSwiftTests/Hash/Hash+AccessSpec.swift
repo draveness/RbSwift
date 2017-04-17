@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class HashAccessSpec: QuickSpec {
+class HashAccessSpec: BaseSpec {
     override func spec() {
         describe(".values(at:)") {
             it("returns an array of optinal value with given keys.") {

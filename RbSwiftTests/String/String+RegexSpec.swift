@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringRegexSpec: QuickSpec {
+class StringRegexSpec: BaseSpec {
     override func spec() {
         
         describe(".sub") {

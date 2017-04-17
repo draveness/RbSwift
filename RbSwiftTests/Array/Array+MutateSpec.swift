@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayMutateSpec: QuickSpec {
+class ArrayMutateSpec: BaseSpec {
     override func spec() {
         describe(".clear") {
             it("makes the array empty") {

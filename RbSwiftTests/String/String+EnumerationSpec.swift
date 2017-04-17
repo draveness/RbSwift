@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringEnumerationSpec: QuickSpec {
+class StringEnumerationSpec: BaseSpec {
     override func spec() {
         describe(".eachLine(separator:closure:)") {
             it("separates the string by \\n characters") {

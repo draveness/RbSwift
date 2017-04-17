@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringIndentSpec: QuickSpec {
+class StringIndentSpec: BaseSpec {
     override func spec() {
         describe(".indent(amount:indentString:)") {
             it("indents the lines in the reveiver") {

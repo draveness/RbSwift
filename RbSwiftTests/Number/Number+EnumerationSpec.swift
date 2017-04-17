@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberEnumerationSpec: QuickSpec {
+class NumberEnumerationSpec: BaseSpec {
     
     override func spec() {
         describe(".downto(limit:)") {

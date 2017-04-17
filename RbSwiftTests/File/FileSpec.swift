@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class FileSpec: QuickSpec {
+class FileSpec: BaseSpec {
     override func spec() {
         describe(".basename(filename:)") {
             it("returns the last component of the filename given in filename") {

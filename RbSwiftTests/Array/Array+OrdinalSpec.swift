@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayOrdinalSpec: QuickSpec {
+class ArrayOrdinalSpec: BaseSpec {
     override func spec() {
         describe(".ordinals") {
             it("returns element with specific index.") {

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class SequenceBoolSpec: QuickSpec {
+class SequenceBoolSpec: BaseSpec {
     override func spec() {
         describe("isAny(closure:)") {
             it("returns true if array has an element satisfy specific condition") {

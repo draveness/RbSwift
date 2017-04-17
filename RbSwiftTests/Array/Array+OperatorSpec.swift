@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayOperatorSpec: QuickSpec {
+class ArrayOperatorSpec: BaseSpec {
     override func spec() {
         describe(".&") {
             it("returns a new array containing elements common to the two arrays, excluding any duplicates") {

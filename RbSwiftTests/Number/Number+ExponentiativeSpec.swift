@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberExponentiativeSpec: QuickSpec {
+class NumberExponentiativeSpec: BaseSpec {
     override func spec() {
         describe(".**") { 
             it("performs correctly") {

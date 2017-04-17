@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringConversionsSpec: QuickSpec {
+class StringConversionsSpec: BaseSpec {
     override func spec() {
         describe(".to_i") {
             it("returns an integer under different circumstances") {

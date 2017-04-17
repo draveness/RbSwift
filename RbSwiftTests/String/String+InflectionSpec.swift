@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringInflectionSpec: QuickSpec {
+class StringInflectionSpec: BaseSpec {
     override func spec() {
         describe(".camelize(upper:)") {
             it("returns the camelize string") {

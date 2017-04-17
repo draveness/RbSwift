@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class HashTransformSpec: QuickSpec {
+class HashTransformSpec: BaseSpec {
     override func spec() {
         describe(".merge(otherHash:)") {
             it("returns a new hash containing the contents of otherHash and the contents of receiver") {

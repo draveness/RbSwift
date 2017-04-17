@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class NumberDurationSpec: QuickSpec {
+class NumberDurationSpec: BaseSpec {
     override func spec() {
         describe(".duration") {
             it("creates Duration instance correctly") {

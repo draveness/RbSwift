@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DateBoolSpec: QuickSpec {
+class DateBoolSpec: BaseSpec {
     override func spec() {
         describe(".isWeekday") {
             it("returns a bool value") {

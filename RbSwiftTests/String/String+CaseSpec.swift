@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringCaseSpec: QuickSpec {
+class StringCaseSpec: BaseSpec {
     override func spec() {
         describe(".downcase") {
             it("returns a copy of str with all lowercase letters replaced with their uppercase counterparts") {

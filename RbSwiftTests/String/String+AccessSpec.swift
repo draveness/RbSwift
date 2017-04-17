@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringAccessSpec: QuickSpec {
+class StringAccessSpec: BaseSpec {
     
     override func spec() {
         describe(".at(pos:)") {

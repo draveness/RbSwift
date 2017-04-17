@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DurationSpec: QuickSpec {
+class DurationSpec: BaseSpec {
     override func spec() {
         let oneYear = Duration(years: 1)
         let oneMonth = Duration(months: 1)

@@ -1,7 +1,5 @@
-                let hash = [1: "one", 2: "two", 3: "three"]
-                expect(hash.except(1, 2)).to(equal([3: "three"]))
-                expect(hash).to(equal([1: "one", 2: "two", 3: "three"]))
-                var hash = [1: "one", 2: "two", 3: "three"]
-                expect(hash.excepted(1, 2)).to(equal([3: "three"]))
-                expect(hash).to(equal([3: "three"]))
+                let file = Fixture.open("file.txt")
+                expect(File.read(file)).to(equal("RbSwift\n"))
+                expect(File.read(file, offset: 1)).to(equal("bSwift\n"))
+                expect(File.read(file, offset: 100)).to(equal(""))
 

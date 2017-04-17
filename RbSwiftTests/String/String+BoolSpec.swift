@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringBoolSpec: QuickSpec {
+class StringBoolSpec: BaseSpec {
     override func spec() {
         describe(".isEmpty") {
             it("returns true when length is zero") {

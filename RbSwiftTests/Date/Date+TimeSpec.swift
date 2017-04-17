@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DateTimeSpec: QuickSpec {
+class DateTimeSpec: BaseSpec {
     override func spec() {
         describe(".change(year:month:day:hour:minute:second:)") {
             it("changes the origianl date components") {

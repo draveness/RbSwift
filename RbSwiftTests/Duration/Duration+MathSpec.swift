@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DurationMathSpec: QuickSpec {
+class DurationMathSpec: BaseSpec {
     override func spec() {
         describe(".+") {
             it("returns a new duration with the sum of both duration's components") {

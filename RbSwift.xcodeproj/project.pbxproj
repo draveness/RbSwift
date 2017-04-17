@@ -306,6 +306,16 @@
 		7291CCFD1EA3CE240033BAEC /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCFB1EA3CE240033BAEC /* IO.swift */; };
 		7291CCFE1EA3CE240033BAEC /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCFB1EA3CE240033BAEC /* IO.swift */; };
 		7291CCFF1EA3CE240033BAEC /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCFB1EA3CE240033BAEC /* IO.swift */; };
+		7291CD021EA4ED6D0033BAEC /* RbSwift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD011EA4ED6D0033BAEC /* RbSwift.txt */; };
+		7291CD031EA4ED6D0033BAEC /* RbSwift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD011EA4ED6D0033BAEC /* RbSwift.txt */; };
+		7291CD051EA4EDB50033BAEC /* IOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD041EA4EDB50033BAEC /* IOSpec.swift */; };
+		7291CD061EA4EDB50033BAEC /* IOSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD041EA4EDB50033BAEC /* IOSpec.swift */; };
+		7291CD081EA4EF120033BAEC /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD071EA4EF120033BAEC /* Fixtures.swift */; };
+		7291CD091EA4EF120033BAEC /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD071EA4EF120033BAEC /* Fixtures.swift */; };
+		7291CD0B1EA4EFE20033BAEC /* BaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */; };
+		7291CD0C1EA4EFE20033BAEC /* BaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */; };
+		7291CD0E1EA4F4CB0033BAEC /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD0D1EA4F4CB0033BAEC /* empty.txt */; };
+		7291CD0F1EA4F4CB0033BAEC /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD0D1EA4F4CB0033BAEC /* empty.txt */; };
 		72D2EF6F1E96186F004CE666 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B031E7D5D90008B49B1 /* DateFormat.swift */; };
 		72D2EF701E96186F004CE666 /* Date+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E276A91E8BF1E700F41D1B /* Date+Bool.swift */; };
 		72D2EF711E96186F004CE666 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B1F1E7D96F3008B49B1 /* Date+Components.swift */; };
@@ -502,6 +512,11 @@
 		7291CCF31EA22E010033BAEC /* Array+Grouping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Grouping.swift"; sourceTree = "<group>"; };
 		7291CCF81EA22F3D0033BAEC /* Array+GroupingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GroupingSpec.swift"; sourceTree = "<group>"; };
 		7291CCFB1EA3CE240033BAEC /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
+		7291CD011EA4ED6D0033BAEC /* RbSwift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RbSwift.txt; sourceTree = "<group>"; };
+		7291CD041EA4EDB50033BAEC /* IOSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSpec.swift; sourceTree = "<group>"; };
+		7291CD071EA4EF120033BAEC /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSpec.swift; sourceTree = "<group>"; };
+		7291CD0D1EA4F4CB0033BAEC /* empty.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
 		729D3D4C1E7E355300258333 /* InflectorRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InflectorRule.swift; sourceTree = "<group>"; };
 		729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+RelativeSpec.swift"; sourceTree = "<group>"; };
 		729D3D521E7E387E00258333 /* Number+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Duration.swift"; sourceTree = "<group>"; };
@@ -771,6 +786,7 @@
 		724874ED1E7CF813007984FD = {
 			isa = PBXGroup;
 			children = (
+				7291CD001EA4ED4C0033BAEC /* Fixtures */,
 				7062BA3357BD5C5CD6608FDD /* Frameworks */,
 				28D74309F6A6B8E1E2C4BCA2 /* Pods */,
 				724874F91E7CF813007984FD /* RbSwift */,
@@ -816,6 +832,8 @@
 				723AA33E1E8AD4970000A612 /* Regex */,
 				72541B5C1E7E2E0B008B49B1 /* Sequence */,
 				72541B1C1E7D9617008B49B1 /* String */,
+				7291CD071EA4EF120033BAEC /* Fixtures.swift */,
+				7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */,
 			);
 			path = RbSwiftTests;
 			sourceTree = "<group>";
@@ -906,6 +924,15 @@
 			path = Number;
 			sourceTree = "<group>";
 		};
+		7291CD001EA4ED4C0033BAEC /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				7291CD011EA4ED6D0033BAEC /* RbSwift.txt */,
+				7291CD0D1EA4F4CB0033BAEC /* empty.txt */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		72F39AC61E9640830050D91B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -937,6 +964,7 @@
 				72273DE51E9B9E5C0022D52C /* DirSpec.swift */,
 				72F39AFD1E9B75D70050D91B /* FileSpec.swift */,
 				72F39B051E9B7BFA0050D91B /* PathnameSpec.swift */,
+				7291CD041EA4EDB50033BAEC /* IOSpec.swift */,
 			);
 			path = File;
 			sourceTree = "<group>";
@@ -1172,6 +1200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7291CD0F1EA4F4CB0033BAEC /* empty.txt in Resources */,
+				7291CD031EA4ED6D0033BAEC /* RbSwift.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1179,6 +1209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7291CD0E1EA4F4CB0033BAEC /* empty.txt in Resources */,
+				7291CD021EA4ED6D0033BAEC /* RbSwift.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1479,6 +1511,7 @@
 				723049C51E966ECA00D5427E /* Date+TimeZoneSpec.swift in Sources */,
 				723049D51E966ECA00D5427E /* Sequence+LengthSpec.swift in Sources */,
 				7291CCFA1EA22F3D0033BAEC /* Array+GroupingSpec.swift in Sources */,
+				7291CD0C1EA4EFE20033BAEC /* BaseSpec.swift in Sources */,
 				723049D71E966ECA00D5427E /* String+AccessSpec.swift in Sources */,
 				723049D31E966ECA00D5427E /* Sequence+EnumerationSpec.swift in Sources */,
 				723049DF1E966ECA00D5427E /* String+LengthSpec.swift in Sources */,
@@ -1513,11 +1546,13 @@
 				723049B91E966ECA00D5427E /* Array+AccessSpec.swift in Sources */,
 				723049CE1E966ECA00D5427E /* Number+EnumerationSpec.swift in Sources */,
 				723049CB1E966ECA00D5427E /* Number+BoolSpec.swift in Sources */,
+				7291CD091EA4EF120033BAEC /* Fixtures.swift in Sources */,
 				723049D11E966ECA00D5427E /* RegexSpec.swift in Sources */,
 				723049C01E966ECA00D5427E /* Date+BoolSpec.swift in Sources */,
 				723049C81E966ECA00D5427E /* Duration+RelativeSpec.swift in Sources */,
 				723049DA1E966ECA00D5427E /* String+CharsSpec.swift in Sources */,
 				72F39AFF1E9B769F0050D91B /* FileSpec.swift in Sources */,
+				7291CD061EA4EDB50033BAEC /* IOSpec.swift in Sources */,
 				723049BB1E966ECA00D5427E /* Array+ConversionsSpec.swift in Sources */,
 				723049CF1E966ECA00D5427E /* Number+ExponentiativeSpec.swift in Sources */,
 				723049E01E966ECA00D5427E /* String+OperatorSpec.swift in Sources */,
@@ -1539,6 +1574,7 @@
 				723049AB1E966ECA00D5427E /* Sequence+LengthSpec.swift in Sources */,
 				723049AA1E966ECA00D5427E /* Sequence+EquatableSpec.swift in Sources */,
 				7291CCF91EA22F3D0033BAEC /* Array+GroupingSpec.swift in Sources */,
+				7291CD0B1EA4EFE20033BAEC /* BaseSpec.swift in Sources */,
 				723049A31E966ECA00D5427E /* Number+DurationSpec.swift in Sources */,
 				723049A51E966ECA00D5427E /* Number+ExponentiativeSpec.swift in Sources */,
 				723049A81E966ECA00D5427E /* Sequence+BoolSpec.swift in Sources */,
@@ -1573,11 +1609,13 @@
 				723049A71E966ECA00D5427E /* RegexSpec.swift in Sources */,
 				723049951E966EC900D5427E /* Array+TransformSpec.swift in Sources */,
 				723049991E966ECA00D5427E /* Date+MathSpec.swift in Sources */,
+				7291CD081EA4EF120033BAEC /* Fixtures.swift in Sources */,
 				723049AF1E966ECA00D5427E /* String+CaseSpec.swift in Sources */,
 				723049A41E966ECA00D5427E /* Number+EnumerationSpec.swift in Sources */,
 				7230499A1E966ECA00D5427E /* Date+TimeSpec.swift in Sources */,
 				723049B81E966ECA00D5427E /* String+RemoveSpec.swift in Sources */,
 				72F39AFE1E9B769F0050D91B /* FileSpec.swift in Sources */,
+				7291CD051EA4EDB50033BAEC /* IOSpec.swift in Sources */,
 				7230499B1E966ECA00D5427E /* Date+TimeZoneSpec.swift in Sources */,
 				7230499E1E966ECA00D5427E /* Duration+RelativeSpec.swift in Sources */,
 				723049901E966EC900D5427E /* Array+BoolSpec.swift in Sources */,

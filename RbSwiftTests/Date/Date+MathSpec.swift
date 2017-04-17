@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DateMathSpec: QuickSpec {
+class DateMathSpec: BaseSpec {
     override func spec() {
         describe(".+") {
             it("returns a new date") {

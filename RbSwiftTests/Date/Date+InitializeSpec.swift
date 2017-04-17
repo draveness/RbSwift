@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class DateInitializeSpec: QuickSpec {
+class DateInitializeSpec: BaseSpec {
     override func spec() {
         beforeEach {
             TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!

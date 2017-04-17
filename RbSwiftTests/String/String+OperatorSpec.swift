@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class StringOperatorSpec: QuickSpec {
+class StringOperatorSpec: BaseSpec {
     override func spec() {
         describe(".*") {
             it("returns the multiple strings concatenation") {

@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class ArrayAccessSpec: QuickSpec {
+class ArrayAccessSpec: BaseSpec {
     override func spec() {
         describe(".at(num:)") {
             it("returns the specific element or nil in array") {

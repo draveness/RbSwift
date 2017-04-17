@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import RbSwift
 
-class RegexSpec: QuickSpec {
+class RegexSpec: BaseSpec {
     
     override func spec() {
         describe(".match(str:pos:closure:)") {
