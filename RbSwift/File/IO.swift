@@ -50,9 +50,7 @@ public class IO {
     open class func read(_ name: String, length: Int = Int.max, offset: Int = 0) -> String {
         let file = File.open(name)
         defer { file.close() }
-        if let offset = offset {
-            file.seek(offset)
-        }
+        file.seek(offset)
         return file.read(length)
     }
     
