@@ -194,15 +194,15 @@ public extension String {
         let strs = strs.map { "[\($0)]" }
         let sets = strs.map { Set<MatchData>($0.regex.scan(self)) }
         guard let first = sets.first else { return self }
-        var result = self as NSString
+        var result = self.bridge
         sets.reduce(first, { (result, set) in
             result.intersection(set)
         }).sorted(by: { (lhs, rhs) -> Bool in
             return lhs.range.location >= rhs.range.location
         }).forEach { data in
-            result = result.replacingCharacters(in: data.range, with: "") as NSString
+            result = result.replacingCharacters(in: data.range, with: "").bridge
         }
-        return result as String
+        return result.bridge
     }
     
     /// Use `delete(strs:)` to mutate `self` in place, see also `delete(strs:)`

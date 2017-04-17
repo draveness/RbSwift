@@ -55,16 +55,16 @@ public struct Regex {
     ///   - closure: A closure invoked if there is a match
     /// - Returns: A `MatchData` instance contains all match results in it
     @discardableResult public func match(_ str: String, _ pos: Int = 0, closure: ((MatchData) -> Void)? = nil) -> MatchData? {
-        let str = str as NSString
-        guard let result = regexp.firstMatch(in: str as String, options: [], range: NSMakeRange(pos, str.length - pos)) else { return nil }
+//        let str = str.bridge
+        guard let result = regexp.firstMatch(in: str, options: [], range: NSMakeRange(pos, str.length - pos)) else { return nil }
 
-        let match = str.substring(with: result.range)
+        let match = str.bridge.substring(with: result.range)
         var captures: [String] = []
         var ranges: [NSRange] = []
         for index in 1..<result.numberOfRanges {
             let range = result.rangeAt(index)
             ranges.append(range)
-            captures.append(str.substring(with: range))
+            captures.append(str.bridge.substring(with: range))
         }
         let matchData = MatchData(match: match, range: result.range, captures: captures, ranges: ranges)
         if let closure = closure { closure(matchData) }
@@ -86,17 +86,16 @@ public struct Regex {
     @discardableResult public func scan(_ str: String, closure: ((MatchData) -> Void)? = nil) -> [MatchData] {
         let matches = regexp.matches(in: str, options: [], range: NSMakeRange(0, str.length))
         
-        let str = str as NSString
         var matchDatas: [MatchData] = []
         for match in matches {
-            let substr = str.substring(with: match.range)
+            let substr = str.bridge.substring(with: match.range)
             var datas: [String] = []
             var ranges: [NSRange] = []
             autoreleasepool {
                 for index in 1..<match.numberOfRanges {
                     let range = match.rangeAt(index)
                     ranges.append(range)
-                    datas.append(str.substring(with: range))
+                    datas.append(str.bridge.substring(with: range))
                 }
             }
             let matchData = MatchData(match: substr, range: match.range, captures: datas, ranges: ranges)

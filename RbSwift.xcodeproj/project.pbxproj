@@ -316,6 +316,10 @@
 		7291CD0C1EA4EFE20033BAEC /* BaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */; };
 		7291CD0E1EA4F4CB0033BAEC /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD0D1EA4F4CB0033BAEC /* empty.txt */; };
 		7291CD0F1EA4F4CB0033BAEC /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7291CD0D1EA4F4CB0033BAEC /* empty.txt */; };
+		7291CD121EA514D90033BAEC /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD111EA514D90033BAEC /* Bridge.swift */; };
+		7291CD131EA514D90033BAEC /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD111EA514D90033BAEC /* Bridge.swift */; };
+		7291CD141EA514D90033BAEC /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD111EA514D90033BAEC /* Bridge.swift */; };
+		7291CD151EA514D90033BAEC /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CD111EA514D90033BAEC /* Bridge.swift */; };
 		72D2EF6F1E96186F004CE666 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B031E7D5D90008B49B1 /* DateFormat.swift */; };
 		72D2EF701E96186F004CE666 /* Date+Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E276A91E8BF1E700F41D1B /* Date+Bool.swift */; };
 		72D2EF711E96186F004CE666 /* Date+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72541B1F1E7D96F3008B49B1 /* Date+Components.swift */; };
@@ -517,6 +521,7 @@
 		7291CD071EA4EF120033BAEC /* Fixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSpec.swift; sourceTree = "<group>"; };
 		7291CD0D1EA4F4CB0033BAEC /* empty.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		7291CD111EA514D90033BAEC /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		729D3D4C1E7E355300258333 /* InflectorRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InflectorRule.swift; sourceTree = "<group>"; };
 		729D3D501E7E385E00258333 /* Duration+RelativeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+RelativeSpec.swift"; sourceTree = "<group>"; };
 		729D3D521E7E387E00258333 /* Number+Duration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Duration.swift"; sourceTree = "<group>"; };
@@ -805,6 +810,7 @@
 		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7291CD101EA514CB0033BAEC /* Bridge */,
 				72304A0C1E967D7200D5427E /* Array */,
 				72304A0D1E967D7A00D5427E /* Date */,
 				72304A0E1E967D8400D5427E /* Duration */,
@@ -931,6 +937,14 @@
 				7291CD0D1EA4F4CB0033BAEC /* empty.txt */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		7291CD101EA514CB0033BAEC /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				7291CD111EA514D90033BAEC /* Bridge.swift */,
+			);
+			name = Bridge;
 			sourceTree = "<group>";
 		};
 		72F39AC61E9640830050D91B /* Resources */ = {
@@ -1382,6 +1396,7 @@
 				723048F11E966C5600D5427E /* Sequence+Transform.swift in Sources */,
 				723048D41E966C5600D5427E /* Date+TimeZone.swift in Sources */,
 				7291CCFE1EA3CE240033BAEC /* IO.swift in Sources */,
+				7291CD141EA514D90033BAEC /* Bridge.swift in Sources */,
 				723048F81E966C5600D5427E /* String+Indent.swift in Sources */,
 				723048E21E966C5600D5427E /* Number+AbsoluteValue.swift in Sources */,
 				72304A011E967C3500D5427E /* Hash+Bool.swift in Sources */,
@@ -1455,6 +1470,7 @@
 				723049291E966C5600D5427E /* Sequence+Transform.swift in Sources */,
 				7230490C1E966C5600D5427E /* Date+TimeZone.swift in Sources */,
 				7291CCFF1EA3CE240033BAEC /* IO.swift in Sources */,
+				7291CD151EA514D90033BAEC /* Bridge.swift in Sources */,
 				723049301E966C5600D5427E /* String+Indent.swift in Sources */,
 				7230491A1E966C5600D5427E /* Number+AbsoluteValue.swift in Sources */,
 				72304A021E967C3500D5427E /* Hash+Bool.swift in Sources */,
@@ -1654,6 +1670,7 @@
 				723049631E966C5700D5427E /* Sequence+Transform.swift in Sources */,
 				723049461E966C5700D5427E /* Date+TimeZone.swift in Sources */,
 				7291CCFD1EA3CE240033BAEC /* IO.swift in Sources */,
+				7291CD131EA514D90033BAEC /* Bridge.swift in Sources */,
 				7230496A1E966C5700D5427E /* String+Indent.swift in Sources */,
 				723049541E966C5700D5427E /* Number+AbsoluteValue.swift in Sources */,
 				72304A001E967C3500D5427E /* Hash+Bool.swift in Sources */,
@@ -1727,6 +1744,7 @@
 				72D2EF901E961882004CE666 /* RegexConvertible.swift in Sources */,
 				72D2EF871E961882004CE666 /* Number+AbsoluteValue.swift in Sources */,
 				7291CCFC1EA3CE240033BAEC /* IO.swift in Sources */,
+				7291CD121EA514D90033BAEC /* Bridge.swift in Sources */,
 				72D2EF891E961882004CE666 /* Number+Conversions.swift in Sources */,
 				72D2EF791E961872004CE666 /* Array+Conversions.swift in Sources */,
 				723049FF1E967C3500D5427E /* Hash+Bool.swift in Sources */,

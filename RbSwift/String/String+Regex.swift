@@ -63,7 +63,7 @@ public extension String {
     /// - Returns: A new string with str replacing the matched result
     func sub(_ pattern: RegexConvertible, _ str: String) -> String {
         guard let matchData = match(pattern.regex) else { return self }
-        return (self as NSString).replacingCharacters(in: matchData.range, with: str)
+        return self.bridge.replacingCharacters(in: matchData.range, with: str)
     }
     
     /// Converts pattern to a `Regex`, then invokes its match(pattern:) method to get
@@ -134,7 +134,7 @@ public extension String {
         for matchData in scan(regex).reversed() {
             result = regex.replace(result, closure(matchData.match))
         }
-        return result as String
+        return result.bridge
     }
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
