@@ -18,7 +18,7 @@ public extension Sequence where Iterator.Element: Equatable {
     ///
     /// - Parameter element: An element
     /// - Returns: A index indicates the first element position in the array of nil
-    func index(_ element: Iterator.Element) -> Int? {
+    func index(_ element: Self.Iterator.Element) -> Int? {
         for (index, elem) in self.enumerated() {
             if elem == element {
                 return index
@@ -35,7 +35,7 @@ public extension Sequence where Iterator.Element: Equatable {
     ///
     /// - Parameter element: An element
     /// - Returns: A index indicates the last element position in the array of nil
-    func rindex(_ element: Iterator.Element) -> Int? {
+    func rindex(_ element: Self.Iterator.Element) -> Int? {
         var result: Int? = nil
         for (index, elem) in self.enumerated() {
             if elem == element {

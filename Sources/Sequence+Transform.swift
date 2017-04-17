@@ -148,7 +148,7 @@ public extension Sequence {
     func flatten<T>() -> [T] {
         var results = [T]()
         for element in self {
-            if let seq = element as? [Iterator.Element] {
+            if let seq = element as? [Self.Iterator.Element] {
                 results += seq.flatten()
             } else if let element = element as? T {
                 results.append(element)
@@ -174,7 +174,7 @@ public extension Sequence {
     func take(_ num: Int) -> [Self.Iterator.Element] {
         guard num.isPositive else { return [] }
         guard num < self.count else { return self.to_a }
-        var results: [Iterator.Element] = []
+        var results: [Self.Iterator.Element] = []
         num.times { index in
             results.append(self.to_a[index])
         }
@@ -198,7 +198,7 @@ public extension Sequence {
     func drop(_ num: Int) -> [Self.Iterator.Element] {
         guard num.isPositive else { return self.to_a }
         guard num < self.count else { return [] }
-        var results: [Iterator.Element] = []
+        var results: [Self.Iterator.Element] = []
         (self.count - num).times { index in
             results.append(self.to_a[index + num])
         }
