@@ -23,16 +23,43 @@ public class IO {
         self._file = file
     }
     
+    /// Synonym for IO.new.
+    ///
+    /// - Parameters:
+    ///   - fd: A file descriptor.
+    ///   - mode: A string mode.
+    /// - Returns: An IO stream.
+    /// - SeeAlso: IO.new
     open class func forfd(_ fd: Int, mode: String) -> IO {
-        return IO(file: fdopen(Int32(fd), mode))
+        return new(fd, mode: mode)
     }
     
-    open class func open(_ fd: Int, mode: String = "r") -> IO {
+    /// Returns a new IO object (a stream) for the given integer file descriptor fd 
+    /// and mode string. opt may be used to specify parts of mode in a more readable fashion.
+    ///
+    /// - Parameters:
+    ///   - fd: A file descriptor.
+    ///   - mode: A string mode.
+    /// - Returns: An IO stream.
+    open class func open(_ fd: Int, mode: String = "r")  -> IO {
         return new(fd, mode: mode)
     }
 
-    open class func new(_ fd: Int, mode: String = "r") -> IO {
-        return forfd(fd, mode: mode)
+    /// With no associated block, `IO.open` is a synonym for `IO.new`. If the optional 
+    /// code block is given, it will be passed io as an argument, and the IO object will 
+    /// automatically be closed when the block terminates.
+    ///
+    /// - Parameters:
+    ///   - fd: A file descriptor.
+    ///   - mode: A string mode.
+    /// - Returns: An IO stream.
+    open class func new(_ fd: Int, mode: String = "r", closure: ((Void) -> ())? = nil) -> IO {
+        let io = IO(file: fdopen(Int32(fd), mode))
+        if let closure = closure {
+            defer { io.close() }
+            closure()
+        }
+        return io
     }
 
     /// Reads length bytes from the I/O stream.
@@ -110,23 +137,24 @@ public class IO {
     static open let newline = Int8("\n".ord)
     static open let retchar = Int8("\r".ord)
 
-//    func gets(_ sep: String = "\n") -> String? {
-//        let buffer = [CChar](repeating: 0, count: 1024)
-//        if fgets(UnsafeMutablePointer(mutating: buffer), buffer.count.to_i32, file) == nil {
-//            return nil
-//        }
-//        lineno += 1
-//        data.length = Int(strlen( data.bytes ))
-//        if data.length > 0 && data.bytes[data.length-1] == IO.newline {
-//            data.length -= 1
-//            data.bytes[data.length] = 0
-//        }
-//        if data.length > 0 && data.bytes[data.length-1] == IO.retchar {
-//            data.length -= 1
-//            data.bytes[data.length] = 0
-//        }
-//        return data.to_s
-//    }
+    func gets(_ sep: String = "\n") -> String? {
+        if sep == "\n" {
+            let buffer = [CChar](repeating: 0, count: 1024)
+            guard let _ = fgets(UnsafeMutablePointer(mutating: buffer), buffer.count.to_i32, file) else { return nil }
+            lineno += 1
+            return buffer.withUnsafeBufferPointer { ptr in
+                String(cString: ptr.baseAddress!)
+            }
+        } else {
+            var buffer: String = ""
+            while true {
+                let char = fgetc(file).to_i.chr
+                buffer.append(char)
+                if char == sep { break }
+            }
+            return buffer
+        }
+    }
     
     /// Flushes any buffered data within ios to the underlying operating system.
     ///
