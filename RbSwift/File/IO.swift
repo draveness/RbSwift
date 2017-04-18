@@ -17,6 +17,8 @@ public class IO {
         }
     }
     
+    open var lineno = 0
+    
     init(file: UnsafeMutablePointer<FILE>) {
         self._file = file
     }
@@ -85,7 +87,7 @@ public class IO {
         guard length.isPositive else { return "" }
         let buffer = [CChar](repeating: 0, count: 1024)
         var result = ""
-        while result.length < length && fgets(UnsafeMutablePointer(mutating: buffer), Int32(buffer.count), file) != nil {
+        while result.length < length && fgets(UnsafeMutablePointer(mutating: buffer), buffer.count.to_i32, file) != nil {
             buffer.withUnsafeBufferPointer { ptr in
                 result += String(cString: ptr.baseAddress!)
             }
@@ -105,6 +107,34 @@ public class IO {
         return fwrite(string, 1, string.length, file)
     }
     
+    static open let newline = Int8("\n".ord)
+    static open let retchar = Int8("\r".ord)
+
+//    func gets(_ sep: String = "\n") -> String? {
+//        let buffer = [CChar](repeating: 0, count: 1024)
+//        if fgets(UnsafeMutablePointer(mutating: buffer), buffer.count.to_i32, file) == nil {
+//            return nil
+//        }
+//        lineno += 1
+//        data.length = Int(strlen( data.bytes ))
+//        if data.length > 0 && data.bytes[data.length-1] == IO.newline {
+//            data.length -= 1
+//            data.bytes[data.length] = 0
+//        }
+//        if data.length > 0 && data.bytes[data.length-1] == IO.retchar {
+//            data.length -= 1
+//            data.bytes[data.length] = 0
+//        }
+//        return data.to_s
+//    }
+    
+    /// Flushes any buffered data within ios to the underlying operating system.
+    ///
+    /// - Returns: An int return value for `fflush`.
+    @discardableResult open func flush() -> Int {
+        return fflush(file).to_i
+    }
+
     /// An enum value as the mapping of `SEEK_SET/SEEK_CUR/SEEK_END`
     ///
     /// - set: SEEK_SEK
@@ -126,7 +156,7 @@ public class IO {
             case .end:
                 return SEEK_END
             case .int(let offset):
-                return Int32(offset)
+                return offset.to_i32
             }
         }
     }
@@ -141,10 +171,36 @@ public class IO {
         fseek(file, offset, whence.to_i())
     }
         
-    /// Closes ios and flushes any pending writes to the operating system.
+    /// Closes I/O stream and flushes any pending writes to the operating system.
     ///
     /// - Returns: A status.
     @discardableResult open func close() -> Int {
         return fclose(file).to_i
+    }
+    
+    /// Returns an integer representing the numeric file descriptor for I/O stream.
+    open var fileno: Int {
+        return Darwin.fileno(file).to_i
+    }
+    
+    /// An alias to `fileno` var.
+    open var to_i: Int {
+        return fileno
+    }
+    
+    /// Returns true if I/O stream is associated with a terminal device (tty), false otherwise.
+    open var isatty: Bool {
+        return Darwin.isatty(fileno.to_i32) != 0
+    }
+    
+    /// The current offset (in bytes) of ios. Set this var to seek to the given position (in bytes) in
+    /// ios. It is not guaranteed that seeking to the right position when ios is textmode.
+    open var pos: Int {
+        get {
+            return ftell(file).to_i
+        }
+        set {
+            seek(newValue)
+        }
     }
 }
