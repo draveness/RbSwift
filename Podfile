@@ -18,6 +18,4 @@ target 'RbSwift iOS' do
     pod 'Nimble'
     pod 'Quick'
   end
-
 end
-

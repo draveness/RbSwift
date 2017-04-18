@@ -6,26 +6,26 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "RbSwift"
-  s.version      = "0.3.3"
-  s.summary      = "A Swift port of convenient methods in Ruby and ActiveSupport"
+  s.name         = 'RbSwift'
+  s.version      = '0.3.3'
+  s.summary      = 'A Swift port of convenient methods in Ruby and ActiveSupport'
   s.description  = <<-DESC
   RbSwift introduces a series of methods which is inspired by Ruby core library and
   ActiveSupport. It provides hundred of convenient functions to make Swift code easier
   to write.
                    DESC
-  s.homepage     = "https://github.com/Draveness/RbSwift"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "draveness" => "i@draveness.me" }
-  s.source       = { :git => "https://github.com/Draveness/RbSwift.git", :tag => "#{s.version}" }
+  s.homepage     = 'https://github.com/Draveness/RbSwift'
+  s.license      = { type: 'MIT', file: 'LICENSE' }
+  s.author = { 'draveness' => 'i@draveness.me' }
+  s.source = { git: 'https://github.com/Draveness/RbSwift.git', tag: s.version.to_s }
 
-  s.ios.deployment_target = "8.0"
-  s.tvos.deployment_target = "9.0"
-  s.osx.deployment_target = "10.10"
-  s.watchos.deployment_target = "2.0"
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.10'
+  s.watchos.deployment_target = '2.0'
 
-  s.source_files  = "RbSwift", "RbSwift/**/*.{h,swift}"
-  s.public_header_files = "RbSwift/RbSwift.h"
+  s.source_files = 'RbSwift', 'RbSwift/**/*.{h,swift}'
+  s.public_header_files = 'RbSwift/RbSwift.h'
 
   s.requires_arc = true
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.1' }
