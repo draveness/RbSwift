@@ -133,9 +133,6 @@ public class IO {
     @discardableResult open func write(_ string: String) -> Int {
         return fwrite(string, 1, string.length, file)
     }
-    
-    static open let newline = Int8("\n".ord)
-    static open let retchar = Int8("\r".ord)
 
     func gets(_ sep: String = "\n") -> String? {
         if sep == "\n" {
