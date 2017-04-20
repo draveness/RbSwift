@@ -78,7 +78,7 @@ class IOSpec: BaseSpec {
             }
         }
         
-        describe(".rewind") {
+        describe(".rewind()") {
             it("positions ios to the beginning of input, resetting lineno to zero.") {
                 let file = Fixture.name("file.txt")
                 File.open(file) { file in
@@ -97,6 +97,28 @@ class IOSpec: BaseSpec {
                 expect(f1.gets()).to(equal("second line\n"))
                 f1.reopen(file)
                 expect(f1.gets()).to(equal("first line\n"))
+            }
+        }
+        
+        
+        describe(".write(string:)") {
+            it("writes the given string to I/O stream.") {
+                File.open("empty.txt", "w") { file in
+                    file.write("Content")
+                }
+                let readFile = File.open("empty.txt", "r")
+                expect(readFile.read()).to(equal("Content"))
+            }
+        }
+        
+        
+        describe(".print(values:)") {
+            it("writes the given object(s) to I/O stream") {
+                File.open("print-empty.txt", "w") { file in
+                    file.print("This is ", 10, " lines\n")
+                }
+                let file = File.open("print-empty.txt")
+                expect(file.read()).to(equal("This is 10 lines\n"))
             }
         }
     }

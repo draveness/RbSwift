@@ -124,6 +124,13 @@ public class IO {
         return file.write(string)
     }
     
+    /// Writes the given object(s) to ios.
+    ///
+    /// - Parameter values: An array of values conforms to `CustomStringConvertible` protocol.
+    public func print(_ values: CustomStringConvertible...) {
+        fputs(values.map { $0.description }.join(""), file)
+    }
+    
     /// Reads length bytes from the I/O stream.
     /// Length must be a non-negative integer or `File#read` will return 
     /// empty string.
