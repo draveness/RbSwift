@@ -184,6 +184,9 @@ public class IO {
     }
     
     /// Positions ios to the beginning of input, resetting lineno to zero.
+    ///
+    ///     file.rewind() <=> file.seek(0)
+    ///
     public func rewind() {
         seek(0)
     }
