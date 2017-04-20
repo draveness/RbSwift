@@ -30,7 +30,7 @@ public class IO {
     ///   - mode: A string mode.
     /// - Returns: An IO stream.
     /// - SeeAlso: IO.new
-    open class func forfd(_ fd: Int, mode: String) -> IO {
+    public class func forfd(_ fd: Int, mode: String) -> IO {
         return new(fd, mode: mode)
     }
     
@@ -41,7 +41,7 @@ public class IO {
     ///   - fd: A file descriptor.
     ///   - mode: A string mode.
     /// - Returns: An IO stream.
-    open class func open(_ fd: Int, mode: String = "r")  -> IO {
+    public class func open(_ fd: Int, mode: String = "r")  -> IO {
         return new(fd, mode: mode)
     }
 
@@ -53,7 +53,7 @@ public class IO {
     ///   - fd: A file descriptor.
     ///   - mode: A string mode.
     /// - Returns: An IO stream.
-    open class func new(_ fd: Int, mode: String = "r", closure: ((Void) -> ())? = nil) -> IO {
+    public class func new(_ fd: Int, mode: String = "r", closure: ((Void) -> ())? = nil) -> IO {
         let io = IO(file: fdopen(Int32(fd), mode))
         if let closure = closure {
             defer { io.close() }
@@ -76,7 +76,7 @@ public class IO {
     ///   - length: The length of bytes from I/O stream.
     ///   - offset: The starting position of the I/O Stream.
     /// - Returns: A string read from the I/O Stream.
-    open class func read(_ name: String, length: Int = Int.max, offset: Int = 0) -> String {
+    public class func read(_ name: String, length: Int = Int.max, offset: Int = 0) -> String {
         let file = File.open(name)
         defer { file.close() }
         file.seek(offset)
@@ -92,7 +92,8 @@ public class IO {
     ///   - offset: The starting position of the I/O Stream.
     ///   - mode: A string for `File#open`
     /// - Returns: The number of bytes written.
-    @discardableResult open class func write(_ name: String, _ string: String, offset: Int = 0, mode: String = "w") -> Int {
+    @discardableResult
+    public class func write(_ name: String, _ string: String, offset: Int = 0, mode: String = "w") -> Int {
         let file = File.open(name, mode)
         defer { file.close() }
         file.seek(offset)
@@ -174,6 +175,23 @@ public class IO {
             return nil
         }
         return char.chr
+    }
+    
+    /// Reads a one-character string from ios. Returns nil if called at end of file.
+    /// An alias to `IO#getc`.
+    public var readchar: String? {
+        return getc
+    }
+    
+    /// Reads the next “line” from the I/O stream; lines are separated by sep.
+    /// A separator of nil and a zero-length separator reads the entire contents.
+    ///
+    /// - Parameter sep: A string separator.
+    /// - Returns: A string value or nil.
+    /// - SeeAlso: An alias to `IO#gets`.
+    @discardableResult
+    public func readline(_ sep: String? = "\n") -> String? {
+        return gets(sep)
     }
     
     /// Flushes any buffered data within ios to the underlying operating system.
