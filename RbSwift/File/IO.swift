@@ -44,6 +44,30 @@ public class IO {
     public class func open(_ fd: Int, mode: String = "r")  -> IO {
         return new(fd, mode: mode)
     }
+    
+    /// Reassociates ios with the I/O stream given in another I/O or to a new
+    /// stream opened on path. This may dynamically change the actual class of this stream.
+    ///
+    /// - Parameter io: Another I/O stream.
+    /// - Returns: Self with an new file pointer.
+    @discardableResult
+    public func reopen(_ io: IO) -> IO {
+        self._file = io._file
+        return self
+    }
+    
+    /// Reassociates ios with the I/O stream given in another I/O or to a new
+    /// stream opened on path. This may dynamically change the actual class of this stream.
+    ///
+    /// - Parameters:
+    ///   - path: A file path.
+    ///   - mode: A mode string.
+    /// - Returns: Self with an new file pointer.
+    @discardableResult
+    public func reopen(_ path: String, _ mode: String = "r") -> IO {
+        let newIO = File.open(path, mode)
+        return reopen(newIO)
+    }
 
     /// With no associated block, `IO.open` is a synonym for `IO.new`. If the optional 
     /// code block is given, it will be passed io as an argument, and the IO object will 
@@ -168,7 +192,7 @@ public class IO {
         }
     }
     
-    /// Reads a one-character string from ios. Returns nil if called at end of file.
+    /// Reads a one-character string from IO stream. Returns nil if called at end of file.
     public var getc: String? {
         let char = fgetc(file).to_i
         if char == -1 {
@@ -177,18 +201,10 @@ public class IO {
         return char.chr
     }
     
-    /// Reads a one-character string from ios. Returns nil if called at end of file.
+    /// Reads a one-character string from IO stream. Returns nil if called at end of file.
     /// An alias to `IO#getc`.
     public var readchar: String? {
         return getc
-    }
-    
-    /// Positions ios to the beginning of input, resetting lineno to zero.
-    ///
-    ///     file.rewind() <=> file.seek(0)
-    ///
-    public func rewind() {
-        seek(0)
     }
     
     /// Reads the next “line” from the I/O stream; lines are separated by sep.
@@ -202,7 +218,7 @@ public class IO {
         return gets(sep)
     }
     
-    /// Flushes any buffered data within ios to the underlying operating system.
+    /// Flushes any buffered data within IO stream to the underlying operating system.
     ///
     /// - Returns: An int return value for `fflush`.
     @discardableResult
@@ -234,6 +250,14 @@ public class IO {
                 return offset.to_i32
             }
         }
+    }
+    
+    /// Positions IO stream to the beginning of input, resetting lineno to zero.
+    ///
+    ///     file.rewind() <=> file.seek(0)
+    ///
+    public func rewind() {
+        seek(0)
     }
     
     /// Seeks to a given `offset` in the stream according to the value of `whence`.
@@ -269,8 +293,8 @@ public class IO {
         return Darwin.isatty(fileno.to_i32) != 0
     }
     
-    /// The current offset (in bytes) of ios. Set this var to seek to the given position (in bytes) in
-    /// ios. It is not guaranteed that seeking to the right position when ios is textmode.
+    /// The current offset (in bytes) of IO stream. Set this var to seek to the given position (in bytes) in
+    /// IO stream. It is not guaranteed that seeking to the right position when IO stream is textmode.
     public var pos: Int {
         get {
             return ftell(file).to_i

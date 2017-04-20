@@ -88,5 +88,16 @@ class IOSpec: BaseSpec {
                 }
             }
         }
+        
+        describe(".reopen(path:mode:)") {
+            it("reassociates ios with the I/O stream given in another I/O") {
+                let file = Fixture.name("file.txt")
+                let f1 = File.open(file)
+                expect(f1.gets()).to(equal("first line\n"))
+                expect(f1.gets()).to(equal("second line\n"))
+                f1.reopen(file)
+                expect(f1.gets()).to(equal("first line\n"))
+            }
+        }
     }
 }
