@@ -66,7 +66,8 @@ public extension String {
     ///
     /// - Parameter separator: A string used to chomp from the end of the string
     /// - Returns: Self
-    @discardableResult mutating func chomped(_ separator: String = "") -> String {
+    @discardableResult
+    mutating func chomped(_ separator: String = "") -> String {
         self = chomp(separator)
         return self
     }
@@ -93,7 +94,8 @@ public extension String {
     /// Modifies str in place as described for .chop, returning str.
     ///
     /// - Returns: Self
-    @discardableResult mutating func choped() -> String {
+    @discardableResult
+    mutating func choped() -> String {
         self = chop
         return self
     }
@@ -105,7 +107,8 @@ public extension String {
     /// 	s               #=> ""
     ///
     /// - Returns: A empty string
-    @discardableResult mutating func cleared() -> String {
+    @discardableResult
+    mutating func cleared() -> String {
         self = ""
         return self
     }
@@ -209,7 +212,8 @@ public extension String {
     ///
     /// - Parameter strs: An array of string used to match the receiver string
     /// - Returns: Self
-    @discardableResult mutating func deleted(_ strs: String...) -> String {
+    @discardableResult
+    mutating func deleted(_ strs: String...) -> String {
         self = delete(strs)
         return self
     }
@@ -225,7 +229,8 @@ public extension String {
     /// Modifies str in place as described for .reverse, returning str.
     ///
     /// - Returns: Self
-    @discardableResult mutating func reversed() -> String {
+    @discardableResult
+    mutating func reversed() -> String {
         self = reverse
         return self
     }
@@ -379,7 +384,8 @@ public extension String {
     ///
     /// - Returns: Self
     /// - See Also: `String#strip`
-    @discardableResult mutating func stripped() -> String {
+    @discardableResult
+    mutating func stripped() -> String {
         self = strip
         return self
     }
@@ -403,7 +409,8 @@ public extension String {
     ///
     /// - Returns: Self
     /// - See Also: `String#rstrip` and `String#strip`
-    @discardableResult mutating func lstripped() -> String {
+    @discardableResult
+    mutating func lstripped() -> String {
         self = lstrip
         return self
     }
@@ -421,7 +428,8 @@ public extension String {
     ///
     /// - Returns: Self
     /// - See Also: `String#rstrip` and `String#strip`
-    @discardableResult mutating func rstripped() -> String {
+    @discardableResult
+    mutating func rstripped() -> String {
         self = rstrip
         return self
     }
@@ -444,7 +452,8 @@ public extension String {
     ///
     /// - Parameter other: Anothing string
     /// - Returns: Self
-    @discardableResult mutating func prepend(_ other: String) -> String {
+    @discardableResult
+    mutating func prepend(_ other: String) -> String {
         self = other + self
         return self
     }
@@ -457,7 +466,8 @@ public extension String {
     ///
     /// - Parameter other: A new string used to replace self
     /// - Returns: Self
-    @discardableResult mutating func replace(_ other: String) -> String {
+    @discardableResult
+    mutating func replace(_ other: String) -> String {
         self = other
         return self
     }

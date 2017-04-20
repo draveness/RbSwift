@@ -77,7 +77,8 @@ public extension String {
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
     /// - Returns: Self
-    @discardableResult mutating func subed(_ pattern: RegexConvertible, _ str: String) -> String {
+    @discardableResult
+    mutating func subed(_ pattern: RegexConvertible, _ str: String) -> String {
         self = sub(pattern, str)
         return self
     }
@@ -110,7 +111,8 @@ public extension String {
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
     /// - Returns: Self
-    @discardableResult mutating func gsubed(_ pattern: RegexConvertible, _ str: String) -> String {
+    @discardableResult
+    mutating func gsubed(_ pattern: RegexConvertible, _ str: String) -> String {
         self = gsub(pattern, str)
         return self
     }
@@ -149,7 +151,8 @@ public extension String {
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - closure: A closure accepts the matching result as input and return output to change the origianl string
-    @discardableResult mutating func gsubed(_ pattern: RegexConvertible, closure: (String) -> String) -> String {
+    @discardableResult
+    mutating func gsubed(_ pattern: RegexConvertible, closure: (String) -> String) -> String {
         self = gsub(pattern, closure: closure)
         return self
     }

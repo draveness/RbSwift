@@ -26,7 +26,8 @@ public extension String {
     /// 	hello                   #=> "hello"
     ///
     /// - Returns: Self
-    @discardableResult mutating func downcased() -> String {
+    @discardableResult
+    mutating func downcased() -> String {
         self = downcase
         return self
     }
@@ -47,7 +48,8 @@ public extension String {
     /// 	hello                   #=> "HELLO"
     ///
     /// - Returns: Self
-    @discardableResult mutating func upcased() -> String {
+    @discardableResult
+    mutating func upcased() -> String {
         self = upcase
         return self
     }
@@ -67,7 +69,8 @@ public extension String {
     /// 	hello                   #=> "hELLheO"
     ///
     /// - Returns: Self
-    @discardableResult mutating func swapcased() -> String {
+    @discardableResult
+    mutating func swapcased() -> String {
         self = swapcase
         return self
     }

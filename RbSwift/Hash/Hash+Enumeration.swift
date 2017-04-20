@@ -23,7 +23,8 @@ public extension Hash {
     ///
     /// - Parameter closure: An closure accepts key-value pair as parameters.
     /// - Returns: Self.
-    @discardableResult func eachPair(closure: (Key, Value) -> Void) -> Hash<Key, Value> {
+    @discardableResult
+    func eachPair(closure: (Key, Value) -> Void) -> Hash<Key, Value> {
         return self.each(closure)
     }
     
@@ -39,7 +40,8 @@ public extension Hash {
     ///
     /// - Parameter closure: An closure accepts key as parameters.
     /// - Returns: Self.
-    @discardableResult func eachKey(closure: (Key) -> Void) -> Hash<Key, Value> {
+    @discardableResult
+    func eachKey(closure: (Key) -> Void) -> Hash<Key, Value> {
         self.keys.reverseEach(closure)
         return self
     }
@@ -56,7 +58,8 @@ public extension Hash {
     ///
     /// - Parameter closure: An closure accepts value as parameters.
     /// - Returns: Self.
-    @discardableResult func eachValue(closure: (Value) -> Void) -> Hash<Key, Value> {
+    @discardableResult
+    func eachValue(closure: (Value) -> Void) -> Hash<Key, Value> {
         self.values.reverseEach(closure)
         return self
     }

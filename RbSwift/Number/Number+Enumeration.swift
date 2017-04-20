@@ -120,7 +120,8 @@ public extension Int {
     ///
     /// - Parameter closure: A closure accepts Void and returns Void
     /// - Returns: An array
-    @discardableResult func times<T>(_ closure: @escaping (Void) throws -> T) rethrows -> [T] {
+    @discardableResult
+    func times<T>(_ closure: @escaping (Void) throws -> T) rethrows -> [T] {
         var result: [T] = []
         try 0.upto(self - 1).forEach { _ in
             try result.append(closure())
@@ -153,7 +154,8 @@ public extension Int {
     ///
     /// - Parameter closure: A closure accepts Void and returns Void
     /// - Returns: An array
-    @discardableResult func times<T>(_ closure: @escaping (Int) throws -> T) rethrows -> [T] {
+    @discardableResult
+    func times<T>(_ closure: @escaping (Int) throws -> T) rethrows -> [T] {
         var result: [T] = []
         try 0.upto(self - 1).forEach { index in
             try result.append(closure(index))

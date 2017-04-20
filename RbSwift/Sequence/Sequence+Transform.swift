@@ -253,7 +253,8 @@ public extension Sequence {
     ///   - n: An integer that indicates how many times the element in array should be called
     ///   - closure: A closure that accepts the element in array as parameter
     /// - Returns: An new array with every elements in array repeated for n times
-    @discardableResult func cycle(_ n: Int = 1, closure: ((Self.Iterator.Element) throws -> Void)? = nil) rethrows -> [Self.Iterator.Element] {
+    @discardableResult
+    func cycle(_ n: Int = 1, closure: ((Self.Iterator.Element) throws -> Void)? = nil) rethrows -> [Self.Iterator.Element] {
         guard n.isPositive else { return [] }
         let results = self.to_a * n
         if let closure = closure {

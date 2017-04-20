@@ -17,7 +17,8 @@ public extension Array {
     ///     arr             #=> []
     ///
     /// - Returns: An empty string
-    @discardableResult mutating func clear() -> [Element] {
+    @discardableResult
+    mutating func clear() -> [Element] {
         self = []
         return self
     }
@@ -32,7 +33,8 @@ public extension Array {
     ///     arr             #=> []
     ///
     /// - Returns: The last element in array
-    @discardableResult mutating func pop() -> Element? {
+    @discardableResult
+    mutating func pop() -> Element? {
         return self.popLast()
     }
     
@@ -48,7 +50,8 @@ public extension Array {
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of popped element
-    @discardableResult mutating func pop(_ num: Int) -> [Element] {
+    @discardableResult
+    mutating func pop(_ num: Int) -> [Element] {
         guard num.isPositive else { return [] }
         guard num < self.length else {
             let element = self
@@ -72,7 +75,8 @@ public extension Array {
     /// - Parameter objs: An array of object prepend to the receiver array
     /// - Returns: An array with objs append to self
     /// - See also: Array#pop(num:) for the opposite effect.
-    @discardableResult mutating func push(_ objs: Element...) -> [Element] {
+    @discardableResult
+    mutating func push(_ objs: Element...) -> [Element] {
         self += objs
         return self
     }
@@ -88,7 +92,8 @@ public extension Array {
     ///     arr             #=> []
     ///
     /// - Returns: The first element in array
-    @discardableResult mutating func shift() -> Element? {
+    @discardableResult
+    mutating func shift() -> Element? {
         if self.isEmpty { return nil }
         return self.removeFirst()
     }
@@ -104,7 +109,8 @@ public extension Array {
     ///
     /// - Parameter num: The count of returning elements
     /// - Returns: An new array of shifted element
-    @discardableResult mutating func shift(_ num: Int) -> [Element] {
+    @discardableResult
+    mutating func shift(_ num: Int) -> [Element] {
         guard num.isPositive else { return [] }
         guard num < self.length else {
             let element = self
@@ -128,7 +134,8 @@ public extension Array {
     /// - Parameter objs: An array of object prepend to the receiver array
     /// - Returns: An array with objs prepend to self
     /// - See also: Array#shift(num:) for the opposite effect.
-    @discardableResult mutating func unshift(_ objs: Element...) -> [Element] {
+    @discardableResult
+    mutating func unshift(_ objs: Element...) -> [Element] {
         self = objs + self
         return self
     }
@@ -149,7 +156,8 @@ public extension Array {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: Self
-    @discardableResult mutating func selected(closure: (Element) throws -> Bool) rethrows -> [Element] {
+    @discardableResult
+    mutating func selected(closure: (Element) throws -> Bool) rethrows -> [Element] {
         self = try select(closure)
         return self
     }
@@ -170,7 +178,8 @@ public extension Array {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: Self
-    @discardableResult mutating func rejected(closure: (Element) throws -> Bool)rethrows  -> [Element] {
+    @discardableResult
+    mutating func rejected(closure: (Element) throws -> Bool)rethrows  -> [Element] {
         self = try reject(closure)
         return self
     }
@@ -195,7 +204,8 @@ public extension Array where Element: Equatable {
     ///   - obj: An object which will be deleted in the array
     ///   - all: A bool value indicates whether deletes all the same object in array (default is `true`).
     /// - Returns: The deleted object or nil.
-    @discardableResult mutating func delete(_ obj: Element, all: Bool = true) -> Element? {
+    @discardableResult
+    mutating func delete(_ obj: Element, all: Bool = true) -> Element? {
         var indexes: [Int] = []
         for (index, item) in self.enumerated() {
             if item == obj {

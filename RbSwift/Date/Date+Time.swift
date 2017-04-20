@@ -75,7 +75,8 @@ public extension Date {
     ///   - minute: A int value
     ///   - second: A int value
     /// - Returns: Self
-    @discardableResult mutating func changed(year: Int? = nil, month: Int? = nil, day: Int? = nil,
+    @discardableResult
+    mutating func changed(year: Int? = nil, month: Int? = nil, day: Int? = nil,
                                     hour: Int? = nil, minute: Int? = nil, second: Int? = nil) -> Date {
         self = change(year: year, month: month, day: day, hour: hour, minute: minute, second: second)
         return self

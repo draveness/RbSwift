@@ -130,7 +130,8 @@ public class IO {
     ///
     /// - Parameter string: A string written to I/O Stream.
     /// - Returns: The number of bytes written.
-    @discardableResult public func write(_ string: String) -> Int {
+    @discardableResult
+    public func write(_ string: String) -> Int {
         return fwrite(string, 1, string.length, file)
     }
 
@@ -144,7 +145,8 @@ public class IO {
     ///
     /// - Parameter sep: A string separator.
     /// - Returns: A string value or nil.
-    @discardableResult public func gets(_ sep: String? = "\n") -> String? {
+    @discardableResult
+    public func gets(_ sep: String? = "\n") -> String? {
         guard let sep = sep?.first, sep.length.isPositive else { return read() }
         if sep == "\n" {
             let buffer = [CChar](repeating: 0, count: 1024)
@@ -177,7 +179,8 @@ public class IO {
     /// Flushes any buffered data within ios to the underlying operating system.
     ///
     /// - Returns: An int return value for `fflush`.
-    @discardableResult public func flush() -> Int {
+    @discardableResult
+    public func flush() -> Int {
         return fflush(file).to_i
     }
 
@@ -220,7 +223,8 @@ public class IO {
     /// Closes I/O stream and flushes any pending writes to the operating system.
     ///
     /// - Returns: A status.
-    @discardableResult public func close() -> Int {
+    @discardableResult
+    public func close() -> Int {
         return fclose(file).to_i
     }
     

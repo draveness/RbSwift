@@ -67,7 +67,8 @@ public extension String {
     ///     lines                   #=> "Multi-line string"
     ///
     /// - Returns: Self
-    @discardableResult mutating func squished() -> String {
+    @discardableResult
+    mutating func squished() -> String {
         self = squish
         return self
     }
@@ -117,7 +118,8 @@ public extension String {
     ///
     /// - Parameter str: A str contains all characters need to squeeze
     /// - Returns: Self
-    @discardableResult mutating func squeezed(_ str: String) -> String {
+    @discardableResult
+    mutating func squeezed(_ str: String) -> String {
         self = squeeze(str)
         return self
     }

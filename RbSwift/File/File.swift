@@ -29,7 +29,8 @@ public class File: IO {
         }
     }
     
-    @discardableResult public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+    @discardableResult
+    public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         let file = File(path, mode)
         if let closure = closure {
             defer { file.close() }
@@ -38,7 +39,8 @@ public class File: IO {
         return file
     }
     
-    @discardableResult public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+    @discardableResult
+    public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         return new(path, mode, closure: closure)
     }
     

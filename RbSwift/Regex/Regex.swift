@@ -54,7 +54,8 @@ public struct Regex {
     ///   - pos: The position in the string to begin the search
     ///   - closure: A closure invoked if there is a match
     /// - Returns: A `MatchData` instance contains all match results in it
-    @discardableResult public func match(_ str: String, _ pos: Int = 0, closure: ((MatchData) -> Void)? = nil) -> MatchData? {
+    @discardableResult
+    public func match(_ str: String, _ pos: Int = 0, closure: ((MatchData) -> Void)? = nil) -> MatchData? {
 //        let str = str.bridge
         guard let result = regexp.firstMatch(in: str, options: [], range: NSMakeRange(pos, str.length - pos)) else { return nil }
 
@@ -83,7 +84,8 @@ public struct Regex {
     ///   - pattern: A string
     ///   - closure: A closure invoked if there is a match
     /// - Returns: An array of `MatchData` instance contains all match results in it
-    @discardableResult public func scan(_ str: String, closure: ((MatchData) -> Void)? = nil) -> [MatchData] {
+    @discardableResult
+    public func scan(_ str: String, closure: ((MatchData) -> Void)? = nil) -> [MatchData] {
         let matches = regexp.matches(in: str, options: [], range: NSMakeRange(0, str.length))
         
         var matchDatas: [MatchData] = []
