@@ -77,5 +77,16 @@ class IOSpec: BaseSpec {
                 }
             }
         }
+        
+        describe(".rewind") {
+            it("positions ios to the beginning of input, resetting lineno to zero.") {
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    expect(file.gets()).to(equal("first line\n"))
+                    file.rewind()
+                    expect(file.gets()).to(equal("first line\n"))
+                }
+            }
+        }
     }
 }

@@ -183,6 +183,11 @@ public class IO {
         return getc
     }
     
+    /// Positions ios to the beginning of input, resetting lineno to zero.
+    public func rewind() {
+        seek(0)
+    }
+    
     /// Reads the next “line” from the I/O stream; lines are separated by sep.
     /// A separator of nil and a zero-length separator reads the entire contents.
     ///
