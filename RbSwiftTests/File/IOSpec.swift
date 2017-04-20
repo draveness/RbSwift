@@ -35,7 +35,7 @@ class IOSpec: BaseSpec {
                 expect(File.read(file)).to(equal("content"))
             }
         }
-
+        
         describe(".write(string:)") {
             it("writes the given string to I/O stream.") {
                 File.open("empty.txt", "w") { file in
@@ -43,6 +43,38 @@ class IOSpec: BaseSpec {
                 }
                 let readFile = File.open("empty.txt", "r")
                 expect(readFile.read()).to(equal("Content"))
+            }
+        }
+        
+        describe(".gets(sep:)") {
+            it("reads the next “line” from the I/O stream") {
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    expect(file.gets()).to(equal("first line\n"))
+                    expect(file.gets("s")).to(equal("s"))
+                }
+                
+                File.open(file) { file in
+                    expect(file.gets(nil)).to(equal("first line\nsecond line\n"))
+                }
+            }
+        }
+        
+        describe(".getc") {
+            it("reads a one-character string from ios.") {
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    expect(file.getc!).to(equal("f"))
+                }
+            }
+            
+            it("returns nil if called at end of file.") {
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    file.gets()
+                    file.gets()
+                    expect(file.getc).to(beNil())
+                }
             }
         }
     }

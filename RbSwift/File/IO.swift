@@ -11,13 +11,13 @@ import Darwin
 
 public class IO {
     private var _file: UnsafeMutablePointer<FILE>
-    open var file: UnsafeMutablePointer<FILE> {
+    public var file: UnsafeMutablePointer<FILE> {
         get {
             return _file
         }
     }
     
-    open var lineno = 0
+    public var lineno = 0
     
     init(file: UnsafeMutablePointer<FILE>) {
         self._file = file
@@ -110,7 +110,7 @@ public class IO {
     ///
     /// - Parameter length: The length of bytes from I/O stream.
     /// - Returns: A string read from the I/O Stream.
-    open func read(_ length: Int = Int.max) -> String {
+    public func read(_ length: Int = Int.max) -> String {
         guard length.isPositive else { return "" }
         let buffer = [CChar](repeating: 0, count: 1024)
         var result = ""
@@ -130,11 +130,22 @@ public class IO {
     ///
     /// - Parameter string: A string written to I/O Stream.
     /// - Returns: The number of bytes written.
-    @discardableResult open func write(_ string: String) -> Int {
+    @discardableResult public func write(_ string: String) -> Int {
         return fwrite(string, 1, string.length, file)
     }
 
-    func gets(_ sep: String = "\n") -> String? {
+    /// Reads the next “line” from the I/O stream; lines are separated by sep. 
+    /// A separator of nil and a zero-length separator reads the entire contents.
+    ///
+    ///     let file = File.open("file.txt")
+    ///     file.gets()     #=> "first line\n"
+    ///     file.gets("s")  #=> "s"
+    ///     file.gets()     #=> "econd line\n"
+    ///
+    /// - Parameter sep: A string separator.
+    /// - Returns: A string value or nil.
+    @discardableResult public func gets(_ sep: String? = "\n") -> String? {
+        guard let sep = sep?.first, sep.length.isPositive else { return read() }
         if sep == "\n" {
             let buffer = [CChar](repeating: 0, count: 1024)
             guard let _ = fgets(UnsafeMutablePointer(mutating: buffer), buffer.count.to_i32, file) else { return nil }
@@ -145,7 +156,8 @@ public class IO {
         } else {
             var buffer: String = ""
             while true {
-                let char = fgetc(file).to_i.chr
+                guard let char = getc else { break }
+                if char == "\n" { lineno += 1 }
                 buffer.append(char)
                 if char == sep { break }
             }
@@ -153,10 +165,19 @@ public class IO {
         }
     }
     
+    /// Reads a one-character string from ios. Returns nil if called at end of file.
+    public var getc: String? {
+        let char = fgetc(file).to_i
+        if char == -1 {
+            return nil
+        }
+        return char.chr
+    }
+    
     /// Flushes any buffered data within ios to the underlying operating system.
     ///
     /// - Returns: An int return value for `fflush`.
-    @discardableResult open func flush() -> Int {
+    @discardableResult public func flush() -> Int {
         return fflush(file).to_i
     }
 
@@ -192,35 +213,35 @@ public class IO {
     ///   - offset: An integer offset.
     ///   - whence: An whenece
     /// - SeeAlso: SeekPosition
-    open func seek(_ offset: Int, whence: SeekPosition = .set) {
+    public func seek(_ offset: Int, whence: SeekPosition = .set) {
         fseek(file, offset, whence.to_i())
     }
         
     /// Closes I/O stream and flushes any pending writes to the operating system.
     ///
     /// - Returns: A status.
-    @discardableResult open func close() -> Int {
+    @discardableResult public func close() -> Int {
         return fclose(file).to_i
     }
     
     /// Returns an integer representing the numeric file descriptor for I/O stream.
-    open var fileno: Int {
+    public var fileno: Int {
         return Darwin.fileno(file).to_i
     }
     
     /// An alias to `fileno` var.
-    open var to_i: Int {
+    public var to_i: Int {
         return fileno
     }
     
     /// Returns true if I/O stream is associated with a terminal device (tty), false otherwise.
-    open var isatty: Bool {
+    public var isatty: Bool {
         return Darwin.isatty(fileno.to_i32) != 0
     }
     
     /// The current offset (in bytes) of ios. Set this var to seek to the given position (in bytes) in
     /// ios. It is not guaranteed that seeking to the right position when ios is textmode.
-    open var pos: Int {
+    public var pos: Int {
         get {
             return ftell(file).to_i
         }

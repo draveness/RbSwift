@@ -290,6 +290,8 @@
 		72304A1B1E97230300D5427E /* Hash+Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A171E97230300D5427E /* Hash+Enumeration.swift */; };
 		72304A1D1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */; };
 		72304A1E1E97231D00D5427E /* Hash+EnumerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72304A1C1E97231D00D5427E /* Hash+EnumerationSpec.swift */; };
+		7263784E1EA85F530068F1BF /* file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7263784D1EA85F530068F1BF /* file.txt */; };
+		7263784F1EA85F530068F1BF /* file.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7263784D1EA85F530068F1BF /* file.txt */; };
 		7291CCEC1EA213980033BAEC /* Array+Ordinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCEB1EA213980033BAEC /* Array+Ordinal.swift */; };
 		7291CCED1EA213980033BAEC /* Array+Ordinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCEB1EA213980033BAEC /* Array+Ordinal.swift */; };
 		7291CCEE1EA213980033BAEC /* Array+Ordinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7291CCEB1EA213980033BAEC /* Array+Ordinal.swift */; };
@@ -493,6 +495,7 @@
 		72541BAF1E7E33C1008B49B1 /* Duration+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+Conversions.swift"; sourceTree = "<group>"; };
 		72541BB11E7E33F9008B49B1 /* Duration+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Duration+Comparable.swift"; sourceTree = "<group>"; };
 		72541BB31E7E34C4008B49B1 /* Date+Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Conversions.swift"; sourceTree = "<group>"; };
+		7263784D1EA85F530068F1BF /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
 		727738871E8025BF008E83E6 /* Number+Enumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Enumeration.swift"; sourceTree = "<group>"; };
 		727738891E802652008E83E6 /* Number+EnumerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+EnumerationSpec.swift"; sourceTree = "<group>"; };
 		7277388B1E8034C1008E83E6 /* Number+Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Math.swift"; sourceTree = "<group>"; };
@@ -935,6 +938,7 @@
 			children = (
 				7291CD011EA4ED6D0033BAEC /* RbSwift.txt */,
 				7291CD0D1EA4F4CB0033BAEC /* empty.txt */,
+				7263784D1EA85F530068F1BF /* file.txt */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -1215,6 +1219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7291CD0F1EA4F4CB0033BAEC /* empty.txt in Resources */,
+				7263784F1EA85F530068F1BF /* file.txt in Resources */,
 				7291CD031EA4ED6D0033BAEC /* RbSwift.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1224,6 +1229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7291CD0E1EA4F4CB0033BAEC /* empty.txt in Resources */,
+				7263784E1EA85F530068F1BF /* file.txt in Resources */,
 				7291CD021EA4ED6D0033BAEC /* RbSwift.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
