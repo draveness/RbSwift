@@ -45,7 +45,7 @@ public class IO {
         return new(fd, mode: mode)
     }
     
-    /// Reassociates ios with the I/O stream given in another I/O or to a new
+    /// Reassociates I/O stream with the I/O stream given in another I/O or to a new
     /// stream opened on path. This may dynamically change the actual class of this stream.
     ///
     /// - Parameter io: Another I/O stream.
@@ -56,7 +56,7 @@ public class IO {
         return self
     }
     
-    /// Reassociates ios with the I/O stream given in another I/O or to a new
+    /// Reassociates I/O stream with the I/O stream given in another I/O or to a new
     /// stream opened on path. This may dynamically change the actual class of this stream.
     ///
     /// - Parameters:
@@ -110,6 +110,12 @@ public class IO {
     /// Opens the file with `File#open` and writes the given string to I/O stream.
     /// The stream must be opened for writing.
     ///
+    ///     File.open("empty.txt", "w") { file in
+    ///         file.write("Content")
+    ///     }
+    ///     let readFile = File.open("empty.txt", "r")
+    /// 	readFile.read()		#=> "Content"
+    ///
     /// - Parameters:
     ///   - name: The name of a file.
     ///   - string: A string to write to the specific file.
@@ -124,19 +130,63 @@ public class IO {
         return file.write(string)
     }
     
-    /// Writes the given object(s) to ios.
+    /// Writes the given object(s) to I/O stream.
+    ///
+    ///     File.open("print-empty.txt", "w") { file in
+    ///         file.print("This is ", 10, " lines\n")
+    ///     }
+    ///     let file = File.open("print-empty.txt")
+    /// 	file.read()		#=> "This is 10 lines\n"
     ///
     /// - Parameter values: An array of values conforms to `CustomStringConvertible` protocol.
     public func print(_ values: CustomStringConvertible...) {
         fputs(values.map { $0.description }.join(""), file)
     }
     
-    /// Writes the given object(s) to ios.
+    /// Writes the given object(s) to I/O stream. Writes a newline after any that do not already
+    /// end with a newline sequence.
     ///
+    /// 	File.open("puts-empty.txt", "w") { file in
+    ///         file.puts("This", "is", "a", "test")
+    /// 	}
+    /// 	let file = File.open("puts-empty.txt")
+    /// 	file.read()		#=> "This\nis\na\ntest\n"
+    /// 	
     /// - Parameter values: An array of values conforms to `CustomStringConvertible` protocol.
     /// - SeeAlso: An alias to `IO#print(values:)`
     public func puts(_ values: CustomStringConvertible...) {
-        print(values)
+        fputs(values.map { $0.description + "\n"}.join(""), file)
+    }
+    
+    /// If obj is Numeric, write the character whose code is the least-significant byte of obj, 
+    /// otherwise write the first byte of the string representation of obj to I/O stream.
+    ///
+    /// 	File.open("putc.txt", "w") { file in
+    ///         file.putc("aaa")
+    ///         file.putc(97)
+    /// 	}
+    /// 	let file = File.open("putc.txt")
+    /// 	file.read()		#=> "aa"
+    ///
+    /// - Parameter char: A character or a string, if char is a string, `IO#putc(char:)` only
+    ///                   write the first char of string into file.
+    public func putc(_ char: String) {
+        print(char.first)
+    }
+    
+    /// If obj is Numeric, write the character whose code is the least-significant byte of obj,
+    /// otherwise write the first byte of the string representation of obj to I/O stream.
+    ///
+    /// 	File.open("putc.txt", "w") { file in
+    ///         file.putc("aaa")
+    ///         file.putc(97)
+    /// 	}
+    /// 	let file = File.open("putc.txt")
+    /// 	file.read()		#=> "aa"
+    /// 	
+    /// - Parameter char: A integer which would convert to String by `Int#chr`.
+    public func putc(_ char: Int) {
+        print(char.chr)
     }
     
     /// Reads length bytes from the I/O stream.
@@ -208,6 +258,19 @@ public class IO {
     }
     
     /// Reads a one-character string from IO stream. Returns nil if called at end of file.
+    ///
+    /// 	let file = Fixture.name("file.txt")
+    /// 	File.open(file) { file in
+    ///         file.getc!		#=> "f"
+    /// 	}
+    ///
+    /// 	let file = Fixture.name("file.txt")
+    /// 	File.open(file) { file in
+    ///         file.gets()
+    ///         file.gets()
+    ///         file.getc		#=> nil
+    /// 	}
+    /// 	
     public var getc: String? {
         let char = fgetc(file).to_i
         if char == -1 {

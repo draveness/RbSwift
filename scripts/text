@@ -1,5 +1,12 @@
-                let file = Fixture.open("file.txt")
-                expect(File.read(file)).to(equal("RbSwift\n"))
-                expect(File.read(file, offset: 1)).to(equal("bSwift\n"))
-                expect(File.read(file, offset: 100)).to(equal(""))
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    expect(file.getc!).to(equal("f"))
+                }
+            
+                let file = Fixture.name("file.txt")
+                File.open(file) { file in
+                    file.gets()
+                    file.gets()
+                    expect(file.getc).to(beNil())
+                }
 

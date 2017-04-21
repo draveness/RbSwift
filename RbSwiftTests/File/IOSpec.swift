@@ -61,7 +61,7 @@ class IOSpec: BaseSpec {
         }
         
         describe(".getc") {
-            it("reads a one-character string from ios.") {
+            it("reads a one-character string from I/O stream.") {
                 let file = Fixture.name("file.txt")
                 File.open(file) { file in
                     expect(file.getc!).to(equal("f"))
@@ -79,7 +79,7 @@ class IOSpec: BaseSpec {
         }
         
         describe(".rewind()") {
-            it("positions ios to the beginning of input, resetting lineno to zero.") {
+            it("positions I/O stream to the beginning of input, resetting lineno to zero.") {
                 let file = Fixture.name("file.txt")
                 File.open(file) { file in
                     expect(file.gets()).to(equal("first line\n"))
@@ -90,7 +90,7 @@ class IOSpec: BaseSpec {
         }
         
         describe(".reopen(path:mode:)") {
-            it("reassociates ios with the I/O stream given in another I/O") {
+            it("reassociates I/O stream with the I/O stream given in another I/O") {
                 let file = Fixture.name("file.txt")
                 let f1 = File.open(file)
                 expect(f1.gets()).to(equal("first line\n"))
@@ -99,7 +99,6 @@ class IOSpec: BaseSpec {
                 expect(f1.gets()).to(equal("first line\n"))
             }
         }
-        
         
         describe(".write(string:)") {
             it("writes the given string to I/O stream.") {
@@ -111,7 +110,6 @@ class IOSpec: BaseSpec {
             }
         }
         
-        
         describe(".print(values:)") {
             it("writes the given object(s) to I/O stream") {
                 File.open("print-empty.txt", "w") { file in
@@ -119,6 +117,27 @@ class IOSpec: BaseSpec {
                 }
                 let file = File.open("print-empty.txt")
                 expect(file.read()).to(equal("This is 10 lines\n"))
+            }
+        }
+        
+        describe(".puts(values:)") {
+            it("writes the given object(s) to I/O stream") {
+                File.open("puts-empty.txt", "w") { file in
+                    file.puts("This", "is", "a", "test")
+                }
+                let file = File.open("puts-empty.txt")
+                expect(file.read()).to(equal("This\nis\na\ntest\n"))
+            }
+        }
+        
+        describe(".putc(char:)") {
+            it("writes the character to file") {
+                File.open("putc.txt", "w") { file in
+                    file.putc("aaa")
+                    file.putc(97)
+                }
+                let file = File.open("putc.txt")
+                expect(file.read()).to(equal("aa"))
             }
         }
     }
