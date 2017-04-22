@@ -381,4 +381,8 @@ public class IO {
             seek(newValue)
         }
     }
+    
+    public var stat: Stat {
+        return Stat(fileno)
+    }
 }
