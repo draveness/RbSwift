@@ -813,12 +813,12 @@
 		724874F91E7CF813007984FD /* RbSwift */ = {
 			isa = PBXGroup;
 			children = (
-				7291CD101EA514CB0033BAEC /* Bridge */,
 				72304A0C1E967D7200D5427E /* Array */,
+				7291CD101EA514CB0033BAEC /* Bridge */,
 				72304A0D1E967D7A00D5427E /* Date */,
 				72304A0E1E967D8400D5427E /* Duration */,
-				72F39AF61E9B74CA0050D91B /* File */,
 				72304A0F1E967D8A00D5427E /* Hash */,
+				72F39AF61E9B74CA0050D91B /* IO */,
 				72304A101E967D9000D5427E /* Inflector */,
 				72304A121E967D9F00D5427E /* Number */,
 				72304A111E967D9A00D5427E /* Regex */,
@@ -835,14 +835,14 @@
 				72541B611E7E2EFA008B49B1 /* Array */,
 				72541B071E7D629E008B49B1 /* Date */,
 				7248753F1E7CFF96007984FD /* Duration */,
-				72F39AF71E9B74DA0050D91B /* File */,
 				723049ED1E96758C00D5427E /* Hash */,
+				72F39AF71E9B74DA0050D91B /* IO */,
 				72541B621E7E2F07008B49B1 /* Number */,
 				723AA33E1E8AD4970000A612 /* Regex */,
 				72541B5C1E7E2E0B008B49B1 /* Sequence */,
 				72541B1C1E7D9617008B49B1 /* String */,
-				7291CD071EA4EF120033BAEC /* Fixtures.swift */,
 				7291CD0A1EA4EFE20033BAEC /* BaseSpec.swift */,
+				7291CD071EA4EF120033BAEC /* Fixtures.swift */,
 			);
 			path = RbSwiftTests;
 			sourceTree = "<group>";
@@ -949,6 +949,7 @@
 				7291CD111EA514D90033BAEC /* Bridge.swift */,
 			);
 			name = Bridge;
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		72F39AC61E9640830050D91B /* Resources */ = {
@@ -964,7 +965,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		72F39AF61E9B74CA0050D91B /* File */ = {
+		72F39AF61E9B74CA0050D91B /* IO */ = {
 			isa = PBXGroup;
 			children = (
 				72273DE01E9B9CD00022D52C /* Dir.swift */,
@@ -973,18 +974,20 @@
 				7291CCFB1EA3CE240033BAEC /* IO.swift */,
 				72F39B001E9B7BD30050D91B /* Pathname.swift */,
 			);
-			path = File;
+			name = IO;
+			path = IO;
 			sourceTree = "<group>";
 		};
-		72F39AF71E9B74DA0050D91B /* File */ = {
+		72F39AF71E9B74DA0050D91B /* IO */ = {
 			isa = PBXGroup;
 			children = (
 				72273DE51E9B9E5C0022D52C /* DirSpec.swift */,
 				72F39AFD1E9B75D70050D91B /* FileSpec.swift */,
-				72F39B051E9B7BFA0050D91B /* PathnameSpec.swift */,
 				7291CD041EA4EDB50033BAEC /* IOSpec.swift */,
+				72F39B051E9B7BFA0050D91B /* PathnameSpec.swift */,
 			);
-			path = File;
+			name = IO;
+			path = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
