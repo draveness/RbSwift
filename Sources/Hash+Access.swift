@@ -169,7 +169,8 @@ public extension Hash {
     ///
     /// - Parameter keys: An array of keys.
     /// - Returns: Key/value pairs with given keys.
-    @discardableResult mutating func excepted(_ keys: Key...) -> [Key: Value] {
+    @discardableResult
+    mutating func excepted(_ keys: Key...) -> [Key: Value] {
         return excepted(keys)
     }
     
@@ -181,7 +182,8 @@ public extension Hash {
     ///
     /// - Parameter keys: An array of keys.
     /// - Returns: Key/value pairs with given keys.
-    @discardableResult mutating func excepted(_ keys: [Key]) -> [Key: Value] {
+    @discardableResult
+    mutating func excepted(_ keys: [Key]) -> [Key: Value] {
         self = except(keys)
         return self
     }
@@ -198,7 +200,8 @@ public extension Hash {
     ///
     /// - Parameter keys: An array of keys.
     /// - Returns: Key-value pairs matching the given keys
-    @discardableResult mutating func extract(_ keys: Key...) -> [Key: Value] {
+    @discardableResult
+    mutating func extract(_ keys: Key...) -> [Key: Value] {
         return extract(keys)
     }
     
@@ -214,7 +217,8 @@ public extension Hash {
     ///
     /// - Parameter keys: An array of keys.
     /// - Returns: Key-value pairs matching the given keys
-    @discardableResult mutating func extract(_ keys: [Key]) -> [Key: Value] {
+    @discardableResult
+    mutating func extract(_ keys: [Key]) -> [Key: Value] {
         var results: [Key: Value] = [:]
         for (key, value) in self {
             if keys.contains(key) {

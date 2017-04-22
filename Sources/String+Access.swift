@@ -288,7 +288,7 @@ public extension String {
     /// - Parameter from: A position indicates the start position of substring
     /// - Returns: A substring from the given position to the end of the string
     func substring(from: Int) -> String {
-        return (self as NSString).substring(from: from)
+        return self.bridge.substring(from: from)
     }
     
     /// Returns a substring from the beginning of the string to the given position(**excluded**).
@@ -301,7 +301,7 @@ public extension String {
     /// - Parameter to: A position indicates the end position of substring
     /// - Returns: A substring from the beginning of the string to the given position
     func substring(to: Int) -> String {
-        return (self as NSString).substring(to: to)
+        return self.bridge.substring(to: to)
     }
     
     /// Returns the index of the first occurrence of the given substring in str.

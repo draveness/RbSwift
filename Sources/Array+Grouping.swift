@@ -27,7 +27,8 @@ public extension Array {
     ///   - with: An element used to padding remaining slot in the last array.
     ///   - closure: A closure recevies array as parameter
     /// - Returns: A two dimentional array of `Element`.
-    @discardableResult func inGroup(of num: Int, fill with: Element? = nil, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
+    @discardableResult
+    func inGroup(of num: Int, fill with: Element? = nil, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive else { return [] }
         var elements = self
         var slices: [[Element]] = []
@@ -59,7 +60,8 @@ public extension Array {
     ///   - with: An element used to padding remaining slot in the last array.
     ///   - closure: A closure recevies array as parameter
     /// - Returns: A two dimentional array of `Element`.
-    @discardableResult func inGroup(_ num: Int, fill with: Element? = nil, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
+    @discardableResult
+    func inGroup(_ num: Int, fill with: Element? = nil, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive else { return [] }
         let division = length / num
         let modulo = length % num
@@ -90,7 +92,8 @@ public extension Array {
     ///
     /// - Parameter closure: A closure accepts element and returns bool value.
     /// - Returns: A nested array.
-    @discardableResult func split(_ closure: (Element) -> Bool) -> [[Element]] {
+    @discardableResult
+    func split(_ closure: (Element) -> Bool) -> [[Element]] {
         var groups: [[Element]] = []
         var lastGroup: [Element] = []
         eachWithIndex { (index, elem) in
@@ -122,7 +125,8 @@ public extension Array where Element: Equatable {
     ///
     /// - Parameter value: A value used to split the array.
     /// - Returns: A nested array.
-    @discardableResult func split(_ value: Element) -> [[Element]] {
+    @discardableResult
+    func split(_ value: Element) -> [[Element]] {
         return split { $0 == value }
     }
 }

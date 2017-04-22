@@ -25,7 +25,8 @@ public extension Array {
     ///   - num: The length of combination in the returning array
     ///   - closure: A closure called each time finds a new combination
     /// - Returns: An new array with all the possible combination in the receiver array
-    @discardableResult func combination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
+    @discardableResult
+    func combination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive && !self.isEmpty else { return [] }
         guard num <= self.length else { return [[]] }
         var bits = Array<Int>(Array<Int>(0..<num).reversed())
@@ -72,7 +73,8 @@ public extension Array {
     ///   - num: The length of combination in the returning array
     ///   - closure: A closure called each time finds a new combination
     /// - Returns: An new array with all the possible repeated combination in the receiver array
-    @discardableResult func repeatedCombination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
+    @discardableResult
+    func repeatedCombination(_ num: Int, closure: (([Element]) -> Void)? = nil) -> [[Element]] {
         guard num.isPositive && !self.isEmpty else { return [] }
         var bits = Array<Int>(repeating: 0, count: num)
         var largest = ([Int](repeating: 0, count: num) + [1]).to_i(self.length)

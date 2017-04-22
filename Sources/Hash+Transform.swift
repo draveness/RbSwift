@@ -70,7 +70,8 @@ public extension Hash {
     ///   - otherHash: Another hash instance.
     ///   - closure: A closure returns a new value if duplicate happens.
     /// - Returns: Self
-    @discardableResult mutating func merged(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
+    @discardableResult
+    mutating func merged(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
         self = self.merge(otherHash, closure: closure)
         return self
     }
@@ -81,7 +82,8 @@ public extension Hash {
     ///   - otherHash: Another hash instance.
     ///   - closure: A closure returns a new value if duplicate happens.
     /// - Returns: Self
-    @discardableResult mutating func updated(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
+    @discardableResult
+    mutating func updated(_ otherHash: Hash<Key, Value>, closure: ((Key, Value, Value) -> Value)? = nil) -> Hash<Key, Value> {
         return merged(otherHash, closure: closure)
     }
 
@@ -92,7 +94,8 @@ public extension Hash {
     /// 	hash                #=> [:]
     ///
     /// - Returns: Self with empty hash.
-    @discardableResult mutating func clear() -> Hash<Key, Value> {
+    @discardableResult
+    mutating func clear() -> Hash<Key, Value> {
         self = [:]
         return self
     }
@@ -105,7 +108,8 @@ public extension Hash {
     ///
     /// - Parameter key: A key of hash.
     /// - Returns: Corresponding value or nil.
-    @discardableResult mutating func delete(_ key: Key) -> Value? {
+    @discardableResult
+    mutating func delete(_ key: Key) -> Value? {
         return self.removeValue(forKey: key)
     }
     
@@ -117,7 +121,8 @@ public extension Hash {
     ///
     /// - Parameter otherHash: Another hash instance.
     /// - Returns: Self
-    @discardableResult mutating func replace(_ otherHash: Hash<Key, Value>) -> Hash<Key, Value> {
+    @discardableResult
+    mutating func replace(_ otherHash: Hash<Key, Value>) -> Hash<Key, Value> {
         self = otherHash
         return self
     }
@@ -132,7 +137,8 @@ public extension Hash {
     ///   - key: A key
     ///   - value: A value
     /// - Returns: The passing value
-    @discardableResult mutating func store(_ key: Key, _ value: Value) -> Value {
+    @discardableResult
+    mutating func store(_ key: Key, _ value: Value) -> Value {
         self[key] = value
         return value
     }
@@ -145,7 +151,8 @@ public extension Hash {
     /// 	hash.shift()		#=> nil
     ///
     /// - Returns: A key-value pair
-    @discardableResult mutating func shift() -> (Key, Value)? {
+    @discardableResult
+    mutating func shift() -> (Key, Value)? {
         if let key = self.keys.first {
             return (key, delete(key)!)
         }
@@ -182,7 +189,8 @@ public extension Hash {
     ///
     /// - Parameter closure: An closure accepts a value return an new value.
     /// - Returns: Self
-    @discardableResult mutating func transformedValues(_ closure: @escaping (Value) -> Value) -> [Key: Value] {
+    @discardableResult
+    mutating func transformedValues(_ closure: @escaping (Value) -> Value) -> [Key: Value] {
         var results: [Key: Value] = [:]
         for (key, value) in self {
             results[key] = closure(value)

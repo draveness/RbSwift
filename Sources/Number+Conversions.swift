@@ -100,6 +100,15 @@ public extension Int32 {
         if self == 0 { return false }
         return true
     }
+    
+    /// Returns a string containing the character represented by the int's value according to encoding.
+    ///
+    ///     97.chr      #=> "a"
+    ///     98.chr      #=> "b"
+    ///
+    var chr: String {
+        return self.to_i.chr
+    }
 }
 
 public extension Int64 {

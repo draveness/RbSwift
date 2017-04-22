@@ -59,7 +59,8 @@ public class Dir {
     ///
     /// - Parameter path: A new current working directory.
     /// - Returns: A bool indicates the result of `Dir#chdir(path:)`
-    @discardableResult public static func chdir(_ path: String = "~") -> Bool {
+    @discardableResult
+    public static func chdir(_ path: String = "~") -> Bool {
         return FileManager.default.changeCurrentDirectoryPath(path)
     }
     
@@ -80,7 +81,8 @@ public class Dir {
     ///   - path: A new current working directory.
     ///   - closure: A block executed in target directory.
     /// - Returns: The value of the closure.
-    @discardableResult public static func chdir<T>(_ path: String = "~", closure: ((Void) -> T)) -> T {
+    @discardableResult
+    public static func chdir<T>(_ path: String = "~", closure: ((Void) -> T)) -> T {
         let pwd = Dir.pwd
         Dir.chdir(path)
         let result = closure()

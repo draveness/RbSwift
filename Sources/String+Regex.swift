@@ -63,7 +63,7 @@ public extension String {
     /// - Returns: A new string with str replacing the matched result
     func sub(_ pattern: RegexConvertible, _ str: String) -> String {
         guard let matchData = match(pattern.regex) else { return self }
-        return (self as NSString).replacingCharacters(in: matchData.range, with: str)
+        return self.bridge.replacingCharacters(in: matchData.range, with: str)
     }
     
     /// Converts pattern to a `Regex`, then invokes its match(pattern:) method to get
@@ -77,7 +77,8 @@ public extension String {
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
     /// - Returns: Self
-    @discardableResult mutating func subed(_ pattern: RegexConvertible, _ str: String) -> String {
+    @discardableResult
+    mutating func subed(_ pattern: RegexConvertible, _ str: String) -> String {
         self = sub(pattern, str)
         return self
     }
@@ -110,7 +111,8 @@ public extension String {
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - str: A string to replace the matching substring
     /// - Returns: Self
-    @discardableResult mutating func gsubed(_ pattern: RegexConvertible, _ str: String) -> String {
+    @discardableResult
+    mutating func gsubed(_ pattern: RegexConvertible, _ str: String) -> String {
         self = gsub(pattern, str)
         return self
     }
@@ -134,7 +136,7 @@ public extension String {
         for matchData in scan(regex).reversed() {
             result = regex.replace(result, closure(matchData.match))
         }
-        return result as String
+        return result.bridge
     }
     
     /// Converts pattern to a `Regex`, then invokes its matchAll(pattern:) method to get
@@ -149,7 +151,8 @@ public extension String {
     /// - Parameters:
     ///   - pattern: A pattern conforms to `RegexConvertible`
     ///   - closure: A closure accepts the matching result as input and return output to change the origianl string
-    @discardableResult mutating func gsubed(_ pattern: RegexConvertible, closure: (String) -> String) -> String {
+    @discardableResult
+    mutating func gsubed(_ pattern: RegexConvertible, closure: (String) -> String) -> String {
         self = gsub(pattern, closure: closure)
         return self
     }

@@ -29,7 +29,8 @@ public class File: IO {
         }
     }
     
-    @discardableResult public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+    @discardableResult
+    public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         let file = File(path, mode)
         if let closure = closure {
             defer { file.close() }
@@ -38,7 +39,8 @@ public class File: IO {
         return file
     }
     
-    @discardableResult public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
+    @discardableResult
+    public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         return new(path, mode, closure: closure)
     }
     
@@ -60,9 +62,8 @@ public class File: IO {
     ///   - suffix: A string will be removed from the filename.
     /// - Returns: The last component with or without extension.
     public class func basename(_ filename: String, _ suffix: String = "") -> String {
-        let filename = filename as NSString
-        let base = filename.lastPathComponent
-        if suffix == ".*" { return (base as NSString).deletingPathExtension }
+        let base = filename.bridge.lastPathComponent
+        if suffix == ".*" { return base.bridge.deletingPathExtension }
         let pattern = suffix + "$"
         guard base =~ pattern else { return base }
         return base.gsub(pattern, "")
@@ -75,8 +76,7 @@ public class File: IO {
     /// - Parameter filename: A file path string.
     /// - Returns: The directory of given filename.
     public class func dirname(_ filename: String) -> String {
-        let filename = filename as NSString
-        return filename.deletingLastPathComponent
+        return filename.bridge.deletingLastPathComponent
     }
     
     /// Returns the extension (the portion of file name in path starting from the last period).
@@ -89,7 +89,7 @@ public class File: IO {
     /// - Parameter path: A file path.
     /// - Returns: A file extension of empty string.
     public class func extname(_ path: String) -> String {
-        let ext = (path as NSString).pathExtension
+        let ext = path.bridge.pathExtension
         guard ext.isEmpty else { return "." + ext }
         return ext
     }
@@ -110,7 +110,7 @@ public class File: IO {
         var filepath = Pathname(path)
         if let dir = dir {
             filepath = Pathname(dir) + filepath
-            return (filepath.path as NSString).standardizingPath
+            return filepath.path.bridge.standardizingPath
         }
         return File.absolutePath(filepath.path)
     }
@@ -126,12 +126,12 @@ public class File: IO {
     public class func absolutePath(_ path: String) -> String {
         let pathname = Pathname(path)
         if pathname.isAbsolute {
-            return (path as NSString).standardizingPath
+            return path.bridge.standardizingPath
         }
 
-        let expandingPath = Pathname((path as NSString).expandingTildeInPath)
+        let expandingPath = Pathname(path.bridge.expandingTildeInPath)
         if expandingPath.isAbsolute {
-            return (expandingPath.path as NSString).standardizingPath
+            return expandingPath.path.bridge.standardizingPath
         }
 
         let path = URL(fileURLWithPath: pathname.path).absoluteString.from(7)!
