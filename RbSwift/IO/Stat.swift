@@ -146,20 +146,21 @@ public class Stat {
     }
 }
 
+private let S_ISUID: Int = 0o004000		/* [XSI] set user id on execution */
+private let S_ISGID: Int = 0o002000		/* [XSI] set group id on execution */
+private let S_ISVTX: Int = 0o001000		/* [XSI] directory restrcted delete */
+
+private let S_IFMT : Int = 0o170000		/* [XSI] type of file mask */
+private let S_IFIFO: Int = 0o010000		/* [XSI] named pipe (fifo) */
+private let S_IFCHR: Int = 0o020000		/* [XSI] character special */
+private let S_IFDIR: Int = 0o040000		/* [XSI] directory */
+private let S_IFBLK: Int = 0o060000		/* [XSI] block special */
+private let S_IFREG: Int = 0o100000		/* [XSI] regular */
+private let S_IFLNK: Int = 0o120000		/* [XSI] symbolic link */
+private let S_IFSOCK:Int = 0o140000		/* [XSI] socket */
+
 // MARK: - File type
 extension Stat {
-    private let S_ISUID: Int = 0o004000		/* [XSI] set user id on execution */
-    private let S_ISGID: Int = 0o002000		/* [XSI] set group id on execution */
-    private let S_ISVTX: Int = 0o001000		/* [XSI] directory restrcted delete */
-    
-    private let S_IFMT : Int = 0o170000		/* [XSI] type of file mask */
-    private let S_IFIFO: Int = 0o010000		/* [XSI] named pipe (fifo) */
-    private let S_IFCHR: Int = 0o020000		/* [XSI] character special */
-    private let S_IFDIR: Int = 0o040000		/* [XSI] directory */
-    private let S_IFBLK: Int = 0o060000		/* [XSI] block special */
-    private let S_IFREG: Int = 0o100000		/* [XSI] regular */
-    private let S_IFLNK: Int = 0o120000		/* [XSI] symbolic link */
-    private let S_IFSOCK:Int = 0o140000		/* [XSI] socket */
     
     /// Returns true if stat has the set-group-id permission bit set, false if it
     /// doesn’t or if the operating system doesn’t support this feature.
