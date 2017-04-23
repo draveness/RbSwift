@@ -31,4 +31,13 @@ public extension Date {
         guard let date = Calendar.global.date(from: dateComponents) else { return nil }
         self.init(timeIntervalSince1970: date.timeIntervalSince1970)
     }
+    
+    /// Creates a `Date` instance with `timespec` struct.
+    ///
+    /// - Parameter timespec: A timespec struct.
+    init(timespec: timespec) {
+        let seconds = timespec.tv_sec.to_double
+        let nanosends = timespec.tv_nsec.to_double
+        self.init(timeIntervalSince1970: seconds + nanosends / 1000)
+    }
 }

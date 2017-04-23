@@ -52,9 +52,15 @@ public class Stat {
         fstat(fileno.to_i32, &info)
     }
     
-//    public var atime: Date 
+    /// Returns the last access time for this file as an object of class `Date`.
+    public var atime: Date {
+        return Date(timespec: info.st_atimespec)
+    }
     
-//    public var birthtime: Date
+    /// Returns the birth time for stat.
+    public var birthtime: Date {
+        return Date(timespec: info.st_birthtimespec)
+    }
     
     /// Returns the native file system’s block size.
     public var blksize: Int {
@@ -78,7 +84,11 @@ public class Stat {
         return mode & S_IFMT == S_IFCHR
     }
     
-//    public var ctime: Date
+    /// Returns the change time for stat (that is, the time directory information about the file
+    /// was changed, not the file itself).
+    public var ctime: Date {
+        return Date(timespec: info.st_ctimespec)
+    }
     
     /// Returns an integer representing the device on which stat resides.
     public var dev: Int {
@@ -89,16 +99,6 @@ public class Stat {
     /// directory, and false otherwise.
     public var isDirectory: Bool {
         return mode & S_IFMT == S_IFDIR
-    }
-    
-    /// Returns true if stat is executable or if the operating system doesn’t distinguish
-    /// executable files from nonexecutable files. The tests are made using the effective
-    /// owner of the process.
-    public var isExecutable: Bool {
-        if geteuid() == 0 {
-            return true
-        }
-        return true
     }
     
     /// Returns the numeric group id of the owner of stat.
@@ -127,26 +127,34 @@ public class Stat {
         return info.st_ino.to_i
     }
     
-//    public var inspect: String {
-//        
-//    }
+    /// Produce a nicely formatted description of stat.
+    public var inspect: String {
+        return "<Stat dev=\(dev), ino=\(ino), mode=\(mode), nlink=\(nlink), uid=\(uid), gid=\(gid), rdev=\(rdev), size=\(size), blksize=\(blksize), blocks=\(blocks), atime=\(atime), mtime=\(mtime), ctime=\(ctime), birthtime=\(birthtime)>"
+    }
     
     /// Returns an integer representing the permission bits of stat.
     public var mode: Int {
         return info.st_mode.to_i
     }
     
-//    public var mtime: Date
+    /// Returns the modification time of stat.
+    public var mtime: Date {
+        return Date(timespec: info.st_mtimespec)
+    }
     
     /// Returns the number of hard links to stat.
     public var nlink: Int {
         return info.st_nlink.to_i
     }
     
+    /// Returns true if the effective user id of the process is the same as the owner 
+    /// of stat.
     public var isOwned: Bool {
         return geteuid() == info.st_uid
     }
     
+    /// Returns true if the operating system supports pipes and stat is a pipe; false 
+    /// otherwise.
     public var isPipe: Bool {
         return mode & S_IFMT == S_IFIFO
     }
@@ -155,9 +163,6 @@ public class Stat {
     public var rdev: Int {
         return info.st_rdev.to_i
     }
-    
-//    public var isReadable: Bool {
-//    }
     
     /// Returns true if stat has the set-group-id permission bit set, false if it
     /// doesn’t or if the operating system doesn’t support this feature.
@@ -194,14 +199,40 @@ public class Stat {
         return mode & S_IFMT == S_IFLNK
     }
     
+    /// Returns the numeric user id of the owner of stat.
     public var uid: Int {
         return info.st_uid.to_i
     }
     
-//    public var isWritable: Bool 
-    
     /// Returns true if stat is a zero-length file; false otherwise.
     public var isZero: Bool {
         return info.st_size == 0
+    }
+}
+
+extension Stat: CustomStringConvertible {
+    /// A textual representation of this instance.
+    ///
+    /// Instead of accessing this property directly, convert an instance of any
+    /// type to a string by using the `String(describing:)` initializer. For
+    /// example:
+    ///
+    ///     struct Point: CustomStringConvertible {
+    ///         let x: Int, y: Int
+    ///
+    ///         var description: String {
+    ///             return "(\(x), \(y))"
+    ///         }
+    ///     }
+    ///
+    ///     let p = Point(x: 21, y: 30)
+    ///     let s = String(describing: p)
+    ///     print(s)
+    ///     // Prints "(21, 30)"
+    ///
+    /// The conversion of `p` to a string in the assignment to `s` uses the
+    /// `Point` type's `description` property.
+    public var description: String {
+        return inspect
     }
 }
