@@ -113,7 +113,7 @@ public class File: IO {
     
     /// Converts a pathname to an absolute pathname. Relative paths are referenced from the current
     /// working directory of the process unless `dir` is given, in which case it will be used as the starting
-    /// point. The given pathname may start with a “~”, which expands to the process owner’s home directory 
+    /// point. The given pathname may start with a "~", which expands to the process owner’s home directory 
     /// (the environment variable HOME must be set correctly).
     ///
     /// 	File.expand(path: "~/file.swift")                   #=> "/absolute/path/to/home/file.swift"
@@ -191,8 +191,16 @@ public class File: IO {
         return ""
     }
     
-    /// Returns true if the named file is a directory, and false otherwise.
+    /// Returns true if stat is a regular file (not a device file, pipe, socket, etc.).
     ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public class func isFile(_ path: String) -> Bool {
+        return Stat(path).isFile
+    }
+    
+    /// Returns true if the named file is a directory, and false otherwise.
+    ///
     /// - Parameter path: A file path.
     /// - Returns: A bool value.
     public class func isDirectory(_ path: String) -> Bool {
@@ -249,18 +257,18 @@ public class File: IO {
         return FileManager.default.fileExists(atPath: path)
     }
 
-    /// Changes permission bits on the named file(s) to the bit pattern represented by `permission`.
+    /// Changes permission bits on the named file(s) to the bit pattern represented by `mode`.
     ///
-    ///     File.chmod(0o777, "file.swift)
+    ///     File.chmod(0o777, "file.swift")
     ///
     /// - Parameters:
-    ///   - permission: A permission bits.
+    ///   - mode: A permission bits.
     ///   - paths: An array of file path.
-    public class func chmod(_ permission: Int, _ paths: String...) {
-        for path in paths {
-            var attributes = try! FileManager.default.attributesOfItem(atPath: path)
-            attributes[FileAttributeKey.posixPermissions] = permission
-            try! FileManager.default.setAttributes(attributes, ofItemAtPath: path)
+    /// - Returns: The number of files processed.
+    @discardableResult
+    public class func chmod(_ mode: Int, _ paths: String...) -> Int {
+        return paths.reduce(0) {
+            return $0 + Darwin.chmod($1, mode_t(mode)).to_i
         }
     }
     
@@ -272,8 +280,7 @@ public class File: IO {
     /// - Parameter path: A file path.
     /// - Returns: The size of file.
     public class func size(_ path: String) -> Int {
-        let attributes = try! FileManager.default.attributesOfItem(atPath: path)
-        return attributes[FileAttributeKey.size] as! Int
+        return Stat(path).size
     }
     
     /// Returns the last access time for the named file as a `Date` object.
@@ -282,5 +289,63 @@ public class File: IO {
     /// - Returns: The atime of file.
     public class func atime(_ path: String) -> Date {
         return Stat(path).atime
+    }
+    
+    /// Returns the birth time for the named file.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: The birthtime of file.
+    public class func birthtime(_ path: String) -> Date {
+        return Stat(path).birthtime
+    }
+    
+    /// Returns true if the named file is a block device.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public class func isBlockDev(_ path: String) -> Bool {
+        return Stat(path).isBlockDev
+    }
+    
+    /// Returns true if the named file is a character device.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public class func isCharDev(_ path: String) -> Bool {
+        return Stat(path).isCharDev
+    }
+    
+//    public class func chown
+    
+    /// Deletes the named files, returning the number of names passed as arguments.
+    ///
+    /// - Parameter paths: An array of file path.
+    /// - Returns: The number of names passed as arguments.
+    /// - Throws: `FileManager#removeItem(atPath:)`
+    @discardableResult
+    public class func delete(_ paths: String...) throws -> Int {
+        var result = 0
+        for path in paths {
+            try FileManager.default.removeItem(atPath: path)
+            result += 1
+        }
+        return result
+    }
+    
+    /// Returns true if the named file exists and has a zero size.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A bool value.
+    public class func isZero(_ path: String) -> Bool {
+        return Stat(path).isZero
+    }
+    
+    /// Identifies the type of the named file; the return string is one of "file", "directory", 
+    /// "characterSpecial", "blockSpecial", "fifo", "link", "socket", or "unknown".
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: A string describes the ftype.
+    public class func ftype(_ path: String) -> String {
+        return Stat(path).ftype
     }
 }
