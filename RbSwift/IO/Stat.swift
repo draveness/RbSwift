@@ -43,13 +43,21 @@ private let S_IFSOCK:Int = 0o140000		/* [XSI] socket */
 public class Stat {
     private var info = stat()
     
-    /// Creates a `Stat` instance with `fstat` locatated in Darwin library.
+    /// Creates a `Stat` instance with `fstat` located in Darwin library.
     /// Internal uses `fstat` to extract `Stat` information from specific file 
     /// descriptor.
     ///
     /// - Parameter fileno: A file number
     public init(_ fileno: Int) {
         fstat(fileno.to_i32, &info)
+    }
+    
+    /// Creates a `Stat` instance with `stat` located in Darwin library.
+    /// Internal uses `stat` to extract `Stat` information from specific path.
+    ///
+    /// - Parameter path: A file path.
+    public init(_ path: String) {
+        stat(path, &info)
     }
     
     /// Returns the last access time for this file as an object of class `Date`.

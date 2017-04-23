@@ -29,6 +29,14 @@ public class File: IO {
         }
     }
     
+    /// Opens the file named by filename according to the given mode and returns a new
+    /// `File` object.
+    ///
+    /// - Parameters:
+    ///   - path: A file path.
+    ///   - mode: A string represents the mode to open the file.
+    ///   - closure: If given, file would be closed automatically after closure executed.
+    /// - Returns: A file object.
     @discardableResult
     public class func new(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         let file = File(path, mode)
@@ -39,6 +47,15 @@ public class File: IO {
         return file
     }
     
+    /// Opens the file named by filename according to the given mode and returns a new
+    /// `File` object.
+    ///
+    /// - Parameters:
+    ///   - path: A file path.
+    ///   - mode: A string represents the mode to open the file.
+    ///   - closure: If given, file would be closed automatically after closure executed.
+    /// - Returns: A file object.
+    /// - SeeAlso: An alias to `File#new`
     @discardableResult
     public class func open(_ path: String, _ mode: String = "r", closure: ((File) -> ())? = nil) -> File {
         return new(path, mode, closure: closure)
@@ -252,10 +269,18 @@ public class File: IO {
     ///     File.size("somefile")       #=> 1234
     ///     File.size("emptyfile")      #=> 0
     ///
-    /// - Parameter path: An file path.
+    /// - Parameter path: A file path.
     /// - Returns: The size of file.
     public class func size(_ path: String) -> Int {
         let attributes = try! FileManager.default.attributesOfItem(atPath: path)
         return attributes[FileAttributeKey.size] as! Int
+    }
+    
+    /// Returns the last access time for the named file as a `Date` object.
+    ///
+    /// - Parameter path: A file path.
+    /// - Returns: The atime of file.
+    public class func atime(_ path: String) -> Date {
+        return Stat(path).atime
     }
 }
