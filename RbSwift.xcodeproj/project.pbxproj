@@ -431,6 +431,7 @@
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS.release.xcconfig"; sourceTree = "<group>"; };
 		64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7200E5FF1EC813E300311FA3 /* RbSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RbSwift.playground; sourceTree = "<group>"; };
 		72273DE01E9B9CD00022D52C /* Dir.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
 		72273DE51E9B9E5C0022D52C /* DirSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirSpec.swift; sourceTree = "<group>"; };
 		723048B51E966B9A00D5427E /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
@@ -799,6 +800,7 @@
 		724874ED1E7CF813007984FD = {
 			isa = PBXGroup;
 			children = (
+				7200E5FF1EC813E300311FA3 /* RbSwift.playground */,
 				7291CD001EA4ED4C0033BAEC /* Fixtures */,
 				7062BA3357BD5C5CD6608FDD /* Frameworks */,
 				28D74309F6A6B8E1E2C4BCA2 /* Pods */,
