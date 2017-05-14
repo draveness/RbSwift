@@ -4,16 +4,15 @@
 <a href="https://travis-ci.org/Draveness/RbSwift"><img src="https://travis-ci.org/Draveness/RbSwift.svg?branch=master"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
-<a href="http://cocoadocs.org/docsets/RbSwift"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
+<a href="https://draveness.github.io/RbSwift/"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/draveness/RbSwift/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RbSwift.svg?style=flat"></a>
-<a href="http://cocoadocs.org/docsets/RbSwift"><img src="https://img.shields.io/cocoapods/p/RbSwift.svg?style=flat"></a>
 </p>
 
-RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](http://cocoadocs.org/docsets/RbSwift/0.1.4/index.html).
+RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](https://draveness.github.io/RbSwift/).
 
 ## Features
 
-+ [x] Transform functions support for `Sequence` and `Array`
++ [x] Transform functions support for `Sequence`, `Array`, and `Dictionary`
 
     ```swift
     [1, 2, 3, nil, nil, 4, 5, 6, 7]
@@ -41,23 +40,40 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
     2.years + 1.day > 1.year    #=> true
     ```
 
-## Usage
++ [x] File and IO supports build on top of lowlevel C API
 
-<p align="center">
-    <a href="#number">Number</a> • <a href="#string">String</a> • <a href="#array">Array</a> • <a href="#data">Date</a> • <a href="#regex">Regex</a> • <a href="#hash">Hash</a>
-</p>
+    ```swift
+    File.basename("/home/work/file.swift") // file.swift
+    File.open("empty.txt", "w") { file in
+        file.write("Content")
+    }
+    
+    
+    Dir.isEmpty("a/empty/folder")   // true
+    Dir.entries(entriesDir)         // [".", "..", "file.swift"]
+    
+    FileUtils.mkdir_p("draveness/spool/mail") // create folder recursively
+    ```
 
-### Number
++ [x] Bridge between `NS` to swift type
 
-### String
+    ```swift
+    let str: NSString = "string"
+    "string".bridge // String
+    "string".bridge.bridge // NSString
+    ```
 
-### Array
+## Documents
 
-### Date
+Full documents for RbSwift can be found [here](https://draveness.github.io/RbSwift/).
 
-### Regex
-
-### Hash
++ [Number](https://draveness.github.io/RbSwift/Extensions/Int.html)
++ [String](https://draveness.github.io/RbSwift/Extensions/String.html)
++ [Array](https://draveness.github.io/RbSwift/Extensions/Array.html)
++ [Date](https://draveness.github.io/RbSwift/Extensions/Date.html)
++ [Regex](https://draveness.github.io/RbSwift/Structs/Regex.html)
++ [Hash](https://draveness.github.io/RbSwift/Extensions/Hash.html)
++ ...
 
 ## Installation
 
