@@ -1,4 +1,4 @@
-![](./RbSwift.jpg)
+![](https://github.com/Draveness/RbSwift/raw/master/RbSwift.jpg)
 
 <p align="center">
 <a href="https://travis-ci.org/Draveness/RbSwift"><img src="https://travis-ci.org/Draveness/RbSwift.svg?branch=master"></a>
@@ -10,23 +10,25 @@
 
 RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](https://draveness.github.io/RbSwift/).
 
+> Most of the APIs and test cases are from [Ruby Core Libraries](http://ruby-doc.org) and [ActiveSupport](https://github.com/rails/rails/tree/master/activesupport) example.
+
 ## Features
 
 + [x] Transform functions support for `Sequence`, `Array`, and `Dictionary`
 
     ```swift
     [1, 2, 3, nil, nil, 4, 5, 6, 7]
-        .flatten()              #=> [1, 2, 3, 4, 5, 6, 7]
-        .select { $0 > 2 }      #=> [3, 4, 5, 6, 7]      
-        .reject { $0.isEven }   #=> [3, 5, 7]
-        .count                  #=> 3
+        .flatten()              //=> [1, 2, 3, 4, 5, 6, 7]
+        .select { $0 > 2 }      //=> [3, 4, 5, 6, 7]      
+        .reject { $0.isEven }   //=> [3, 5, 7]
+        .count                  //=> 3
     ```
 
 + [x] Built-in `Regex` support for `String` 
 
     ```swift
-    "hello".gsub("l", "abc")    #=> "heabcabco"
-    "hello".gsub("l", "lll")    #=> "lllllllllllllll"
+    "hello".gsub("l", "abc")    //=> "heabcabco"
+    "hello".gsub("l", "lll")    //=> "lllllllllllllll"
 
     if "hello world" =~ "hello" {
         print("this will match")
@@ -36,21 +38,20 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
 + [x] Convenient methods build `Date` instance
 
     ```
-    Date.now + 1.day            #=> 2017-01-01 12:00:00 +0000
-    2.years + 1.day > 1.year    #=> true
+    Date.now + 1.day            //=> 2017-01-01 12:00:00 +0000
+    2.years + 1.day > 1.year    //=> true
     ```
 
 + [x] File and IO supports build on top of lowlevel C API
 
     ```swift
-    File.basename("/home/work/file.swift") // file.swift
+    File.basename("/home/work/file.swift") //=> file.swift
     File.open("empty.txt", "w") { file in
         file.write("Content")
     }
     
-    
-    Dir.isEmpty("a/empty/folder")   // true
-    Dir.entries(entriesDir)         // [".", "..", "file.swift"]
+    Dir.isEmpty("a/empty/folder")   //=> true
+    Dir.entries(entriesDir)         //=> [".", "..", "file.swift"]
     
     FileUtils.mkdir_p("draveness/spool/mail") // create folder recursively
     ```
@@ -59,8 +60,8 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
 
     ```swift
     let str: NSString = "string"
-    "string".bridge // String
-    "string".bridge.bridge // NSString
+    "string".bridge         //=> String
+    "string".bridge.bridge  //> NSString
     ```
 
 ## Documents
@@ -93,7 +94,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'RbSwift', '~> 0.1.3'
+    pod 'RbSwift', '~> 0.4.1'
 end
 ```
 
@@ -117,7 +118,7 @@ $ brew install carthage
 To integrate RbSwift into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Draveness/RbSwift" ~> 0.1.3
+github "Draveness/RbSwift" ~> 0.4.1
 ```
 
 Run `carthage update` to build the framework and drag the built `RbSwift.framework` into your Xcode project.

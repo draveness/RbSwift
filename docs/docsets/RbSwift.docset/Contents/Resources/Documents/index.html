@@ -279,22 +279,21 @@
         <section>
           <section class="section">
             
-            <p><img src="./RbSwift.jpg" alt=""></p>
+            <p><img src="https://github.com/Draveness/RbSwift/raw/master/RbSwift.jpg" alt=""></p>
 
 <p align="center">
 <a href="https://travis-ci.org/Draveness/RbSwift"><img src="https://travis-ci.org/Draveness/RbSwift.svg?branch=master"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
-<a href="http://cocoadocs.org/docsets/RbSwift"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
+<a href="https://draveness.github.io/RbSwift/"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/draveness/RbSwift/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RbSwift.svg?style=flat"></a>
-<a href="http://cocoadocs.org/docsets/RbSwift"><img src="https://img.shields.io/cocoapods/p/RbSwift.svg?style=flat"></a>
 </p>
 
-<p>RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate <a href="http://cocoadocs.org/docsets/RbSwift/0.1.4/index.html">Documents</a>.</p>
+<p>RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate <a href="https://draveness.github.io/RbSwift/">Documents</a>.</p>
 <h2 id='features' class='heading'>Features</h2>
 
 <ul>
-<li><p>[x] Transform functions support for <code>Sequence</code> and <code>Array</code></p>
+<li><p>[x] Transform functions support for <code>Sequence</code>, <code>Array</code>, and <code>Dictionary</code></p>
 <pre class="highlight swift"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
     <span class="o">.</span><span class="nf">flatten</span><span class="p">()</span>              <span class="err">#</span><span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
     <span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">}</span>      <span class="err">#</span><span class="o">=&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>      
@@ -313,18 +312,36 @@
 <pre class="highlight plaintext"><code>Date.now + 1.day            #=&gt; 2017-01-01 12:00:00 +0000
 2.years + 1.day &gt; 1.year    #=&gt; true
 </code></pre></li>
-</ul>
-<h2 id='usage' class='heading'>Usage</h2>
+<li><p>[x] File and IO supports build on top of lowlevel C API</p>
+<pre class="highlight swift"><code><span class="kt">File</span><span class="o">.</span><span class="nf">basename</span><span class="p">(</span><span class="s">"/home/work/file.swift"</span><span class="p">)</span> <span class="c1">// file.swift</span>
+<span class="kt">File</span><span class="o">.</span><span class="nf">open</span><span class="p">(</span><span class="s">"empty.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="p">{</span> <span class="n">file</span> <span class="k">in</span>
+    <span class="n">file</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"Content"</span><span class="p">)</span>
+<span class="p">}</span>
 
-<p align="center">
-    <a href="#number">Number</a> • <a href="#string">String</a> • <a href="#array">Array</a> • <a href="#data">Date</a> • <a href="#regex">Regex</a> • <a href="#hash">Hash</a>
-</p>
-<h3 id='number' class='heading'>Number</h3>
-<h3 id='string' class='heading'>String</h3>
-<h3 id='array' class='heading'>Array</h3>
-<h3 id='date' class='heading'>Date</h3>
-<h3 id='regex' class='heading'>Regex</h3>
-<h3 id='hash' class='heading'>Hash</h3>
+<span class="kt">Dir</span><span class="o">.</span><span class="nf">isEmpty</span><span class="p">(</span><span class="s">"a/empty/folder"</span><span class="p">)</span>   <span class="c1">// true</span>
+<span class="kt">Dir</span><span class="o">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">entriesDir</span><span class="p">)</span>         <span class="c1">// [".", "..", "file.swift"]</span>
+
+<span class="kt">FileUtils</span><span class="o">.</span><span class="nf">mkdir_p</span><span class="p">(</span><span class="s">"draveness/spool/mail"</span><span class="p">)</span> <span class="c1">// create folder recursively</span>
+</code></pre></li>
+<li><p>[x] Bridge between <code>NS</code> to swift type</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">str</span><span class="p">:</span> <span class="kt">NSString</span> <span class="o">=</span> <span class="s">"string"</span>
+<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span> <span class="c1">// String</span>
+<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">bridge</span> <span class="c1">// NSString</span>
+</code></pre></li>
+</ul>
+<h2 id='documents' class='heading'>Documents</h2>
+
+<p>Full documents for RbSwift can be found <a href="https://draveness.github.io/RbSwift/">here</a>.</p>
+
+<ul>
+<li><a href="https://draveness.github.io/RbSwift/Extensions/Int.html">Number</a></li>
+<li><a href="https://draveness.github.io/RbSwift/Extensions/String.html">String</a></li>
+<li><a href="https://draveness.github.io/RbSwift/Extensions/Array.html">Array</a></li>
+<li><a href="https://draveness.github.io/RbSwift/Extensions/Date.html">Date</a></li>
+<li><a href="https://draveness.github.io/RbSwift/Structs/Regex.html">Regex</a></li>
+<li><a href="https://draveness.github.io/RbSwift/Extensions/Hash.html">Hash</a></li>
+<li>&hellip;</li>
+</ul>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
@@ -338,7 +355,7 @@
 <span class="n">use_frameworks!</span>
 
 <span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'RbSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 0.1.3'</span>
+    <span class="n">pod</span> <span class="s1">'RbSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 0.4.1'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -355,7 +372,7 @@
 </code></pre>
 
 <p>To integrate RbSwift into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "Draveness/RbSwift" ~&gt; 0.1.3
+<pre class="highlight plaintext"><code>github "Draveness/RbSwift" ~&gt; 0.4.1
 </code></pre>
 
 <p>Run <code>carthage update</code> to build the framework and drag the built <code>RbSwift.framework</code> into your Xcode project.</p>
