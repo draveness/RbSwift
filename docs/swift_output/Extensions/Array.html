@@ -1,0 +1,2677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Array" class="dashAnchor"></a>
+    <a title="Array Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RbSwift Docs</a> (72% documented)</p>
+        <p class="header-right"><a href="https://github.com/Draveness/RbSwift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RbSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Array Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Dir.html">Dir</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dir/HomeDirectory.html">– HomeDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dir/RemoveDirectoryError.html">– RemoveDirectoryError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileUtils.html">FileUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO/SeekPosition.html">– SeekPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stat.html">Stat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date/Period.html">– Period</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Hash.html">Hash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/IndexPath.html">IndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/IndexSet.html">IndexSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Integer.html">Integer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSCalendar.html">NSCalendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSData.html">NSData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSDate.html">NSDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexPath.html">NSIndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexSet.html">NSIndexSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSRange.html">NSRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSString.html">NSString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSTimeZone.html">NSTimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURL.html">NSURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLComponents.html">NSURLComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLRequest.html">NSURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String/LetterCase.html">– LetterCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLComponents.html">URLComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLRequest.html">URLRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1auRxs9EquatablerFTGSax_GSax__GSax_">&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1mFTSSSi_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1mFTSiSS_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1murFTGSax_SS_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1murFTGSax_Si_GSax_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2mmFTSdSd_Sd">**(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2mmFTSiSi_Si">**(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTSSVS_8Pathname_S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTVS_8PathnameS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTVS_8PathnameSS_S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions/+(_:_:).html">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1suRxs9EquatablerFTGSax_GSax__GSax_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2llFTSSSS_SS">&lt;&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2eeuRxs9EquatablerFTGSaGSax__GSaGSax___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2etFTSSPS_16RegexConvertible__Sb">=~(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2etFTVs9CharacterPS_16RegexConvertible__Sb">=~(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RegexConvertible.html">RegexConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Duration.html">Duration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MatchData.html">MatchData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Pathname.html">Pathname</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Regex.html">Regex</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7RbSwift4Hash">Hash</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Array</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">RandomAccessCollection</span><span class="p">,</span> <span class="kt">MutableCollection</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa2atFSiGSqx_"></a>
+                    <a name="//apple_ref/swift/Method/at(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa2atFSiGSqx_">at(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the nth element in the array or nil.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.at(0) #=&gt; 1
+arr.at(4) #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">at</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The element index</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An element at specific index or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa6sampleGSqx_"></a>
+                    <a name="//apple_ref/swift/Property/sample" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa6sampleGSqx_">sample</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Choose a random element from the array.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.sample      #=&gt; 2
+arr.sample      #=&gt; 1
+arr.sample      #=&gt; 1
+arr.sample      #=&gt; 2
+arr.sample      #=&gt; 3
+arr             #=&gt; [1, 2, 3]
+</code></pre>
+
+<p>If the array is empty <code>Array#sample</code> returns <code>nil</code>.</p>
+<pre class="highlight plaintext"><code>[].sample       #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sample</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa6sampleFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/sample(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa6sampleFSiGSax_">sample(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Choose a random element or n random elements from the array.
+The elements are chosen by using random and unique indices into the array in order to ensure that 
+an element doesn’t repeat itself unless the array already contained duplicate elements.
+If the array is empty the <code>Array#sample</code> returns nil and the <code>Array#sample(n:)</code> form returns an empty array.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.sample(1)       #=&gt; [2]
+arr.sample(2)       #=&gt; [1, 2]
+arr.sample(2)       #=&gt; [1, 3]
+arr.sample(2)       #=&gt; [3, 1]
+arr.sample(3)       #=&gt; [3, 1, 2]
+arr.sample(4)       #=&gt; [2, 3, 1]
+arr.sample(0)       #=&gt; []
+arr                 #=&gt; [1, 2, 3]
+</code></pre>
+
+<p>If the array is empty <code>Array#sample(n:)</code> returns an empty array.</p>
+<pre class="highlight plaintext"><code>[].sample()         #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sample</span><span class="p">(</span><span class="n">_</span> <span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An integer of random elements count</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array with random elements</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa7shuffleGSax_"></a>
+                    <a name="//apple_ref/swift/Property/shuffle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa7shuffleGSax_">shuffle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new array with elements of <code>self</code> shuffled.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.shuffle         #=&gt; [1, 2, 3]
+arr.shuffle         #=&gt; [3, 2, 1]
+arr.shuffle         #=&gt; [2, 1, 3]
+arr.shuffle         #=&gt; [1, 3, 2]
+arr                 #=&gt; [1, 3, 2]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">shuffle</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa4fromFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/from(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa4fromFSiGSax_">from(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the tail of the array from the <code>position</code>.</p>
+<pre class="highlight plaintext"><code>["a", "b", "c", "d"].from(0)        #=&gt; ["a", "b", "c", "d"]
+["a", "b", "c", "d"].from(2)        #=&gt; ["c", "d"]
+["a", "b", "c", "d"].from(10)   #=&gt; []
+[].from(0)                      #=&gt; []
+["a", "b", "c", "d"].from(-2)   #=&gt; ["c", "d"]
+["a", "b", "c"].from(-10)       #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An integer value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An sub array of Element.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa2toFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/to(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa2toFSiGSax_">to(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the beginning of the array up to the <code>position</code>.</p>
+<pre class="highlight plaintext"><code>["a", "b", "c", "d"].to(0)      #=&gt; ["a"]
+["a", "b", "c", "d"].to(2)      #=&gt; ["a", "b", "c"]
+["a", "b", "c", "d"].to(10)     #=&gt; ["a", "b", "c", "d"]
+[].to(0)                        #=&gt; []
+["a", "b", "c", "d"].to(-2)     #=&gt; ["a", "b", "c"]
+["a", "b", "c"].to(-10)         #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">to</span><span class="p">(</span><span class="n">_</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>position</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An integer value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An sub array of Element.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxs9EquatablerSa7withoutFtGSax__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/without(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxs9EquatablerSa7withoutFtGSax__GSax_">without(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of the Array without the specified elements.</p>
+<pre class="highlight plaintext"><code>let people = ["David", "Rafael", "Aaron", "Todd"]
+people.without("David", "Aaron")        #=&gt; ["Rafael", "Todd"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">without</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt">Element</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>elements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of specific elements.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa5clearFT_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa5clearFT_GSax_">clear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Makes the current string empty</p>
+<pre class="highlight plaintext"><code>var arr = [1, 2, 3]
+arr.clear()     #=&gt; []
+arr             #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An empty string</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa3popFT_GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/pop()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa3popFT_GSqx_">pop()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove last element in array or nil</p>
+<pre class="highlight plaintext"><code>var arr = [1, 2, 3]
+arr.pop()       #=&gt; 3
+arr.pop()       #=&gt; 2
+arr.pop()       #=&gt; 1
+arr.pop()       #=&gt; nil
+arr             #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">pop</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The last element in array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa3popFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/pop(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa3popFSiGSax_">pop(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the last several elements in array.</p>
+<pre class="highlight plaintext"><code>var arr = [1, 2, 3]
+arr.pop()       #=&gt; [3]
+arr.pop(2)      #=&gt; [1, 2]
+arr             #=&gt; []
+arr.pop()       #=&gt; []
+arr.pop()       #=&gt; []
+arr             #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">pop</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The count of returning elements</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array of popped element</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa4pushFtGSax__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/push(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa4pushFtGSax__GSax_">push(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends objects to the front of self.</p>
+<pre class="highlight plaintext"><code>var arr = ["a", "b", "c"]
+arr.push("d")           #=&gt; ["a", "b", "c", "d"]
+arr.push("e", "f")      #=&gt; ["a", "b", "c", "d", "e", "f"]
+arr                     #=&gt; ["a", "b", "c", "d", "e", "f"]
+</code></pre>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    See also: Array#pop(num:) for the opposite effect.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">push</span><span class="p">(</span><span class="n">_</span> <span class="nv">objs</span><span class="p">:</span> <span class="kt">Element</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of object prepend to the receiver array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array with objs append to self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa5shiftFT_GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/shift()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa5shiftFT_GSqx_">shift()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove first element in array or nil</p>
+<pre class="highlight plaintext"><code>var arr = ["a", "b", "c"]
+arr.shift()     #=&gt; "a"
+arr             #=&gt; ["b", "c"]
+arr.shift()     #=&gt; "b"
+arr.shift()     #=&gt; "c"
+arr.shift()     #=&gt; nil
+arr             #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shift</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The first element in array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa5shiftFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/shift(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa5shiftFSiGSax_">shift(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the first several elements in array.</p>
+<pre class="highlight plaintext"><code>var arr = ["a", "b", "c"]
+arr.shift()     #=&gt; "a"
+arr             #=&gt; ["b", "c"]
+arr.shift(2)     #=&gt; ["b", "c"]
+arr.shift()     #=&gt; []
+arr             #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shift</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The count of returning elements</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array of shifted element</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa7unshiftFtGSax__GSax_"></a>
+                    <a name="//apple_ref/swift/Method/unshift(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa7unshiftFtGSax__GSax_">unshift(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepends objects to the front of self, moving other elements upwards</p>
+<pre class="highlight plaintext"><code>var arr = [1]
+arr.unshift(2)      #=&gt; [2, 1]
+arr.unshift(2, 3)   #=&gt; [2, 3, 2, 1]
+arr                 #=&gt; [2, 3, 2, 1]
+</code></pre>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    See also: Array#shift(num:) for the opposite effect.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">unshift</span><span class="p">(</span><span class="n">_</span> <span class="nv">objs</span><span class="p">:</span> <span class="kt">Element</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of object prepend to the receiver array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array with objs prepend to self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa8selectedFzT7closureFzxSb_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/selected(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa8selectedFzT7closureFzxSb_GSax_">selected(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A mutating version of <code>Sequence#select(closure:)</code></p>
+<pre class="highlight plaintext"><code>var arr1 = [1, 2, 3]
+arr1.select { $0 &gt; 2 }       #=&gt; [3]
+arr1                         #=&gt; [3]
+
+var arr2 = [1, 2, 3]
+arr2.select { $0 &lt;= 2 }      #=&gt; [1, 2]
+arr2                         #=&gt; [1, 2]
+
+var arr3 = [1, 2, 3]
+arr3.select { _ in false }   #=&gt; []
+arr3                         #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">selected</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block accepts element in the receiver and returns a bool value</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa8rejectedFzT7closureFzxSb_GSax_"></a>
+                    <a name="//apple_ref/swift/Method/rejected(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa8rejectedFzT7closureFzxSb_GSax_">rejected(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A mutating version of <code>Sequence#reject(closure:)</code></p>
+<pre class="highlight plaintext"><code>var arr1 = [1, 2, 3]
+arr1.reject { $0 &gt; 2 }       #=&gt; [1, 2]
+arr1                         #=&gt; [1, 2]
+
+var arr2 = [1, 2, 3]
+arr2.reject { $0 &lt;= 2 }      #=&gt; [3]
+arr2                         #=&gt; [3]
+
+var arr3 = [1, 2, 3]
+arr3.reject { _ in false }   #=&gt; [1, 2, 3]
+arr3                         #=&gt; [1, 2, 3]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">rejected</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span><span class="k">rethrows</span>  <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block accepts element in the receiver and returns a bool value</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxs9EquatablerSa6deleteFTx3allSb_GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:all:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxs9EquatablerSa6deleteFTx3allSb_GSqx_">delete(_:all:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes all items from self that are equal to obj.
+If all is <code>false</code>, delete the first object the the array.</p>
+<pre class="highlight plaintext"><code>var arr = [1, 2, 3, 4, 1, 2, 3, 5, 6]
+arr.delete(1)                   #=&gt; 1
+arr                             #=&gt; [2, 3, 4, 2, 3, 5, 6]
+arr.delete(2)                   #=&gt; 2
+arr                             #=&gt; [3, 4, 3, 5, 6]
+arr.delete(3, all: false)       #=&gt; 3
+arr                             #=&gt; [4, 3, 5, 6]
+arr.delete(1000)                #=&gt; nil
+arr                             #=&gt; [4, 3, 5, 6]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="nv">all</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>obj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object which will be deleted in the array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>all</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bool value indicates whether deletes all the same object in array (default is <code>true</code>).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The deleted object or nil.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa4to_iFSiSi"></a>
+                    <a name="//apple_ref/swift/Method/to_i(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa4to_iFSiSi">to_i(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert an array of integer to int by base default is 10.</p>
+<pre class="highlight plaintext"><code>[1,2,3].to_i()      #=&gt; 321
+[1,2,3,4].to_i()    #=&gt; 4321
+[0,0,0,1].to_i(2)   #=&gt; 8
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">to_i</span><span class="p">(</span><span class="n">_</span> <span class="nv">base</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>base</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An integer indicates the integer&rsquo;s base</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An integer</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ve7RbSwiftRxzSSrSa11to_sentenceSS"></a>
+                    <a name="//apple_ref/swift/Property/to_sentence" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ve7RbSwiftRxzSSrSa11to_sentenceSS">to_sentence</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts the array to a comma-separated sentence where the last element is
+joined by the connector word.</p>
+<pre class="highlight plaintext"><code>[].to_sentence                          #=&gt; ""
+["one"].to_sentence                     #=&gt; "one"
+["one", "two"].to_sentence              #=&gt; "one and two"
+["one", "two", "three"].to_sentence     #=&gt; "one, two, and three"
+["one", "two"].to_sentence(twoWordsConnector: "-")      #=&gt; "one-two"
+["one", "two", "three"].to_sentence(wordsConnector: " or ", lastWordConnector: " or at least ") 
+    #=&gt; "one or two or at least three"
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">to_sentence</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxzSSrSa11to_sentenceFT14wordsConnectorSS17twoWordsConnectorSS17lastWordConnectorSS_SS"></a>
+                    <a name="//apple_ref/swift/Method/to_sentence(wordsConnector:twoWordsConnector:lastWordConnector:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxzSSrSa11to_sentenceFT14wordsConnectorSS17twoWordsConnectorSS17lastWordConnectorSS_SS">to_sentence(wordsConnector:twoWordsConnector:lastWordConnector:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts the array to a comma-separated sentence where the last element is 
+ joined by the connector word.</p>
+<pre class="highlight plaintext"><code>[].to_sentence                          #=&gt; ""
+["one"].to_sentence                     #=&gt; "one"
+["one", "two"].to_sentence              #=&gt; "one and two"
+["one", "two", "three"].to_sentence     #=&gt; "one, two, and three"
+["one", "two"].to_sentence(twoWordsConnector: "-")      #=&gt; "one-two"
+["one", "two", "three"].to_sentence(wordsConnector: " or ", lastWordConnector: " or at least ")
+     #=&gt; "one or two or at least three"
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">to_sentence</span><span class="p">(</span><span class="nv">wordsConnector</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">", "</span><span class="p">,</span> <span class="nv">twoWordsConnector</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">" and "</span><span class="p">,</span> <span class="nv">lastWordConnector</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">", and "</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>wordsConnector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sign or word used to join the elements in
+arrays with two or more elements (default: <q>,</q>).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>twoWordsConnector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sign or word used to join the elements n arrays with two elements (default: <q>and</q>).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lastWordConnector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sign or word used to join the last element in arrays with three or more elements (default: <q>, and</q>).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A sentence joined the array of string into an human-readable sentence.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa7inGroupFT2ofSi4fillGSqx_7closureGSqFGSax_T___GSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/inGroup(of:fill:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa7inGroupFT2ofSi4fillGSqx_7closureGSqFGSax_T___GSaGSax__">inGroup(of:fill:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Splits or iterates over the array in groups of size <code>number</code>,
+padding any remaining slots with <code>with</code> unless it is <code>nil</code>.</p>
+<pre class="highlight plaintext"><code>arr.inGroup(of: 0)              #=&gt; []
+arr.inGroup(of: 3)              #=&gt; [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+arr.inGroup(of: 4)              #=&gt; [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10]]
+arr.inGroup(of: 4, fill: 0)     #=&gt; [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 0, 0]]
+
+arr.inGroup(of: 4, fill: 0) { group in
+    print(group)    #=&gt; [1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 0, 0]
+}
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">inGroup</span><span class="p">(</span><span class="n">of</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">fill</span> <span class="nv">with</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The size of array in the two dimentional array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An element used to padding remaining slot in the last array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure recevies array as parameter</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A two dimentional array of <code>Element</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa7inGroupFTSi4fillGSqx_7closureGSqFGSax_T___GSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/inGroup(_:fill:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa7inGroupFTSi4fillGSqx_7closureGSqFGSax_T___GSaGSax__">inGroup(_:fill:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Splits or iterates over the array in number of groups, padding any remaining
+slots with <code>with</code> unless it is false.</p>
+<pre class="highlight plaintext"><code>arr.inGroup(0)              #=&gt; []
+arr.inGroup(3)              #=&gt; [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
+arr.inGroup(4)              #=&gt; [[1, 2, 3], [4, 5, 6], [7, 8], [9, 10]]
+arr.inGroup(4, fill: 0)     #=&gt; [[1, 2, 3], [4, 5, 6], [7, 8, 0], [9, 10, 0]]
+
+arr.inGroup(4, fill: 0) { group in
+    print(group)    #=&gt; [1, 2, 3], [4, 5, 6], [7, 8, 0], [9, 10, 0]
+}
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">inGroup</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">fill</span> <span class="nv">with</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The size of array in the two dimentional array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An element used to padding remaining slot in the last array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure recevies array as parameter</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A two dimentional array of <code>Element</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa5splitFFxSbGSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/split(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa5splitFFxSbGSaGSax__">split(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Divides the array into one or more subarrays based on a delimiting <code>value</code>
+or the result of an block.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.split(3)    #=&gt; [[1, 2], [4, 5, 6, 7, 8, 9, 10]]
+
+arr.split { 
+    $0 % 3 == 0 
+}   #=&gt; [[1, 2], [4, 5], [7, 8], [10]]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">split</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure accepts element and returns bool value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A nested array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxs9EquatablerSa5splitFxGSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/split(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxs9EquatablerSa5splitFxGSaGSax__">split(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Divides the array into one or more subarrays based on a delimiting <code>value</code>
+or the result of an block.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr.split(3)    #=&gt; [[1, 2], [4, 5, 6, 7, 8, 9, 10]]
+
+arr.split {
+    $0 % 3 == 0
+}   #=&gt; [[1, 2], [4, 5], [7, 8], [10]]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">split</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value used to split the array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A nested array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa6secondx"></a>
+                    <a name="//apple_ref/swift/Property/second" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa6secondx">second</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[1]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">second</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa5thirdx"></a>
+                    <a name="//apple_ref/swift/Property/third" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa5thirdx">third</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[2]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">third</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa6fourthx"></a>
+                    <a name="//apple_ref/swift/Property/fourth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa6fourthx">fourth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[3]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">fourth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa5fifthx"></a>
+                    <a name="//apple_ref/swift/Property/fifth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa5fifthx">fifth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[4]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">fifth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa5sixthx"></a>
+                    <a name="//apple_ref/swift/Property/sixth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa5sixthx">sixth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[5]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sixth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa7seventhx"></a>
+                    <a name="//apple_ref/swift/Property/seventh" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa7seventhx">seventh</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[6]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">seventh</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa6eighthx"></a>
+                    <a name="//apple_ref/swift/Property/eighth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa6eighthx">eighth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[7]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">eighth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa5ninthx"></a>
+                    <a name="//apple_ref/swift/Property/ninth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa5ninthx">ninth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[8]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">ninth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa5tenthx"></a>
+                    <a name="//apple_ref/swift/Property/tenth" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa5tenthx">tenth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[9]</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">tenth</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa12secondToLastx"></a>
+                    <a name="//apple_ref/swift/Property/secondToLast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa12secondToLastx">secondToLast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[-2]</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">secondToLast</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa11thirdToLastx"></a>
+                    <a name="//apple_ref/swift/Property/thirdToLast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa11thirdToLastx">thirdToLast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equals to <code>self[-3]</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">thirdToLast</span><span class="p">:</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxs9EquatablerSa5isEqlFGSax_Sb"></a>
+                    <a name="//apple_ref/swift/Method/isEql(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxs9EquatablerSa5isEqlFGSax_Sb">isEql(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if self and other are the same object, or are both arrays with the same content</p>
+<pre class="highlight plaintext"><code>let arr1 = [1, 2, 3]
+let arr2 = [3, 2, 1]
+arr1.isEql(arr2)    #=&gt; true
+
+let arr3 = [3, 2, 3]
+let arr4 = [3, 2, 1]
+arr3.isEql(arr4)    #=&gt; false
+
+let arr5 = [1, 2, 3, 4, 5, 6]
+let arr6 = [3, 2, 1]
+arr5.isEql(arr6)    #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEql</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another array</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value indicates the equatable between two arrays</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxs9EquatablerSa9isIncludeFxSb"></a>
+                    <a name="//apple_ref/swift/Method/isInclude(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxs9EquatablerSa9isIncludeFxSb">isInclude(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if the given object is present in self (that is, if any element == object).</p>
+<pre class="highlight plaintext"><code>[1, 2, 3].isInclude(1)              #=&gt; true
+["a", "b", "c"].isInclude("b")      #=&gt; true
+</code></pre>
+
+<p>Otherwise returns false.</p>
+<pre class="highlight plaintext"><code>[1, 2, 3].isInclude(100)            #=&gt; false
+["a", "b", "c"].isInclude("bbb")        #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isInclude</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>Element</code> value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ve7RbSwiftRxs9EquatablerSa4uniqGSax_"></a>
+                    <a name="//apple_ref/swift/Property/uniq" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ve7RbSwiftRxs9EquatablerSa4uniqGSax_">uniq</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new array with unique element.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3, 4, 1, 2]
+arr.uniq        #=&gt; [1, 2, 3, 4]
+arr             #=&gt; [1, 2, 3, 4, 1, 2]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">uniq</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa11combinationFTSi7closureGSqFGSax_T___GSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/combination(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa11combinationFTSi7closureGSqFGSax_T___GSaGSax__">combination(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When invoked with a closure, pass all combinations of length n of elements
+from the array and then returns the array itself.
+The implementation makes no guarantees about the order in which the combinations are yielded.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.combination(1) #=&gt; [[1], [2], [3]]
+arr.combination(2) #=&gt; [[1, 2], [1, 3], [2, 3]]
+arr.combination(3) #=&gt; [[1, 2, 3]]
+arr.combination(0) #=&gt; []
+arr.combination(5) #=&gt; [[]]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">combination</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The length of combination in the returning array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure called each time finds a new combination</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array with all the possible combination in the receiver array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa19repeatedCombinationFTSi7closureGSqFGSax_T___GSaGSax__"></a>
+                    <a name="//apple_ref/swift/Method/repeatedCombination(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa19repeatedCombinationFTSi7closureGSqFGSax_T___GSaGSax__">repeatedCombination(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When invoked with a closure, pass all <strong>repeated</strong> combinations of length n of elements
+from the array and then returns the array itself.
+The implementation makes no guarantees about the order in which the combinations are yielded.</p>
+<pre class="highlight plaintext"><code>let arr = [1, 2, 3]
+arr.repeatedCombination(1) #=&gt; [[1],[2],[3]]
+arr.repeatedCombination(2) #=&gt; [[1,1],[1,2],[1,3],[2,2],[2,3],[3,3]]
+arr.repeatedCombination(3) #=&gt; [[1,1,1],[1,1,2],[1,1,3],[1,2,2],[1,2,3],[1,3,3],[2,2,2],[2,2,3],[2,3,3],[3,3,3]]
+arr.repeatedCombination(4) #=&gt; [[1,1,1,1],[1,1,1,2],[1,1,1,3],[1,1,2,2],[1,1,2,3],[1,1,3,3],
+    [1,2,2,2],[1,2,2,3],[1,2,3,3],[1,3,3,3], [2,2,2,2],[2,2,2,3],[2,2,3,3],[2,3,3,3],[3,3,3,3]]
+arr.repeatedCombination(0) #=&gt; []
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">repeatedCombination</span><span class="p">(</span><span class="n">_</span> <span class="nv">num</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(([</span><span class="kt">Element</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>num</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The length of combination in the returning array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure called each time finds a new combination</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array with all the possible repeated combination in the receiver array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa3digurFtGSaSi__GSqqd___"></a>
+                    <a name="//apple_ref/swift/Method/dig(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa3digurFtGSaSi__GSqqd___">dig(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Extracts the nested value specified by the sequence of idx objects by
+calling dig at each step, returning nil if any intermediate step is nil.</p>
+<pre class="highlight plaintext"><code>let a = [[1, 2, 3], [3, 4, 5]]
+a.dig(0)                    #=&gt; [1, 2, 3]
+a.dig(1, 2)                 #=&gt; 5
+a.dig(1, 2, 3)              #=&gt; nil
+a.dig(10, 2, 3)             #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">dig</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">idxs</span><span class="p">:</span> <span class="kt">Int</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idxs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A sequence of int specify the value location in the recevier array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An value in the nested array or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa3digurFGSaSi_GSqqd___"></a>
+                    <a name="//apple_ref/swift/Method/dig(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa3digurFGSaSi_GSqqd___">dig(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Extracts the nested value specified by the sequence of idx objects by 
+calling dig at each step, returning nil if any intermediate step is nil.</p>
+<pre class="highlight plaintext"><code>let a = [[1, 2, 3], [3, 4, 5]]
+a.dig(0)                    #=&gt; [1, 2, 3]
+a.dig(1, 2)                 #=&gt; 5
+a.dig(1, 2, 3)              #=&gt; nil
+a.dig(10, 2, 3)             #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">dig</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">idxs</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>idxs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A sequence of int specify the value location in the recevier array.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An value in the nested array or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa3zipurFtGSaGSaqd_____GSaGSaqd____"></a>
+                    <a name="//apple_ref/swift/Method/zip(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa3zipurFtGSaGSaqd_____GSaGSaqd____">zip(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts any arguments to arrays, then merges elements of self with corresponding elements from each argument.</p>
+<pre class="highlight plaintext"><code>let a = [ 4, 5, 6 ]
+let b = [ 7, 8, 9 ]
+[1, 2, 3].zip(a, b)   #=&gt; [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+</code></pre>
+
+<p>This generates a nested n-element arrays, where n is the least count of all the ararys including the receiver.</p>
+<pre class="highlight plaintext"><code>[1, 2].zip(a, b)      #=&gt; [[1, 4, 7]]
+a.zip([1, 2], [8])    #=&gt; [[4, 1, 8]]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">zip</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">arrays</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">T</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>arrays</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another arrays with type [T]</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new nested array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa8tranposeurFT_GSqGSaGSaqd_____"></a>
+                    <a name="//apple_ref/swift/Method/tranpose()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa8tranposeurFT_GSqGSaGSaqd_____">tranpose()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the tranpose of the current two-dimentional array.</p>
+<pre class="highlight plaintext"><code>let a = [[1, 2], [3, 4], [5, 6]]
+a.transpose()   #=&gt; [[1, 3, 5], [2, 4, 6]]
+</code></pre>
+
+<p>If the receiver&rsquo;s elements have different length, <code>Array#transpose()</code> will
+return <code>nil</code>.</p>
+<pre class="highlight plaintext"><code>let b = [[1, 2], [3], [5, 6, 7]]
+b.transpose()   #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">tranpose</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt">T</span><span class="p">]]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new array or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vE7RbSwiftSa6rotateGSax_"></a>
+                    <a name="//apple_ref/swift/Property/rotate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vE7RbSwiftSa6rotateGSax_">rotate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new array by rotating <code>self</code> so that the element at <code>count</code> is the first element of the new array.</p>
+<pre class="highlight plaintext"><code>let a = [ "a", "b", "c", "d" ]
+a.rotate         #=&gt; ["b", "c", "d", "a"]
+a                #=&gt; ["a", "b", "c", "d"]
+</code></pre>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    See also: Array#rotate(count:)
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">rotate</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftSa6rotateFSiGSax_"></a>
+                    <a name="//apple_ref/swift/Method/rotate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftSa6rotateFSiGSax_">rotate(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new array by rotating <code>self</code> so that the element at <code>count</code> is the first element of the new array.</p>
+<pre class="highlight plaintext"><code>let a = [ "a", "b", "c", "d" ]
+a.rotate         #=&gt; ["b", "c", "d", "a"]
+a                #=&gt; ["a", "b", "c", "d"]
+a.rotate(2)      #=&gt; ["c", "d", "a", "b"]
+</code></pre>
+
+<p>If <code>count</code> is negative then it rotates in the opposite direction, starting from the end of <code>self</code> where -1 is
+the last element.</p>
+<pre class="highlight plaintext"><code>a.rotate(-3)     #=&gt; ["b", "c", "d", "a"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">_</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>count</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The element in the first place after rotate</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new array</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwiftRxzSSrSa4joinFSSSS"></a>
+                    <a name="//apple_ref/swift/Method/join(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwiftRxzSSrSa4joinFSSSS">join(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new string by concatenating the elements of the sequence,
+adding the given separator between each element.</p>
+
+<p>The following example shows how an array of strings can be joined to a
+single, comma-separated string:</p>
+<pre class="highlight plaintext"><code>let cast = ["Vivien", "Marlon", "Kim", "Karl"]
+let list = cast.join(", ")
+print(list)
+// Prints "Vivien, Marlon, Kim, Karl"
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">join</span><span class="p">(</span><span class="n">_</span> <span class="nv">separator</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>separator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string to insert between each of the elements
+in this sequence. The default separator is an empty string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A single, concatenated string.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

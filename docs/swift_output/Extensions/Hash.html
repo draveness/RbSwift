@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hash Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/Hash" class="dashAnchor"></a>
+    <a title="Hash Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RbSwift Docs</a> (72% documented)</p>
+        <p class="header-right"><a href="https://github.com/Draveness/RbSwift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RbSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Hash Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Dir.html">Dir</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dir/HomeDirectory.html">– HomeDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dir/RemoveDirectoryError.html">– RemoveDirectoryError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileUtils.html">FileUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IO/SeekPosition.html">– SeekPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Stat.html">Stat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Calendar.html">Calendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date/Period.html">– Period</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Hash.html">Hash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/IndexPath.html">IndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/IndexSet.html">IndexSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Integer.html">Integer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSCalendar.html">NSCalendar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSData.html">NSData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSDate.html">NSDate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexPath.html">NSIndexPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSIndexSet.html">NSIndexSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSRange.html">NSRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSString.html">NSString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSTimeZone.html">NSTimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURL.html">NSURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLComponents.html">NSURLComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLRequest.html">NSURLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Sequence.html">Sequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String/LetterCase.html">– LetterCase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/TimeZone.html">TimeZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLComponents.html">URLComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLRequest.html">URLRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1auRxs9EquatablerFTGSax_GSax__GSax_">&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1mFTSSSi_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1mFTSiSS_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1murFTGSax_SS_SS">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1murFTGSax_Si_GSax_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2mmFTSdSd_Sd">**(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2mmFTSiSi_Si">**(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTSSVS_8Pathname_S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTVS_8PathnameS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1pFTVS_8PathnameSS_S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions/+(_:_:).html">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi1suRxs9EquatablerFTGSax_GSax__GSax_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2llFTSSSS_SS">&lt;&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2eeuRxs9EquatablerFTGSaGSax__GSaGSax___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2etFTSSPS_16RegexConvertible__Sb">=~(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F7RbSwiftoi2etFTVs9CharacterPS_16RegexConvertible__Sb">=~(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/OptionalType.html">OptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RegexConvertible.html">RegexConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DateFormat.html">DateFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Duration.html">Duration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MatchData.html">MatchData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Pathname.html">Pathname</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Regex.html">Regex</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7RbSwift4Hash">Hash</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Hash</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">K</span><span class="p">,</span> <span class="kt">V</span><span class="o">&gt;</span> <span class="o">=</span> <span class="kt">Dictionary</span><span class="o">&lt;</span><span class="kt">K</span><span class="p">,</span> <span class="kt">V</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5isAnyFT7closureFTxq__Sb_Sb"></a>
+                    <a name="//apple_ref/swift/Method/isAny(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5isAnyFT7closureFTxq__Sb_Sb">isAny(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Passes each element of the collection to the given block. The method returns 
+true if the block ever returns a value other than false or nil.</p>
+<pre class="highlight plaintext"><code>let h1 = ["a": 100, "b": 200]
+h1.isAny { (key, _) in key == "a" }     #=&gt; true
+h1.isAny { (key, _) in key == "c" }     #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isAny</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure accepts key and value pair from the hash.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary3hasFT3keyx_Sb"></a>
+                    <a name="//apple_ref/swift/Method/has(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary3hasFT3keyx_Sb">has(key:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the given key is present in hsh.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+hash.has(key: "a")      #=&gt; true
+hash.has(key: "c")      #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">has</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string represent key in hsh.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary8isMemberFxSb"></a>
+                    <a name="//apple_ref/swift/Method/isMember(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary8isMemberFxSb">isMember(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the given key is present in hsh. An alias to <code>isMember(key:)</code> methods.、</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+hash.isMember("a")      #=&gt; true
+hash.isMember("c")      #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isMember</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string represent key in hsh.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwift0_Rxs8Hashable_s9EquatablerVs10Dictionary3hasFT5valueq__Sb"></a>
+                    <a name="//apple_ref/swift/Method/has(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwift0_Rxs8Hashable_s9EquatablerVs10Dictionary3hasFT5valueq__Sb">has(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the given value is present in hsh.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+hash.has(value: 100)        #=&gt; true
+hash.has(value: 2000)       #=&gt; false
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">has</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A string represent value in hsh.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary8eachPairFT7closureFTxq__T__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/eachPair(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary8eachPairFT7closureFTxq__T__GS0_xq__">eachPair(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls block once for each key in hsh, passing the key-value pair as parameters.
+An alias to <code>Sequence#each(closure:)</code> method.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+var result: [String: Int] = [:]
+hash.eachPair {
+    result[$0] = $1 + 100
+})          #=&gt; ["a": 100, "b": 200]
+
+result      #=&gt; ["a": 200, "b": 300]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">eachPair</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An closure accepts key-value pair as parameters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary7eachKeyFT7closureFxT__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/eachKey(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary7eachKeyFT7closureFxT__GS0_xq__">eachKey(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls block once for each key in hsh, passing the key as parameters.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+var result: [String] = []
+hash.eachKey {
+    result.append($0)
+})          #=&gt; ["a", "b"]
+
+result      #=&gt; ["a": 100, "b": 200]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">eachKey</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An closure accepts key as parameters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary9eachValueFT7closureFq_T__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/eachValue(closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary9eachValueFT7closureFq_T__GS0_xq__">eachValue(closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls block once for each key in hsh, passing the value as parameters.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+var result: [Int] = []
+hash.eachValue {
+    result.append($0)
+})          #=&gt; [100, 200]
+
+result      #=&gt; ["a": 100, "b": 200]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">eachValue</span><span class="p">(</span><span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An closure accepts value as parameters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6valuesFt2atGSax__GSaGSqq___"></a>
+                    <a name="//apple_ref/swift/Method/values(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6valuesFt2atGSax__GSaGSqq___">values(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of optinal value with given keys.</p>
+<pre class="highlight plaintext"><code>let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+hash.values(at: "cat", "dog")           #=&gt; ["feline", "canine"]
+hash.values(at: "catcat", "dog")        #=&gt; [nil, "canine"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">values</span><span class="p">(</span><span class="n">at</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Value</span><span class="p">?]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optioanl value of array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6valuesFT2atGSax__GSaGSqq___"></a>
+                    <a name="//apple_ref/swift/Method/values(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6valuesFT2atGSax__GSaGSqq___">values(at:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of optinal value with given keys.</p>
+<pre class="highlight plaintext"><code>let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+hash.values(at: ["cat", "dog"])         #=&gt; ["feline", "canine"]
+hash.values(at: ["catcat", "dog"])      #=&gt; [nil, "canine"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">values</span><span class="p">(</span><span class="n">at</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Value</span><span class="p">?]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optioanl value of array.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5assocFxGSqTxq___"></a>
+                    <a name="//apple_ref/swift/Method/assoc(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5assocFxGSqTxq___">assoc(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Searches through the hash with key using <code>subscript</code>. Returns the key-value tuple
+or nil if no match is found.</p>
+<pre class="highlight plaintext"><code>let hash = [1: "one", 2: "two", 3: "three"]
+hash.assoc(1)       #=&gt; (1, "one")
+hash.assoc(42)      #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">assoc</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An key of type <code>Key</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A key-value tuple or <code>nil</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5fetchFTxq__q_"></a>
+                    <a name="//apple_ref/swift/Method/fetch(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5fetchFTxq__q_">fetch(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a value from the hash for the given key.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+hash.fetch("a")     #=&gt; 100
+</code></pre>
+
+<p>If the key can’t be found, there are several options:
+With no other arguments, it will return nil; </p>
+<pre class="highlight plaintext"><code>hash.fetch("z")     #=&gt; nil
+</code></pre>
+
+<p>if default is given, then that will be returned;</p>
+<pre class="highlight plaintext"><code>hash.fetch("z", 500)        #=&gt; 500
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">,</span> <span class="n">_</span> <span class="k">default</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>default</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Default value if key can&rsquo;t be found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5fetchFTx7closureGSqFxq___GSqq__"></a>
+                    <a name="//apple_ref/swift/Method/fetch(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5fetchFTx7closureGSqFxq___GSqq__">fetch(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a value from the hash for the given key.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 100, "b": 200]
+hash.fetch("a")     #=&gt; 100
+</code></pre>
+
+<p>If the key can’t be found, there are several options:
+if the optional code block is specified, then that will be run and its result returned.</p>
+<pre class="highlight plaintext"><code>hash.fetch("z", closure: { _ in
+    return 1000
+})      #=&gt; 1000
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A code block will executes on the key if not found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A value or nil</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary11fetchValuesFtGSax__GSqGSaq___"></a>
+                    <a name="//apple_ref/swift/Method/fetchValues(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary11fetchValuesFtGSax__GSqGSaq___">fetchValues(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array containing the values associated with the given keys or <code>nil</code> 
+when one of keys can’t be found. Also see Hash#values(at:) and Hash#fetch(key:).</p>
+<pre class="highlight plaintext"><code>let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+hash.fetchValues("cow", "cat")!     #=&gt; ["bovine", "feline"]
+hash.fetchValues("cow", "bird")     #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchValues</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Value</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of values or nil.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary11fetchValuesFTGSax_7closureFxq__GSaq__"></a>
+                    <a name="//apple_ref/swift/Method/fetchValues(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary11fetchValuesFTGSax_7closureFxq__GSaq__">fetchValues(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array containing the values associated with the given keys or <code>nil</code>
+when one of keys can’t be found. Also see Hash#values(at:) and Hash#fetch(key:).</p>
+<pre class="highlight plaintext"><code>let hash = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+hash.fetchValues("cow", "bird") { key in
+    return key.upcase
+}       #=&gt; ["bovine", "BIRD"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchValues</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure executs each time value is not found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of values.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6exceptFtGSax__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/except(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6exceptFtGSax__GS0_xq__">except(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a hash that includes everything except given keys.</p>
+<pre class="highlight plaintext"><code>let hash = [1: "one", 2: "two", 3: "three"]
+hash.except(1, 2)       #=&gt; [3: "three"]
+hash                    #=&gt; [1: "one", 2: "two", 3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">except</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new hash without passing keys.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6exceptFGSax_GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/except(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6exceptFGSax_GS0_xq__">except(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a hash that includes everything except given keys.</p>
+<pre class="highlight plaintext"><code>let hash = [1: "one", 2: "two", 3: "three"]
+hash.except(1, 2)       #=&gt; [3: "three"]
+hash                    #=&gt; [1: "one", 2: "two", 3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">except</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new hash without passing keys.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary8exceptedFtGSax__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/excepted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary8exceptedFtGSax__GS0_xq__">excepted(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the given keys from hash and returns it.</p>
+<pre class="highlight plaintext"><code>var hash = [1: "one", 2: "two", 3: "three"]
+hash.excepted(1, 2)     #=&gt; [3: "three"]
+hash                    #=&gt; [3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">excepted</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Key/value pairs with given keys.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary8exceptedFGSax_GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/excepted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary8exceptedFGSax_GS0_xq__">excepted(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the given keys from hash and returns it.</p>
+<pre class="highlight plaintext"><code>var hash = [1: "one", 2: "two", 3: "three"]
+hash.excepted(1, 2)     #=&gt; [3: "three"]
+hash                    #=&gt; [3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">excepted</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Key/value pairs with given keys.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary7extractFtGSax__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/extract(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary7extractFtGSax__GS0_xq__">extract(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes and returns the key/value pairs matching the given keys.</p>
+<pre class="highlight plaintext"><code>var hash1 = [1: "one", 2: "two", 3: "three"]
+hash1.extract(1, 2)     #=&gt; [1: "one", 2: "two"]
+hash1                   #=&gt; [3: "three"]
+
+var hash2 = [1: "one", 2: "two", 3: "three"]
+hash2.extract(1, 4)     #=&gt; [1: "one"]
+hash2                   #=&gt; [2: "two", 3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">extract</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="kt">Key</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Key-value pairs matching the given keys</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary7extractFGSax_GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/extract(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary7extractFGSax_GS0_xq__">extract(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes and returns the key/value pairs matching the given keys.</p>
+<pre class="highlight plaintext"><code>var hash1 = [1: "one", 2: "two", 3: "three"]
+hash1.extract(1, 2)     #=&gt; [1: "one", 2: "two"]
+hash1                   #=&gt; [3: "three"]
+
+var hash2 = [1: "one", 2: "two", 3: "three"]
+hash2.extract(1, 4)     #=&gt; [1: "one"]
+hash2                   #=&gt; [2: "two", 3: "three"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">extract</span><span class="p">(</span><span class="n">_</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[</span><span class="kt">Key</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keys</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of keys.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Key-value pairs matching the given keys</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:Fe7RbSwift0_Rxs8Hashable_s9EquatablerVs10Dictionary6rassocFq_GSqTxq___"></a>
+                    <a name="//apple_ref/swift/Method/rassoc(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Fe7RbSwift0_Rxs8Hashable_s9EquatablerVs10Dictionary6rassocFq_GSqTxq___">rassoc(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Searches through the hash with value using <code>subscript</code>. Returns the key-value tuple
+or nil if no match is found.</p>
+<pre class="highlight plaintext"><code>let hash = [1: "one", 2: "two", 3: "three"]
+hash.rassoc("one")          #=&gt; (1, "one")
+hash.rassoc("forty-two")    #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">rassoc</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An key of type <code>Key</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A key-value tuple or <code>nil</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5mergeFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/merge(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5mergeFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__">merge(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new hash containing the contents of <code>otherHash</code> and the contents of hsh.
+If no block is specified, the value for entries with duplicate keys will be that 
+of <code>otherHash</code>. </p>
+<pre class="highlight plaintext"><code>let h1 = ["a": 100, "b": 200]
+let h2 = ["b": 254, "c": 300]
+
+h1.merge(h2)        #=&gt; ["a": 100, "b": 254, "c": 300]))
+</code></pre>
+
+<p>Otherwise the value for each duplicate key is determined by calling
+the block with the key, its value in hsh and its value in <code>otherHash</code>.</p>
+<pre class="highlight plaintext"><code>h1.merge(h2) { (key, oldval, newval) in
+    newval - oldval
+}       #=&gt; ["a": 100, "b": 54,  "c": 300]
+
+h1      #=&gt; ["a": 100, "b": 200]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">merge</span><span class="p">(</span><span class="n">_</span> <span class="nv">otherHash</span><span class="p">:</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherHash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another hash instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure returns a new value if duplicate happens.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new hash containing the contents of both hash.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6updateFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/update(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6updateFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__">update(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An alias to <code>Hash#merge(otherHash:)</code> methods.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">otherHash</span><span class="p">:</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherHash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another hash instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure returns a new value if duplicate happens.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new hash containing the contents of both hash.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6mergedFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/merged(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6mergedFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__">merged(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A mutating version of <code>Hash#merge(otherHash:closure:)</code></p>
+<pre class="highlight plaintext"><code>let h1 = ["a": 100, "b": 200]
+let h2 = ["b": 254, "c": 300]
+
+h1.merge(h2)        #=&gt; ["a": 100, "b": 254, "c": 300]))
+h1                  #=&gt; ["a": 100, "b": 254, "c": 300]))
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">merged</span><span class="p">(</span><span class="n">_</span> <span class="nv">otherHash</span><span class="p">:</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherHash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another hash instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure returns a new value if duplicate happens.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary7updatedFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/updated(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary7updatedFTGS0_xq__7closureGSqFTxq_q__q___GS0_xq__">updated(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An alias to <code>Hash#merged(otherHash:)</code> methods.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">updated</span><span class="p">(</span><span class="n">_</span> <span class="nv">otherHash</span><span class="p">:</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">((</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherHash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another hash instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure returns a new value if duplicate happens.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5clearFT_GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5clearFT_GS0_xq__">clear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes all key-value pairs from hsh.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 100]
+hash.clear()        #=&gt; [:]
+hash                #=&gt; [:]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self with empty hash.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary6deleteFxGSqq__"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary6deleteFxGSqq__">delete(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An alias to <code>Hash#removeValue(forKey:)</code>.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 100, "b": 200]
+hash.delete("a")        #=&gt; 100
+hash                    #=&gt; ["b": 200]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A key of hash.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Corresponding value or nil.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary7replaceFGS0_xq__GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/replace(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary7replaceFGS0_xq__GS0_xq__">replace(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replaces the contents of hsh with the contents of otherHash.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 100, "b": 200]
+hash.replace(["c": 300])        #=&gt; ["c": 300]
+hash                            #=&gt; ["c": 300]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">replace</span><span class="p">(</span><span class="n">_</span> <span class="nv">otherHash</span><span class="p">:</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Hash</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherHash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Another hash instance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5storeFTxq__q_"></a>
+                    <a name="//apple_ref/swift/Method/store(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5storeFTxq__q_">store(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Associates the value given by value with the key given by key.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 4]
+hash.store("b", 5)      #=&gt; 5
+hash                    #=&gt; ["a": 4, "b": 5]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">store</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Key</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A value</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The passing value</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary5shiftFT_GSqTxq___"></a>
+                    <a name="//apple_ref/swift/Method/shift()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary5shiftFT_GSqTxq___">shift()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a key-value pair from hsh and returns it as the two-item 
+array ( key, value ), or nil if the hash is empty.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 4]
+hash.shift()        #=&gt; ("b", 5)
+hash.shift()        #=&gt; nil
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">shift</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">Value</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A key-value pair</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary15transformValuesurFFq_qd__GS0_xqd___"></a>
+                    <a name="//apple_ref/swift/Method/transformValues(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary15transformValuesurFFq_qd__GS0_xqd___">transformValues(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return a new with the results of running block once for every value.
+This method does not change the keys.</p>
+<pre class="highlight plaintext"><code>let hash = ["a": 1, "b": 2, "c": 3]
+hash.transformValues { $0 * $0 + 1 }    #=&gt; ["a": 2, "b": 5, "c": 10]
+hash.transformValues { $0.to_s }        #=&gt; ["a": "1", "b": "2", "c": "3"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">transformValues</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">T</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An closure accepts a value return an new value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An new hash with key-value pair</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE7RbSwiftVs10Dictionary17transformedValuesFFq_q_GS0_xq__"></a>
+                    <a name="//apple_ref/swift/Method/transformedValues(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE7RbSwiftVs10Dictionary17transformedValuesFFq_q_GS0_xq__">transformedValues(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return a new with the results of running block once for every value.
+This method does not change the keys. The mutates version of
+<code>Hash#transformedValues(closure:)</code> can only accepts a closure with
+<code>(Value) -&gt; Value</code> type.</p>
+<pre class="highlight plaintext"><code>var hash = ["a": 1, "b": 2, "c": 3]
+hash.transformedValues { 
+    $0 * $0 + 1 
+}       #=&gt; ["a": 2, "b": 5, "c": 10]
+hash    #=&gt; ["a": 2, "b": 5, "c": 10]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">transformedValues</span><span class="p">(</span><span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Key</span><span class="p">:</span> <span class="kt">Value</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An closure accepts a value return an new value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Self</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ve7RbSwift0_Rxs8Hashable_S0_rVs10Dictionary6invertGS1_q_x_"></a>
+                    <a name="//apple_ref/swift/Property/invert" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ve7RbSwift0_Rxs8Hashable_S0_rVs10Dictionary6invertGS1_q_x_">invert</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new hash created by using hsh’s values as keys, and the keys as values. </p>
+<pre class="highlight plaintext"><code>let hash1 = ["a": 100, "b": 200]
+hash1.invert            #=&gt; [100: "a", 200: "b"]
+
+let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
+hash2.invert.invert     #=&gt; ["cat": "feline", "dog": "canine", "cow": "bovine"]
+</code></pre>
+
+<p>If a key with the same value already exists in the hsh, then the last one defined
+will be used, the earlier value(s) will be discarded.</p>
+<pre class="highlight plaintext"><code>let hash3 = ["cat": 1, "dog": 1]
+hash3.invert    #=&gt; [1: "dog"]
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">invert</span><span class="p">:</span> <span class="p">[</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">Key</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

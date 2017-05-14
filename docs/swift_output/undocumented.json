@@ -1,0 +1,1475 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Array/Array+Operator.swift",
+      "line": 11,
+      "symbol": "&(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Array/Array+Operator.swift",
+      "line": 28,
+      "symbol": "*(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Array/Array+Operator.swift",
+      "line": 34,
+      "symbol": "*(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Array/Array+Operator.swift",
+      "line": 38,
+      "symbol": "-(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Array/Array+Operator.swift",
+      "line": 42,
+      "symbol": "==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 12,
+      "symbol": "NSString.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 18,
+      "symbol": "String.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 24,
+      "symbol": "NSData.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 30,
+      "symbol": "Data.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 36,
+      "symbol": "NSURL.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 42,
+      "symbol": "URL.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 48,
+      "symbol": "NSIndexPath.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 54,
+      "symbol": "IndexPath.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 61,
+      "symbol": "NSError.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 67,
+      "symbol": "Error.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 73,
+      "symbol": "NSIndexSet.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 79,
+      "symbol": "IndexSet.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 85,
+      "symbol": "NSCalendar.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 91,
+      "symbol": "Calendar.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 97,
+      "symbol": "NSTimeZone.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 103,
+      "symbol": "TimeZone.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 109,
+      "symbol": "NSDate.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 115,
+      "symbol": "Date.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 121,
+      "symbol": "NSURLRequest.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 127,
+      "symbol": "URLRequest.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 133,
+      "symbol": "NSURLComponents.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Bridge/Bridge.swift",
+      "line": 139,
+      "symbol": "URLComponents.bridge",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Components.swift",
+      "line": 17,
+      "symbol": "Date._components",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Initialize.swift",
+      "line": 24,
+      "symbol": "Date.init(str:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Initialize.swift",
+      "line": 29,
+      "symbol": "Date.init(_:_:_:_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 85,
+      "symbol": "Date.Period",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 86,
+      "symbol": "Date.Period.midnight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 87,
+      "symbol": "Date.Period.beginningOfDay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 88,
+      "symbol": "Date.Period.noon",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 89,
+      "symbol": "Date.Period.midday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 90,
+      "symbol": "Date.Period.middleOfDay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+Time.swift",
+      "line": 91,
+      "symbol": "Date.Period.endOfDay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+TimeZone.swift",
+      "line": 15,
+      "symbol": "TimeZone.utc",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+TimeZone.swift",
+      "line": 16,
+      "symbol": "TimeZone.gmt",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Date/Date+TimeZone.swift",
+      "line": 18,
+      "symbol": "TimeZone.global",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Conversions.swift",
+      "line": 32,
+      "symbol": "Duration.to_dateComponents",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 13,
+      "symbol": "Duration.since",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 17,
+      "symbol": "Duration.in",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 21,
+      "symbol": "Duration.fromNow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 25,
+      "symbol": "Duration.later",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 29,
+      "symbol": "Duration.ago",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 33,
+      "symbol": "Duration.before",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 37,
+      "symbol": "Duration.before(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 41,
+      "symbol": "Duration.later(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 45,
+      "symbol": "Duration.since(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 49,
+      "symbol": "Duration.fromNow(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration+Relative.swift",
+      "line": 53,
+      "symbol": "Duration.ago(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": null,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": 11,
+      "symbol": "Duration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Duration/Duration.swift",
+      "line": 31,
+      "symbol": "Duration.init(years:months:weeks:days:hours:minutes:seconds:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Dir.swift",
+      "line": 11,
+      "symbol": "Dir",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Dir.swift",
+      "line": 23,
+      "symbol": "Dir.glob(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Dir.swift",
+      "line": 39,
+      "symbol": "Dir.HomeDirectory.notExists",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Dir.swift",
+      "line": 116,
+      "symbol": "Dir.RemoveDirectoryError.notEmpty",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Dir.swift",
+      "line": 117,
+      "symbol": "Dir.RemoveDirectoryError.cocoa",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/File.swift",
+      "line": 11,
+      "symbol": "File",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/File.swift",
+      "line": 12,
+      "symbol": "File.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/File.swift",
+      "line": 13,
+      "symbol": "File.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/FileUtils.swift",
+      "line": 11,
+      "symbol": "FileUtils",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/FileUtils.swift",
+      "line": 21,
+      "symbol": "FileUtils.mkdir_p(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/FileUtils.swift",
+      "line": 27,
+      "symbol": "FileUtils.touch(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/FileUtils.swift",
+      "line": 31,
+      "symbol": "FileUtils.touch(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 12,
+      "symbol": "IO",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 14,
+      "symbol": "IO.file",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 20,
+      "symbol": "IO.lineno",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 314,
+      "symbol": "IO.SeekPosition.set",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 315,
+      "symbol": "IO.SeekPosition.cur",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 316,
+      "symbol": "IO.SeekPosition.end",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 317,
+      "symbol": "IO.SeekPosition.int",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/IO.swift",
+      "line": 385,
+      "symbol": "IO.stat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": null,
+      "symbol": "Pathname",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 11,
+      "symbol": "Pathname",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 12,
+      "symbol": "Pathname.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 14,
+      "symbol": "Pathname.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 43,
+      "symbol": "+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 47,
+      "symbol": "+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Pathname.swift",
+      "line": 51,
+      "symbol": "+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Stat.swift",
+      "line": null,
+      "symbol": "Stat",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Stat.swift",
+      "line": null,
+      "symbol": "Stat",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/IO/Stat.swift",
+      "line": 30,
+      "symbol": "Stat",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 12,
+      "symbol": "Integer.to_s",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 18,
+      "symbol": "Int.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 22,
+      "symbol": "Int.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 26,
+      "symbol": "Int.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 30,
+      "symbol": "Int.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 34,
+      "symbol": "Int.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 38,
+      "symbol": "Int.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 42,
+      "symbol": "Int.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 46,
+      "symbol": "Int.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 50,
+      "symbol": "Int.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 54,
+      "symbol": "Int.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 58,
+      "symbol": "Int.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 75,
+      "symbol": "Int16.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 79,
+      "symbol": "Int16.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 83,
+      "symbol": "Int16.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 87,
+      "symbol": "Int16.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 91,
+      "symbol": "Int16.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 95,
+      "symbol": "Int16.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 99,
+      "symbol": "Int16.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 103,
+      "symbol": "Int16.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 107,
+      "symbol": "Int16.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 111,
+      "symbol": "Int16.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 115,
+      "symbol": "Int16.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 131,
+      "symbol": "Int32.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 135,
+      "symbol": "Int32.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 139,
+      "symbol": "Int32.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 143,
+      "symbol": "Int32.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 147,
+      "symbol": "Int32.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 151,
+      "symbol": "Int32.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 155,
+      "symbol": "Int32.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 159,
+      "symbol": "Int32.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 163,
+      "symbol": "Int32.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 167,
+      "symbol": "Int32.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 171,
+      "symbol": "Int32.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 187,
+      "symbol": "Int64.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 191,
+      "symbol": "Int64.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 195,
+      "symbol": "Int64.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 199,
+      "symbol": "Int64.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 203,
+      "symbol": "Int64.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 207,
+      "symbol": "Int64.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 211,
+      "symbol": "Int64.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 215,
+      "symbol": "Int64.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 218,
+      "symbol": "Int64.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 222,
+      "symbol": "Int64.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 226,
+      "symbol": "Int64.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 233,
+      "symbol": "UInt.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 237,
+      "symbol": "UInt.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 241,
+      "symbol": "UInt.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 245,
+      "symbol": "UInt.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 249,
+      "symbol": "UInt.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 253,
+      "symbol": "UInt.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 257,
+      "symbol": "UInt.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 261,
+      "symbol": "UInt.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 265,
+      "symbol": "UInt.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 269,
+      "symbol": "UInt.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 273,
+      "symbol": "UInt.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 289,
+      "symbol": "UInt16.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 293,
+      "symbol": "UInt16.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 297,
+      "symbol": "UInt16.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 301,
+      "symbol": "UInt16.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 305,
+      "symbol": "UInt16.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 309,
+      "symbol": "UInt16.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 313,
+      "symbol": "UInt16.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 317,
+      "symbol": "UInt16.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 321,
+      "symbol": "UInt16.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 325,
+      "symbol": "UInt16.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 329,
+      "symbol": "UInt16.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 345,
+      "symbol": "UInt32.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 349,
+      "symbol": "UInt32.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 353,
+      "symbol": "UInt32.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 357,
+      "symbol": "UInt32.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 361,
+      "symbol": "UInt32.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 365,
+      "symbol": "UInt32.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 369,
+      "symbol": "UInt32.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 373,
+      "symbol": "UInt32.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 377,
+      "symbol": "UInt32.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 381,
+      "symbol": "UInt32.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 385,
+      "symbol": "UInt32.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 401,
+      "symbol": "UInt64.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 405,
+      "symbol": "UInt64.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 409,
+      "symbol": "UInt64.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 413,
+      "symbol": "UInt64.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 417,
+      "symbol": "UInt64.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 421,
+      "symbol": "UInt64.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 425,
+      "symbol": "UInt64.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 429,
+      "symbol": "UInt64.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 432,
+      "symbol": "UInt64.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 436,
+      "symbol": "UInt64.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 440,
+      "symbol": "UInt64.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 447,
+      "symbol": "Float.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 451,
+      "symbol": "Float.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 455,
+      "symbol": "Float.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 459,
+      "symbol": "Float.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 463,
+      "symbol": "Float.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 467,
+      "symbol": "Float.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 471,
+      "symbol": "Float.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 475,
+      "symbol": "Float.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 479,
+      "symbol": "Float.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 483,
+      "symbol": "Float.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 487,
+      "symbol": "Float.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 494,
+      "symbol": "Double.to_f",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 498,
+      "symbol": "Double.to_double",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 502,
+      "symbol": "Double.to_i",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 506,
+      "symbol": "Double.to_i16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 510,
+      "symbol": "Double.to_i32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 514,
+      "symbol": "Double.to_i64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 518,
+      "symbol": "Double.to_u",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 522,
+      "symbol": "Double.to_u16",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 526,
+      "symbol": "Double.to_u32",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 530,
+      "symbol": "Double.to_u64",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Number/Number+Conversions.swift",
+      "line": 534,
+      "symbol": "Double.to_bool",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Regex/MatchData.swift",
+      "line": 37,
+      "symbol": "MatchData.init(match:range:captures:ranges:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Regex/RegexConvertible.swift",
+      "line": 11,
+      "symbol": "RegexConvertible",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Regex/RegexConvertible.swift",
+      "line": 14,
+      "symbol": "RegexConvertible.pattern",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Regex/RegexConvertible.swift",
+      "line": 30,
+      "symbol": "String.pattern",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Regex/RegexConvertible.swift",
+      "line": 41,
+      "symbol": "Character.pattern",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Sequence/Sequence+Transform.swift",
+      "line": 267,
+      "symbol": "OptionalType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/Sequence/Sequence+Transform.swift",
+      "line": 269,
+      "symbol": "OptionalType.map(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/String/String+Inflections.swift",
+      "line": 18,
+      "symbol": "String.LetterCase.upper",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/draveness/workspace/iOS/RbSwift/RbSwift/String/String+Inflections.swift",
+      "line": 19,
+      "symbol": "String.LetterCase.lower",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/draveness/workspace/iOS/RbSwift"
+}
