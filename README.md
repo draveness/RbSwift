@@ -38,7 +38,7 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
 + [x] Convenient methods build `Date` instance
 
     ```
-    Date.now + 1.day            //=> 2017-01-01 12:00:00 +0000
+    Date.now + 1.day            //=> 2017-01-01 12:00:00 +0000
     2.years + 1.day > 1.year    //=> true
     ```
 
@@ -61,7 +61,7 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
     ```swift
     let str: NSString = "string"
     "string".bridge         //=> String
-    "string".bridge.bridge  //=> NSString
+    "string".bridge.bridge  //=> NSString
     ```
 
 ## Documents
