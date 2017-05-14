@@ -61,7 +61,7 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
     ```swift
     let str: NSString = "string"
     "string".bridge         //=> String
-    "string".bridge.bridge  //> NSString
+    "string".bridge.bridge  //=> NSString
     ```
 
 ## Documents
