@@ -6,6 +6,7 @@
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
 <a href="https://draveness.github.io/RbSwift/"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/draveness/RbSwift/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RbSwift.svg?style=flat"></a>
+<a href='https://coveralls.io/github/Draveness/RbSwift?branch=master'><img src='https://coveralls.io/repos/github/Draveness/RbSwift/badge.svg?branch=master' alt='Coverage Status' /></a>
 </p>
 
 RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](https://draveness.github.io/RbSwift/).
