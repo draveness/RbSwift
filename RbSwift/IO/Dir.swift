@@ -87,7 +87,7 @@ public class Dir: CustomStringConvertible {
 //    public static func glob(_ pattern: String) -> [String] {
 //        return []
 //    }
-    
+
     /// Returns the home directory of the current user or the named user if given.
     ///
     ///     Dir.home       #=> "/Users/username"

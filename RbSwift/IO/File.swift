@@ -9,7 +9,15 @@
 import Foundation
 
 public class File: IO {
+    /// Returns the pathname used to create file as a string. Does not normalize the name.
     public let path: String
+
+    /// Returns the pathname used to create file as a string. Does not normalize the name.
+    /// An alias to `File#path`.
+    public var to_path: String {
+        return path
+    }
+
     public init(_ path: String, _ mode: String = "r") {
         self.path = path
         super.init(file: fopen(path, mode))
