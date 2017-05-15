@@ -6,10 +6,10 @@
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
 <a href="https://draveness.github.io/RbSwift/"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/draveness/RbSwift/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RbSwift.svg?style=flat"></a>
-<a href='https://coveralls.io/github/Draveness/RbSwift?branch=master'><img src='https://coveralls.io/repos/github/Draveness/RbSwift/badge.svg?branch=master' alt='Coverage Status' /></a>
+<a href="https://codecov.io/gh/Draveness/RbSwift"><img src="https://codecov.io/gh/Draveness/RbSwift/branch/master/graph/badge.svg" alt="Codecov" /></a>
 </p>
 
-RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [Documents](https://draveness.github.io/RbSwift/).
+RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate [API Reference](https://draveness.github.io/RbSwift/).
 
 > Most of the APIs and test cases are from [Ruby Core Libraries](http://ruby-doc.org) and [ActiveSupport](https://github.com/rails/rails/tree/master/activesupport) example.
 
@@ -65,9 +65,9 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
     "string".bridge.bridge  //=> NSString
     ```
 
-## Documents
+## Documentation
 
-Full documents for RbSwift can be found [here](https://draveness.github.io/RbSwift/).
+Full documentation for RbSwift can be found [here](https://draveness.github.io/RbSwift/).
 
 + [Number](https://draveness.github.io/RbSwift/Extensions/Int.html)
 + [String](https://draveness.github.io/RbSwift/Extensions/String.html)

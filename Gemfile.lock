@@ -6,12 +6,16 @@ GEM
     coveralls-gcov (0.1.2)
       commander
     highline (1.7.8)
+    rouge (2.0.7)
+    xcpretty (0.2.7)
+      rouge (~> 2.0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coveralls-gcov
+  xcpretty
 
 BUNDLED WITH
    1.14.6
