@@ -16,8 +16,8 @@ before_deploy:
 script:
 - xcodebuild -version
 - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests iOS' -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
-- bash <(curl -s https://codecov.io/bash) -cF ios
-# - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests macOS' -sdk macosx -enableCodeCoverage YES | xcpretty
+  # - bash <(curl -s https://codecov.io/bash) -cF ios
+  # - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests macOS' -sdk macosx -enableCodeCoverage YES | xcpretty
 deploy:
   provider: releases
   api_key:
