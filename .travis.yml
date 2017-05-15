@@ -29,5 +29,5 @@ deploy:
     repo: Draveness/RbSwift
     tags: true
 after_success:
-- bundle exec coveralls-gcov --repo-token REPO_TOKEN --no-gcov
+- bundle exec coveralls-gcov --repo-token gm1xNVCRcnVSnBdTeGRU72IshlPzz6fe5 --no-gcov
 
