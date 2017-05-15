@@ -13,7 +13,7 @@
     <a title="RbSwift  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RbSwift Docs</a> (72% documented)</p>
+        <p><a href="index.html">RbSwift Docs</a> (73% documented)</p>
         <p class="header-right"><a href="https://github.com/Draveness/RbSwift"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -287,46 +287,51 @@
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
 <a href="https://draveness.github.io/RbSwift/"><img src="https://img.shields.io/cocoapods/v/RbSwift.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/draveness/RbSwift/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/RbSwift.svg?style=flat"></a>
+<a href='https://coveralls.io/github/Draveness/RbSwift?branch=master'><img src='https://coveralls.io/repos/github/Draveness/RbSwift/badge.svg?branch=master' alt='Coverage Status' /></a>
 </p>
 
 <p>RbSwift provides a series of Swift struct/class extension including lots of handy functions with elaborate <a href="https://draveness.github.io/RbSwift/">Documents</a>.</p>
+
+<blockquote>
+<p>Most of the APIs and test cases are from <a href="http://ruby-doc.org">Ruby Core Libraries</a> and <a href="https://github.com/rails/rails/tree/master/activesupport">ActiveSupport</a> example.</p>
+</blockquote>
 <h2 id='features' class='heading'>Features</h2>
 
 <ul>
 <li><p>[x] Transform functions support for <code>Sequence</code>, <code>Array</code>, and <code>Dictionary</code></p>
 <pre class="highlight swift"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-    <span class="o">.</span><span class="nf">flatten</span><span class="p">()</span>              <span class="err">#</span><span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">}</span>      <span class="err">#</span><span class="o">=&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>      
-    <span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">isEven</span> <span class="p">}</span>   <span class="err">#</span><span class="o">=&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-    <span class="o">.</span><span class="n">count</span>                  <span class="err">#</span><span class="o">=&gt;</span> <span class="mi">3</span>
+    <span class="o">.</span><span class="nf">flatten</span><span class="p">()</span>              <span class="c1">//=&gt; [1, 2, 3, 4, 5, 6, 7]</span>
+    <span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">}</span>      <span class="c1">//=&gt; [3, 4, 5, 6, 7]      </span>
+    <span class="o">.</span><span class="n">reject</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">isEven</span> <span class="p">}</span>   <span class="c1">//=&gt; [3, 5, 7]</span>
+    <span class="o">.</span><span class="n">count</span>                  <span class="c1">//=&gt; 3</span>
 </code></pre></li>
 <li><p>[x] Built-in <code>Regex</code> support for <code>String</code> </p>
-<pre class="highlight swift"><code><span class="s">"hello"</span><span class="o">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s">"l"</span><span class="p">,</span> <span class="s">"abc"</span><span class="p">)</span>    <span class="err">#</span><span class="o">=&gt;</span> <span class="s">"heabcabco"</span>
-<span class="s">"hello"</span><span class="o">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s">"l"</span><span class="p">,</span> <span class="s">"lll"</span><span class="p">)</span>    <span class="err">#</span><span class="o">=&gt;</span> <span class="s">"lllllllllllllll"</span>
+<pre class="highlight swift"><code><span class="s">"hello"</span><span class="o">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s">"l"</span><span class="p">,</span> <span class="s">"abc"</span><span class="p">)</span>    <span class="c1">//=&gt; "heabcabco"</span>
+<span class="s">"hello"</span><span class="o">.</span><span class="nf">gsub</span><span class="p">(</span><span class="s">"l"</span><span class="p">,</span> <span class="s">"lll"</span><span class="p">)</span>    <span class="c1">//=&gt; "lllllllllllllll"</span>
 
 <span class="k">if</span> <span class="s">"hello world"</span> <span class="o">=~</span> <span class="s">"hello"</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"this will match"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></li>
 <li><p>[x] Convenient methods build <code>Date</code> instance</p>
-<pre class="highlight plaintext"><code>Date.now + 1.day            #=&gt; 2017-01-01 12:00:00 +0000
-2.years + 1.day &gt; 1.year    #=&gt; true
+<pre class="highlight plaintext"><code>Date.now + 1.day            //=&gt; 2017-01-01 12:00:00 +0000
+2.years + 1.day &gt; 1.year    //=&gt; true
 </code></pre></li>
 <li><p>[x] File and IO supports build on top of lowlevel C API</p>
-<pre class="highlight swift"><code><span class="kt">File</span><span class="o">.</span><span class="nf">basename</span><span class="p">(</span><span class="s">"/home/work/file.swift"</span><span class="p">)</span> <span class="c1">// file.swift</span>
+<pre class="highlight swift"><code><span class="kt">File</span><span class="o">.</span><span class="nf">basename</span><span class="p">(</span><span class="s">"/home/work/file.swift"</span><span class="p">)</span> <span class="c1">//=&gt; file.swift</span>
 <span class="kt">File</span><span class="o">.</span><span class="nf">open</span><span class="p">(</span><span class="s">"empty.txt"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="p">{</span> <span class="n">file</span> <span class="k">in</span>
     <span class="n">file</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="s">"Content"</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kt">Dir</span><span class="o">.</span><span class="nf">isEmpty</span><span class="p">(</span><span class="s">"a/empty/folder"</span><span class="p">)</span>   <span class="c1">// true</span>
-<span class="kt">Dir</span><span class="o">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">entriesDir</span><span class="p">)</span>         <span class="c1">// [".", "..", "file.swift"]</span>
+<span class="kt">Dir</span><span class="o">.</span><span class="nf">isEmpty</span><span class="p">(</span><span class="s">"a/empty/folder"</span><span class="p">)</span>   <span class="c1">//=&gt; true</span>
+<span class="kt">Dir</span><span class="o">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">entriesDir</span><span class="p">)</span>         <span class="c1">//=&gt; [".", "..", "file.swift"]</span>
 
 <span class="kt">FileUtils</span><span class="o">.</span><span class="nf">mkdir_p</span><span class="p">(</span><span class="s">"draveness/spool/mail"</span><span class="p">)</span> <span class="c1">// create folder recursively</span>
 </code></pre></li>
 <li><p>[x] Bridge between <code>NS</code> to swift type</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">str</span><span class="p">:</span> <span class="kt">NSString</span> <span class="o">=</span> <span class="s">"string"</span>
-<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span> <span class="c1">// String</span>
-<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">bridge</span> <span class="c1">// NSString</span>
+<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span>         <span class="c1">//=&gt; String</span>
+<span class="s">"string"</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">bridge</span>  <span class="c1">//=&gt; NSString</span>
 </code></pre></li>
 </ul>
 <h2 id='documents' class='heading'>Documents</h2>
@@ -398,7 +403,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-14)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

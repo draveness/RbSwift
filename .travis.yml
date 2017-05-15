@@ -9,13 +9,14 @@ before_install:
 - pod update Nimble
 - brew update
 - brew outdated carthage || brew upgrade carthage
-- gem install xcpretty
+- bundle install
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
 script:
 - xcodebuild -version
 - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests iOS' -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty
+- swiftcov generate --output coverage xcodebuild test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests iOS' -configuration Release -destination 'platform=iOS Simulator,name=iPhone 7'
   # - bash <(curl -s https://codecov.io/bash) -cF ios
   # - xcodebuild clean test -workspace RbSwift.xcworkspace -scheme 'RbSwiftTests macOS' -sdk macosx -enableCodeCoverage YES | xcpretty
 deploy:
@@ -27,4 +28,6 @@ deploy:
   on:
     repo: Draveness/RbSwift
     tags: true
+after_success:
+- bundle exec coveralls-gcov --repo-token REPO_TOKEN --no-gcov
 

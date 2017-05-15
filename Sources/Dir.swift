@@ -8,7 +8,71 @@
 
 import Foundation
 
-public class Dir {
+public class Dir: CustomStringConvertible {
+    private var _dir: UnsafeMutablePointer<DIR>?
+
+    /// Returns the path parameter passed to dir’s constructor.
+    public let path: String
+
+    /// Returns the file descriptor used in dir.
+    /// This method uses `dirfd()` function defined by POSIX 2008.
+    public var fileno: Int {
+        return dirfd(_dir).to_i
+    }
+
+    /// Returns the current position in dir. See also `Dir#seek(pos:)`.
+    public var pos: Int {
+        get {
+            return telldir(_dir)
+        }
+        set {
+            seek(newValue)
+        }
+    }
+
+    /// Returns the current position in dir.
+    public var tell: Int {
+        return pos
+    }
+
+    /// Returns the path parameter passed to dir’s constructor.
+    public var to_path: String {
+        return path
+    }
+
+    /// Return a string describing this Dir object.
+    public var inspect: String {
+        return path
+    }
+
+    /// Return a string describing this Dir object.
+    public var description: String {
+        return path
+    }
+
+    /// Returns a new directory object for the named directory.
+    public init?(_ path: String) {
+        self.path = path
+        guard let dir = opendir(path) else { return nil }
+        self._dir = dir
+    }
+
+    /// Returns a new directory object for the named directory.
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: A new `Dir` object or nil.
+    public static func new(_ path: String) -> Dir? {
+        return Dir(path)
+    }
+
+    /// Returns a new directory object for the named directory.
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: A new `Dir` object or nil.
+    public static func open(_ path: String) -> Dir? {
+        return Dir(path)
+    }
+
     /// Returns the path to the current working directory of this process as a string.
     public static var getwd: String {
         return FileManager.default.currentDirectoryPath
@@ -20,10 +84,10 @@ public class Dir {
         return getwd
     }
     
-    public static func glob(_ pattern: String) -> [String] {
-        return []
-    }
-    
+//    public static func glob(_ pattern: String) -> [String] {
+//        return []
+//    }
+
     /// Returns the home directory of the current user or the named user if given.
     ///
     ///     Dir.home       #=> "/Users/username"
@@ -62,6 +126,16 @@ public class Dir {
     @discardableResult
     public static func chdir(_ path: String = "~") -> Bool {
         return FileManager.default.changeCurrentDirectoryPath(path)
+    }
+
+    /// Changes this process’s idea of the file system root.
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: A bool value indicates the result of `Darwin.chroot`
+    /// - SeeAlso: `Darwin.chroot`.
+    @discardableResult
+    public static func chroot(_ path: String) -> Bool {
+        return Darwin.chroot(path) == 0
     }
     
     /// Changes the current working directory of the process to the given string.
@@ -133,7 +207,17 @@ public class Dir {
             throw RemoveDirectoryError.cocoa(error.localizedDescription)
         }
     }
-    
+
+    /// Deletes the named directory. An alias to `Dir.rmdir(path:)`.
+    ///
+    ///     try Dir.unlink("/a/folder/path")
+    ///
+    /// - Parameter path: A directory path
+    /// - Throws: `RemoveDirectoryError` if the directory isn’t empty.
+    public static func unlink(_ path: String) throws {
+        try rmdir(path)
+    }
+
     /// Returns true if the named file is a directory, false otherwise.
     ///
     ///     Dir.isExist("/a/folder/path/not/exists")     #=> false
@@ -175,5 +259,36 @@ public class Dir {
         } catch {
             return []
         }
+    }
+
+    /// Calls the block once for each entry in the named directory, passing the filename of each
+    /// entry as a parameter to the block.
+    ///
+    /// - Parameters:
+    ///   - path: A directory path.
+    ///   - closure: A closure accepts all the entries in current directory.
+    public static func foreach(_ path: String, closure: (String) -> ()) {
+        entries(path).each(closure)
+    }
+
+    /// Deletes the named directory.
+    ///
+    /// - Parameter path: A directory path.
+    /// - Returns: A bool value indicates the result of `Dir.delete(path:)`
+    @discardableResult
+    public static func delete(_ path: String) -> Bool {
+        return Darwin.rmdir(path) == 0
+    }
+
+    /// Seeks to a particular location in dir.
+    ///
+    /// - Parameter pos: A particular location.
+    public func seek(_ pos: Int) {
+        seekdir(_dir, pos)
+    }
+
+    /// Repositions dir to the first entry.
+    public func rewind() {
+        rewinddir(_dir)
     }
 }

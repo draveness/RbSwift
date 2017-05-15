@@ -14,7 +14,7 @@
     <a title="Dir Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RbSwift Docs</a> (72% documented)</p>
+        <p><a href="../index.html">RbSwift Docs</a> (73% documented)</p>
         <p class="header-right"><a href="https://github.com/Draveness/RbSwift"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -289,6 +289,353 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC7RbSwift3Dir4pathSS"></a>
+                    <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir4pathSS">path</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the path parameter passed to dir’s constructor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir6filenoSi"></a>
+                    <a name="//apple_ref/swift/Property/fileno" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir6filenoSi">fileno</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the file descriptor used in dir.
+This method uses <code>dirfd()</code> function defined by POSIX 2008.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fileno</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L19-L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir3posSi"></a>
+                    <a name="//apple_ref/swift/Property/pos" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir3posSi">pos</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current position in dir. See also <code>Dir#seek(pos:)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L24-L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir4tellSi"></a>
+                    <a name="//apple_ref/swift/Property/tell" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir4tellSi">tell</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current position in dir.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tell</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L34-L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir7to_pathSS"></a>
+                    <a name="//apple_ref/swift/Property/to_path" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir7to_pathSS">to_path</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the path parameter passed to dir’s constructor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">to_path</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L39-L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir7inspectSS"></a>
+                    <a name="//apple_ref/swift/Property/inspect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir7inspectSS">inspect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return a string describing this Dir object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inspect</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L44-L46">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RbSwift3Dir11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RbSwift3Dir11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return a string describing this Dir object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L49-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RbSwift3DircFSSGSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RbSwift3DircFSSGSqS0__">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new directory object for the named directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L54-L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir3newFSSGSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/new(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir3newFSSGSqS0__">new(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new directory object for the named directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">new</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Dir</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>Dir</code> object or nil.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L64-L66">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir4openFSSGSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/open(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir4openFSSGSqS0__">open(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new directory object for the named directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">open</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Dir</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code>Dir</code> object or nil.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L72-L74">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:ZvC7RbSwift3Dir5getwdSS"></a>
                     <a name="//apple_ref/swift/Variable/getwd" class="dashAnchor"></a>
                     <a class="token" href="#/s:ZvC7RbSwift3Dir5getwdSS">getwd</a>
@@ -311,7 +658,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L13-L15">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L77-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -342,29 +689,7 @@ An alias to <code>Dir#getwd</code> var.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L19-L21">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:ZFC7RbSwift3Dir4globFSSGSaSS_"></a>
-                    <a name="//apple_ref/swift/Method/glob(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC7RbSwift3Dir4globFSSGSaSS_">glob(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L23-L25">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L83-L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -396,7 +721,7 @@ An alias to <code>Dir#getwd</code> var.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L31-L33">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L95-L97">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -431,7 +756,7 @@ An alias to <code>Dir#getwd</code> var.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L38-L40">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L102-L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -492,7 +817,7 @@ Dir.home("user") #=&gt; "/user"
                         <p>Home directory.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L50-L53">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L114-L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -548,7 +873,65 @@ Dir.pwd     #=&gt; "/var/spool/mail"
                         <p>A bool indicates the result of <code>Dir#chdir(path:)</code></p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L63-L65">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L127-L129">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir6chrootFSSSb"></a>
+                    <a name="//apple_ref/swift/Method/chroot(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir6chrootFSSSb">chroot(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes this process’s idea of the file system root.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>Darwin.chroot</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">chroot</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value indicates the result of <code>Darwin.chroot</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L137-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -624,7 +1007,7 @@ value   #=&gt; 1
                         <p>The value of the closure.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L85-L91">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L159-L165">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,7 +1088,7 @@ try! Dir.mkdir("draveness/spool/mail", recursive: true)
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L103-L109">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L177-L183">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -741,7 +1124,7 @@ try! Dir.mkdir("draveness/spool/mail", recursive: true)
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L115-L118">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L189-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -797,7 +1180,63 @@ try! Dir.mkdir("draveness/spool/mail", recursive: true)
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L126-L135">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L200-L209">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir6unlinkFzSST_"></a>
+                    <a name="//apple_ref/swift/Method/unlink(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir6unlinkFzSST_">unlink(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes the named directory. An alias to <code>Dir.rmdir(path:)</code>.</p>
+<pre class="highlight plaintext"><code>try Dir.unlink("/a/folder/path")
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Classes/Dir/RemoveDirectoryError.html">RemoveDirectoryError</a></code> if the directory isn’t empty.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unlink</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L217-L219">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -853,7 +1292,7 @@ Dir.isExist("/a/folder/path/exists")         #=&gt; true
                         <p>A bool value indicates whether there is a directory in given path.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L144-L148">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L228-L232">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -911,7 +1350,7 @@ Dir.isEmpty("/a/folder/with/files")      #=&gt; false
                         <p>A bool value indicates the directory is not exists or is empty.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L159-L164">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L243-L248">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -965,7 +1404,201 @@ Dir.isEmpty("/a/folder/with/files")      #=&gt; false
                         <p>An array of all filenames in the given directory.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Draveness/RbSwift/tree/0.4.1/RbSwift/IO/Dir.swift#L171-L178">Show on GitHub</a>
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L255-L262">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir7foreachFTSS7closureFSST__T_"></a>
+                    <a name="//apple_ref/swift/Method/foreach(_:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir7foreachFTSS7closureFSST__T_">foreach(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calls the block once for each entry in the named directory, passing the filename of each
+entry as a parameter to the block.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">foreach</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>closure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure accepts all the entries in current directory.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L270-L272">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC7RbSwift3Dir6deleteFSSSb"></a>
+                    <a name="//apple_ref/swift/Method/delete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC7RbSwift3Dir6deleteFSSSb">delete(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes the named directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A directory path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A bool value indicates the result of <code>Dir.delete(path:)</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L279-L281">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RbSwift3Dir4seekFSiT_"></a>
+                    <a name="//apple_ref/swift/Method/seek(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RbSwift3Dir4seekFSiT_">seek(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Seeks to a particular location in dir.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">seek</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pos</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A particular location.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L286-L288">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RbSwift3Dir6rewindFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/rewind()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RbSwift3Dir6rewindFT_T_">rewind()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Repositions dir to the first entry.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rewind</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Draveness/RbSwift/tree/0.5.0/RbSwift/IO/Dir.swift#L291-L293">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -975,7 +1608,7 @@ Dir.isEmpty("/a/folder/with/files")      #=&gt; false
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-14)</p>
+          <p>&copy; 2017 <a class="link" href="https://github.com/Draveness" target="_blank" rel="external">Draveness</a>. All rights reserved. (Last updated: 2017-05-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
