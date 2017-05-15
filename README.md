@@ -95,7 +95,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'RbSwift', '~> 0.4.1'
+    pod 'RbSwift', '~> 0.5.0'
 end
 ```
 
@@ -119,7 +119,7 @@ $ brew install carthage
 To integrate RbSwift into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Draveness/RbSwift" ~> 0.4.1
+github "Draveness/RbSwift" ~> 0.5.0
 ```
 
 Run `carthage update` to build the framework and drag the built `RbSwift.framework` into your Xcode project.
