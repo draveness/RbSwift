@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Integer {
+public extension BinaryInteger {
     var to_s: String {
         return "\(self)"
     }

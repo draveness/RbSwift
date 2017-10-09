@@ -95,7 +95,7 @@ private extension String {
                 return Pathname(".")
             } else if components.first == "/" && components.count > 1 {
                 let p = components.joined(separator: "/")
-                let path = p.substring(from: p.characters.index(after: p.startIndex))
+                let path = String(p[p.characters.index(after: p.startIndex)...])
                 return Pathname(path)
             } else {
                 let path = components.joined(separator: "/")

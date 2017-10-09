@@ -42,30 +42,6 @@ public struct MatchData {
     }
 }
 
-extension NSRange: Equatable, Hashable {
-    /// The hash value.
-    ///
-    /// Hash values are not guaranteed to be equal across different executions of
-    /// your program. Do not save hash values to use during a future execution.
-    public var hashValue: Int {
-        return location.hashValue ^ length.hashValue
-    }
-
-    /// Returns a Boolean value indicating whether two values are equal.
-    ///
-    /// Equality is the inverse of inequality. For any values `a` and `b`,
-    /// `a == b` implies that `a != b` is `false`.
-    ///
-    /// - Parameters:
-    ///   - lhs: A value to compare.
-    ///   - rhs: Another value to compare.
-    public static func ==(lhs: NSRange, rhs: NSRange) -> Bool {
-        guard lhs.length == rhs.length else { return false }
-        guard lhs.location == rhs.location else { return false }
-        return true
-    }
-}
-
 extension MatchData: Hashable {
     /// The hash value.
     ///

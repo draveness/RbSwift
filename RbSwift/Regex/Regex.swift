@@ -63,7 +63,7 @@ public struct Regex {
         var captures: [String] = []
         var ranges: [NSRange] = []
         for index in 1..<result.numberOfRanges {
-            let range = result.rangeAt(index)
+            let range = result.range(at: index)
             ranges.append(range)
             captures.append(str.bridge.substring(with: range))
         }
@@ -95,7 +95,7 @@ public struct Regex {
             var ranges: [NSRange] = []
             autoreleasepool {
                 for index in 1..<match.numberOfRanges {
-                    let range = match.rangeAt(index)
+                    let range = match.range(at: index)
                     ranges.append(range)
                     datas.append(str.bridge.substring(with: range))
                 }

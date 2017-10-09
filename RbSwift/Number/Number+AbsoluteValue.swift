@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Integer where Self: SignedNumber {
+public extension BinaryInteger where Self: SignedNumeric {
     /// Returns the absolute value of `self`.
     ///
     /// 	(-1).abs    #=> 1

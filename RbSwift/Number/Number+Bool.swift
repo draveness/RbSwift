@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Bool
-public extension Integer {
+public extension BinaryInteger {
     /// Receiver integer is 0.
     var isZero: Bool {
         return self == 0

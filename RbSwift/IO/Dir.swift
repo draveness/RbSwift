@@ -175,9 +175,9 @@ public class Dir: CustomStringConvertible {
     ///   - permissions: An integer represents the posix permission.
     /// - Throws: When `FileManager#createDirectory(atPath:withIntermediateDirectories:attributes:)` throws.
     public static func mkdir(_ path: String, recursive: Bool = false, _ permissions: Int? = nil) throws {
-        var attributes: [String: Any] = [:]
+        var attributes: [FileAttributeKey: Any] = [:]
         if let permissions = permissions {
-            attributes[FileAttributeKey.posixPermissions.rawValue] = permissions
+            attributes[FileAttributeKey.posixPermissions] = permissions
         }
         try FileManager.default.createDirectory(atPath: path, withIntermediateDirectories: recursive, attributes: attributes)
     }
