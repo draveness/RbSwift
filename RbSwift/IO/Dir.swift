@@ -156,7 +156,7 @@ public class Dir: CustomStringConvertible {
     ///   - closure: A block executed in target directory.
     /// - Returns: The value of the closure.
     @discardableResult
-    public static func chdir<T>(_ path: String = "~", closure: ((Void) -> T)) -> T {
+  public static func chdir<T>(_ path: String = "~", closure: (() -> T)) -> T {
         let pwd = Dir.pwd
         Dir.chdir(path)
         let result = closure()
