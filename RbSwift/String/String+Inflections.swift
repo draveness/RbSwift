@@ -34,16 +34,16 @@ public extension String {
     /// - SeeAlso: LetterCase
     func camelize(_ firstLetter: LetterCase = .upper) -> String {
         let source = gsub("[-_]", " ")
-        if source.characters.contains(" ") {
+        if source.contains(" ") {
             var first = source.substring(to: 1)
             first = firstLetter == .upper ? first.upcase : first.downcase
             let camel = source.capitalized.gsub(" ", "")
-            let rest = String(camel.characters.dropFirst())
+            let rest = String(camel.dropFirst())
             return "\(first)\(rest)"
         } else {
             var first = source.substring(to: 1)
             first = firstLetter == .upper ? first.upcase : first.downcase
-            let rest = String(source.characters.dropFirst())
+            let rest = String(source.dropFirst())
             return "\(first)\(rest)"
         }
     }

@@ -33,7 +33,7 @@ class DirSpec: BaseSpec {
 
         describe(".home(path:)") {
             it("returns the home directory of the current user or the named user if given.") {
-                expect(try! Dir.home("user")).to(equal(Dir.home))
+                expect(try! Dir.home(NSUserName())).to(equal(Dir.home))
             }
         }
         

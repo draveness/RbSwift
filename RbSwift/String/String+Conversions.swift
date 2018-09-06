@@ -216,8 +216,8 @@ public extension String {
     ///     "2017-03-19 00:35:36 +0800".to_datetime!        #=> 2017-03-19 00:35:36 +0800
     ///
     /// - See Also: DateFormat
-    var to_datetime: Date? {
-        return Date(str: self)
+    func to_datetime(locale: Locale = Locale.current) -> Date? {
+        return Date(str: self, locale: locale)
     }
 }
 

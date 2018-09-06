@@ -11,6 +11,7 @@ import Nimble
 import RbSwift
 
 class StringConversionsSpec: BaseSpec {
+    var locale = Locale(identifier: "en_US_POSIX")
     override func spec() {
         describe(".to_i") {
             it("returns an integer under different circumstances") {
@@ -85,7 +86,7 @@ class StringConversionsSpec: BaseSpec {
         
         describe(".to_datetime") {
             it("returns a Date with RFC2822 form") {
-                let date = "Sun Mar 19 01:04:21 2017".to_datetime!
+                let date = "Sun Mar 19 01:04:21 2017".to_datetime(locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))
@@ -95,7 +96,7 @@ class StringConversionsSpec: BaseSpec {
             }
             
             it("returns a Date with custom form") {
-                let date = "2017-03-19 00:35:36 +0800".to_datetime!
+                let date = "2017-03-19 00:35:36 +0800".to_datetime(locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))

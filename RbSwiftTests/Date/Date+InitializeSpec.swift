@@ -11,6 +11,7 @@ import Nimble
 import RbSwift
 
 class DateInitializeSpec: BaseSpec {
+    var locale = Locale(identifier: "en_US_POSIX")
     override func spec() {
         beforeEach {
             TimeZone.global = TimeZone(identifier: "Asia/Shanghai")!
@@ -18,7 +19,7 @@ class DateInitializeSpec: BaseSpec {
         
         describe(".init(str:)") {
             it("parses str into date correctly") {
-                let date = Date(str: "Sun Mar 19 01:04:21 2017")!
+                let date = Date(str: "Sun Mar 19 01:04:21 2017", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))
@@ -28,7 +29,7 @@ class DateInitializeSpec: BaseSpec {
             }
             
             it("parses custom date format string correctly") {
-                let date = Date(str: "2017-03-19 00:35:36 +0800")!
+                let date = Date(str: "2017-03-19 00:35:36 +0800", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))

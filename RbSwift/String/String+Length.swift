@@ -12,7 +12,7 @@ import Foundation
 public extension String {
     /// Returns the length of string.
     var length: Int {
-        return self.characters.count
+        return self.lengthOfBytes(using: .utf8)
     }
     
     /// Returns the length of string.
@@ -21,7 +21,7 @@ public extension String {
     }
     
     /// Returns the length of string.
-    var count: Int {
-        return self.length
-    }
+//    var count: Int {
+//        return self.length
+//    }
 }

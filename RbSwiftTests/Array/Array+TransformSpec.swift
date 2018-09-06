@@ -17,7 +17,7 @@ class ArrayPatchSpec: BaseSpec {
                 expect([1, 2, 3].combination(1).flatMap { $0 }).to(equal([[1], [2], [3]].flatMap { $0 }))
                 expect([1, 2, 3].combination(2).flatMap { $0 }).to(equal([[1, 2], [1, 3], [2, 3]].flatMap { $0 }))
                 expect([1, 2, 3].combination(3).flatMap { $0 }).to(equal([[1, 2, 3]].flatMap { $0 }))
-                expect([1, 2, 3].combination(0).flatMap { $0 }).to(equal([].flatMap { $0 }))
+                expect([1, 2, 3].combination(0).flatMap { $0 }).to(equal([].compactMap { $0 }))
                 expect([1, 2, 3].combination(5).flatMap { $0 }).to(equal([[]].flatMap { $0 }))
             }
         }
@@ -28,7 +28,7 @@ class ArrayPatchSpec: BaseSpec {
                 expect([1, 2, 3].repeatedCombination(2).flatMap { $0 }).to(equal([[1,1],[1,2],[1,3],[2,2],[2,3],[3,3]].flatMap { $0 }))
                 expect([1, 2, 3].repeatedCombination(3).flatMap { $0 }).to(equal([[1,1,1],[1,1,2],[1,1,3],[1,2,2],[1,2,3],[1,3,3],[2,2,2],[2,2,3],[2,3,3],[3,3,3]].flatMap { $0 }))
                 expect([1, 2, 3].repeatedCombination(4).flatMap { $0 }).to(equal([[1,1,1,1],[1,1,1,2],[1,1,1,3],[1,1,2,2],[1,1,2,3],[1,1,3,3],[1,2,2,2],[1,2,2,3],[1,2,3,3],[1,3,3,3], [2,2,2,2],[2,2,2,3],[2,2,3,3],[2,3,3,3],[3,3,3,3]].flatMap { $0 }))
-                expect([1, 2, 3].repeatedCombination(0).flatMap { $0 }).to(equal([].flatMap { $0 }))
+                expect([1, 2, 3].repeatedCombination(0).flatMap { $0 }).to(equal([].compactMap { $0 }))
             }
         }
         

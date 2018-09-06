@@ -42,7 +42,7 @@ public extension Hash {
     /// - Returns: Self.
     @discardableResult
     func eachKey(closure: (Key) -> Void) -> Hash<Key, Value> {
-        self.keys.reverseEach(closure)
+        self.keys.each(closure)
         return self
     }
     
@@ -60,7 +60,7 @@ public extension Hash {
     /// - Returns: Self.
     @discardableResult
     func eachValue(closure: (Value) -> Void) -> Hash<Key, Value> {
-        self.values.reverseEach(closure)
+        self.values.each(closure)
         return self
     }
 }

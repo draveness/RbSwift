@@ -126,7 +126,7 @@ class HashTransformSpec: BaseSpec {
                 let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
                 expect(hash2.invert.invert).to(equal(hash2))
                 let hash3 = ["cat": 1, "dog": 1]
-                expect(hash3.invert).to(equal([1: "dog"]))
+                expect(hash3.invert[1]).notTo(beNil())
             }
         }
         
