@@ -163,7 +163,7 @@ public class File: IO {
         
         // remove trailing `/` if path is directory.
         if path.hasSuffix("/") && path.length.isPositive {
-            return path.to(path.length-1)!
+            return path.substring(to: path.length-1)
         } else {
             return path
         }
@@ -186,7 +186,7 @@ public class File: IO {
     /// - Parameter paths: An array of file path.
     /// - Returns: A new file path.
     public class func join(_ paths: String...) -> String {
-        var pathnames = paths.flatMap(Pathname.init)
+        var pathnames = paths.compactMap(Pathname.init)
         if pathnames.count == 1 {
             return pathnames.first!.path
         } else if pathnames.count >= 2 {

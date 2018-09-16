@@ -26,7 +26,7 @@ class DurationRelativeSpec: BaseSpec {
             }
             
             it("returns a date with passing date minus duration") {
-                let date = "2018-01-01 12:00:30 +0800".to_datetime!
+                let date = "2018-01-01 12:00:30 +0800".to_datetime()!
                 let beforeDate = 1.year.ago(date)
                 expect(beforeDate.year).to(equal(2017))
                 expect(beforeDate.month).to(equal(1))
@@ -61,7 +61,7 @@ class DurationRelativeSpec: BaseSpec {
             }
 
             it("returns a date with passing date add duration") {
-                let date = "2018-01-01 12:00:30 +0800".to_datetime!
+                let date = "2018-01-01 12:00:30 +0800".to_datetime()!
                 let afterDate = 1.year.since(date)
                 expect(afterDate.year).to(equal(2019))
                 expect(afterDate.month).to(equal(1))

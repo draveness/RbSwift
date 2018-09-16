@@ -11,6 +11,7 @@ import Nimble
 import RbSwift
 
 class DateFormatSpec: BaseSpec {
+    var locale = Locale(identifier: "en_US_POSIX")
     override func spec() {
         describe(".parse") {
             beforeEach {
@@ -18,7 +19,7 @@ class DateFormatSpec: BaseSpec {
             }
             
             it("parses custom date format string correctly") {
-                let date = DateFormat.parse(str: "2017-03-19 00:35:36 +0800")!
+                let date = DateFormat.parse(str: "2017-03-19 00:35:36 +0800", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))
@@ -29,7 +30,7 @@ class DateFormatSpec: BaseSpec {
             }
             
             it("parses iso8601 date format string correctly") {
-                let date = DateFormat.parse(str: "2017-03-19T01:00:59+08:00")!
+                let date = DateFormat.parse(str: "2017-03-19T01:00:59+08:00", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))
@@ -39,7 +40,7 @@ class DateFormatSpec: BaseSpec {
             }
             
             it("parses rfc2822 date format string correctly") {
-                let date = DateFormat.parse(str: "Sun, 19 Mar 2017 01:02:04 +0800")!
+                let date = DateFormat.parse(str: "Sun, 19 Mar 2017 01:02:04 +0800", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))
@@ -49,7 +50,7 @@ class DateFormatSpec: BaseSpec {
             }
             
             it("parses ctime date format string correctly") {
-                let date = DateFormat.parse(str: "Sun Mar 19 01:04:21 2017")!
+                let date = DateFormat.parse(str: "Sun Mar 19 01:04:21 2017", locale: self.locale)!
                 expect(date.year).to(equal(2017))
                 expect(date.month).to(equal(3))
                 expect(date.day).to(equal(19))

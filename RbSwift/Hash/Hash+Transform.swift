@@ -209,11 +209,10 @@ public extension Hash where Value: Hashable {
     ///     let hash2 = ["cat": "feline", "dog": "canine", "cow": "bovine"]
     /// 	hash2.invert.invert		#=> ["cat": "feline", "dog": "canine", "cow": "bovine"]
     ///
-    /// If a key with the same value already exists in the hsh, then the last one defined
-    /// will be used, the earlier value(s) will be discarded.
+    /// If a key with the same value already exists in the hsh, then the random one will be used.
     ///
     ///     let hash3 = ["cat": 1, "dog": 1]
-    /// 	hash3.invert    #=> [1: "dog"]
+    /// 	hash3.invert    #=> [1: "dog"] or [1: "cat"]
     ///
     var invert: [Value: Key] {
         var results: [Value: Key] = [:]

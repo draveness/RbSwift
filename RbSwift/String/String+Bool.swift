@@ -35,7 +35,7 @@ public extension String {
     /// - Parameter substrings: An array of strings or characters
     /// - Returns: A bool value indicates whether the string includes the other string
     func isInclude(_ substrings: [String]) -> Bool {
-        return substrings.flatMap(contains).isAny { $0 == true }
+        return substrings.compactMap(contains).isAny { $0 == true }
     }
     
     /// Returns `true` if receiver does not contains the given strings or characters array.
@@ -63,7 +63,7 @@ public extension String {
     /// - Parameter substrings: An array of strings or characters
     /// - Returns: A bool value indicates whether the string excludes the other string
     func isExlude(_ substrings: [String]) -> Bool {
-        return substrings.flatMap(contains).isAll { $0 == false }
+        return substrings.compactMap(contains).isAll { $0 == false }
     }
     
     /// Returns true if str starts with one of the prefixes given.
@@ -87,7 +87,7 @@ public extension String {
     /// - Parameter substrings: An array of prefixes
     /// - Returns: A bool value indicates whether the string starts with another string in array
     func isStartWith(_ substrings: [String]) -> Bool {
-        return substrings.flatMap(hasPrefix).isAny { $0 == true }
+        return substrings.compactMap(hasPrefix).isAny { $0 == true }
     }
     
     /// Returns true if str ends with one of the suffixes given.
@@ -115,7 +115,7 @@ public extension String {
     /// - Parameter substrings: An array of suffixes
     /// - Returns: A bool value indicates whether the string ends with another string in array
     func isEndWith(_ substrings: [String]) -> Bool {
-        return substrings.flatMap(hasSuffix).isAny { $0 == true }
+        return substrings.compactMap(hasSuffix).isAny { $0 == true }
     }
     
     /// Converts pattern to a `NSReguarExpression`, then returns a bool value indicates whether

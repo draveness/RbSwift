@@ -106,7 +106,7 @@ public class Dir: CustomStringConvertible {
     /// Returns the home directory of the current user or the named user if given.
     ///
     ///     Dir.home()       #=> "/Users/username"
-    ///     Dir.home("user") #=> "/user"
+    ///     Dir.home("user") #=> "/Users/user"
     ///
     /// - Parameter path: The name of user.
     /// - Returns: Home directory.

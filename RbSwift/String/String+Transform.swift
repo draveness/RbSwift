@@ -22,7 +22,7 @@ public extension String {
     var chomp: String {
         guard self.length > 0 else { return "" }
         var result = self
-        while let last = result.characters.last {
+        while let last = Substring(result).last {
             guard last =~ "[ \t\n\r\\v]" else { break }
             result = result.chop
         }
@@ -47,7 +47,7 @@ public extension String {
         guard separator.length > 0 else {
             var result = self
             while result.length > 0 {
-                if let lastChar = result.characters.last {
+                if let lastChar = Substring(result).last {
                     if lastChar == "\r\n" {
                         result = result.chop
                     } else {
@@ -223,7 +223,7 @@ public extension String {
     /// 	"Hello".reverse		#=> "olleH"
     ///
     var reverse: String {
-        return String(self.characters.reversed())
+        return String(self.reversed())
     }
     
     /// Modifies str in place as described for .reverse, returning str.
@@ -271,7 +271,7 @@ public extension String {
     /// - Parameter separator: A string to seperate the receiver
     /// - Returns: An array of string which separated by separator
     func split(_ separator: RegexConvertible = " ", limit: Int = 0) -> [String] {
-        guard separator.pattern.length > 0 else { return self.characters.map { String($0) } }
+        guard separator.pattern.length > 0 else { return self.map { String($0) } }
         let result = trimmingCharacters(in: CharacterSet.whitespaces)
         guard separator.pattern != " " else { return result.components(separatedBy: CharacterSet.whitespacesAndNewlines).filter { !$0.isEmpty } }
         let datas = separator.regex.scan(self)
@@ -398,7 +398,7 @@ public extension String {
     /// - See Also: `String#rstrip` and `String#strip`
     var lstrip: String {
         var result = self
-        while let first = result.characters.first {
+        while let first = Substring(result).first {
             guard first =~ "[ \t\n\r\\v]" else { break }
             result.remove(at: result.startIndex)
         }

@@ -16,13 +16,13 @@ public extension Date {
     /// - Parameter str: A string
     /// - Returns: A date object or nil
     /// - See Also: `DateFormat#parse(str:)`
-    static func parse(str: String) -> Date? {
-        guard let date = DateFormat.parse(str: str) else { return nil }
+    static func parse(str: String, locale: Locale = Locale.current) -> Date? {
+        guard let date = DateFormat.parse(str: str, locale: locale) else { return nil }
         return date
     }
     
-    init?(str: String) {
-        guard let date = DateFormat.parse(str: str) else { return nil }
+    init?(str: String, locale: Locale = Locale.current) {
+        guard let date = DateFormat.parse(str: str, locale: locale) else { return nil }
         self.init(timeIntervalSince1970: date.timeIntervalSince1970)
     }
     

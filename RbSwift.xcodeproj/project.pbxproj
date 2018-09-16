@@ -404,6 +404,7 @@
 		72F39B0A1E9C83F50050D91B /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39B081E9C83F50050D91B /* FileUtils.swift */; };
 		72F39B0B1E9C83F50050D91B /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39B081E9C83F50050D91B /* FileUtils.swift */; };
 		72F39B0C1E9C83F50050D91B /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F39B081E9C83F50050D91B /* FileUtils.swift */; };
+		749C484C0E39360C71E99DBF /* Pods_RbSwift_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7F908B4DE780238F663F1C /* Pods_RbSwift_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,8 +426,10 @@
 
 /* Begin PBXFileReference section */
 		0251220F4AC3B1F1F2A16DB4 /* Pods-RbSwift iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0334C438BDCD6B25AFC6206D /* Pods-RbSwift macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift macOS/Pods-RbSwift macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		12776B238AB1406E00843746 /* Pods-RbSwiftTests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		1691E350F4092E3F61EA650E /* Pods-RbSwift iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS.release.xcconfig"; sourceTree = "<group>"; };
+		1CF12C9C3B9EF7D1FB003D53 /* Pods-RbSwift macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwift macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwift macOS/Pods-RbSwift macOS.release.xcconfig"; sourceTree = "<group>"; };
 		1F5E83A94585B48725284980 /* Pods_RbSwiftTests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -576,6 +579,7 @@
 		AEEBAC1B2C123BC22AA8381D /* Pods_RbSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0378F43074623D773B8F912 /* Pods_RbSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10BBC20ECFCF1E97BDFA59E /* Pods-RbSwiftTests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RbSwiftTests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7F908B4DE780238F663F1C /* Pods_RbSwift_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwift_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9FBC60D38554D73E840B2C /* Pods_RbSwiftTests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RbSwiftTests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -614,6 +618,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				749C484C0E39360C71E99DBF /* Pods_RbSwift_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +642,8 @@
 				64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */,
 				D10BBC20ECFCF1E97BDFA59E /* Pods-RbSwiftTests macOS.debug.xcconfig */,
 				366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */,
+				0334C438BDCD6B25AFC6206D /* Pods-RbSwift macOS.debug.xcconfig */,
+				1CF12C9C3B9EF7D1FB003D53 /* Pods-RbSwift macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -649,6 +656,7 @@
 				2FD675F1AFD8692134211951 /* Pods_RbSwift_iOS.framework */,
 				DF9FBC60D38554D73E840B2C /* Pods_RbSwiftTests_iOS.framework */,
 				1F5E83A94585B48725284980 /* Pods_RbSwiftTests_macOS.framework */,
+				DF7F908B4DE780238F663F1C /* Pods_RbSwift_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1078,7 +1086,6 @@
 				723049721E966D8700D5427E /* Frameworks */,
 				723049731E966D8700D5427E /* Resources */,
 				03DE5B0D9D300DC2BFE98F32 /* [CP] Embed Pods Frameworks */,
-				C6FFEDE3BEB133C2E73DF39E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1099,7 +1106,6 @@
 				723049811E966E9C00D5427E /* Frameworks */,
 				723049821E966E9C00D5427E /* Resources */,
 				77554DF97A297D5F29B9C0E3 /* [CP] Embed Pods Frameworks */,
-				04618E364A33EFAB18074931 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1115,6 +1121,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72D2EEE61E96170E004CE666 /* Build configuration list for PBXNativeTarget "RbSwift macOS" */;
 			buildPhases = (
+				42BD054F207247EC39580C68 /* [CP] Check Pods Manifest.lock */,
 				72D2EEDC1E96170E004CE666 /* Sources */,
 				72D2EEDD1E96170E004CE666 /* Frameworks */,
 				72D2EEDE1E96170E004CE666 /* Headers */,
@@ -1138,7 +1145,6 @@
 				72D2EF631E961842004CE666 /* Frameworks */,
 				72D2EF641E961842004CE666 /* Headers */,
 				72D2EF651E961842004CE666 /* Resources */,
-				59A179453D8CFFECB5B41595 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1156,7 +1162,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = draveness;
 				TargetAttributes = {
 					723048B11E966B9A00D5427E = {
@@ -1182,7 +1188,7 @@
 					};
 					72D2EF661E961842004CE666 = {
 						CreatedOnToolsVersion = 8.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1267,43 +1273,40 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		04618E364A33EFAB18074931 /* [CP] Copy Pods Resources */ = {
+		42BD054F207247EC39580C68 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RbSwift macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59A179453D8CFFECB5B41595 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwift iOS/Pods-RbSwift iOS-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		718108C8155DBCF8EB4EAA95 /* [CP] Check Pods Manifest.lock */ = {
@@ -1312,13 +1315,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RbSwiftTests macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74B94126F4FB500159743B2D /* [CP] Check Pods Manifest.lock */ = {
@@ -1327,13 +1333,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RbSwift iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		77554DF97A297D5F29B9C0E3 /* [CP] Embed Pods Frameworks */ = {
@@ -1342,9 +1351,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1357,28 +1371,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RbSwiftTests iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C6FFEDE3BEB133C2E73DF39E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1829,6 +1831,7 @@
 		723048B81E966B9A00D5427E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
@@ -1843,7 +1846,7 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
@@ -1852,6 +1855,7 @@
 		723048B91E966B9A00D5427E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
@@ -1866,7 +1870,7 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
@@ -1875,6 +1879,7 @@
 		723048C51E966BC800D5427E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1888,7 +1893,7 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
@@ -1897,6 +1902,7 @@
 		723048C61E966BC800D5427E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1910,7 +1916,7 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
@@ -1920,16 +1926,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D10BBC20ECFCF1E97BDFA59E /* Pods-RbSwiftTests macOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Resources/Info-macOS-test.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwiftTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1937,16 +1944,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 366F11EB54CC8993ED8405CA /* Pods-RbSwiftTests macOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Resources/Info-macOS-test.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwiftTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1954,14 +1962,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 12776B238AB1406E00843746 /* Pods-RbSwiftTests iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Resources/Info-iOS-test.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwiftTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1969,14 +1978,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64EB8A65F39FB2B899F395E6 /* Pods-RbSwiftTests iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "Resources/Info-iOS-test.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwiftTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1993,6 +2003,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2000,6 +2011,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2052,6 +2064,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2059,6 +2072,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2093,7 +2107,9 @@
 		};
 		72D2EEE71E96170E004CE666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0334C438BDCD6B25AFC6206D /* Pods-RbSwift macOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2110,13 +2126,15 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		72D2EEE81E96170E004CE666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CF12C9C3B9EF7D1FB003D53 /* Pods-RbSwift macOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2133,7 +2151,7 @@
 				PRODUCT_NAME = RbSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -2141,6 +2159,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0251220F4AC3B1F1F2A16DB4 /* Pods-RbSwift iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -2154,8 +2173,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-iOS";
 				PRODUCT_NAME = RbSwift;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2163,6 +2182,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1691E350F4092E3F61EA650E /* Pods-RbSwift iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -2176,8 +2196,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.draveness.RbSwift-iOS";
 				PRODUCT_NAME = RbSwift;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

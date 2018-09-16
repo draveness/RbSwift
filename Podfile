@@ -4,15 +4,18 @@
 use_frameworks!
 
 target 'RbSwift iOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  target 'RbSwiftTests macOS' do
+  platform :ios, '8.0'
+  target 'RbSwiftTests iOS' do
     inherit! :search_paths
     inhibit_all_warnings!
     pod 'Nimble'
     pod 'Quick'
   end
+end
 
-  target 'RbSwiftTests iOS' do
+target 'RbSwift macOS' do
+  platform :osx, '10.10'
+  target 'RbSwiftTests macOS' do
     inherit! :search_paths
     inhibit_all_warnings!
     pod 'Nimble'

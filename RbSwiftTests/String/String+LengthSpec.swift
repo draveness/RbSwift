@@ -15,21 +15,21 @@ class StringLengthSpec: BaseSpec {
         describe(".length") {
             it("returns the length of string") {
                 let string = "A very very long string"
-                expect(string.length).to(equal(string.characters.count))
+                expect(string.length).to(equal(23))
             }
         }
         
         describe(".size") {
             it("returns the length of string") {
                 let string = "A very very long string"
-                expect(string.size).to(equal(string.characters.count))
+                expect(string.size).to(equal(23))
             }
         }
         
         describe(".count") {
             it("returns the length of string") {
                 let string = "A very very long string"
-                expect(string.count).to(equal(string.characters.count))
+                expect(string.count).to(equal(23))
             }
         }
     }

@@ -20,7 +20,7 @@ public extension Array {
     /// - Returns: An integer
     func to_i(_ base: Int = 10) -> Int {
         var index = 0
-        return flatMap {
+        return compactMap {
             $0 as? Int
         }.reduce(0) { (result, digit) in
             let result = result + digit * (base ** index)
