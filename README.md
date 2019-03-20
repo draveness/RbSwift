@@ -43,7 +43,7 @@ RbSwift provides a series of Swift struct/class extension including lots of hand
     2.years + 1.day > 1.year    //=> true
     ```
 
-+ [x] File and IO supports build on top of lowlevel C API
++ [x] File and IO supports which build on top of low-level C API
 
     ```swift
     File.basename("/home/work/file.swift") //=> file.swift
@@ -107,7 +107,7 @@ $ pod install
 
 ### Carthage
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+[Carthage](https://github.com/Carthage/Carthage) is a decentralised dependency manager that builds your dependencies and provides you with binary frameworks.
 
 You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
 
@@ -142,7 +142,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ### Contact
 
-Follow and contact me with [email](mailto:i@draveness.me). If you find an issue, just [open a ticket](https://github.com/draveness/rbswift/issues/new). Pull requests are warmly welcome as well.
+Follow and contact me with [email](mailto:i@draveness.me). If you find an issue, [open a ticket](https://github.com/draveness/rbswift/issues/new). Pull requests are warmly welcome as well.
 
 ### License
 
