@@ -1198,6 +1198,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 724874ED1E7CF813007984FD;
@@ -1273,7 +1274,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-macOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-macOS/Quick.framework",
 			);
@@ -1284,7 +1285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RbSwiftTests macOS/Pods-RbSwiftTests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		42BD054F207247EC39580C68 /* [CP] Check Pods Manifest.lock */ = {
@@ -1351,7 +1352,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble-iOS/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick-iOS/Quick.framework",
 			);
@@ -1362,7 +1363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RbSwiftTests iOS/Pods-RbSwiftTests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0392383E8B441B9E8ECE2EC /* [CP] Check Pods Manifest.lock */ = {
