@@ -145,7 +145,7 @@ public extension String {
         
         var value = 0
         for (index, bit) in result.reverse.chars.enumerated() {
-            value += Int(pow(Double(base), Double(index))) * nums.index(of: bit)!
+            value += Int(pow(Double(base), Double(index))) * nums.firstIndex(of: bit)!
         }
         return value * sign
     }

@@ -14,7 +14,7 @@ public extension String {
     ///
     /// - upper: Return the UppcaseCamelCase when specified
     /// - lower: Return the lowerCamelCase when specified
-    public enum LetterCase {
+    enum LetterCase {
         case upper
         case lower
     }
