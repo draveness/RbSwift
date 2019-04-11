@@ -69,8 +69,8 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func dropWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.SubSequence {
-        return try drop(while: closure)
+    func dropWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> [Element] {
+        return try drop(while: closure).to_a
     }
     
     /// Passes elements to the block until the block returns nil or false, then stops 
@@ -82,7 +82,7 @@ public extension Sequence {
     ///
     /// - Parameter closure: A block accepts element in the receiver and returns a bool value
     /// - Returns: A new array
-    func takeWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.SubSequence {
+    func takeWhile(_ closure: (Self.Iterator.Element) throws -> Bool) rethrows ->  [Element] {
         return try prefix(while: closure)
     }
     
